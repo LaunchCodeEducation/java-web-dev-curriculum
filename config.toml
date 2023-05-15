@@ -1,7 +1,13 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://java-web-dev-curriculum.netlify.app'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Java Web Development'
 theme = "hugo-theme-relearn"
+
+canonifyURLs = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [params]
   themeVariant = ["lc-light", "lc-dark-blue", "lc-dark-blue-two"]
+
