@@ -32,7 +32,9 @@ some initial concepts and get feedback from LaunchCode staff.
 
 Your mentor on this project is Blake.
 
-![LaunchCode mentor image](figures/LC-mentor.png)
+{{< rawhtml >}}
+   <img src="pictures/LC-Blake.png" alt="LaunchCode Mentor Blake" width=20% />
+{{< /rawhtml >}}
 
 ## Learning Objectives
 
@@ -75,13 +77,14 @@ In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroo
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit
 unfinished---program, go ahead and run it to get an idea of how it works. To do
-this, right-click on the ``main`` method in the ``TechJobs`` class and select
+this, right-click on the `main` method in the `TechJobs` class and select
 *Run TechJobs.main()*.
 
-> **Warning**
->
-> The application will run until you force it to quit, re-prompting time
-> after time. To kill it, press the red "stop" icon in the Run pane *or* entereing ``x`` from the initial prompt. We'll learn precisely how the program manages to work this way below.
+
+{{% notice red Warning "rocket" %}}
+The application will run until you force it to quit, re-prompting time after time. To kill it, press the red "stop" icon in the Run pane *or* entereing `x` from the initial prompt. We'll learn precisely how the program manages to work this way below.
 
 Let's explore the code by starting with the source of the data our program is
 providing access to.
+{{% /notice %}}
+

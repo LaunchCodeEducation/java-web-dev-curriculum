@@ -12,32 +12,21 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-### The Data File: ``jobs_data.csv``
+### The Data File: `jobs_data.csv`
 
-Our simple app doesn't connect to a database. If the prototype proves
-useful and we continue development, we'll add that functionality later.
-But for now, we've been given a CSV (comma-separated values) file from
-the Company Team at LaunchCode that contains some recent jobs. This file
-was exported from an Excel spreadsheet into this format, which is easy
-for programs to read in.
+Our simple app doesn't connect to a database. If the prototype proves useful and we continue development, we'll add that functionality later.
+But for now, we've been given a CSV (comma-separated values) file from the Company Team at LaunchCode that contains some recent jobs. This file was exported from an Excel spreadsheet into this format, which is easy for programs to read in.
 
-If CSV files are new to you, don't worry, they're easy to understand.
-CSV files are conceptually similar to simple spreadsheets in that they
-organize data in rows and columns. The major difference is that they
-don't have the ability to carry out calculations the way spreadsheets
+If CSV files are new to you, don't worry, they're easy to understand. CSV files are conceptually similar to simple spreadsheets in that they organize data in rows and columns. The major difference is that they don't have the ability to carry out calculations the way spreadsheets
 do, and you can easily open, read, and edit them in plain text editors.
 
-Open up ``jobs_data.csv``, which is in the ``src/main/java/resources`` folder. You'll see that the first line is:
+Open up `jobs_data.csv`, which is in the `src/main/java/resources` folder. You'll see that the first line is:
 
 ```bash
 name,employer,location,position type,core competency
 ```
 
-While it isn't required, the first line of a CSV file often represents
-the column names. We have 5 names here, which indicates that each of our
-rows in the CSV file should have 5 fields. In this file format, a "row"
-corresponds to a new line. So each line below the first will constitute
-a row of data, or a record.
+While it isn't required, the first line of a CSV file often represents the column names. We have 5 names here, which indicates that each of our rows in the CSV file should have 5 fields. In this file format, a "row" corresponds to a new line. So each line below the first will constitute a row of data, or a record.
 
 Have a look at the data below line 1, and ask yourself the following
 questions:
@@ -69,9 +58,9 @@ It begins by declaring two local variables: `columnChoices` and `actionChoices`.
 
 Next, we notice a `while loop` that starts `while (true)`. While we usually want to avoid creating infinite loops, we have a good reason for doing so in this case! We want our application to continually run until the user decides they want to quit. The simplest way to do this is to loop forever. When the user wants to quit, they can enter `x` at the initial "View jobs by" prompt. As you saw above, however, IntelliJ's *Run* pane works slightly differently and you'll need to rely on the red "stop" icon to stop the program.
 
-> **Note**
->
-> Another way to kill a running program from the terminal is by pressing ctrl-C (a widely-known command to kill a console application). This will work in any terminal context, and not just for our console program in IntelliJ
+{{% notice blue Note "rocket" %}}
+Another way to kill a running program from the terminal is by pressing ctrl-C (a widely-known command to kill a console application). This will work in any terminal context, and not just for our console program in IntelliJ
+{{% /notice %}}
 
 The `main` method can be summarized as follows:
 
@@ -128,11 +117,11 @@ The local variable `choiceKeys` is used to easily enumerate the `choices` `HashM
 
 The `JobData` class is responsible for importing the data from the CSV file and parsing it into a Java-friendly format, that is, into `HashMap` and `ArrayList` form. Look toward the bottom of the class, and you will see a method named `loadData`, which does just what it advertises. After parsing the file data, it stores the data in the private property `allJobs`, which is of type `ArrayList<HashMap<String, String>>`.
 
-> **Note**
->
-> We haven't covered static properties and methods in-depth yet. For this assignment, know simply that they allow us to use properties and methods of a class without creating an object from that class. For example, we can call `JobData.findAll()` from the `TechJob` class.
->
-> If you want to create a new method in `JobData` or add a property, be sure to declare it as `static`.
+{{% notice blue Note "rocket" %}}
+We haven't covered static properties and methods in-depth yet. For this assignment, know simply that they allow us to use properties and methods of a class without creating an object from that class. For example, we can call `JobData.findAll()` from the `TechJob` class.
+
+If you want to create a new method in `JobData` or add a property, be sure to declare it as `static`.
+{{% /notice %}}
 
 Let's look more closely at the data type of `allJobs`. It purports to be an `ArrayList` that stores `HashMap` objects, which have `String` keys and `String` values. If we were to represent some of this data visually, using `[]` for an `ArrayList` and `{}` with key/value pairs, it would look like this:
 
