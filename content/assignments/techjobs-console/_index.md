@@ -12,8 +12,6 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-# Assignment #1: Tech Jobs (Console Edition)
-
 ## Introduction
 
 Congratulations! Based on your hard work and strong coding skills, you have

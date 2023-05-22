@@ -12,7 +12,7 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-# Implement `printJobs`
+## Implement `printJobs`
 
 When trying out the program, and later when reading the code, you
 hopefully noticed that there's some work to do in the `printJobs`

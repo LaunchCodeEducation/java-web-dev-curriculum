@@ -19,19 +19,26 @@ Before submitting, make sure that your application:
 1. Prints each field of a job when using search functionality, and when listing all columns. If there are no search results, a descriptive message is displayed.
 1. Allows the user to search for a string across all columns.
 1. Returns case-insensitive results.
-1. Run the autograding tests to ensure that the tests pass.
+1. Run the auto-grading tests to ensure that the tests pass.
 
-## How to Submit
+## Solution Demo
 
-To turn in your assignment and get credit, follow the submission instructions.
-<!-- TODO: Add Correct link below -->
-<!-- Review [Assignment 0] if you need a refresher on this process. -->
+### Watch a demo of a working solution.
 
-## Bonus Missions
+{{< youtube Ai9ceGDWkac >}}
+
+### How to Submit
+
+<!-- TODO: add correct link below when able -->
+To turn in your assignment and get credit, follow the
+[submission instructions]().
+
+### Bonus Missions
 
 If you want to take your learning a few steps further, here are some
-additional features the company team thinks would be nice to have in our app. We're not providing you much
-guidance here, but we have confidence that you can figure how to implement these enhanced features!
+additional problems you can try to solve. We're not providing you much
+guidance here, but we have confidence that you can figure these problems
+out!
 
 1. **Sorting list results**: When a user asks for a list of employers, locations, position types, etc., it would be nice if results were sorted alphabetically. Make this happen.
-1. **Returning a copy of AllJobs**: Look at `JobData.FindAll()`. Notice that it's returning the `AllJobs` property, which is a static property of the `JobData` class. In general, this is not a great thing to do, since the person calling our `FindAll()` method could then mess with the data that `AllJobs` contains. Fix this by creating a copy of `AllJobs`. *Hint:* Look at the methods of the `List` class listed in the Microsoft documentation.
+2. **Returning a copy of allJobs**: Look at `JobData.findAll()`. Notice that it's returning the `allJobs` property, which is a static property of the `JobData` class. In general, this is not a great thing to do, since the person calling our `findAll` method could then mess with the data that `allJobs` contains. Fix this by creating a copy of `allJobs`. *Hint:* Look at the constructors in the Oracle `ArrayList` documentation.

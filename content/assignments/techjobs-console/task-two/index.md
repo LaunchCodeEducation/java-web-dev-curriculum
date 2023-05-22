@@ -12,7 +12,7 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-# Create Method `findByValue`
+## Create Method `findByValue`
 
 At this stage, the application will allow users to search a *given
 column* of the data for a given String. Your next task is to enable a
