@@ -12,6 +12,19 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
+Before diving in and starting to code, make sure you understand what the code you've been given does. Since you're starting with a functioning---albeit unfinished---program, go ahead and run it to get an idea of how it works.
+
+{{% notice orange "Warning" "rocket" %}}
+
+The application will run until you force it to quit, re-prompting time
+after time. To kill it, press the "stop" icon in the upper corner the of Run pane. We'll learn precisely how the program manages to work this way below.
+
+{{% /notice %}}
+
+Let's explore the code by starting with the source of the data our program is
+providing access to.
+
+
 ### The Data File: `jobs_data.csv`
 
 Our simple app doesn't connect to a database. If the prototype proves useful and we continue development, we'll add that functionality later.
