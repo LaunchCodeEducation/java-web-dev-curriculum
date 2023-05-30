@@ -28,8 +28,7 @@ Here are some questions to ask yourself as you get started:
 3. How can you make this comparison in a way that effectively ignores the case of the strings?
 4. How can you do this *without* altering the capitalization of the items in `allJobs` so that the data gets printed out the same way that it appears in `job_data.csv`?
 
-<!-- TODO: Add correct link below when able -->
 You might find it useful to review the String methods listed in the
-chapter on [Data Types]().
+chapter on [Data Types](https://education.launchcode.org/java-web-development/chapters/data-types/index.html#data-types).
 
 When this task is completed, you're ready to submit your assignment!

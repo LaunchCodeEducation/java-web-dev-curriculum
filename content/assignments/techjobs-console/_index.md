@@ -66,11 +66,11 @@ Blake has now handed the task off to you. You must add a couple of features and
 then get feedback from the Company Team.
 
 After you work through the tasks Blake has laid out for you, tackle one
-or more of the [bonus missions](#tech-jobs-console-bonus-missions).
+or more of the [bonus missions](https://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-console/submission/#bonus-missions).
 
 ## Getting Started
 
-In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment0](assignment0.md) for details. 
+In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0](https://education.launchcode.org/java-web-dev-curriculum/assignments/hello-world/index.html#getting-started) for details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit

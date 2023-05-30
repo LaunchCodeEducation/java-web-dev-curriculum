@@ -31,7 +31,7 @@ Before submitting, make sure that your application:
 
 <!-- TODO: add correct link below when able -->
 To turn in your assignment and get credit, follow the
-[submission instructions]().
+[submission instructions](https://education.launchcode.org/java-web-dev-curriculun/assignments/hello-world/index.html#submitting-your-work-on-canvas).
 
 ### Bonus Missions
 
