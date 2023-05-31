@@ -58,7 +58,7 @@ Notice the two slightly different "play" buttons at the left of the code. The to
 
 The lower button, next to the `testSayHello()` method, will run only that individual test. A test is a single method in a test file that has `@Test` just above it. A test file may have multiple tests.
 
-Run all of the tests (in this case, there is only one) but clicking on the topmost button.
+Run all of the tests (in this case, there is only one) by clicking on the topmost button.
 
 ![The double play icon runs all tests in the file](figures/run-all-tests.png)
 
