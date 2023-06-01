@@ -22,7 +22,7 @@ Set up a local copy of the project:
 1. The tests for this assignment are set up the same way as for [assignment 2](https://education.launchcode.org/java-web-development/assignments/tech-jobs-oo.html#assignment-2-autograding).
 
 You won't be able to run your application or the tests yet. If you try to do so, you'll see a host of errors relating to the
-Spring Data annotations and classes. Some of these have already been used in the code, but the dependency that includes them has not yet been declared. That will be one of your tasks. You'll need to complete [Part1](tech-jobs-persistent-pt1) before you can
+Spring Data annotations and classes. Some of these have already been used in the code, but the dependency that includes them has not yet been declared. That will be one of your tasks. You'll need to complete [Part1](https://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-persistent/part-one/#connect-a-database-to-a-spring-app) before you can
 run the application and view it in a browser.
 
 That said, it's a good idea to scan the classes and templates even before you're able to execute
@@ -30,11 +30,11 @@ That said, it's a good idea to scan the classes and templates even before you're
 [Tech Jobs (MVC Edition)](https://education.launchcode.org/java-web-development/assignments/tech-jobs-mvc.html#tech-jobs-mvc), with a few key differences.
 
 You're no longer using a csv file to load job data, instead, we'll be creating new Job objects via a
-user form. The Job data will be stored in a MySQL database that you'll setup in [Part 1](tech-jobs-persistent-pt1) of this assignment.
+user form. The Job data will be stored in a MySQL database that you'll setup in [Part 1](http://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-persistent/part-one/#connect-a-database-to-a-spring-app) of this assignment.
 
 As you explore
 the starter code, you'll notice that the `JobField` abstract class is no longer present. Your task for
-[Part 2](tech-jobs-persistent-pt2) is to complete the work to persist some of the classes.
+[Part 2](https://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-persistent/part-two/#persisting-employers-and-skills) is to complete the work to persist some of the classes.
 You'll do this for `Employer` and `Skill` classes, as well as `Job`.
 
 The `Job` class will also look different from how you have last seen it. In Parts 3 and 4, you'll

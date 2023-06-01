@@ -51,8 +51,8 @@ To map the `Employer` and `Skill` classes to your `techjobs` database, you'll ad
 objects, similar to the existing `JobRepository` interface. Like `JobRepository`, make use of the Spring Data `CrudRepository` interface to map our objects.
 
 1. In `models/data`, create a new interface `EmployerRepository`.
-   - `EmployerRepository` should extend `CrudRepository`.
-   - `EmployerRepository` should be annotated with `@Repository`.
+- `EmployerRepository` should extend `CrudRepository`.
+- `EmployerRepository` should be annotated with `@Repository`.
 2. Repeat the steps above for an interface, `SkillRepository`.
 
 ## Controllers
@@ -69,11 +69,8 @@ the `EmployerController` handlers. `EmployerController` contains two handlers wi
 information. Your task here is to make use of the `EmployerRepository` class in these handlers.
 
 1. Add a private field of `EmployerRepository` type called `employerRepository` to `EmployerController`. Give this field an `@Autowired` annotation.
-
 2. Add an `index` method that responds at `/employers` with a list of all employers in the database. This method should use the template `employers/index`. To figure out the name of the model attribute you should use to pass employers into the view, review this template.
-
 3. `processAddEmployerForm` already takes care of sending the form back if any of the submitted employer object information is invalid. However, it doesn't yet contain the code to save a valid object. Use `employerRepository` and the appropriate method to do so.
-
 4. `displayViewEmployer` will be in charge of rendering a page to view the contents of an individual employer object. It will make use of that employer object's `id` field to grab the correct information from `employerRepository`. `optEmployer` is currently initialized to `null`. Replace this using the `.findById()` method with the right argument to look for the given employer object from the data layer.
 
 {{% notice blue Tip "rocket" %}}
