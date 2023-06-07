@@ -29,16 +29,11 @@ Before submitting, make sure that your application:
 
 ### How to Submit
 
-<!-- TODO: add correct link below when able -->
-To turn in your assignment and get credit, follow the
-[submission instructions](https://education.launchcode.org/java-web-dev-curriculun/assignments/hello-world/index.html#submitting-your-work-on-canvas).
+To turn in your assignment and get credit, follow the [submission instructions]({{< relref "../../hello-world/index.html#submitting-your-work-on-canvas" >}}).
 
 ### Bonus Missions
 
-If you want to take your learning a few steps further, here are some
-additional problems you can try to solve. We're not providing you much
-guidance here, but we have confidence that you can figure these problems
-out!
+If you want to take your learning a few steps further, here are some additional problems you can try to solve. We're not providing you much guidance here, but we have confidence that you can figure these problems out!
 
 1. **Sorting list results**: When a user asks for a list of employers, locations, position types, etc., it would be nice if results were sorted alphabetically. Make this happen.
 2. **Returning a copy of allJobs**: Look at `JobData.findAll()`. Notice that it's returning the `allJobs` property, which is a static property of the `JobData` class. In general, this is not a great thing to do, since the person calling our `findAll` method could then mess with the data that `allJobs` contains. Fix this by creating a copy of `allJobs`. *Hint:* Look at the constructors in the Oracle `ArrayList` documentation.

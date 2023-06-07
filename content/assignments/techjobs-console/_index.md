@@ -66,11 +66,15 @@ Blake has now handed the task off to you. You must add a couple of features and
 then get feedback from the Company Team.
 
 After you work through the tasks Blake has laid out for you, tackle one
-or more of the [bonus missions](https://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-console/submission/#bonus-missions).
+or more of the [bonus missions]({{< relref "./submission/#bonus-missions" >}}).
 
 ## Getting Started
 
-In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0](https://education.launchcode.org/java-web-dev-curriculum/assignments/hello-world/index.html#getting-started) for details. 
+{{% notice blue Note "rocket" %}}
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions](../hello-world/index.html#running-the-autograding-tests-through-github-actions) section of `Assignment 0` 
+{{% /notice %}}
+
+In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0]({{< relref "../hello-world/index.html" >}}) for details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit
