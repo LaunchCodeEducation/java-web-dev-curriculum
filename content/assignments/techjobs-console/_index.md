@@ -30,7 +30,9 @@ some initial concepts and get feedback from LaunchCode staff.
 
 Your mentor on this project is Blake.
 
-![LaunchCode Mentor Blake](pictures/pictures/LC-Blake.png.png?classes=border)
+{{< rawhtml >}}
+   <img src="pictures/LC-Blake.png" alt="LaunchCode Mentor Blake" width=20% />
+{{< /rawhtml >}}
 
 ## Learning Objectives
 
