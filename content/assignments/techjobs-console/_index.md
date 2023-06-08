@@ -70,13 +70,11 @@ or more of the [bonus missions]({{< relref "./submission/#bonus-missions" >}}).
 
 ## Getting Started
 
-<!-- TODO: Add correct link below once merged into book -->
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]() section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
 {{% /notice %}}
 
-<!-- TODO: Add correct link below once merged into book -->
-In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0]() for details. 
+In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit
