@@ -28,8 +28,7 @@ Before submitting, make sure that your application:
 {{< youtube Ai9ceGDWkac >}}
 
 ### How to Submit
-<!-- TODO: Update below when merged into main. Currently this file does not exist so book will not build properly. Uncomment once merged and add relref -->
-<!-- To turn in your assignment and get credit, follow the [submission instructions](). -->
+To turn in your assignment and get credit, follow the [submission instructions]({{< relref "../../hello-world/#submitting-your-work-on-canvas" >}}).
 
 ### Bonus Missions
 
