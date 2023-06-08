@@ -30,9 +30,7 @@ some initial concepts and get feedback from LaunchCode staff.
 
 Your mentor on this project is Blake.
 
-{{< rawhtml >}}
-   <img src="pictures/LC-Blake.png" alt="LaunchCode Mentor Blake" width=20% />
-{{< /rawhtml >}}
+![LaunchCode Mentor Blake](pictures/pictures/LC-Blake.png.png?classes=border)
 
 ## Learning Objectives
 
@@ -70,11 +68,13 @@ or more of the [bonus missions]({{< relref "./submission/#bonus-missions" >}}).
 
 ## Getting Started
 
+<!-- TODO: Add correct link below once merged into book -->
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions](../hello-world/index.html#running-the-autograding-tests-through-github-actions) section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]() section of `Assignment 0` 
 {{% /notice %}}
 
-In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0]({{< relref "../hello-world/index.html" >}}) for details. 
+<!-- TODO: Add correct link below once merged into book -->
+In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub Classroom assignment invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [assignment 0]() for details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit
