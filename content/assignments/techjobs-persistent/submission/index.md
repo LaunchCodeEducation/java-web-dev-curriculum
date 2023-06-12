@@ -20,4 +20,4 @@ If a test in `TestCommentedTests` fails, this means that you failed to uncomment
 
 ## How to Submit
 
-To turn in your assignment and get credit, follow the [Submission Instructions](https://education.launchcode.org/java-web-dev-curriculun/assignments/hello-world/index.html#submitting-your-work-on-canvas)
+To turn in your assignment and get credit, follow the [Submission Instructions]({{< relref "../../hello-world/_index.md#submitting-your-work-on-canvas" >}})

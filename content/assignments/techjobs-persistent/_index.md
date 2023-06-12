@@ -19,7 +19,7 @@ functionality by using Spring Data. You will be responsible for completing the c
 to create new job data.
 
 <!-- TODO: Link will need to be updated once entered into the book -->
-Your final application will have the same list and search capabilities as your [Tech Jobs (MVC Edition)]() but
+Your final application will have the same list and search capabilities as your <!-- [Tech Jobs (MVC Edition)]() --> but
 you'll need to do the work to connect the project to a database for storing user-submitted job data. 
 
 Each of the four sections of this assignment will also ask you to demonstrate your SQL skills under an item labelled **SQL TASK**.

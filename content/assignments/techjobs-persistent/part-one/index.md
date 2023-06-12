@@ -19,13 +19,15 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 {{% notice blue Tip "rocket" %}}
 Remember to double click on the schema name in the file tree to make it the default schema.
 {{% /notice %}}
-1. In the administration tab, create a new user, `techjobs` with the same settings as described in the lesson tutorial. This user should have the password `techjobs` as well.
-1. Update `build.gradle` with the necessary dependencies. At this point, you should be able to run the tests. Run the tests in `TestTaskOne` to verify your gradle dependencies.
-1. Update `src/resources/application.properties` with the correct info. This will include
+
+2. In the administration tab, create a new user, `techjobs` with the same settings as described in the lesson tutorial. This user should have the password `techjobs` as well.
+3. Update `build.gradle` with the necessary dependencies. At this point, you should be able to run the tests. Run the tests in `TestTaskOne` to verify your gradle dependencies.
+4. Update `src/resources/application.properties` with the correct info. This will include
 `spring.datasource.url` set to the address of your database connection, as well as the username and password for a user you have create Refer to the tip below for the other properties you must add to complete your database setup.
 
 {{% notice blue Tip "rocket" %}}
-You can double check your setup against what you've already done for [your coding events repo](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html#setup-orm-database). You can copy these property assignments from your coding events repo, only needing to change the database address and username/password values.
+<!-- TODO: Update below link to the coding events repo -->
+You can double check your setup against what you've already done for <!-- [your coding events repo](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html#setup-orm-database) -->. You can copy these property assignments from your coding events repo, only needing to change the database address and username/password values.
 {{% /notice %}}
 
 {{% notice blue Tip "rocket" %}}
@@ -49,4 +51,4 @@ locally in the browser at `http://localhost:8080` (unless of course you have cha
 
 Your running application still has limited functionality. You won't yet be able to add a job with the *Add Job* form. You also
 won't yet be able to view the list of jobs or search for jobs - but this is mostly because you have no job data. Move on to
-Part 2 below to start adding these functionalities.
+[Part 2]({{< relref "../part-two/index.html" >}}) below to start adding these functionalities.

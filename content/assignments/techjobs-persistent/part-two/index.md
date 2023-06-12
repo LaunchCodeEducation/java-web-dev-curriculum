@@ -14,7 +14,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Persisting Employers and Skills
 
-You will need to have completed the [setup steps](https://education.launchcode.org/java-web-dev-curriculum/assignments/techjobs-persistent/part-one/#connect-a-database-to-a-spring-app) before starting this
+You will need to have completed the [setup steps]({{< relref "../part-one/index.html" >}}) before starting this
 section.
 
 ### AbstractEntity
