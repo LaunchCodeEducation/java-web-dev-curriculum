@@ -5,8 +5,8 @@ draft: false
 weight: 1
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -246,5 +246,5 @@ open the relevant file.
 
 ![TODO list in IntelliJ](figures/startcode-todolist.png)
 
-As you work on your tasks, refer to the
+As you work on your tasks, remember to refer to the
 [demo app](https://java-techjobs-mvc.launchcodetechnicaltraining.org/).
