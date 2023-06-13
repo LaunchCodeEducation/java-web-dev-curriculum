@@ -48,7 +48,7 @@ Open the class file. This time the constructors, getters, and setters are done. 
 <!-- //TODO: Update link below when Classes and Objects part 2 chapter is added to this book -->
 
 1. Code a `toString` method that just returns the `value` of a `PositionType` object.
-1. Use the _Generate_ option again to add the `equals` and `hashCode` methods. Refer to the [previous section](https://education.launchcode.org/java-web-development/chapters/classes-part2/equals-shortcut.html#equals-shortcut) of this chapter if you need a quick review.
+1. Use the _Generate_ option again to add the `equals` and `hashCode` methods. Refer to the [Classes and Objects Part 2]() IntelliJ Generator Shortcut section if you need a quick review.
 1. Assume that two `PositionType` objects are equal when their id fields match.
 
 {{% notice green "Tip" "rocket" %}} 
