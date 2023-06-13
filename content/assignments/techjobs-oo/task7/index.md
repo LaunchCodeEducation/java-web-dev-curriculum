@@ -25,4 +25,4 @@ Now that the new structure is ready, another team member can refactor the import
 
 ## How to Submit
 
-To turn in your assignment and get credit, follow the [submission instructions](http://localhost:52748/assignments/hello-world/#submitting-your-work-on-canvas) from Assignment 0.
+To turn in your assignment and get credit, follow the [submission instructions]({{< relref "../../hello-world/#submitting-your-work-on-canvas" >}}) from Assignment 0.
