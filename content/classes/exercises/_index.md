@@ -16,6 +16,10 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 Work on these exercises in the IntelliJ `java-web-dev-exercises` project.
 
+{{% notice blue Note "rocket" %}}
+If you have not already cloned the `java-web-dev-exercises` project repository you can find it here: [Java Web Dev Projects Repository](https://github.com/LaunchCodeEducation/java-web-dev-projects-17)
+{{% /notice %}}
+
 1. Open up the file, `Student.java`, and add all of the necessary getters and setters. Think about the access level each field and method should have, and try reducing the access level of at least one setter to less than public.
 
 {{% expand "Check Your Solution" %}}
