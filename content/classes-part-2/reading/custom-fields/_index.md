@@ -196,10 +196,6 @@ public class Temperature {
 }
 ```
 
-## References
-1. [Declaring Member Variables (docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html)
-1. [Initializing Fields (docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html)
-1. [Constructors (docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html)
 
 ## Check Your Understanding
 

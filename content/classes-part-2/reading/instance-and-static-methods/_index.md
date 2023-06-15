@@ -16,7 +16,7 @@ We explored configuring data within classes with fields and properties. Now let�
 
 ## Quick Method Review
 <!-- TODO: Link to chapter 4 -->
-In the [last chapter](LINK), we learned that:
+In the [last chapter](TODO), we learned that:
 
 1. A method belongs to a class and performs an action.
 
@@ -107,7 +107,7 @@ Now let’s examine them in the context of what we’ve recently learned about c
 Just like static fields, **static methods** belong to the class as a whole, and not to any of the specific instances of the class. Thus, they are sometimes also called **class methods**. A static method is essentially the opposite of an instance method, since the two cases are mutually exclusive. _Instance methods_ rely on each object’s specific data, while static methods must NOT rely on data from a specific object.
 
 <!-- TODO: Link to chapter 2: Static Method Examples -->
-We call a static method by preceding it with the class name and using dot-notation. Here’s an example that we looked at [previously].
+We call a static method by preceding it with the class name and using dot-notation. Here’s an example that we looked at [previously](TODO).
 
 {{% notice blue "Example" "rocket" %}} 
  `HelloMethods.java`
@@ -164,10 +164,7 @@ Instance fields can only be called by instance methods.
  While static methods cannot access instance variables, an instance method CAN access a static variable. Why?
 {{% /notice %}}
 
-## References
-1. [Encapsulation (wikipedia.org)](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
-1. [Defining Methods (docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-1. [Passing Data to a Method or Constructor (docs.oracle.com)](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
+
 
 
 ## Check Your Understanding
