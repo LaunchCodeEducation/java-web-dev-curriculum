@@ -2,7 +2,7 @@
 title: "Reading"
 date: 2023-06-14T16:06:05-05:00
 draft: false
-weight: 5
+weight: 1
 originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
