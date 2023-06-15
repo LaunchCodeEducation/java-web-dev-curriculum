@@ -1,6 +1,6 @@
 ---
 title: "IntelliJ Generator Shortcut"
-date: 2023-06-15T16:06:05-05:00
+date: 2023-06-15T10:06:05-05:00
 draft: false
 weight: 4 
 originalAuthor: Courtney Frey # to be set by page creator
@@ -36,13 +36,13 @@ public class Course {
 1. Select _equals() and hashCode()_.  You will be asked which template to use.  Select _java.util.Objects.equals() and hashCode() (java 7+)_.  This is all we will select for now.
 
 {{< rawhtml >}}
-   <img src="../images/equals-hasCode.png" alt="menu for shortcuts" />
+   <img src="../images/equals-hasCode.png" alt="menu for shortcuts" width=30%/>
 {{< /rawhtml >}}
 
 1. When you are asked to _Choose fields to be included in equals()_  choose the fields you want equals to consider. Let’s assume that two `Course` objects will be equal if they have the same `title` and `instructor` values.  Select _Next_.
 
 {{< rawhtml >}}
-   <img src="../images/select-elements.png" alt="menu selecting fields" />
+   <img src="../images/select-elements.png" alt="menu selecting fields" width=50%/>
 {{< /rawhtml >}}
 
 1. The next menu will ask you to _Choose the fields you want included in hashCode()_.  This should match the fields you selected when you were setting up the `equals()` method.  Select _Create_.
