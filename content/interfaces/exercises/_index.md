@@ -1,12 +1,12 @@
 ---
-title: "Exercises"
+title: "Exercises: Interfaces and Polymorphism"
 date: 2023-06-15T14:01:05-05:00
 draft: false
 weight: 3
-originalAuthor: <no value> # to be set by page creator
-originalAuthorGitHub: <no value> # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+originalAuthor: Courtney Frey # to be set by page creator
+originalAuthorGitHub: speudusa # to be set by page creator
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -14,4 +14,30 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Exercises
 
-{{% children %}}
+As a new Java coder, it might take you some time to recognize the usefulness of interfaces. At first glance, these tools do not seem to provide much benefit over extending a base class, adding instance methods to a class, or overriding a method like `toString`.
+
+To help overcome this, let’s consider a common occurrence—sorting an `ArrayList` of objects.
+<!-- TODO: link to table ArrayList methods in 3.4 -->
+If the list contains `String` or numerical entries, then sorting the list is [trivial](TODO):
+   ```java
+   Collections.sort(arrayListName);
+   ```
+
+However, if the elements are custom objects (like `Cat`), then sorting the list becomes more complicated. This is because the objects may contain multiple fields, any of which could be used as a sorting option. For `Cat` objects, this could include `name`, `age`, or `mass`.
+
+## Getting Started
+
+Work on these exercises in the IntelliJ `java-web-dev-projects`. You will find the starter code in the `lsn7interfaces` package. Go ahead and open the folder and take a quick look at the class files.
+
+You will practice implementing interfaces by playing around with a small ice cream store. It consists of a refrigerated display `Case`, which contains a collection of ice cream `Flavor` objects and a selection of `Cone` objects.
+
+{{% notice green "Tip" "rocket" %}} 
+ Did you notice the abstract `Ingredient` class? This gets extended into `Flavor` and `Cone` to help streamline the code.
+{{% /notice %}}
+
+## 1. Sorting Flavors by Name
+
+To display a menu for your customers, you need to sort the ice cream flavors alphabetically by their `name` field. Fortunately, the `Comparator` interface helps you solve the sorting-objects-by-field problem.
+
+
+
