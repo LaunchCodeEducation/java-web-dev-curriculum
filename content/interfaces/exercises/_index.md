@@ -2,7 +2,7 @@
 title: "Exercises: Interfaces and Polymorphism"
 date: 2023-06-15T14:01:05-05:00
 draft: false
-weight: 3
+weight: 2
 originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
