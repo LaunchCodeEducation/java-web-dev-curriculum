@@ -13,3 +13,9 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Next Steps
+
+[Java Interface](https://www.w3schools.com/java/java_interface.asp)
+
+[Interfaces in Java](https://www.geeksforgeeks.org/interfaces-in-java/)
+
+[Java Interfaces](https://www.baeldung.com/java-interfaces)
