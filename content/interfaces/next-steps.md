@@ -19,3 +19,5 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 [Interfaces in Java](https://www.geeksforgeeks.org/interfaces-in-java/)
 
 [Java Interfaces](https://www.baeldung.com/java-interfaces)
+
+[Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp)

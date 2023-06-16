@@ -18,14 +18,14 @@ The first situations where you’ll want to use interfaces involve applying pre-
 
 **Important Methods**: `compareTo(T)`
 
-[Comparable<T> Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html)
+[Comparable Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html)
 
 ## `Comparator<T>`
 **Purpose**: Compares two objects of a given class. To allow comparisons and ordering based on the different fields, you can create several different `Comparator` classes. The class for the compared objects does NOT implement the interface itself.
 
 **Important Methods**: `compare(T, T)`
 
-[Comparator<T> Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
+[Comparator Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
 
 <!-- TODO: link 1 & 2 back to chapter 3.4 -->
 This interface can be used to determine, given two objects of the given type, which one is “greater” than the other. It is also used by collections such as an [ArrayList](TODO 1) to sort its contents with the [sort](TODO 2) method.
@@ -39,7 +39,7 @@ This interface can be used to determine, given two objects of the given type, wh
 
 **Important Methods**: `iterator()`
 
-[Iterable<T> Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html)
+[Iterable Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html)
 
 This interface is implemented by the `ArrayList<T>` class, which we’ve been using throughout this course.
 
@@ -60,7 +60,7 @@ for (String item : collection) {
 
 **Important Methods**: `add(int, T)`, `get(int)`, `indexOf(T)`
 
-[List<T> Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
+[List Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
 
 This interface is also implemented by the `ArrayList<T>` class, which we’ve been using throughout this course. In fact, `List<T>` extends `Iterable<T>`. _An interface may extend another interface_, in the same way that classes may extend each other.
 {{% notice blue "Example" "rocket" %}} 
@@ -79,7 +79,7 @@ String firstItem = collection.get(0);
 
 **Important Methods**: `get(K)`, `containsKey(K)`, `put(K, V)`
 
-[Map<K, V> Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html)
+[Map Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html)
 `
 This interface is implemented by the `HashMap<K, V>` class, which we’ve been using throughout this course.
 {{% notice blue "Example" "rocket" %}} 
