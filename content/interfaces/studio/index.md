@@ -17,8 +17,8 @@ Although they look the same, the old optical discs—CDs and DVDs—are quite di
 ## Getting Ready
 
 Set up a local copy of the project:
-<!-- TODO create repo for starter code -->
-   1. Visit the [repository page](TODO) for this project and fork it to create a copy under your own GitHub account.
+
+   1. Visit the [repository page](https://github.com/LaunchCodeEducation/java17-spinning-discs) for this project and fork it to create a copy under your own GitHub account.
 
    1. Back in IntelliJ, close any open projects.
 
