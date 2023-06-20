@@ -1,0 +1,14 @@
+---
+title: "Inheritance in OOP"
+date: 2021-10-01T09:28:27-05:00
+weight: 1
+draft: false
+---
+
+**Inheritance** is the second of the **Four Pillars of Object-Oriented Programming** that we encounter.
+
+Here's a definition: inheritance is a mechanism within object-oriented programming that allows one class to be based on another class, thus receiving its properties and behaviors.
+
+{{% notice blue Note "rocket" %}}
+Inheritance is also sometimes referred to as **subtyping**.
+{{% /notice %}}
