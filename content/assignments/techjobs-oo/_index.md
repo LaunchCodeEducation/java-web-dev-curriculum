@@ -1,5 +1,5 @@
 ---
-title: "Assignment 2: Tech Jobs OO"
+title: "Assignment #2: Tech Jobs OO"
 date: 2023-06-05T10:20:54-05:00
 draft: false
 weight: 3

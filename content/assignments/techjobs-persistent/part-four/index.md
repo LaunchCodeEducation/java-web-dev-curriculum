@@ -66,8 +66,7 @@ As with a job's employer, you only need to query your database for skills if the
 
 ## It's Your Job, List It and Re-Search It
 
-<!-- TODO: Add link to techjobs mvc below -->
-You now have all the tools in place to re-implement the list and search views from <!-- [tech-jobs-mvc](#tech-jobs-mvc) -->.
+You now have all the tools in place to re-implement the list and search views from [TechJobs MVC]({{< relref "../../techjobs-mvc" >}}).
 
 1. In the `ListController` class, add fields for `EmployerRepository ` and `SkillRepository`, both annotated with `@Autowired`.
 1. You'll also need to pass the employer and skill data from those repositories into the view template rendered at `list/`. Add the right `model.addAttribute(name, value)` statements to pass this info into `templates/list.html`.
