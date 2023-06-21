@@ -102,9 +102,8 @@ public class Greeting {
 
 What access modifier would you give `name`?
 
-a. no access modifier
-b. `public`
-c. `private`
-d. `protected`
-```
+1. no access modifier
+1. `public`
+1. `private`
+1. `protected`
 {{% /notice %}}

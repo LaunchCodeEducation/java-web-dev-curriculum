@@ -101,7 +101,7 @@ If you want to learn more about this subject, check out the Oracle Documentation
 {{% notice green Question "rocket" %}}
 The following code block contains several bugs. Mark all of the lines that contain a bug in the code.
 
-```java
+```java {linenos=table}
 public class Greeting {
 
    public String name = "Jess"
