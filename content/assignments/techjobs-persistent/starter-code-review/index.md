@@ -23,11 +23,10 @@ Set up a local copy of the project:
 1. The tests for this assignment are set up the same way as for <!--[assignment 2](). -->
 
 You won't be able to run your application or the tests yet. If you try to do so, you'll see a host of errors relating to the
-Spring Data annotations and classes. Some of these have already been used in the code, but the dependency that includes them has not yet been declared. That will be one of your tasks. You'll need to complete [Part1]({{< relref "../part-one/index.html" >}}) before you can run the application and view it in a browser.
+Spring Data annotations and classes. Some of these have already been used in the code, but the dependency that includes them has not yet been declared. That will be one of your tasks. You'll need to complete [Part 1]({{< relref "../part-one/index.html" >}}) before you can run the application and view it in a browser.
 
-<!-- TODO: Add appropriate link below for assignment 3 once added to book. -->
 That said, it's a good idea to scan the classes and templates even before you're able to execute
-`bootRun`. Take a gander at the `Job` class. It will look somewhat similar to the model in <!--[Tech Jobs (MVC Edition)]() -->, with a few key differences.
+`bootRun`. Take a gander at the `Job` class. It will look somewhat similar to the model in [Tech Jobs (MVC Edition)]({{< relref "../../techjobs-mvc" >}}), with a few key differences.
 
 You're no longer using a csv file to load job data, instead, we'll be creating new Job objects via a
 user form. The Job data will be stored in a MySQL database that you'll setup in [Part 1]({{< relref "../part-one/index.html" >}}) of this assignment.
