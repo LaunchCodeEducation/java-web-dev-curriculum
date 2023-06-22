@@ -161,8 +161,8 @@ In a previous lesson, we introduced the special methods `equals` and `toString`.
 Note that we should use the `@Override` annotation when we provide new implementations of these methods as well.
 
 ### References:
-- [The @Override annotation (docs.oracle.com)](https://docs.oracle.com/en/java/javase/17/docs/api/index.html)
-- [The Object Class (docs.oracle.com)](https://docs.oracle.com/en/java/javase/17/docs/api/index.html)
+- [The @Override annotation (docs.oracle.com)](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
+- [The Object Class (docs.oracle.com)](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
 
 Check Your Understanding:
 
