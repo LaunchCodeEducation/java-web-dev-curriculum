@@ -25,7 +25,7 @@ We’ve encountered access modifiers so far in our code. In our examples, you fr
 Let's take another look at our `HelloWorld` class from the last section,
 but with one small change.
 
-```java
+```java{linenos=table}
 public class HelloWorld {
 
    String message = "Hello World";
@@ -35,7 +35,6 @@ public class HelloWorld {
    }
 
 }
-```
 
 In this `HelloWorld` class, we omit the `public` access modifier in lines 3 and 5. Doing this implicitly gives the message field and the `sayHello` method **default access**.
 {{% /notice %}}
