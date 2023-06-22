@@ -3,6 +3,13 @@ title: "Inheritance in Java"
 date: 2021-10-01T09:28:27-05:00
 weight: 2
 draft: false
+originalAuthor: John Woolbright # to be set by page creator
+originalAuthorGitHub: jwoolbright23 # to be set by page creator
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+lastEditor: # update any time edits are made after review
+lastEditorGitHub: # update any time edits are made after review
+lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Let's examine an inheritance relationship between two classes, `Cat` and `HouseCat`. `HouseCat` is a class that inherits from `Cat`. When defined, `HouseCat` thus receives the data and behaviors of `Cat`. These inherited traits are things like fields, properties, and methods. Any fields and non-constructor methods in `Cat` are available to each instance of `HouseCat`.
