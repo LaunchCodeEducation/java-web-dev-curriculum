@@ -5,8 +5,8 @@ draft: false
 weight: 5
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -86,12 +86,10 @@ using `Arrays` instead of `ArrayLists`:
    }
 ```
 
-<!-- TODO: Add link back to arraylist methods -->
-
 Note that we have to decide up front how large our `Arrays` `students`
 and `grades` are going to be. Thus, this program sets an arbitrary maximum amount
 of students, likely larger than any user will enter. It may seem obvious, then, 
-that `Array` has no equivalent add() method. The only 
+that `Array` has no equivalent [add() method]({{< relref "../arraylist/#arraylist-methods" >}}). The only 
 way to access and alter an element in an `Array` is with **bracket notation**, 
 using an explicit index. For example, gradebook defines a counter variable, `numStudents`.
 When the first student is entered by the user, the value is stored in `newStudent`.
@@ -116,10 +114,6 @@ end of our program, we could do the following:
 
 We’ll use `Arrays` in Java from time-to-time, but for the most part you should
 rely on `ArrayLists` to store collections of values, or ordered data.
-
-## References
-
-* [Arrays Tutorial](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
 
 ## Check Your Understanding
 

@@ -5,8 +5,8 @@ draft: false
 weight: 3
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -61,3 +61,7 @@ A test run of the program might yield the following:
 ```
 
 We’ll look at the gradebook using an `Arraylist` first. 
+
+{{% notice blue "Note" "rocket" %}}
+   To run the code as you learn about different collections, navigate to the `control-flow-and-collections` directory in `java-web-dev-projects`. Within this directory, you will find a `chapter-example` directory with a working IntelliJ project inside. The `student-example` project has three classes that show how each of the three collections we are covering in this chapter can be used to make a gradebook application.
+{{% /notice %}}

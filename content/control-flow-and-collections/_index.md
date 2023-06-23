@@ -3,18 +3,26 @@ title: "Chapter 3: Control Flow and Collections"
 date: 2023-06-22T09:45:23-05:00
 draft: false
 weight: 3
-originalAuthor: <no value> # to be set by page creator
-originalAuthorGitHub: <no value> # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+originalAuthor: Sally Steuterman # to be set by page creator
+originalAuthorGitHub: gildedgardenia # to be set by page creator
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-## Major Concepts 
+## Learning Objectives
+
+Upon completing all the material in this chapter, you should be able to do the following:
+
+1. Use basic control flow structures
+1. Create and work with common collections objects
+1. Understand how to choose a collection type for a given problem
 
 ## Key Terminology
+
+Here is a list of the key terms you will find throughout the chapter organized by the page upon which they first appear.
 
 ### Conditionals
 

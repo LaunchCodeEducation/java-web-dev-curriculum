@@ -5,8 +5,8 @@ draft: false
 weight: 6
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -180,10 +180,6 @@ We leave it to you to refer to the official documentation linked below for more
 details. You’ll certainly be using `ArrayLists` and maps in more ways than
 those covered in this lesson, but with the knowledge you have now, you
 should be able to use Java collections and learn new uses as you go.
-
-## References
-
-*  [HashMap Class](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/HashMap.html)
 
 ## Check Your Understanding
 

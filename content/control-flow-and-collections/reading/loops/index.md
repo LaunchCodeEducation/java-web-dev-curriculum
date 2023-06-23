@@ -5,8 +5,8 @@ draft: false
 weight: 2
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -249,13 +249,6 @@ printouts):
    Found it!
    Not here
 ```
-
-## References
-
-* [The for statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
-* [The while and do-while Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
-* [Break and Continue Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html)
-* [Summary of Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flowsummary.html)
 
 ## Check Your Understanding
 

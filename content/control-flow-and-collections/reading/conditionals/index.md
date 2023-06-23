@@ -5,8 +5,8 @@ draft: false
 weight: 1
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -308,12 +308,6 @@ The output:
    Enter an integer: 4
    Saturday
 ```
-
-## References 
-
-* [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
-* [The if-then and if-then-else Statements](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html)
-* [The switch Statement](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)
 
 ## Check Your Understanding
 

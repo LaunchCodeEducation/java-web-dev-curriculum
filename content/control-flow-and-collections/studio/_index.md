@@ -5,8 +5,8 @@ draft: false
 weight: 3
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -36,13 +36,14 @@ For your convenience, here is a quote from the movie *Hidden Figures*:
 
 ## Some Items to Ponder Before Starting
 
+1. Within the `control-flow-and-collections` directory in `java-web-dev-projects`, create a new directory called `studio`. Within the `studio` directory, create a new IntelliJ project called `counting-characters` for working on this task.
 1. There are multiple ways to approach this task, but one way involves the
    following steps:
 
-   a. Loop through the string one character at a time,
-   b. Store and/or update the count for a given character using an appropriate
+   1. Loop through the string one character at a time,
+   1. Store and/or update the count for a given character using an appropriate
       data structure.
-   c. Loop through the data structure to print the results (one character and its
+   1. Loop through the data structure to print the results (one character and its
       count per line).
 
 1. Which type of data structure (`ArrayList`, `HashMap`, or `Array`)

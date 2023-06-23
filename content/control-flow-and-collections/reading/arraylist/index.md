@@ -5,8 +5,8 @@ draft: false
 weight: 4
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: # to be set by the page reviewer
-reviewerGitHub: # to be set by the page reviewer
+reviewer: Kimberly Horan # to be set by the page reviewer
+reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -70,7 +70,7 @@ source code.
    }
 ```
 
-<!-- TODO: Add link to Array page -->
+<!-- TODO: Add link to Chapter 2, array section -->
 
 Here we declare and initialize two objects, `students` and `grades`,
 which appear to be of type `ArrayList<String>` and
@@ -286,11 +286,6 @@ create it. So we'll need to first define the new Array before we can use
 ```
 
 Speaking of Arrays, let's see the Array version of Gradebook next.
-
-## References
-
-* [Java Collections](http://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
-* [ArrayList Class](http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 
 ## Check Your Understanding
 
