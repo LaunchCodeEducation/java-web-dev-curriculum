@@ -43,9 +43,11 @@ In this project, you’ll show that you can:
 
 ### Get the Starter Code
 
-<!-- //TODO: add link to github classroom -->
+{{% notice blue Note "rocket" %}}
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
+{{% /notice %}}
 
-In Canvas, Graded Assignment #2: TechJobs (Object-Oriented Edition) contains a [GitHub Classroom assignment]( ADD LINK) invitation link and then set up the project in IntelliJ. Refer back to the GitHub Classroom instructions from [Assignment #0: Hello, World!]({{< relref "../hello-world/_index.md" >}}) for details.
+In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
 
 ## Introduction
 Sally has gotten the ball rolling by adding a `Job` class, along with classes to represent the individual properties of a job: `Employer`, `Location`, `PositionType`, and `CoreCompetency`. She completed the Employer class, and she left you the task of filling in the others.
