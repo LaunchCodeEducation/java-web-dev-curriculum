@@ -97,7 +97,7 @@ The first constructor allows for the creation of `Student` objects where the cod
 A better way to write the above constructors would be this:
 
 {{% notice blue Example "rocket" %}}
-```java
+```java{linenos=tables}
 public class Student {
 
     private String name;
@@ -122,7 +122,7 @@ public class Student {
 ```
 {{% /notice %}}
 
-In the example above on line 17, we use `this()` to invoke another constructor within the same class. In this case, the second constructor calls the first with the default values for `numberOfCredits` and `gpa`. If you use this syntax, the call to `this()` must be the first line in the constructor. This is a good practice not only because it makes your code shorter, but also because it allows any initialization behavior that may be carried out beyond just initializing variables to be contained in a smaller number of constructors. In other words, constructors can share initialization code. Notice from this example that a constructor doesn’t need to require an initial value for each field as an argument.
+In the example above on line 16, we use `this()` to invoke another constructor within the same class. In this case, the second constructor calls the first with the default values for `numberOfCredits` and `gpa`. If you use this syntax, the call to `this()` must be the first line in the constructor. This is a good practice not only because it makes your code shorter, but also because it allows any initialization behavior that may be carried out beyond just initializing variables to be contained in a smaller number of constructors. In other words, constructors can share initialization code. Notice from this example that a constructor doesn’t need to require an initial value for each field as an argument.
 
 When defining constructors, think about:
 

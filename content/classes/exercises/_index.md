@@ -14,10 +14,10 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Classes and Objects
 
-Work on these exercises in the IntelliJ `java-web-dev-exercises` project.
+Work on these exercises in the IntelliJ `java-web-dev-projects` project.
 
 {{% notice blue Note "rocket" %}}
-If you have not already cloned the `java-web-dev-exercises` project repository you can find it here: [Java Web Dev Projects Repository](https://github.com/LaunchCodeEducation/java-web-dev-projects-17)
+If you have not already cloned the `java-web-dev-projects` project repository you can find it here: [Java Web Dev Projects Repository](https://github.com/LaunchCodeEducation/java-web-dev-projects/)
 {{% /notice %}}
 
 1. Open up the file, `Student.java`, and add all of the necessary getters and setters. Think about the access level each field and method should have, and try reducing the access level of at least one setter to less than public.
@@ -58,9 +58,15 @@ public double getGpa() {
 ```
 {{% /expand %}}
 
-2. Instantiate the `Student` class using yourself as the student. For the `numberOfCredits` give yourself `1` for this class and a GPA of `4.0` because you are a Java superstar!
+2. Instantiate the `Student` class within the StudentPractice class using yourself as the student. For the `numberOfCredits` give yourself `1` for this class and a GPA of `4.0` because you are a Java superstar!
 
-3. In the `school` package, create a class `Course` with at least three fields. Before diving into IntelliJ, try using pen and paper to work through what these might be. At least one of your fields should be an `ArrayList` or `HashMap`, and you should use your `Student` class.
+{{% expand "Check Your Solution" %}}
+```java
+Student student = new Student("Your Name", 12345, 1, 4.0);
+```
+{{% /expand %}}
+
+3. Within the same package, create a class `Course` with at least three fields. Before diving into IntelliJ, try using pen and paper to work through what these might be. At least one of your fields should be an `ArrayList` or `HashMap`, and you should use your `Student` class.
 
 {{% expand "Check Your Solution" %}}
 ```java
@@ -72,7 +78,7 @@ public class Course {
 ```
 {{% /expand %}}
 
-4. In the `school` package, create a class `Teacher` with four fields: `firstName`, `lastName`, `subject`, and `yearsTeaching`. Add getters and setters to the class and add the access level to each field and method in the class. When adding your getters and setters, think about what we read about in the section on Encapsulation.
+4. Within the same package, create a class `Teacher` that has four fields: `firstName`, `lastName`, `subject`, and `yearsTeaching`. Add getters and setters to the class and add the access level to each field and method in the class. When adding your getters and setters, think about what we read about in the section on Encapsulation.
 
 1. What access modifier restricts access the most for what we need?
 

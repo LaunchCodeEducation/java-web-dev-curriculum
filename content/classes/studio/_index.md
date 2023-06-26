@@ -3,8 +3,8 @@ title: "Studio: Restaurant Menu"
 date: 2023-01-23T13:36:52-06:00
 draft: false
 weight: 3
-originalAuthor: Sally Steuterman # to be set by page creator
-originalAuthorGitHub: gildedgardenia # to be set by page creator
+originalAuthor: John Woolbright # to be set by page creator
+originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
@@ -41,7 +41,7 @@ While your partner is presenting their design, ask questions about why they made
 
 ## Implementation
 
-In IntelliJ, create a new project, "Restaurant Menu". Within the project, create a new package named "restaurant". Add the `Menu` and `MenuItem` classes and code the design that you created above. Be sure to add getters and setters as appropriate.
+In IntelliJ, open the "Restaurant Menu" project in the `classes-part-one/studio` directory. Within the project, create a new package named "restaurant" within the `src/main/java` directory. Add the `Menu` and `MenuItem` classes and code the design that you created above. Be sure to add getters and setters as appropriate.
 
 ## Submitting Your Work
 
