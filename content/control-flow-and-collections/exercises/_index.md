@@ -5,8 +5,8 @@ draft: false
 weight: 2
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: John Woolbright # to be set by the page reviewer
+reviewerGitHub: jwoolbright23 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -14,12 +14,11 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 <!-- TODO: Add link to Chapter 1, naming conventions -->
 
-Work on these exercises in the `java-web-dev-projects` repo,
-creating a new class for each item. You may call these classes whatever you
+Work on these exercises in the `java-web-dev-projects` repo,creating a new class for each item. You may call these classes whatever you
 like, but remember to use the proper Java naming conventions.
 
 1. Navigate inside `control-flow-and-collections` within `java-web-dev-projects` and create a new folder called `exercises`.
-1. Created a new IntelliJ project within your new `exercises` directory called `collections-exercises`.
+1. Create a new IntelliJ project within your new `exercises` directory called `collections-exercises`.
 
 Now you are ready to start creating new classes and practice using different collections!
 

@@ -5,8 +5,8 @@ draft: false
 weight: 5
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: John Woolbright # to be set by the page reviewer
+reviewerGitHub: jwoolbright23 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -14,9 +14,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 <!-- TODO: add reference to Chapter 2 -->
 
-We learned about arrays in Java in a previous lesson, 
-so let’s spend a moment comparing them to `ArrayLists`. `ArrayLists`  
-are generally easier to use than Java's `Array`. Let's see why this is.
+We learned about arrays in Java in a previous lesson, so let’s spend a moment comparing them to `ArrayLists`. `ArrayLists` are generally easier to use than Java's `Array`. Let's see why this is.
 
 Why does Java have both `Arrays` and `ArrayLists`? The answer is
 historical, at least in part. Java is a C-style language, and arrays are
@@ -32,7 +30,7 @@ To illustrate `Array` usage, here is a version of the Gradebook program
 using `Arrays` instead of `ArrayLists`:
 
 ```java {linenos=table}
-   package org.launchcode.java.demos.collections;
+   package org.launchcode;
 
    import java.util.Scanner;
 

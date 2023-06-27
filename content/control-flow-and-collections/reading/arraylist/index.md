@@ -5,8 +5,8 @@ draft: false
 weight: 4
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: John Woolbright # to be set by the page reviewer
+reviewerGitHub: jwoolbright23 # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -17,12 +17,11 @@ several new Java concepts, including the class `ArrayList`. We will also
 review different kinds of `for` loops used in Java.
 
 Before going any further, we suggest you run the `ArrayListGradebook`
-program in IntelliJ. You can view this program in `java-web-dev-exercises`.
-Once you’ve done that, let’s look at what is happening in the Java
-source code.
+program in IntelliJ. You can view this program in `java-web-dev-projects/chapter-example/student-example` directory.
+Once you’ve done that, let’s look at what is happening in the Java source code.
 
 ```java {linenos=table}
-   package org.launchcode.java.demos.collections;
+   package org.launchcode;
 
    import java.util.ArrayList;
    import java.util.Scanner;
