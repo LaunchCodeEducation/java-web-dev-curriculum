@@ -16,7 +16,7 @@ lastMod: 2023-06-27T09:27:57-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 
 <!-- TODO: Link to chapter 1 for naming conventions-->
 
-Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](TODO) and make sure that the file name matches the class name.
+Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) and make sure that the file name matches the class name.
 
 
 
