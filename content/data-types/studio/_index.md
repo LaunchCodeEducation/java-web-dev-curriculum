@@ -57,7 +57,7 @@ Some questions to ask yourself:
 Add a second Java file to your program to delegate the area calculation away from the printing task.
 
 1. Add a new class in your `studios.areaofacircle` package called `Circle`.
-1, Create a method called `getArea` inside of `Circle` that takes a `Double` `radius` as its only parameter and returns another `Double`, the result of the area calculation.
+1. Create a method called `getArea` inside of `Circle` that takes a `Double` `radius` as its only parameter and returns another `Double`, the result of the area calculation.
    {{% notice green "Tip" "rocket" %}} 
    ```java
    public static Double getArea(Double radius) {
