@@ -100,6 +100,5 @@ public boolean equals(Object toBeCompared) {
 ```
 {{% /expand %}}
 
-<!-- TODO: link to chapter 4 exercises -->
 
 Add custom `equals()` and `toString()` methods to the `Course` class which you started in the exercises for the [previous chapter]({{< relref "../../classes/exercises/_index.md" >}}).
