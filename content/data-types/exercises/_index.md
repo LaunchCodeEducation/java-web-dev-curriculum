@@ -16,7 +16,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 <!-- TODO: Link to chapter 1 for naming conventions-->
 
-Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions]({{< relref "../intro-and-setup/naming-conventions" >}}) and make sure that the file name matches the class name.
+Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](TODO) and make sure that the file name matches the class name.
 
 
 
@@ -24,22 +24,35 @@ Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Creat
 
 Here is how to create a new module to store these exercises, and how to create new classes within this package:
 
-1. Click on the folder `java-web-dev-projects` in the Project pane, then right-click (or control-click for some Mac users) and select _New_ and then select _Module_.
-1. Name the package `datatypes-exercises`.
+1. Click on the folder `java-web-dev-projects` in the Project pane.
+1. Open the package `datatypes-exercises`.
 1. Open the `src` folder (directory).
 1. Open the `main` module.
-1. Open the `java` folder (It's a blue folder)
-1. Open the `org.launchcode` package folder.  You should see a class called `Main`.
-1. Right-click/Control-click on the `org.launchcode` package and select _New_ and then _Java Class_.
-1. Name this what you will name your class (for example, in the 4th exercise below, you might name the class `Alice` or `Sentence`).
+1. Right-click (or control-click for some Mac users) on the `java` folder and select _New_ and then select _Package_.
+   {{< rawhtml >}}
+   <img src="./images/create-newpackage.png" alt="Select New then Package to create a new package " />
+   {{< /rawhtml >}}
+1. Name the new package `org.launchcode`.
+   {{< rawhtml >}}
+   <img src="./images/name-newpackage.png" alt="Name the new package 'org.launchcode`"  />
+   {{< /rawhtml >}}
+1. Righ click on the package and select _New_ and then _Java Class_.
+1. Name this what you will name your class (for example, in the 1st exercise below, you might name the class `InputOutput` or `Hello`).
+   {{< rawhtml >}}
+   <img src="./images/name-newclass.png" alt="Naming the new class InputOutput to match the theme of the exercise" width=60% />
+   {{< /rawhtml >}}
 1. Repeat steps 7 and 8 to create new classes.
 
-   {{% notice blue "Example" "rocket" %}} 
+   {{% notice orange "Warning" "rocket" %}} 
    You will be asked whether you want to add this file to Git. Press the “Yes” or "Add" button.
    This is similar to `git init` and will allow you to stage your work later.
    {{% /notice %}}
 
-1. You created the new class! You can proceed to write code within it. (Don’t forget to write the `main` method!)
+1. You created the new class! You should see it in the file tree.    You can proceed to write code within it. (Don’t forget to write the `main` method!)
+
+   {{< rawhtml >}}
+   <img src="./images/filetree-newclass.png" alt="File tree now contains the new class named InputOutput" />
+   {{< /rawhtml >}}
 
 ## The Exercises
 

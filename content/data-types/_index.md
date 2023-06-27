@@ -22,17 +22,24 @@ By the end of this lesson, you should be able to do the following:
 1. Write simple Java programs
 
 ## Key Terminology
+
+## Data Types
 1. dynamically typed
 1. statically typed
 1. type system
 1. boxing
 1. unboxing
 1. autoboxing
-1. encapsulation
+
+### Some Java Practice
+1. encapsulate
 1. `import`
+1. `Scanner`
 1. `package`
 1. `//`
 1. `/ * ... */`
+
+### More Data Types
 1. objects
 1. class
 1. reference variables

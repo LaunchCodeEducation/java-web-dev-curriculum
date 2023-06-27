@@ -17,9 +17,10 @@ Get cozy with Java syntax by writing a console program that calculates the area 
 ## Creating your class
 Since you’re still new to Java and IntelliJ, we’ll provide some extra direction the first studio.
 
-First, make a new folder, or package, to hold your studio work. Create a new package named `org.launchcode.java.studios.areaofacircle` by right-clicking (or ctrl-clicking for some Mac users) on the `src` directory in `java-web-dev-exercises` and selecting _New_ > _Package_. Be sure to enter the full name, or your package won’t be created in the correct location.
-
-Create your class in the `java-web-dev-exercises` project within the package `org.launchcode.java.studios.areaofacircle` by right-clicking/ctrl-clicking on the `studios.areaofacircle` package/folder and selecting _New_ > _Java Class_. Enter the name Area. Select the option to add the file to Git when the window appears.
+1. Find the `java` folder inside the `datatypes-studio` module.
+1. Create a new package named `org.launchcode` by right-clicking (or ctrl-clicking for some Mac users) on the `java` directory and selecting _New_ > _Package_. Be sure to enter `org.launchcode` as the full name, or your package won’t be created in the correct location.
+1. Create a new class inside the package by right-clicking/ctrl-clicking on the `studios.areaofacircle` package/folder and selecting _New_ > _Java Class_. 
+1. Name the class `Area`.  Select the option to add the file to Git when the window appears.
 
 ## A. The `Area` Class
 
@@ -66,9 +67,9 @@ Add a second Java file to your program to delegate the area calculation away fro
    {{% /notice %}}
 1. Back in `Area`, replace your area calculation line with a call to `Circle`.`getArea()`.
 
-{{% notice green "Tip" "rocket" %}} 
- Check out the HelloMethods and Message example from [Static Methods](../reading/more-data-types/#static-methods) for a reference on how to use a class from another file.
-{{% /notice %}}
+   {{% notice green "Tip" "rocket" %}} 
+   Check out the HelloMethods and Message example from [Static Methods](../reading/more-data-types/#static-methods) for a reference on how to use a class from another file.
+   {{% /notice %}}
 
 Great work! Don't forget to save, `stage`, and `commit` your work up to GitHub.
 

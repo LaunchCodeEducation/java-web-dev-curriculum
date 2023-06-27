@@ -16,10 +16,10 @@ Let’s move beyond our “Hello, World” example and explore a simple temperat
 
 ## Temperature Conversion
 
-1. Open the `TempConverter` file in the `java-web-dev-projects/datatypes/datatypes-examples` project in IntelliJ.
+1. Open the `TempConverter` file in the `java-web-dev-projects/datatypes/datatypes-examples` project in IntelliJ. Click through the folders until you find the `TempConverter` class.
 
    {{< rawhtml >}}
-   <img src="../images/tempConverterTree.png" alt="File tree showing files found in 'lsn1datatypes' directory "  />
+   <img src="../images/select-tempconverter.png" alt="File tree showing files found in 'lsn1datatypes' directory "  width=60%/>
    {{< /rawhtml >}}
 
 1. Here’s what the file should look like. We will analyze the different statements in a moment.
