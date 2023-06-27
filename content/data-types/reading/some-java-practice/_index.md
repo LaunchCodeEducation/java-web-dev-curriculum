@@ -16,7 +16,7 @@ Let’s move beyond our “Hello, World” example and explore a simple temperat
 
 ## Temperature Conversion
 
-1. Open the `TempConverter` file in the `java-web-dev-exercises` project in IntelliJ.
+1. Open the `TempConverter` file in the `java-web-dev-projects/datatypes/datatypes-examples` project in IntelliJ.
 
    {{< rawhtml >}}
    <img src="../images/tempConverterTree.png" alt="File tree showing files found in 'lsn1datatypes' directory "  />
@@ -25,7 +25,6 @@ Let’s move beyond our “Hello, World” example and explore a simple temperat
 1. Here’s what the file should look like. We will analyze the different statements in a moment.
 
    ```java{linenos=table,hl_lines=[],linenostart=1}
-   package org.launchcode.java.demos.lsn1datatypes;
 
    import java.util.Scanner;
 

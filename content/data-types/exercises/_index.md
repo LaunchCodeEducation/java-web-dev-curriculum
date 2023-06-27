@@ -16,19 +16,23 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 <!-- TODO: Link to chapter 1 for naming conventions-->
 
-Work on these exercises in the IntelliJ `java-web-dev-exercises` project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](Link to chapter 1) and make sure that the file name matches the class name.
+Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions]({{< relref "../intro-and-setup/naming-conventions" >}}) and make sure that the file name matches the class name.
+
 
 
 ## Creating a Package and Classes
 
-Here is how to create a new package to store these exercises, and how to create new classes within this package:
+Here is how to create a new module to store these exercises, and how to create new classes within this package:
 
-1. Click on the folder `src` in the Project pane, then right-click (or control-click for some Mac users) and select _New_ and then select _Package_.
-1. Name the package `exercises`.
-1. Right-click/Control-click on the newly created `exercises` folder. Select _New_ and then _Package_.
-1. Name the package `datatypes`.
-1. Right-click/Control-click on the newly created `datatypes` folder. Select _New_ and then _Java Class_.
+1. Click on the folder `java-web-dev-projects` in the Project pane, then right-click (or control-click for some Mac users) and select _New_ and then select _Module_.
+1. Name the package `datatypes-exercises`.
+1. Open the `src` folder (directory).
+1. Open the `main` module.
+1. Open the `java` folder (It's a blue folder)
+1. Open the `org.launchcode` package folder.  You should see a class called `Main`.
+1. Right-click/Control-click on the `org.launchcode` package and select _New_ and then _Java Class_.
 1. Name this what you will name your class (for example, in the 4th exercise below, you might name the class `Alice` or `Sentence`).
+1. Repeat steps 7 and 8 to create new classes.
 
    {{% notice blue "Example" "rocket" %}} 
    You will be asked whether you want to add this file to Git. Press the “Yes” or "Add" button.
@@ -43,7 +47,7 @@ Here is how to create a new package to store these exercises, and how to create 
 
 Write a new “Hello, World” program to prompt the user for their name and greet them by name.
 
-1. Follow steps 5-7 above to create a new `HelloWorld Class` inside of your `datatypes` folder.
+1. Follow steps 7 and 8 above to create a new `HelloWorld Class` inside of your `org.launchcode` folder.
 
 1. Add an `import` statement at the the top of the file to include `Scanner`:
    ```java
@@ -62,14 +66,15 @@ Write a new “Hello, World” program to prompt the user for their name and gre
    String name = input.nextLine();
    ```
 1. Use concatenation to print the greeting:
-```java
-System.out.println("Hello " + name);
-```
+   ```java
+   System.out.println("Hello " + name);
+   ```
 Right-click/Control-click the arrow next to your class and run the program.
 
 {{% expand "Check your solution" %}}
 ```java
-package exercises.lsn1datatypes;
+package org.launchcode;
+
 import java.util.Scanner;
 
 public class HelloWorld {
@@ -88,7 +93,7 @@ public class HelloWorld {
 
 Write a program to calculate the area of a rectangle and print the answer to the console. You should prompt the user for the dimensions. (What data types should the dimensions be?)
 
-1. Follow steps 5-7 above to create a new Class inside of your exercises.
+1. Follow steps 7 and 8 above to create a new Class inside of your exercises.
 
 1. Add an `import` statement at the top of your file to use `Scanner`.
 
@@ -116,7 +121,7 @@ Write a program that asks a user for the number of miles they have driven and th
 
 {{% expand "Check your solution" %}}
 ```java
-   package exercises.datatypes;
+
    import java.util.Scanner;
 
    public class Miles {
@@ -150,10 +155,12 @@ The first sentence of _Alice’s Adventures in Wonderland_ is below. Store this 
 
 Extend the previous exercise. Assume the user enters a word that is in the sentence. Print out its index within the string and its length. Next, remove the word from the string and print the sentence again to confirm your code. Remember that strings are _immutable_, so you will need to reassign the old sentence variable or create a new one to store the updated phrase.
 
-   {{% expand "Check your solution" %}}
-      Integer index = firstSentence.indexOf(searchTerm);
-      Integer length = searchTerm.length();
-      System.out.println("Your search term first appears at index " + index + ". Your term is " + length + " characters long.");
-      String modifiedSentence = firstSentence.replace(searchTerm, "");
-      System.out.println(modifiedSentence);
-   {{% /expand %}}
+{{% expand "Check your solution" %}}
+```java
+   Integer index = firstSentence.indexOf(searchTerm);
+   Integer length = searchTerm.length();
+   System.out.println("Your search term first appears at index " + index + ". Your term is " + length + " characters long.");
+   String modifiedSentence = firstSentence.replace(searchTerm, "");
+   System.out.println(modifiedSentence);
+```
+{{% /expand %}}
