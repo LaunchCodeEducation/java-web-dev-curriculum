@@ -12,7 +12,7 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-Work on these exercises in the IntelliJ `java-web-dev-projects` project. You will update your `Student.java` file by implementing the `addGrade` and `getGradeLevel` methods that were sketched out in the [Instance Methods]({{< relref "../reading/instance-and-static-methods/_index.md" >}}) section.
+Work on these exercises in the IntelliJ `java-web-dev-projects/classes-part-two/exercises` project. You will update your `Student.java` file by implementing the `addGrade` and `getGradeLevel` methods that were sketched out in the [Instance Methods]({{< relref "../reading/instance-and-static-methods/_index.md" >}}) section.
 
 ## 1. The `getGradeLevel` Method
 
