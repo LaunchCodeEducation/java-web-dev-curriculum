@@ -17,8 +17,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 {{< youtube LQxzrKPnUGY >}}
 
 {{% notice blue Note "rocket" %}}
-<!-- TODO: Will need to update below links to new hello-spring app when created -->
-The starter code for this video is found in the [path-variables branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/path-variables) of the `hello-spring-demo` repo. The final code presented in this video is found on the [forms branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/forms). As always, code along to the videos on your own `hello-spring` project.
+The starter code for this video is found in the [path-variables branch](https://github.com/LaunchCodeEducation/hello-spring/tree/path-variables) of the `hello-spring-demo` repo. The final code presented in this video is found on the [forms branch](https://github.com/LaunchCodeEducation/hello-spring/tree/forms). As always, code along to the videos on your own `hello-spring` project.
 {{% /notice %}}
 
 ## Sending Form Data - Text

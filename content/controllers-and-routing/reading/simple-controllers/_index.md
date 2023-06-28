@@ -20,7 +20,7 @@ The first of the MVC elements we'll work on implementing are the controllers. Re
 
 {{< youtube attSxLlXkz8 >}}
 
-**Note:** The starter code for this video is found in the [starter branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/starter) of the `hello-spring-demo` repo. The final code presented in this video is found on the [static-responses branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/static-responses). Code along to the videos on your own `hello-spring` project.
+**Note:** The starter code for this video is found in the [starter branch](https://github.com/LaunchCodeEducation/hello-spring/tree/starter) of the `hello-spring-demo` repo. The final code presented in this video is found on the [static-responses branch](https://github.com/LaunchCodeEducation/hello-spring/tree/static-responses). Code along to the videos on your own `hello-spring` project.
 
 ## Controllers and Static Responses - Intro
 

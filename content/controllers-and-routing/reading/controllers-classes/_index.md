@@ -17,8 +17,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 {{< youtube DvEvhB20e2s >}}
 
 {{% notice blue Note "rocket" %}}
-<!-- TODO: Update links below when hello-spring app is created. Will also need to update intro-to-web-dev link once book has been completed migrated -->
-The starter code for this video is found in the [forms branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/forms) of the `hello-spring-demo` repo. The final code presented in this video is found on the [class-annotations branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/class-annotations). As always, code along to the videos on your own `hello-spring` project.
+The starter code for this video is found in the [forms branch](https://github.com/LaunchCodeEducation/hello-spring/tree/forms) of the `hello-spring-demo` repo. The final code presented in this video is found on the [class-annotations branch](https://github.com/LaunchCodeEducation/hello-spring/tree/class-annotations). As always, code along to the videos on your own `hello-spring` project.
 
 Have you been tracking your app progress in your own [git branches](https://education.launchcode.org/intro-to-professional-web-dev/chapters/git/branches.html?highlight=git%20checkout#creating-a-new-branch)? Saving your progress in branches for each video tutorial means you can always go back to a certain spot in the app development. We will be returning to the `forms` branch in the next lesson, so track your `class-annotations` in a new branch with `git checkout -b <branch-name>`.
 {{% /notice %}}
