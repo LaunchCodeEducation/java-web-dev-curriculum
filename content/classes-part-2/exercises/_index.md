@@ -100,5 +100,5 @@ public boolean equals(Object toBeCompared) {
 ```
 {{% /expand %}}
 
-
-Add custom `equals()` and `toString()` methods to the `Course` class which you started in the exercises for the [previous chapter]({{< relref "../../classes/exercises/_index.md" >}}).
+<!-- TODO: Update link when classes has been merged -->
+Add custom `equals()` and `toString()` methods to the `Course` class which you started in the exercises for the [previous chapter].
