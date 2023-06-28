@@ -188,7 +188,7 @@ It is a rule in Java that a file containing a class marked `public` MUST be name
 
 ### Try It
 
-Open the `HelloMethods` and `Messages` files in the `java-web-dev-exercises` project in IntelliJ and experiment with the following:
+Open the `HelloMethods` and `Messages` files in the `java-web-dev-projects` project in IntelliJ and experiment with the following:
 
 1. Figure out how to alter the `HelloMethods` code to change the message returned.
 1. Add another “Hello, World” language option.
