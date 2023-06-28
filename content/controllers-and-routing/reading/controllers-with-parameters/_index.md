@@ -37,7 +37,7 @@ Here's our [introduction to HTTP](https://education.launchcode.org/intro-to-prof
 {{< youtube cXwlynCtZSM >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found in the [static-responses branch](https://github.com/LaunchCodeEducation/hello-spring/tree/static-responses) of the `hello-spring-demo` repo. The final code presented in this video is found on the [query-parameters branch](https://github.com/LaunchCodeEducation/hello-spring/tree/query-parameters). Be sure to code along to the videos on your own `hello-spring` project.
+The starter code for this video is found in the [static-responses branch](https://github.com/LaunchCodeEducation/hello-spring/tree/static-responses) of the `hello-spring` repo. The final code presented in this video is found on the [query-parameters branch](https://github.com/LaunchCodeEducation/hello-spring/tree/query-parameters). Be sure to code along to the videos on your own `hello-spring` project.
 {{% /notice %}}
 
 ## `@RequestParam`
@@ -60,7 +60,7 @@ The controller method looks for the query string in the URL that matches its par
 {{< youtube lRNO0eAcSs4 >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found in the [query-parameters branch](https://github.com/LaunchCodeEducation/hello-spring/tree/query-parameters) of the `hello-spring-demo` repo. The final code presented in this video is found on the [path-variables branch](https://github.com/LaunchCodeEducation/hello-spring/tree/path-variables). Please code along to the videos on your own `hello-spring` project.
+The starter code for this video is found in the [query-parameters branch](https://github.com/LaunchCodeEducation/hello-spring/tree/query-parameters) of the `hello-spring` repo. The final code presented in this video is found on the [path-variables branch](https://github.com/LaunchCodeEducation/hello-spring/tree/path-variables). Please code along to the videos on your own `hello-spring` project.
 {{% /notice %}}
 
 ## `@PathVariable`

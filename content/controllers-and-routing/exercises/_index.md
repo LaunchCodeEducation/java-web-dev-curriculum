@@ -12,12 +12,10 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-<!-- TODO: Update the hello-spring name once project is created -->
 While reading the chapter, you created a basic Hello, World application using Spring Boot called `hello-spring`. Open that project up in IntelliJ, and get ready to add some features!
 
 {{% notice blue Note "rocket" %}}
-<!-- TODO: Add correct link below once hello-spring app has been created -->
-Before you start these exercises, take a look at the [hello-spring-demo class-annotations branch](https://github.com/LaunchCodeEducation/hello-spring-demo/tree/class-annotations) to make sure your own application matches ours.
+Before you start these exercises, take a look at the [hello-spring class-annotations branch](https://github.com/LaunchCodeEducation/hello-spring/tree/class-annotations) to make sure your own application matches ours.
 {{% /notice %}}
 
 Create and checkout a branch for your exercises solution. Name it something useful, such as `controller-exercises`.
