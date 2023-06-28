@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Courtney Frey # update any time edits are made after review
+lastEditorGitHub: speudusa # update any time edits are made after review
+lastMod: 2023-06-26T10:20:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Sally needs you to build up the remaining classes. In each case, refer to the `Employer` class for hints on how to structure your code.
@@ -45,10 +45,8 @@ Be careful, though. If you forget to remove `setID`, then users can change the `
 ## The `PositionType` Class
 Open the class file. This time the constructors, getters, and setters are done. Sally’s comments direct you to where you need to add the custom methods.
 
-<!-- //TODO: Update link below when Classes and Objects part 2 chapter is added to this book -->
-
 1. Code a `toString` method that just returns the `value` of a `PositionType` object.
-1. Use the _Generate_ option again to add the `equals` and `hashCode` methods. Refer to the [Classes and Objects Part 2]() IntelliJ Generator Shortcut section if you need a quick review.
+1. Use the _Generate_ option again to add the `equals` and `hashCode` methods. Refer to the [Classes and Objects Part 2]({{< relref "../../../../classes-part-2/reading/intellij-shortcut/index.md" >}}) IntelliJ Generator Shortcut section if you need a quick review.
 1. Assume that two `PositionType` objects are equal when their id fields match.
 
 {{% notice green "Tip" "rocket" %}} 
