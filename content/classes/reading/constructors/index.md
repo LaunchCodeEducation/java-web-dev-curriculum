@@ -47,7 +47,7 @@ HelloWorld goodbye = new HelloWorld("Goodbye World");
 System.out.println(goodbye.getMessage()); // prints "Goodbye World"
 ```
 
-## Default constructor
+## Default Constructor
 
 It’s not required that every class have a constructor. If you don’t provide one, the Java compiler will generate an empty constructor for you, known as a **default constructor**. For example, when we left out a constructor in our `HelloWorld` class above, the compiler created the following constructor for us:
 
@@ -132,7 +132,7 @@ When defining constructors, think about:
 
 ## Check Your Understanding
 
-{{% notice blue Question "rocket" %}}
+{{% notice green Question "rocket" %}}
 A constructor is required for every class.
 
 1. True
@@ -140,7 +140,7 @@ A constructor is required for every class.
 1. False
 {{% /notice %}}
 
-{{% notice blue Question "rocket" %}}
+{{% notice green Question "rocket" %}}
 Let's take a look at a class called `Dog`.
 
 ```java

@@ -95,8 +95,6 @@ public void setName(String aName) {
 }
 ```
 
-**Note**
-
 {{% notice blue Note "rocket" %}}
 Prefixing a parameter that is intended to set an instance variable with `a` is a relatively common convention, and one that we’ll adopt to
 avoid shadowing and having to use `this` in our setters. You can think of the `a` as denoting the “argument” version of the variable.
@@ -161,8 +159,6 @@ public void setCelsius(double celsius) {
 
 Since there’s a link between `fahrenheit` and `celsius`, we want to make sure that when one is updated, so is the other. In this case, we only store one field value (`fahrenheit`) and make the appropriate calculation when getting or setting the `celsius` property.
 
-**Note**
-
 {{% notice blue Note "rocket" %}}
 There are slight variations among Java developers when it comes to colloquial usage of the term *property*. People will sometimes define
 the term in a slightly more specific or narrow way, to mean a private field with public getters and setters.
@@ -174,7 +170,7 @@ Using properties, getters/setters, and fields, we can *encapsulate* the informat
 
 ### Check Your Understanding
 
-{{% notice blue Question "rocket" %}}
+{{% notice green Question "rocket" %}}
 What is a method that is used to give a private field a value?
 
 1. getter

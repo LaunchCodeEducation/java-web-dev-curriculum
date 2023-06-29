@@ -35,6 +35,7 @@ public class HelloWorld {
    }
 
 }
+```
 
 In this `HelloWorld` class, we omit the `public` access modifier in lines 3 and 5. Doing this implicitly gives the message field and the `sayHello` method **default access**.
 {{% /notice %}}
@@ -85,7 +86,7 @@ If you want to learn more about controlling access to members of a class, check 
 
 ### Check Your Understanding
 
-{{% notice blue Question "rocket" %}}
+{{% notice green Question "rocket" %}}
 For this question, refer to the code block below.
 
 ```java

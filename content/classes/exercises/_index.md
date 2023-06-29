@@ -14,7 +14,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Classes and Objects
 
-Work on these exercises in the IntelliJ `java-web-dev-projects` project.
+Work on these exercises in the `classes-part-one` directory in `java-web-dev-projects`.
 
 {{% notice blue Note "rocket" %}}
 If you have not already cloned the `java-web-dev-projects` project repository you can find it here: [Java Web Dev Projects Repository](https://github.com/LaunchCodeEducation/java-web-dev-projects/)

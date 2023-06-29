@@ -16,8 +16,8 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 After completing this chapter, you should be able to understand the following:
 1. The difference betwen `public` and `private` modifiers
-1. Encapsulation and its role in `Object Oriented Programming`
-1. Constructors and their relationship with other `Java` classes
+1. Encapsulation and its role in Object-oriented Programming
+1. Constructors and their relationship with other Java classes
 1. How to declare and define a new method
 1. Method overloading
 

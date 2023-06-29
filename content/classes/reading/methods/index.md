@@ -16,7 +16,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 A **method** is a function that belongs to a class. In Java, all procedures must be part of a class. Let’s revisit our `HelloWorld` class.
 
-```java
+```java {linenos=table}
 public class HelloWorld {
 
     private String message = "Hello World";
@@ -52,7 +52,7 @@ So far, we’ve only looked at examples of methods that are relatively specializ
 
 Let’s say we want to add a method in our `Student` class that reports the GPA of a student. This method is an **instance method** since it will belong to each `Student` object created and will use the data of each such object.
 
-```java
+```java {linenos=table}
 public class Student {
 
     private static int nextStudentId = 1;
@@ -89,7 +89,7 @@ We will make use of instance methods more in the next chapter. However, we wante
 
 ## Check Your Understanding
 
-{{% notice blue Question "rocket" %}}
+{{% notice green Question "rocket" %}}
 Fill in the blanks with the appropriate terms.
 
 1. _____________ gives a class property a field.

@@ -88,7 +88,7 @@ In this context, inside of the class, we can refer to fields (and methods) that 
 
 You are allowed to create local variables (variables declared within a method) with the same name as a field of the given class. In this case, in order to refer to the field, we *must* use `this`.
 
-{{% notice red Warning "rocket" %}}
+{{% notice orange Warning "rocket" %}}
 When a local variable has the same name as a field, we say that the local variable **shadows** the field. Errors caused by shadowing can be tricky to spot, so it’s best to avoid doing this in your code.
 {{% /notice %}}
 
