@@ -15,8 +15,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 We explored configuring data within classes with fields and properties. Now let’s turn our attention back to class _behavior_ (methods).
 
 ## Quick Method Review
-<!-- TODO: Link once classes chapter is added -->
-In the [last chapter], we learned that:
+In the [last chapter]({{< relref "../../../classes/reading/methods" >}}), we learned that:
 
 1. A method belongs to a class and performs an action.
 
@@ -106,7 +105,7 @@ Now let’s examine them in the context of what we’ve recently learned about c
 
 Just like static fields, **static methods** belong to the class as a whole, and not to any of the specific instances of the class. Thus, they are sometimes also called **class methods**. A static method is essentially the opposite of an instance method, since the two cases are mutually exclusive. _Instance methods_ rely on each object’s specific data, while static methods must NOT rely on data from a specific object.
 
-We call a static method by preceding it with the class name and using dot-notation. Here’s an example that we looked at [previously]({{< relref "../../../../../../data-types/reading/more-data-types/_index.md#static-methods" >}}).
+We call a static method by preceding it with the class name and using dot-notation. Here’s an example that we looked at [previously]({{< relref "../../../data-types/reading/more-data-types/_index.md#static-methods" >}}).
 
 {{% notice blue "Example" "rocket" %}} 
  `HelloMethods.java`
