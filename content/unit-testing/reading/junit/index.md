@@ -14,8 +14,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 JUnit is a library that provides the classes, methods, and assertions
 for writing and executing unit tests in Java. In this course, 
-we use JUnit 5. Although there are newer versions now available, 
-JUnit 5 is still popular and widely used.
+we use JUnit 5.
 
 ## Java Annotations
 
@@ -28,35 +27,36 @@ directly affect the code they annotate, but they do supply information to the co
 Annotations are indicated with an `@` symbol. We will provide an example in the 
 walkthrough below.
 
-## `.jar` and Testing Setup
+## Testing Setup
 
-In your `java-web-dev-projects` repo, we've included two `.jar` files for the JUnit 
-library. These are located in the `lib` folder. **JAR** stands for **Java ARchive** and is a 
-common Java file format used for bundling many classes and files together. The JUnit library
-code is bundled and packaged in both the `junit-4.13-beta-3.jar` and 
-`hamcrest-core-1.3.jar` `.jar` files.
+Whenever you have set up a new project in IntelliJ, you may have noticed that in addition to `main`, there is a `test` directory. Before you start adding tests, you need to check that JUnit is already set up and ready to go.
 
-{{% notice blue "Note" "rocket" %}}
-   The versions of these packages may change before this text.
-{{% /notice %}}
+1. Open up `build.gradle`.
+1. Within `dependencies`, if JUnit is already configured, you will see something similar to the following:
 
-In this project, we call these external libraries **dependencies**. A dependency is a 
+   ```java
+   testImplementation(platform("org.junit:junit-bom:5.9.1"))
+   testImplementation("org.junit.jupiter:junit-jupiter")
+   ```
+
+1. If you don't see anything in `dependencies`, right-click directly on `dependencies`. In the resulting menu, select *Generate*, then `Add Dependency`.
+1. At the bottom of the IntelliJ screen, search for `org.junit.jupiter:junit-jupiter`. Select "JUnit Jupiter Aggregator" and click *Add*.
+
+   {{% notice blue "Note" "rocket" %}}
+   There are a lot of different versions of JUnit as people contribute their own code. Make sure that you have selected "JUnit Jupiter Aggregator".
+   {{% /notice %}}
+
+1. You may need to wait a moment for IntelliJ to reload with JUnit added to your project. Now you are ready to test!
+
+We call external libraries, like JUnit, **dependencies**. A dependency is a 
 separately developed program or piece of code that another program or piece of code 
 uses to carry it out its function. Our Java tests will *depend* on JUnit code. In 
-the future, as you build your own Java projects, you will likely include these 
-dependencies in a different fashion other than `.jar` files. Many Java projects 
-use a build automation tool to help manage dependencies. We'll begin using this kind
-of tool later in this course. Since we're not quite there yet, we've included the 
-`.jar` files.
-
-Right-click on each of the `.jar` files and select the *Add as Library*
-option. In the dialog box that opens up, make sure the
-`java-web-dev-projects` project is selected, then click *OK*.
+the future, as you build your own Java projects, you will likely use different dependencies.
 
 ### `main/Car` and `test/CarTest`
 
-Within `org.launchcode.java.demos`, open the `lsn5unittesting` directory.
-Inside `lsn5unittesting`, you'll see a `main` directory and `test`
+Within `unit-testing/chapter-example`, open the `car-example` project in IntelliJ.
+Inside, you'll see a `main` directory and `test`
 directory. Open the `Car` class within `main` and  look around. Here, we
 provide a class `Car` with basic information about a make, model, gas level,
 and mileage as well as getters, setters, and a few other methods. 
@@ -83,24 +83,21 @@ be sure write this code rather than copy/paste it:
 Once written, you likely need to add these import statements at the top of your file:
 
 ```java {linenos=table}
-   import org.junit.Test;
-   import static org.junit.Assert.assertEquals;
+   import org.junit.jupiter.api.Test;
+   import static org.junit.jupiter.api.Assertions.*;
 ```
 
-<!-- TODO: Add link back to Chapter 1 -->
 {{% notice blue "Note" "rocket" %}}
    In some cases, IntelliJ may sense which testing library and method you want to 
    use and add the import statements as you type. If this is the case, just make sure they
-   are the correct paths. Aren't IDEs <install-intellij> wonderful?
+   are the correct paths. Aren't IDEs wonderful?
 {{% /notice %}}
 
 As we mention above, `@Test` annotates the method to signal it as a test case. We need 
 to add the appropriate import statement in order to take advantage of this annotation. 
 
-<!-- TODO: Add link to previous page -->
-
 Our empty test is aptly named `emptyTest()`, a description of its role. This test does 
-not follow the AAA rule from our testing-best-practices, as it jumps straight to 
+not follow the AAA rule from our testing best practices, as it jumps straight to 
 asserting. Nor is it relevant, for that matter. 
 
 Again, the IDE comes in handy, inserting the names of each of our parameters, 
@@ -144,55 +141,49 @@ Under your second TODO, write a test to verify that the constructor sets the
 
 Here, we give the test a descriptive name, `testInitialGasTank()`, initialized a new 
 `Car` object, and test that the constructor correctly handles the `gasTankLevel` property.
-By now, you've probably already imported the `Car` class.
-
-```java
-   import org.launchcode.java.demos.lsn5unittesting.main.Car;
-```
-
 Run `CarTest` to see that both tests pass. 
 
 {{% notice green "Tip" "rocket" %}}
    If you want to run only one test, click the green arrow next to the test method's name.
 {{% /notice %}}
 
-## `@Before`
+## `@BeforeEach`
 
-`@Before` is another annotation we can use to help in test cases. The `@Before`
+`@BeforeEach` is another annotation we can use to help in test cases. The `@BeforeEach`
 annotation can be used to set up some data or a condition that you want to have for 
 every test in a given class. In the case of `CarTest`, it would be nice to not need to
 create a new `Car` instance for each test we write. 
 
 In your `testInitialGasTank()` method, remove the line initiating `test_car`. 
-Above your first test, add the following `@Before` method:
+Above your first test, add the following `@BeforeEach` method:
 
 ```java {linenos=table}
    Car test_car;
 
-   @Before
+   @BeforeEach
    public void createCarObject() {
       test_car = new Car("Toyota", "Prius", 10, 50);
    }
 ```
 
-Did IntelliJ prompt you to import `@Before`? Did it import the annotation as you were 
+Did IntelliJ prompt you to import `@BeforeEach`? Did it import the annotation as you were 
 writing the method? If not, add it:
 
 ```java
-   import org.junit.Before;
+   import org.junit.jupiter.api.BeforeEach;
 ```
 
 Now, run the test file and ensure your test still passes.
 
-## `@After`
+## `@AfterEach`
 
-`@After`, conversely, defines a set of conditions to be met after each test in a 
+`@AfterEach`, conversely, defines a set of conditions to be met after each test in a 
 suite is run. 
 
 {{% notice blue "Note" "rocket" %}}
-   A good or frequent use case for `@After` would be if you needed to test
+   A good or frequent use case for `@AfterEach` would be if you needed to test
    some code that requires access to a database. Here, you could open the database 
-   connection with a `@Before` method and close the connection in an `@After` method.
+   connection with a `@BeforeEach` method and close the connection in an `@AfterEach` method.
 {{% /notice %}}
 
 ## Common Assertion Methods

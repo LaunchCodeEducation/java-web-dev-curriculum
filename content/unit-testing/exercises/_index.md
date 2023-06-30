@@ -12,8 +12,8 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-Work on these exercises in the IntelliJ `java-web-dev-projects` 
-project. You will update your `CarTest.java` file by adding 
+Work on these exercises in the IntelliJ `car-exercises` 
+project in `java-web-dev-projects/unit-testing/exercises`. You will update your `CarTest.java` file by adding 
 more test cases.
 
 ## `testGasTankAfterDriving()`
@@ -35,6 +35,14 @@ Add a test for the third TODO, "gasTankLevel is accurate after driving within ta
 
 {{% expand "Check your solution" %}}
 
+```java
+@Test
+public void testGasTankAfterDriving() {
+   test_car.drive(50);
+   assertEquals(9, test_car.getGasTankLevel(),.001);
+}
+```
+
 {{% /expand %}}
 
 ## `testGasTankAfterExceedingTankRange()`
@@ -46,6 +54,14 @@ Add a test for the fourth TODO, "gasTankLevel is accurate after attempting to dr
 
 {{% expand "Check your solution" %}}
 
+```java
+@Test
+public void testGasTankAfterExceedingTankRange() {
+   test_car.drive(501);
+   assertEquals(test_car.getGasTankLevel(), 0, .001);
+}
+```
+
 {{% /expand %}}
 
 ## `testGasOverfillException()`
@@ -55,14 +71,14 @@ perform an action on our car object, and we are expecting the object
 to throw an error. In this case, we are going to attempt to add gas 
 to our car that exceeds the gas tank size.
 
-1. First, we'll add some text to our `@Test` annotation to tell JUnit
+1. First, we'll add some code to our test to tell JUnit
    to expect an exception. 
 
    ```java
       //TODO: can't have more gas than tank size, expect an exception
-      @Test(expected = IllegalArgumentException.class)
+      @Test()
       public void testGasOverfillException() {
-
+         assertthrows(IllegalArgumentException.class, () -> );
       }
    ```
 
@@ -77,23 +93,12 @@ to our car that exceeds the gas tank size.
       }
    ```
 
-1. Back in `CarTest`, implement the new `addGas()` method and a 
-   `fail()` scenario.
-
-   ```java
-      test_car.addGas(5);
-      fail("Shouldn't get here, car cannot have more gas in tank than the size of the tank");
-   ```
-
-   The `fail()` message will be displayed if the test fails. 
-   We have to import `fail` into this class to use it.
+1. Back in `CarTest`, implement the new `addGas()` method and what should happen if the exception is thrown after the `->` syntax using this code: `test_car.addGas(5), "Shouldn't get here, car cannot have more gas in tank than the size of the tank"`. The string will be displayed if the test fails. 
 
 1. Run the test. It should fail! In the output is an unexpected 
    exception. This test was expecting an `IllegalArgumentException`, 
    but it got an `AssertionError` exception. This caused the test 
-   to fail. Further down in the output log, we can see that our 
-   `fail()` statement printed out the statement about not being 
-   able to add more gas than is possible.
+   to fail.
 
 1. We need to refactor `Car` to throw an exception when too much
    gas is added to the tank. Find the `setGasTankLevel` method and
@@ -111,5 +116,13 @@ to our car that exceeds the gas tank size.
 1. Now, run the test - it should pass!
 
 {{% expand "Check your solution" %}}
+
+```java
+@Test
+public void testGasOverfillException() {
+   assertThrows(IllegalArgumentException.class, () -> test_car.addGas(5), "Shouldn't get here, car cannot have more gas in tank than the size of the tank"
+   );
+}
+```
 
 {{% /expand %}}

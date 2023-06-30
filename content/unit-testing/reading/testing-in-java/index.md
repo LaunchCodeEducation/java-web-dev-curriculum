@@ -20,8 +20,10 @@ function as documentation, giving an observer instructions
 on how to properly execute your classes and methods.
 
 This course covers **unit testing** in Java with a test runner called
-**JUnit4**. Unit testing breaks down the codebase into its smallest
+**JUnit**. Unit testing breaks down the codebase into its smallest
 building blocks, which are individual statements and methods. 
+
+<!-- TODO: After JavaScript migration, update this link -->
 
 {{% notice green "Tip" "rocket" %}}
 
