@@ -102,7 +102,7 @@ From the list below, which annotations are applied above a controller class.
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
-From the list below, which annotations are applied above a controller method.
+Select all the annotations applied above a controller method from the list below. 
 1. `@Controller`
       
 1. `@GetMapping`
