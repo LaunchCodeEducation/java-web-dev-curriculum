@@ -84,7 +84,7 @@ public String helloForm() {
 ## Check Your Understanding
 
 {{% notice green Question "rocket" %}}
-From the list below, which annotations are applied above a controller class.
+Which annotation is applied above a controller class?
 
 1. `@Controller`
       
