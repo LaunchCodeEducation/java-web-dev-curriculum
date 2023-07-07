@@ -20,7 +20,7 @@ Upon completing all the content in this chapter, you should be able to do the fo
 1. Identify proper behaviors for which a test should be written
 1. Understand the importance of testing in creating well-functioning code
 1. Use test-driven development to define the behavior of code before writing it, and to ensure that code is properly tested
-1. Use JUnit to create test
+1. Use JUnit to create tests
 
 ## Key Terminology
 

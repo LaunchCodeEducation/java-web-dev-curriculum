@@ -16,4 +16,4 @@ Before continuing on to the next chapter, here are some additional resources on 
 
 1. [JUnit 5 Test LifeCycle](https://howtodoinjava.com/junit5/junit-5-test-lifecycle/)
 1. [JUnit Documentation](https://junit.org/junit5/docs/current/user-guide/)
-1. [Intellij's notes on JUnit](https://www.jetbrains.com/help/idea/junit.html)
+1. [Intellij notes on JUnit](https://www.jetbrains.com/help/idea/junit.html)
