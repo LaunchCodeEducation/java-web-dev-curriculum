@@ -18,15 +18,15 @@ Although they look the same, the old optical discs—CDs and DVDs—are quite di
 
 Set up a local copy of the project:
 
-   1. Visit the [repository page](https://github.com/LaunchCodeEducation/java17-spinning-discs) for this project and fork it to create a copy under your own GitHub account.
+1. Open the `studio` folder inside the `interfaces` repository.
 
-   1. Back in IntelliJ, close any open projects.
+1. Back in IntelliJ, close any open projects.
 
-   1. On the IntelliJ welcome screen, click Check out from Version Control and select Git.
+1. On the IntelliJ welcome screen, click Check out from Version Control and select Git.
 
-   1. Choose your fork from the repository dropdown, select the parent directory where you’d like to store your project, and hit Clone.
+1. Choose your fork from the repository dropdown, select the parent directory where you’d like to store your project, and hit Clone.
 
-   1. In the first modal screen, select Create project from existing sources. Accept the default settings on all other screens.
+1. In the first modal screen, select Create project from existing sources. Accept the default settings on all other screens.
 
 ## Disc Project Overview
 
@@ -40,15 +40,15 @@ Just like you did with your Restaurant Menu studios, you will begin with pen and
 
 Here are a few behaviors that both CDs and DVDs share:
 
-   1. They both spin,
+1. They both spin,
 
-   1. They both store data,
+1. They both store data,
 
-   1. Data gets written to the discs by using a laser,
+1. Data gets written to the discs by using a laser,
 
-   1. The data on the discs can be read by using a laser,
+1. The data on the discs can be read by using a laser,
 
-   1. Once loaded, they both report information like name, capacity, contents, and disc type.
+1. Once loaded, they both report information like name, capacity, contents, and disc type.
 
 With your partner, add one or two more behaviors to the list. Feel free to do some quick research online if needed. Note that information like storage capacity does NOT belong on this list, since it describes a _property_ (field) rather than a _behavior_ (method).
 
@@ -64,17 +64,17 @@ Behaviors added to an interface do NOT have to be identical for every object tha
 
 For example, even though CDs and DVDs both spin, they do so at different speeds. Their behavior (spinning) is the same, but the details of that behavior vary. Thus, a method like `spinDisc()` fits well into an interface.
 
-  1. For the other behaviors you and your partner sorted, decide which ones belong in the interface.
+1. For the other behaviors you and your partner sorted, decide which ones belong in the interface.
 
-   1. Write down details about how these behaviors differ for CDs and DVDs. This guides your thinking about how each class should override the methods.
+1. Write down details about how these behaviors differ for CDs and DVDs. This guides your thinking about how each class should override the methods.
 
-   1. For the behaviors that cannot go into the interface, decide if they could be placed in an abstract class or if they need to appear in the separate `CD` and `DVD` classes.
+1. For the behaviors that cannot go into the interface, decide if they could be placed in an abstract class or if they need to appear in the separate `CD` and `DVD` classes.
 
-   1. Finally, write down the fields needed to define the properties of a CD or DVD (e.g. `storageCapacity`). Consider:
+1. Finally, write down the fields needed to define the properties of a CD or DVD (e.g. `storageCapacity`). Consider:
 
-      1. Which fields are shared by both types of discs, and which ones are unique to each class?
+   1. Which fields are shared by both types of discs, and which ones are unique to each class?
 
-      1. Do any of the fields represent constants?
+   1. Do any of the fields represent constants?
 
  
 ## Code the Interface
@@ -103,11 +103,11 @@ OK. Now put your code to work.
 
 ## Complete the Disc Classes
 
-   1. Extend the base class into the `CD` and `DVD` classes.
+1. Extend the base class into the `CD` and `DVD` classes.
 
-   1. Implement the interface in each class.
+1. Implement the interface in each class.
 
-   1. Fill in the `@Override` code for each of the interface methods.
+1. Fill in the `@Override` code for each of the interface methods.
 
    {{% notice green "Tip" "rocket" %}} 
    You can hover over the `implements` keyword and click the IntelliJ suggestions to generate these method signatures.

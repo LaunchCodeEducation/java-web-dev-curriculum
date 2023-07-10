@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Courtney Frey  # update any time edits are made after review
+lastEditorGitHub: speudusa # update any time edits are made after review
+lastMod: 2023-07-10T14:01:05-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Exercises
@@ -17,8 +17,8 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 As a new Java coder, it might take you some time to recognize the usefulness of interfaces. At first glance, these tools do not seem to provide much benefit over extending a base class, adding instance methods to a class, or overriding a method like `toString`.
 
 To help overcome this, let’s consider a common occurrence—sorting an `ArrayList` of objects.
-<!-- TODO: link to table ArrayList methods in 3.4 -->
-If the list contains `String` or numerical entries, then sorting the list is [trivial](TODO):
+
+If the list contains `String` or numerical entries, then sorting the list is [trivial]({{< relref "../../../control-flow-and-collections/reading/arraylist/" >}}):
    ```java
    Collections.sort(arrayListName);
    ```
@@ -27,7 +27,7 @@ However, if the elements are custom objects (like `Cat`), then sorting the list 
 
 ## Getting Started
 
-Work on these exercises in the IntelliJ `java-web-dev-projects`. You will find the starter code in the `lsn7interfaces` package. Go ahead and open the folder and take a quick look at the class files.
+Work on these exercises in the IntelliJ `java-web-dev-projects`. You will find the starter code in the `exercises` package of the `interfaces` directory. Go ahead and open the folder and take a quick look at the class files.
 
 You will practice implementing interfaces by playing around with a small ice cream store. It consists of a refrigerated display `Case`, which contains a collection of ice cream `Flavor` objects and a selection of `Cone` objects.
 
@@ -48,14 +48,11 @@ To display a menu for your customers, you need to sort the ice cream flavors alp
    ```
 1. Notice that IntelliJ flags a couple of errors that you need to fix:
    1. Import `java.util.Comparator`. This removes the flag on `Comparator`.
-
    1. Hover over the line again and select _implement methods_. Choose the `compare` option.
    {{< rawhtml >}}
    <img src="../exercises/images/implement-methods.png" alt=" " width=80% />
    {{< /rawhtml >}}
-
    1. This adds an `@Override` method that compares two `Flavor` objects and always returns `0`.
-
 1. Always returning `0` results in no sorting, so replace line 8 with:
 
 ```java
@@ -86,7 +83,7 @@ public static void main(String[] args){
 
 }
 ```
-   1. To sort the flavors list, first create a new `FlavorComparator` object.
+1. To sort the flavors list, first create a new `FlavorComparator` object.
    ```java{linenos=table,hl_lines=[],linenostart=6}
    public static void main(String[] args){
       Case menu = new Case();
@@ -95,7 +92,7 @@ public static void main(String[] args){
       Comparator comparator = new FlavorComparator();
    }
    ```
-   1. Next, call the sort method on `flavors` and pass the `comparator` object as the argument.
+1. Next, call the sort method on `flavors` and pass the `comparator` object as the argument.
 
    ```java{linenos=table,hl_lines=[],linenostart=6}
    public static void main(String[] args){
@@ -108,7 +105,7 @@ public static void main(String[] args){
    }
    ```
 
-   1. Iterating through the `flavors` list before and after the sort shows the results. (The output below displays just the `name` fields).
+1. Iterating through the `flavors` list before and after the sort shows the results. (The output below displays just the `name` fields).
    ```bash
    Before:                 After:
 
@@ -131,12 +128,11 @@ Note that `Main` does NOT have to implement the `Comparator` interface. This onl
 ## Sorting Cones by Cost
 
 Now let’s sort our `cones` list by cost, from least expensive to most expensive.
+1. Create the new class `ConeComparator`.
 
-   1. Create the new class `ConeComparator`.
+1. Follow the example above to implement the `Comparator` interface and evaluate `Cone` objects by cost.
 
-   1. Follow the example above to implement the `Comparator` interface and evaluate `Cone` objects by cost.
-
-   1. In `Main`, sort the `cones` list, then print the elements to the screen to verify the results.
+1. In `Main`, sort the `cones` list, then print the elements to the screen to verify the results.
 
    ```bash
    Before:           After:
@@ -170,7 +166,7 @@ public class ConeComparator implements Comparator<Cone> {
 Did you get this error?
 
    {{< rawhtml >}}
-   <img src="../exercises/images/compare-double.png" alt=" " width=80% />
+   <img src="../exercises/images/compare-double.png" alt=" " width=60% />
    {{< /rawhtml >}}
 
 This happens because according to the interface, `compare` MUST return an integer value, but the `cost` fields are `double` type.
