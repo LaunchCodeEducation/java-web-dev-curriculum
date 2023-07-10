@@ -125,7 +125,7 @@ template for this page, and it is possible to create an interactive site
 without one. However, as your projects grow in size, templates make it MUCH
 easier to maintain your work.
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 Use templates when building a web-based project.
 {{% /notice %}}
 
