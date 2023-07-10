@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Courtney Frey  # update any time edits are made after review
+lastEditorGitHub: speudusa # update any time edits are made after review
+lastMod: 2023-07-10T14:01:05-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 The first situations where you’ll want to use interfaces involve applying pre-defined interfaces and classes that are part of Java. Here are a few examples.
 
@@ -27,8 +27,7 @@ The first situations where you’ll want to use interfaces involve applying pre-
 
 [Comparator Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
 
-<!-- TODO: link 1 & 2 back to chapter 3.4 -->
-This interface can be used to determine, given two objects of the given type, which one is “greater” than the other. It is also used by collections such as an [ArrayList](TODO 1) to sort its contents with the [sort](TODO 2) method.
+This interface can be used to determine, given two objects of the given type, which one is “greater” than the other. It is also used by collections such as an [ArrayList]({{< relref "../../../control-flow-and-collections/reading/arraylist/" >}}) to sort its contents with the `sort()` method.
 
 {{% notice blue "Note" "rocket" %}} 
  For more on the differences between Comparator and Comparable, see [this article](https://www.javatpoint.com/difference-between-comparable-and-comparator).

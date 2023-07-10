@@ -7,14 +7,14 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Courtney Frey  # update any time edits are made after review
+lastEditorGitHub: speudusa # update any time edits are made after review
+lastMod: 2023-07-10T14:01:05-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 After all that we have learned about interfaces, you are probably wondering, _how do I write my unit tests with interfaces?_
 
 <!-- TODO: link back to 7.6 -->
-The best practices to [testing interfaces](TODO) are very similar to those of testing inheritance. You want to focus on testing the contract that the interface is supposed to be upholding as opposed to the interface itself.
+The best practices to [testing interfaces]({{< relref "../../../inheritance/reading/testing-inheritance/" >}}) are very similar to those of testing inheritance. You want to focus on testing the contract that the interface is supposed to be upholding as opposed to the interface itself.
 
 {{% notice blue "Example" "rocket" %}} 
 We have a `Temperature` interface, a `Celsius` class, and a `Fahrenheit` class.

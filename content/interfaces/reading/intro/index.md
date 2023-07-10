@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Courtney Frey  # update any time edits are made after review
+lastEditorGitHub: speudusa # update any time edits are made after review
+lastMod: 2023-07-10T14:01:05-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 The third pillar of Object-Oriented Programming that we’ll explore is polymorphism.
@@ -17,8 +17,8 @@ The third pillar of Object-Oriented Programming that we’ll explore is polymorp
 ## Polymorphism
 
 **Polymorphism** is an object-oriented mechanism that allows for objects of different types to be used in the same way.
-<!-- TODO: link to 7.5 -->
-We’ve already encountered polymorphism made possible by inheritance when talking about [casting](TODO) with our `Cat` and `HouseCat` classes. In that case, we stored an object of type `HouseCat` in its compatible type, `Cat`.
+
+We’ve already encountered polymorphism made possible by inheritance when talking about [casting]({{< relref "../../../inheritance/reading/casting/" >}}) with our `Cat` and `HouseCat` classes. In that case, we stored an object of type `HouseCat` in its compatible type, `Cat`.
 
 Let’s take a closer look at how polymorphism might work in our cat-centric application.
 
