@@ -130,7 +130,15 @@ Now that you have created and rendered a form in your `coding-events` project, y
 The starter code for this video is found at the [form branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms) of the `CodingEventsJava` repo. 
 The final code presented in this video is found on the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued). As always, code along to the videos on your own `coding-events` project.
 
-Also notice that the `@RequestMapping` annotation within the `EventController` class may be different in the `CodingEventsJava` branches than in the video walkthrough. You may also notice the endpoint referenced in the `resources/templates/index.html` file is `events/` and not `/events`.
+If you are having trouble with the redirect from creating a new event via the `events/create` endpoint you may need to update your redirect within the `createEvent` method to point to the desired location:
+
+```java
+@PostMapping("create")
+public String createEvent(@RequestParam String eventName) {
+   events.add(eventName);
+   return "redirect:/events";
+}
+```
 {{% /notice %}}
 
 As usual, the following summary outlines the ideas from the clip.
