@@ -2,7 +2,7 @@
 title: "Chapter 9: Spring Into MVC"
 date: 2023-07-03T16:28:46-05:00
 draft: false
-weight: 100
+weight: 9
 originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Courtney Frey # to be set by the page reviewer
