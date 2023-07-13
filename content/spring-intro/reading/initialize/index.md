@@ -56,7 +56,7 @@ your git workflow.
 
    {{% notice blue "Note" "rocket" %}}
 
-   This is the title of your project.
+   This will also be the *Name* of your project.  It will be added to the *Package name* as well.
 
    {{% /notice %}}
 
