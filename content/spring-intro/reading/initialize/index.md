@@ -59,7 +59,7 @@ your git workflow.
    This will also be the *Name* of your project.  It will be added to the *Package name* as well.
 
    {{% /notice %}}
-
+1. For *Project Metadata/Packaging*, select *Jar*.
 1. For *Project Metadata/Options/Java*, select *17*.
 1. For *Dependencies*, search for and add the following: *Spring Web*,
    and *Spring Boot DevTools*.
