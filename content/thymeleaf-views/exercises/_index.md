@@ -55,7 +55,9 @@ Now, let's add descriptions to our events!
 
 5. Add some CSS to style your table to make it easier to read and center it on the page. You may need to create a new `styles.css` as well. Make sure to connect `styles.css` to the appropriate template with `th:href`.
 
-## Bonus Mission
+## Bonus Missions
 
-Try to add one more column to the table with pictures for each coding event.
-You need to use `th:href` to pull in pictures in the appropriate template.
+1. Update your `processCreateEventForm` method so that you are able to create a new event using the new `HashMap`.
+- You will also need to update your `events/create` template so that a user can enter a description.
+
+1. Try to add one more column to the table with pictures for each coding event. You need to use `th:href` to pull in pictures in the appropriate template.
