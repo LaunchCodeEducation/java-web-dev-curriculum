@@ -73,7 +73,7 @@ information. Your task here is to make use of the `EmployerRepository` class in 
 3. `processAddEmployerForm` already takes care of sending the form back if any of the submitted employer object information is invalid. However, it doesn't yet contain the code to save a valid object. Use `employerRepository` and the appropriate method to do so.
 4. `displayViewEmployer` will be in charge of rendering a page to view the contents of an individual employer object. It will make use of that employer object's `id` field to grab the correct information from `employerRepository`. `optEmployer` is currently initialized to `null`. Replace this using the `.findById()` method with the right argument to look for the given employer object from the data layer.
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 The variable holding the id you want to query for is already provided for you in the controller method's parameters.
 {{% /notice %}}
 
@@ -93,7 +93,7 @@ and view them.
 
 4. **SQL TASK:** In `queries.sql` under "Part 2", write a query to list the names of the employers in St. Louis City. Do NOT specify an ordering for the query results. 
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 If everything seems to work – that is, you are able to submit the form without any errors – but you don’t see your employers or skills in the list after submission, here’s what you should check:
 1. Is there any data in the `employers` and `skills` table? Check by going to MySQL Workbench and looking for the employer/skill data within your schema.
 2. If there’s data in the database, check that you are correctly querying for the list of all objects in the controller Are you calling `.findAll()` on the repository?
