@@ -39,7 +39,7 @@ your git workflow.
 ## Initialize a Spring Boot Project - Text
 
 1. Go to [start.spring.io](https://start.spring.io/).
-1. For *Project*, select *Gradle Project*.
+1. For *Project*, select *Gradle - Groovy Project*.
 1. For *Language*, select *Java*.
 1. For *Spring Boot*, select the most recent non-SNAPSHOT release.
 1. For *Project Metadata/Group*, enter `org.launchcode`.
