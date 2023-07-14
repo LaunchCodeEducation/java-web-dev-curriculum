@@ -1,5 +1,5 @@
 ---
-title: "Studio"
+title: "Studio: Spinning the Discs"
 date: 2023-06-15T14:01:05-05:00
 draft: false
 weight: 3
@@ -16,9 +16,11 @@ Although they look the same, the old optical discs—CDs and DVDs—are quite di
 
 ## Getting Ready
 
-Set up a local copy of the project:
+Open the `studio` folder inside the `interfaces` directory within `java-web-dev-projects`.
 
-1. Open the `studio` folder inside the `interfaces` repository.
+<!-- Set up a local copy of the project:
+
+1. Open the `studio` folder inside the `interfaces` directory.
 
 1. Back in IntelliJ, close any open projects.
 
@@ -26,7 +28,7 @@ Set up a local copy of the project:
 
 1. Choose your fork from the repository dropdown, select the parent directory where you’d like to store your project, and hit Clone.
 
-1. In the first modal screen, select Create project from existing sources. Accept the default settings on all other screens.
+1. In the first modal screen, select Create project from existing sources. Accept the default settings on all other screens. -->
 
 ## Disc Project Overview
 
