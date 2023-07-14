@@ -83,7 +83,7 @@ Some projects contain a stand-alone `configurations` method. This method bundles
    
 {{% notice blue "Note" "rocket" %}}
 
-   In the `hello-spring-demo` project, the `build.gradle` file contains a configurations method.  
+   In the `hello-spring` project, the `build.gradle` file contains a configurations method.  
    The `hello-spring` project does not.
 
 {{% /notice %}}
