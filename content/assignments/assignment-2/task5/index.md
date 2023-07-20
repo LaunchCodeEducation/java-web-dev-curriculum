@@ -66,4 +66,4 @@ In the `Job` class, create a `toString` method that passes the first test. Since
 
 Cool! Your `Job` class is now complete and operates as desired.
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task6/index.md" >}})
+[Next]("../../../assignments/techjobs-oo/task6/index.md")

@@ -12,12 +12,12 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-{{< youtube 1bCgzjatcr4 >}}
+<!-- # youtube 1bCgzjatcr4 -->
 
 Watch this video to learn the basics of the debugging tools available in IntelliJ.
 If you want to follow along, Chris is working with `ArrayListGradebook` 
-from the [Control Flow and Collections chapter]({{< relref "../../../control-flow-and-collections/reading/arraylist/" >}}) 
-and the `HelloMethods` and `Message` from [Classes and Objects, Part 2 chapter]({{< relref "../../../classes-part-2/reading/instance-and-static-methods/" >}}).
+from the [Control Flow and Collections chapter]("../../../control-flow-and-collections/reading/arraylist/") 
+and the `HelloMethods` and `Message` from [Classes and Objects, Part 2 chapter]("../../../classes-part-2/reading/instance-and-static-methods/").
 You should have already downloaded this code from `java-web-dev-projects`.  
 
 {{% notice blue "Note" "rocket" %}}

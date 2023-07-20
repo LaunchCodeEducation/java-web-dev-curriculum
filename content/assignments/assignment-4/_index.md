@@ -18,7 +18,7 @@ You will once again work with the `Tech Jobs` application. This time around you'
 functionality by using Spring Data. You will be responsible for completing the code to allow users
 to create new job data.
 
-Your final application will have the same list and search capabilities as your [Tech Jobs (MVC Edition)]({{< relref "../techjobs-mvc" >}}) but
+Your final application will have the same list and search capabilities as your [Tech Jobs (MVC Edition)]("../techjobs-mvc") but
 you'll need to do the work to connect the project to a database for storing user-submitted job data. 
 
 Each of the four sections of this assignment will also ask you to demonstrate your SQL skills under an item labelled **SQL TASK**.

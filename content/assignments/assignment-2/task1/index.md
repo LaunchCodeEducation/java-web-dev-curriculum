@@ -50,5 +50,5 @@ public class Employer {
 
 1. The second constructor (lines 11 - 14) assigns `aValue` to the `value` field. However, it ALSO initializes `id` for the object by calling the first constructor with the `this();` statement. Including `this();` in any `Employer` constructor makes initializing id a default behavior.
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task2/index.md" >}})
+[Next](relref "../../../assignments/techjobs-oo/task2/index.md")
 

@@ -20,11 +20,6 @@ Your apprenticeship at LaunchCode is going well! Only a few weeks in and you’r
 
 Your last task was to get the prototype Tech Jobs app in good shape. Now it’s time to advance the underlying structure of the program.
 
-Your mentor on this project is Sally, one of the developers at LaunchCode. She regularly supports coders who are just getting started with their careers.
-
-{{< rawhtml >}}
-<img src="figures/LC-Sally.png" alt="Image of Sally" width =20%>
-{{< /rawhtml >}}
 
 After seeing your strong work with your last project, Blake reported that you performed well and learned quickly. Because of your success, he and Sally feel comfortable assigning you to a set of tasks that are a notch up in difficulty.
 
@@ -44,10 +39,10 @@ In this project, you’ll show that you can:
 ### Get the Starter Code
 
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]("../hello-world/#running-the-autograding-tests-through-github-actions") section of `Assignment 0` 
 {{% /notice %}}
 
-In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
+In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]("../hello-world/#getting-started") for more details. 
 
 ## Introduction
 Sally has gotten the ball rolling by adding a `Job` class, along with classes to represent the individual properties of a job: `Employer`, `Location`, `PositionType`, and `CoreCompetency`. She completed the Employer class, and she left you the task of filling in the others.
@@ -112,30 +107,22 @@ If we were to store these four new properties as strings within the `Job` class,
 
 ### Running the Autograding Tests
 
-Before diving into your tasks, review [Assignment #0: Hello, World!]({{< relref "../hello-world/_index.md" >}}) for details on running the autograding tests for this assignment. This assignment has many more tests than the previous two, so we’ve organized them into separate files.
+Before diving into your tasks, review [Assignment #0: Hello, World!]("../hello-world/_index.md") for details on running the autograding tests for this assignment. This assignment has many more tests than the previous two, so we’ve organized them into separate files.
 
-{{< rawhtml >}}
 <img src="figures/test-files.png" alt="File tree image">
-{{< /rawhtml >}}
 
 Each of the one test files, `TestTaskXXXX`, contains the tests to grade one of the six tasks outlined in below (there’s no coding work for your first task, so there is no `TestTaskOne`). Run all of the tests by right-clicking on the `org.launchcode.techjobs.oo` and selecting `Run tests...`
 
-{{< rawhtml >}}
 <img src="figures/run-all-tests2.png" alt="menu for running tests">
-{{< /rawhtml >}}
 
 
 You should see a large number of failures along with a small number of passing tests. Your job is to get those failures to pass, while not breaking the few tests that already pass.
 
-{{< rawhtml >}}
 <img src="figures/initial-failing-tests.png" alt="output for failing tests">
-{{< /rawhtml >}}
 
 When you start on one of the tasks below, begin by running only the tests associated with that task. To do so, right-click on the test file and select _Run TestTaskXXXX_.
 
-{{< rawhtml >}}
 <img src="figures/run-tests-single-task.png" alt="output for failing tests">
-{{< /rawhtml >}}
 
 As you work on the components of the given tasks, continually re-run the tests to see the failing tests gradually turn to passing. When all tests within the file pass, you’re ready to move onto the next task.
 
@@ -150,4 +137,4 @@ The list below provides a general overview of your assigned tasks. Specific deta
 1. Use TDD to design and code a custom `toString` method for the `Job` class.
 1. Use inheritance to DRY the code within `Employer`, `Location`, `CoreCompetency`, and `PositionType`.
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task1/index.md" >}})
+[Next]("../../../assignments/techjobs-oo/task1/index.md")

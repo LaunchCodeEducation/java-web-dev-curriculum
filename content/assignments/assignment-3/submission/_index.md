@@ -20,7 +20,7 @@ You might also want to check your app's behavior against that of [our demo app](
 
 ## How to Submit
 
-To turn in your assignment and get credit, follow the [submission instructions]({{< relref "../../hello-world/#submitting-your-work-on-canvas" >}}).
+To turn in your assignment and get credit, follow the [submission instructions]("../../hello-world/#submitting-your-work-on-canvas").
 
 ## Bonus Missions
 

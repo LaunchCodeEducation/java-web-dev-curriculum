@@ -28,11 +28,6 @@ This first project will be a simple proof-of-concept prototype. It won't be
 pretty or have lots of features, but it will give you a chance to work through
 some initial concepts and get feedback from LaunchCode staff.
 
-Your mentor on this project is Blake.
-
-{{< rawhtml >}}
-   <img src="pictures/LC-Blake.png" alt="LaunchCode Mentor Blake" width=20% />
-{{< /rawhtml >}}
 
 ## Learning Objectives
 
@@ -66,15 +61,15 @@ Blake has now handed the task off to you. You must add a couple of features and
 then get feedback from the Company Team.
 
 After you work through the tasks Blake has laid out for you, tackle one
-or more of the [bonus missions]({{< relref "./submission/#bonus-missions" >}}).
+or more of the [bonus missions]("./submission/#bonus-missions").
 
 ## Getting Started
 
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]("../hello-world/#running-the-autograding-tests-through-github-actions") section of `Assignment 0` 
 {{% /notice %}}
 
-In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
+In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]"../hello-world/#getting-started") for more details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit

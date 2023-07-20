@@ -22,21 +22,15 @@ Since this project contains two sets of tests used for different purposes—the 
 
 At the top right of IntelliJ, select _Add Configuration_, just left of the green _Run_ button.
 
-{{< rawhtml >}}
 <img src="../figures/add-configuration.png" alt="Configuration tab">
-{{< /rawhtml >}}
 
 If this item doesn’t have the label _Add Configuration_, then open the associated dropdown and select _Edit Configurations_.
 
-{{< rawhtml >}}
 <img src="../figures/edit-configurations.png" alt="Configuration tab">
-{{< /rawhtml >}}
 
 In the modal that opens, click on the + icon at the top left, and select _JUnit_.
 
-{{< rawhtml >}}
 <img src="../figures/select-junit-configuration.png" alt="Configuration tab">
-{{< /rawhtml >}}
 
 Fill out the resulting form using the values:
 
@@ -49,9 +43,7 @@ Then hit _Apply_ and _OK_.
 
 To run the tests, select the _JobTest_ configuration from the configurations menu and hit the green _Run_ button.
 
-{{< rawhtml >}}
 <img src="../figures/running-junit-config.png" alt="Configuration tab">
-{{< /rawhtml >}}
 
 Now you’re ready to start writing some tests!
 
@@ -109,5 +101,5 @@ Time to `save`, `commit`, and `push` your work to GitHub again.
 {{% /notice %}}
 
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task5/index.md" >}})
+[Next]("../../../assignments/techjobs-oo/task5/index.md")
 

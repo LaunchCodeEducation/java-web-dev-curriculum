@@ -59,7 +59,7 @@ System.out.println(person);
 
 ## `equals`
 
-Suppose we have two objects of type `Student`, say `student1` and `student2`, and we want to determine if they are equal. If we try to compare them using `==`, we will likely get a result we did not expect. This is because `student1` and `student2` are [reference variables]({{< relref "../../../data-types/reading/more-data-types/_index.md#reference-variables" >}}), which means they hold a reference to, or the address of, the actual `Student` objects. `student1` and `student2` evaluate as equal only when they have the same memory address.
+Suppose we have two objects of type `Student`, say `student1` and `student2`, and we want to determine if they are equal. If we try to compare them using `==`, we will likely get a result we did not expect. This is because `student1` and `student2` are [reference variables]("../../../data-types/reading/more-data-types/_index.md#reference-variables"), which means they hold a reference to, or the address of, the actual `Student` objects. `student1` and `student2` evaluate as equal only when they have the same memory address.
 
 To state that again: `student1` and `student2` will be equal (`==`) only when they refer to, or point at, the exact same object. Consider the example below, which creates two `Student` objects:
 
@@ -125,17 +125,13 @@ One catch of working with `equals()` is that its input parameter must be of type
 Here’s a visualization of the concepts of equality and identity:
 
 ### Equality
-{{< rawhtml >}}
    <img src="../images/equality.png" alt="2 variables pointing to unique objects" width=70% />
-{{< /rawhtml >}}
 
 
 When you test for equality, you look at two different objects and compare some aspect of them to each other.
 
 ###  Identity
-{{< rawhtml >}}
    <img src="../images/identity.png" alt="2 variables pointing to same objects" width=70% />
-{{< /rawhtml >}}
 
 When you test for identity, you look at two variables to see if they reference the exact same object.
 
