@@ -5,8 +5,8 @@ draft: false
 weight: 2
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -58,6 +58,7 @@ Now, let's add descriptions to our events!
 ## Bonus Missions
 
 1. Update your `processCreateEventForm` method so that you are able to create a new event using the new `HashMap`.
-- You will also need to update your `events/create` template so that a user can enter a description.
+
+   - You will also need to update your `events/create` template so that a user can enter a description.
 
 1. Try to add one more column to the table with pictures for each coding event. You need to use `th:href` to pull in pictures in the appropriate template.

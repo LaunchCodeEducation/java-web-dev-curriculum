@@ -5,8 +5,8 @@ draft: false
 weight: 2
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -86,11 +86,11 @@ We're assuming you've completed these [Controllers and Routing Exercises]({{< re
 on [this page]({{< relref "../../../controllers-and-routing/reading/controllers-classes/" >}}).
 {{% /notice %}}
 
-{{% notice red Warning "rocket" %}}
+{{% notice orange Warning "rocket" %}}
 The videos in this chapter walk you through building small web-based projects. Do NOT skip this practice, because the end of chapter exercises
 pick up where the tutorials end.
 
-In addition, the following video explores the use of `file templates`. Windows and Linux users may have a different experience than that shown in the video. For more information on locating / using `file templates` please visit the following link: [jetbrains file and code templates](https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html)
+In addition, the following video explores the use of `file templates`. Windows and Linux users may have a different experience than that shown in the video. For more information on locating / using `file templates` please visit the following link: [JetBrains file and code templates](https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html)
 {{% /notice %}}
 
 {{< youtube UIetMLyDVjQ >}}
@@ -99,7 +99,7 @@ In addition, the following video explores the use of `file templates`. Windows a
 The starter code for this video is found at the 
 [forms](https://github.com/LaunchCodeEducation/hello-spring/tree/forms) branch of `hello-spring-demo`. 
 The final code presented in this video is found on the 
-[views-static](https://github.com/LaunchCodeEducation/hello-spring/tree/views-static).
+[views-static](https://github.com/LaunchCodeEducation/hello-spring/tree/views-static)
 branch.
 {{% /notice %}}
 
