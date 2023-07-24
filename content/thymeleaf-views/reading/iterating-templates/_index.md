@@ -211,6 +211,8 @@ Which option produces one heading, 4 ordered lists, and 4 coffee names (each nam
 1. Option 1
 2. Option 2
 3. Option 3
+
+<!-- Solution: option 2 -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -219,6 +221,8 @@ Which option produces one heading, one ordered list, and 4 coffee names (with th
 1. Option 1
 2. Option 2
 3. Option 3
+
+<!-- Solution: option 1 -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -227,4 +231,6 @@ Which option produces 4 headings, 4 ordered lists, and 4 coffee names (each name
 1. Option 1
 2. Option 2
 3. Option 3
+
+<!-- Solution: option 3 -->
 {{% /notice %}}

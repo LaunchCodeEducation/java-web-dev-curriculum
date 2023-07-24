@@ -203,6 +203,8 @@ following attributes should you add to the `ul` tag?
 
 1. `th:if = "${numbers.size()}"`
 1. `th:unless = "${numbers.size()}"`
+
+<!-- Solution: answer = option 1 -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -214,6 +216,8 @@ Now you want to display ONLY the positive values in the list. Which of the follo
 1. `th:unless = "${number}"`
 1. `th:unless = "${number >= 0}"`
 1. `th:unless = "${number <= 0}"`
+
+<!-- Solution: option 3 and 6 -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -223,4 +227,6 @@ Now you want to display ONLY the positive, even values in the list. Which of the
 1. `th:if = "${number > 0 or number%2 == 0}"`
 1. `th:unless = "${number < 0 and number%2 == 0}"`
 1. `th:unless = "${number < 0 or number%2 == 0}"`
+
+<!-- Solution: option 1 -->
 {{% /notice %}}

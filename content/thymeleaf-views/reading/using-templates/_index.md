@@ -11,8 +11,8 @@ lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
-<!-- TODO: Update when conditionals-template is created -->
-In the [next video](), you will extend your `hello-spring` project and practice using Thymeleaf templates as you code along with the clip.
+
+In the [next video]({{< relref "../conditionals-templates/_index.md#try-it" >}}), you will extend your `hello-spring` project and practice using Thymeleaf templates as you code along with the clip.
 
 Before you get there, however, we need to review a few core skills and best-practices.
 
@@ -146,6 +146,8 @@ What will be displayed on the screen if the controller sends in a `name` variabl
 1. Name: Blake
 1. Blake: Default
 1. Blake
+
+<!-- Solution: Name: Blake -->
 {{% /notice %}}
 
 
@@ -160,4 +162,6 @@ Which of the following will produce the desired result?
 1. `<li th:text = "Item name: ${name}, Price = ${price}"></li>`
 1. `<li th:text = "${name}, ${price}">Item name: , Price = </li>`
 1. `<li>Item name: ${name}, Price = ${price}</li>`
+
+<!-- Solution: `<li th:text = "Item name: ${name}, Price = ${price}"></li>` -->
 {{% /notice %}}

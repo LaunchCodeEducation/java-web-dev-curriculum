@@ -149,6 +149,5 @@ If the template expects data for a list, but the controller does not provide
 ## Check Your Understanding
 
 {{% notice green Question "rocket" %}}
-Why should we use a template to design a web page rather than just coding
-   the entire site with HTML and CSS?
+Why should we use a template to design a web page rather than just coding the entire site with HTML and CSS?
 {{% /notice %}}
