@@ -16,7 +16,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 1. Start MySQL Workbench and create a new schema named `techjobs`.
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 Remember to double click on the schema name in the file tree to make it the default schema.
 {{% /notice %}}
 
@@ -25,12 +25,12 @@ Remember to double click on the schema name in the file tree to make it the defa
 4. Update `src/resources/application.properties` with the correct info. This will include
 `spring.datasource.url` set to the address of your database connection, as well as the username and password for a user you have create Refer to the tip below for the other properties you must add to complete your database setup.
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 <!-- TODO: Update below link to the coding events repo -->
 You can double check your setup against what you've already done for <!-- [your coding events repo](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html#setup-orm-database) -->. You can copy these property assignments from your coding events repo, only needing to change the database address and username/password values.
 {{% /notice %}}
 
-{{% notice blue Tip "rocket" %}}
+{{% notice green Tip "rocket" %}}
 If when starting your application, you encounter an error similar to
 
 ```bash
