@@ -12,11 +12,9 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-<!-- TODO: Find Temperature class in classes content and link back -->
-
 To get started with exceptions, open up `java-web-dev-projects/exceptions/chapter-example` on your machine so you can code along.
 Inside the `Temperature` package, take a look at the `Temperature` class.
-We worked with this exact class when learning more about classes.
+We worked with this exact class when learning more about [classes]({{< relref "../../../classes/reading/encapsulation/#getters-and-setters">}}).
 
 ```java {linenos=table, linenostart=3}
    public class Temperature {
@@ -45,7 +43,7 @@ Instead of simply printing out a warning that the temperature is below absolute 
 Before coding with exceptions, first think about what the exception needs to handle.
 In the case of our `Temperature` class, we need to throw an exception if the program attempts to set the value of `fahrenheit` to a temperature that is below absolute zero.
 The first question we need to ask about this exception is: when will it be thrown?
-Exceptions in Java can either be checked or unchecked depending on if the exception is a compile-time exception or a runtime exception.
+Exceptions in Java can either be checked or unchecked depending on if the exception is a **compile-time exception** or a **runtime exception**.
 In the context of a larger program, `setFahrenheit()` is only called with a value that is given by a user.
 This means if we throw an exception when a value that is below absolute zero is passed to `setFahrenheit()`, it will be a runtime or unchecked exception.
 
