@@ -24,11 +24,11 @@ Inside the `resources` folder, there is another directory called `static`. By co
 
 ## `th:src` and `th:href` - Video
 
-Code along with this final video to practice adding static resources to your `coding-events` project:
+Code along with this final video to practice adding static resources to your `codingevents` project:
 
 {{< youtube syzOmHnTnmo >}}
 
-> The starter code for this video is found at the [fragments branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/fragments) of the `CodingEventsJava` repo. The final code presented in this video is found on the [static-resources branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/static-resources). As always, code along to the videos on your own `coding-events` project.
+> The starter code for this video is found at the [fragments branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/fragments) of the `CodingEventsJava` repo. The final code presented in this video is found on the [static-resources branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/static-resources). As always, code along to the videos on your own `codingevents` project.
 
 ## `th:src`
 

@@ -64,7 +64,7 @@ data transfer or responding to user actions belongs in the controller. Code that
 involves retrieving data from a database or service or organizing that data belongs 
 with the model. 
 
-In our `coding-events` application thus far, we've done all data handling inside of 
+In our `codingevents` application thus far, we've done all data handling inside of 
 controller classes. However, most data manipulation should occur in model classes.
 So we need to make a distinction between these actions. For any manipulations that must occur
 regardless of a user's actions, that code belongs in the model. For changes

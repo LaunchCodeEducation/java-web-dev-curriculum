@@ -27,20 +27,20 @@ If you have not done so, commit and push any unsaved work from your
 Your new project will keep track of some fictional coding events.
 <!-- TODO: Update Link Below to chapter 9 when available -->
 1. Use the [start.spring.io](https://start.spring.io/) website to initialize your new project.
-2. Follow the steps you used to setup [hello-spring](initialize-spring-boot-project), but call the new project `coding-events`.
+2. Follow the steps you used to setup [hello-spring](initialize-spring-boot-project), but call the new project `codingevents`.
 3. Add the *Thymeleaf* dependency in addition to *Spring Web*, *Spring Boot DevTools*, and *Validation*.
 4. *Generate* the `.zip` file and then import it into IntelliJ.
 
 ## Coding Events Setup - Video
 
-Now that you have `coding-events` up and running, add features to it by coding along with the content below:
+Now that you have `codingevents` up and running, add features to it by coding along with the content below:
 
 <!-- {{< youtube hmgxMOf51JU >}} -->
 
 {{% notice blue Note "rocket" %}}
-The following videos will demonstrate features we've added to a new MVC application we'll be working with called `coding-events`. You may notice that parts of this video include references to `Java11`. Your project should be using `Java17`.
+The following videos will demonstrate features we've added to a new MVC application we'll be working with called `codingevents`. You may notice that parts of this video include references to `Java11`. Your project should be using `Java17`.
 
-You should create your own version of `coding-events` from [Spring Initializer](https://start.spring.io/) and refer to [this branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/starter) and the [Coding Events Setup - Text]({{< relref "#coding-events-setup---text" >}}) walkthrough to replicate our code. You may fork and clone from the `CodingEventsJava` project for reference.
+You should create your own version of `codingevents` from [Spring Initializer](https://start.spring.io/) and refer to [this branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/starter) and the [Coding Events Setup - Text]({{< relref "#codingevents-setup---text" >}}) walkthrough to replicate our code. You may fork and clone from the `CodingEventsJava` project for reference.
 {{% /notice %}}
 
 ## Coding Events Setup - Text
@@ -65,7 +65,7 @@ The code reviewed in the video uses concepts learned in the [previous chapter](c
 {{% notice blue Note "rocket" %}}
 The starter code for this video is found at the [starter branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/starter) of the `CodingEventsJava` repo. 
 
-The final code presented in this video is found on the [form branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms). As always, code along to the videos on your own `coding-events` project.
+The final code presented in this video is found on the [form branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 Before moving on, be sure to commit and push your changes. Do this after each
@@ -122,13 +122,13 @@ Some points to note:
 
 ## Add a Form Handler Method - Video
 
-Now that you have created and rendered a form in your `coding-events` project, you need to add a method to the controller to *handle* its submission. Code along with the video below to add this functionality.
+Now that you have created and rendered a form in your `codingevents` project, you need to add a method to the controller to *handle* its submission. Code along with the video below to add this functionality.
 
 {{< youtube LnpJcq33uoM >}}
 
 {{% notice blue Note "rocket" %}}
 The starter code for this video is found at the [form branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms) of the `CodingEventsJava` repo. 
-The final code presented in this video is found on the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued). As always, code along to the videos on your own `coding-events` project.
+The final code presented in this video is found on the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued). As always, code along to the videos on your own `codingevents` project.
 
 If you are having trouble with the redirect from creating a new event via the `events/create` endpoint you may need to update your redirect within the `createEvent` method to point to the desired location:
 

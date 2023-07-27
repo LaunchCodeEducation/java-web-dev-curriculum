@@ -22,7 +22,7 @@ event data.
 {{< youtube ijnIgreiNHU >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found at the [add-property branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-property) of the `CodingEventsJava` repo. The final code presented in this video is found on the [add-id branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-id). As always, code along to the videos on your own `coding-events` project.
+The starter code for this video is found at the [add-property branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-property) of the `CodingEventsJava` repo. The final code presented in this video is found on the [add-id branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-id). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### Add a Unique Id - Text
@@ -78,7 +78,7 @@ With these additions, every time a new event object is created, it is assigned a
 
 {{% notice blue Note "rocket" %}}
 The starter code for this video is found at the [add-id branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-id) repo. 
-The final code presented in this video is found on the [create-data-layer branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-data-layer). As always, code along to the videos on your own `coding-events` project.
+The final code presented in this video is found on the [create-data-layer branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-data-layer). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### Create a Data Layer - Text
@@ -143,7 +143,7 @@ EventData.add(new Event(eventName, eventDescription));
 {{< youtube orsBBbDaJMM >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found at the [create-data-layer branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-data-layer) of the `CodingEventsJava` repo. The final code presented in this video is found on the [delete-events branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/delete-events). As always, code along to the videos on your own `coding-events` project.
+The starter code for this video is found at the [create-data-layer branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-data-layer) of the `CodingEventsJava` repo. The final code presented in this video is found on the [delete-events branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/delete-events). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### Delete an Event - Text
@@ -221,13 +221,13 @@ This handler method uses the `required = false` parameter of `@RequestParam` to 
 ### Check Your Understanding
 
 {{% notice green Question "rocket" %}}
-In `coding-events`, which method can we call to list every event object?
+In `codingevents`, which method can we call to list every event object?
 
 <!-- Solution: EventData.getAll() -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
-In `coding-events`, breaking up the event storage from the `Event` model is an example of which object-oriented
+In `codingevents`, breaking up the event storage from the `Event` model is an example of which object-oriented
 concept?
 
 <!-- Solution: Encapsulation -->

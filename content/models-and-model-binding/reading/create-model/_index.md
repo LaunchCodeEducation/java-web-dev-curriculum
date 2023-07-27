@@ -12,12 +12,12 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-In the next several pages, we will be making updates to `coding-events` to demonstrate model creation,
+In the next several pages, we will be making updates to `codingevents` to demonstrate model creation,
 how models relate to data, and the practice of model binding. The first of these steps is to move data 
 handling out of our controller classes and into a model class. As we discussed on the previous page, the 
 controller class is not responsible for holding data.
 
-In `coding-events`, we'll remove the `ArrayList` data from `EventController` and create a proper 
+In `codingevents`, we'll remove the `ArrayList` data from `EventController` and create a proper 
 Java class to deal with event items. We'll then update our controller methods to take
 advantage of the new model and its properties, rather than the strings stored in the list.
 Lastly, because the controller is updating, the template variables it relies upon will also need to
@@ -29,7 +29,7 @@ change to reflect the model properties.
 
 {{% notice blue Note "rocket" %}}
 The starter code for this video is found at the [add-bootstrap branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-bootstrap) of `CodingEventsJava` repository. The final code presented in this video is found on the 
-[create-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-model). As always, code along with the videos on your own `coding-events` project.
+[create-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-model). As always, code along with the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### Create a Model Class - Text
@@ -102,7 +102,7 @@ The syntax `event.fieldName` runs a getter method behind the scenes in order to 
 {{< youtube 5dtyojtADbk >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found at the [create-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-model)  of the `coding-events-demo` repo. The final code presented in this video is found on the [add-property branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-property). As always, code along to the videos on your own `coding-events` project.
+The starter code for this video is found at the [create-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/create-model)  of the `codingevents-demo` repo. The final code presented in this video is found on the [add-property branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-property). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### Add a Model Property - Text

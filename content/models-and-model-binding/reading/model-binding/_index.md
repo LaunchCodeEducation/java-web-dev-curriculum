@@ -21,7 +21,7 @@ Model binding reduces the amount of code we need to write to create an object an
 {{< youtube gzk__EWfvaw >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found at the [delete-events branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/delete-events) of the `CodingEventsJava` repo. The final code presented in this video is found on the [model-binding branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/model-binding). As always, code along to the videos on your own `coding-events` project.
+The starter code for this video is found at the [delete-events branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/delete-events) of the `CodingEventsJava` repo. The final code presented in this video is found on the [model-binding branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/model-binding). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 ### How to Use Model-Binding - Text
@@ -72,7 +72,7 @@ Complete this sentence: Model binding ...
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
-In `coding-events`, we add an additional private field, `numberOfAttendees`, to the `Event` class. What other change must we make to ensure the user of our application can determine this value? (Assume we are using model binding to process form submission.)
+In `codingevents`, we add an additional private field, `numberOfAttendees`, to the `Event` class. What other change must we make to ensure the user of our application can determine this value? (Assume we are using model binding to process form submission.)
 
 1. Pass in a `numberOfAttendees` parameter to the form submission handler.
 1. Add another input element to the create event form with a `name=numberOfAttendees` attribute.
