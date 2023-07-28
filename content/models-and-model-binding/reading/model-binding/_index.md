@@ -30,7 +30,7 @@ With the `Event` model in place, we can incorporate another annotation, `@ModelA
 
 Revised `processCreateEventForm` in `EventController`:
 
-```java
+```java {linenos=true}
 @PostMapping("create")
 public String processCreateEventForm(@ModelAttribute Event newEvent) {
    EventData.add(newEvent);
@@ -44,7 +44,7 @@ For binding to take place, we must use the model field names as the form field n
 
 `events/create.html`:
 
-```html
+```html {linenos=true}
 <div class="form-group">
    <label>Name
       <input type="text" name="name" class="form-control">

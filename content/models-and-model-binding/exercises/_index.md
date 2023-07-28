@@ -68,7 +68,7 @@ As you work through these steps, test your code along the way! With each change 
 - Return the appropriate template string.
 
    {{% expand "Check your solution" %}}
-   ```java
+   ```java {linenos=true}
    @GetMapping("edit/{eventId}")
    public String displayEditForm(Model model, @PathVariable int eventId){
    Event eventToEdit = EventData.getById(eventId);
@@ -98,7 +98,7 @@ As you work through these steps, test your code along the way! With each change 
 - Redirect the user to `/events` (the event listing page).
 
    {{% expand "Check your solution" %}}
-   ```java
+   ```java {linenos=true}
    @PostMapping("edit")
    public String processEditForm(int eventId, String name, String description) {
    Event eventToEdit = EventData.getById(eventId);

@@ -44,7 +44,7 @@ Of course, we'll also like at least one constructor and some getters and setters
 
 In `models/Event.java`:
 
-```java
+```java {linenos=true}
 public class Event {
 
    private String name;
@@ -72,7 +72,7 @@ Now that we're working to move the data handling out from the controller classes
 we'll need to update the `POST` handler that creates new events. Update the `.add()` method inside of 
 `processCreateEventForm` to add a new `Event` instance:
 
-```java
+```java {linenos=true}
 @PostMapping("create")
 public String processCreateEventForm(@RequestParam String eventName) {
    events.add(new Event(eventName));
@@ -111,7 +111,7 @@ To round out the `Event` class, we'll add a `description` field to showcase what
 
 Updates to `models/Event.java`:
 
-```java
+```java {linenos=true}
 public class Event {
 
    private String name;
@@ -155,7 +155,7 @@ description field and to display that description along with the event's name.
 
 `events/create.html`:
 
-```html
+```html {linenos=true}
 <label>
    Description
    <input type="text" name="eventDescription"  class="form-control">
@@ -174,7 +174,7 @@ value into the creation of the Event object.
 
 `EventController`:
 
-```java
+```java {linenos=true}
 @PostMapping("create")
 public String processCreateEventForm(@RequestParam String eventName, @RequestParam String eventDescription) {
    events.add(new Event(eventName, eventDescription));

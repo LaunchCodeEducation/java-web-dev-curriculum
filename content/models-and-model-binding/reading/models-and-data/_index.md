@@ -45,7 +45,7 @@ To accomplish the same data clarity with events, we'll add a few things to the e
 
 The result in `models/Event.java`:
 
-```java
+```java {linenos=true}
 public class Event {
 
    private int id;
@@ -95,7 +95,7 @@ maintaining the event data that simply extend built-in HashMap methods.
 
 The contents of `data/EventData.java`:
 
-```java
+```java {linenos=true}
 public class EventData {
 
    private static Map<Integer, Event> events = new HashMap<>();
@@ -157,7 +157,7 @@ with this task is to create a controller method to get a view to delete events.
 
 Onto the end of `EventController`, add the following method:
 
-```java
+```java {linenos=true}
 @GetMapping("delete")
 public String renderDeleteEventForm(Model model) {
    model.addAttribute("title", "Delete Event");
@@ -170,7 +170,7 @@ We'll now need to create a new view for the path mapped in the method above. Add
 `events/delete.html`. This view will reference event id fields in order to distinguish which items the user 
 will request to delete via checkbox inputs. 
 
-```html
+```html {linenos=true}
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
    <head th:replace="fragments :: head"></head>
@@ -202,7 +202,7 @@ page once they have selected which event, or events, to remove from storage.
 
 In `EventController`, add another controller method:
 
-```java
+```java {linenos=true}
 @PostMapping("delete")
 public String processDeleteEventsForm(@RequestParam(required = false) int[] eventIds) {
 
