@@ -14,8 +14,23 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Learning Objectives
 
+Upon completing all the content in this chapter, you should be able to do the following:
+
+1. Validate form submission data using annotations and model binding
+
 ## Key Terminology
 
-## Content Links
+Here is a list of key terms for this chapter listed by the page the terms first appear on.
+
+### Server-Side Validation
+
+1. client-side validation
+1. server-side validation
+
+### Thymeleaf Form Tools
+
+1. no-arg constructor
+
+## Chapter Content
 
 {{% children %}}

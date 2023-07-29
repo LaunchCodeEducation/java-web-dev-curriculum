@@ -29,9 +29,9 @@ easier and cleaner.
 
 {{% notice blue "Note" "rocket" %}}
 
-   The starter code for this video is found at the `validation-errors branch <https://github.com/LaunchCodeEducation/coding-events/tree/validation-errors>`__ of the ``coding-events-demo`` repo. 
-   The final code presented in this video is found on the `display-errors branch <https://github.com/LaunchCodeEducation/coding-events/tree/display-errors>`__ As always, code along to the 
-   videos on your own ``coding-events`` project.
+   The starter code for this video is found at the [validation-errors branch](https://github.com/LaunchCodeEducation/coding-events/tree/validation-errors) of the `CodingEventsJava` repo. 
+   The final code presented in this video is found on the [display-errors branch](https://github.com/LaunchCodeEducation/coding-events/tree/display-errors) As always, code along to the 
+   videos on your own `codingevents` project.
 
 {{% /notice %}}
 
@@ -204,48 +204,44 @@ that if there are validation errors, the form will be rendered with the values
 that the user previously entered, preventing the user from having to re-enter
 all of their data.
 
-Using ``th:errors``
-^^^^^^^^^^^^^^^^^^^
+### Using `th:errors`
 
-The Thymeleaf attribute ``th:errors`` is used similarly to ``th:field`` to
+The Thymeleaf attribute `th:errors` is used similarly to `th:field` to
 display field-specific error messages. Recall that when we added our validation
 annotations to each model field, we also
-:ref:`added a message argument <validation-messages>`. Setting ``th:errors`` to
+added a message argument. Setting `th:errors` to
 a field will display any validation errors for that field.
 
 For example, let's add a new element to the first form group:
 
-.. sourcecode:: html
-   :lineno-start: 9
-
+```html {linenos=table, linenostart=9}
    <div class="form-group">
       <label>Name
          <input th:field="${event.name}" class="form-control" />
       </label>
       <p class="error" th:errors="${event.name}"></p>
    </div>
+```
 
-Setting ``th:errors="${event.name}"`` tells Thymeleaf to insert any error
-messages related to the ``name`` field of ``event`` into the paragraph element.
-We add ``class="error"`` to allow us to style this element, for example with
-red text. A simple rule in our ``styles.css`` file will do the trick:
+Setting `th:errors="${event.name}"` tells Thymeleaf to insert any error
+messages related to the `name` field of `event` into the paragraph element.
+We add `class="error"` to allow us to style this element, for example with
+red text. A simple rule in our `styles.css` file will do the trick:
 
-.. sourcecode:: css
-
+```css
    .error {
      color: red;
    }
+```
 
-.. admonition:: Note
-
-   Make sure that ``styles.css`` is included in the ``head`` fragment of ``fragments.html``, or the stylesheet will not load.
+{{% notice blue "Note" "rocket" %}}
+   Make sure that `styles.css` is included in the `head` fragment of `fragments.html`, or the stylesheet will not load.
+{{% /notice %}}
 
 Using this attribute on all of the fields gives us our final form template
 code:
 
-.. sourcecode:: html
-   :lineno-start: 8
-
+```html {linenos=table, linenostart=8}
    <form method="post">
       <div class="form-group">
          <label>Name
@@ -269,27 +265,23 @@ code:
          <input type="submit" value="Create" class="btn btn-success" />
       </div>
    </form>
+```
 
 Now, when the form is submitted with invalid data, our custom validation error
 messages will display just below the given inputs.
 
-.. figure:: figures/display-validation-errors.png
-   :alt: Our Create Event form after submission with all fields blank. Red error messages are visible next to the fields that failed validation.
-   :width: 700px
+## Check Your Understanding
 
-   The result of submitting an empty form
+{{% notice green "Question" "rocket" %}}
 
-Check Your Understanding
-------------------------
+   Which HTML attributes will a `th:field` attribute NOT influence?
 
-.. admonition:: Question
+   1. `id`
+   1. `name`
+   1. `value`
+   1. `field`
 
-   Which HTML attributes will a ``th:field`` attribute NOT influence?
+{{% /notice %}}
 
-   #. ``id``
-   #. ``name``
-   #. ``value``
-   #. ``field``
-
-.. ans: D, which is not even an attribute. All other attributes are set by
-   th:field
+<!-- D, which is not even an attribute. All other attributes are set by
+   th:field -->
