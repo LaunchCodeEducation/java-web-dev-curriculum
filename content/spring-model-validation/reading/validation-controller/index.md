@@ -65,9 +65,9 @@ Let's look at how we can practically do this within Spring Boot.
 
 {{% notice blue "Note" "rocket" %}}
 
-   The starter code for this video is found at the `add-validation-annotations branch <https://github.com/LaunchCodeEducation/coding-events/tree/add-validation-annotations>`__ of the ``coding-events-demo`` repo. 
-   The final code presented in this video is found on the `validation-errors branch <https://github.com/LaunchCodeEducation/coding-events/tree/validation-errors>`__. As always, code along to the 
-   videos on your own ``coding-events`` project.
+   The starter code for this video is found at the [add-validation-annotations branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-validation-annotations) of the `CodingEventsJava` repo. 
+   The final code presented in this video is found on the [validation-errors branch](https://github.com/LaunchCodeEducation/coding-events/tree/validation-errors). As always, code along to the 
+   videos on your own `codingevents` project.
 
 {{% /notice %}}
 
