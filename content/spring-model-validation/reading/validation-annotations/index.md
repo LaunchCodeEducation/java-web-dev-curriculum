@@ -12,11 +12,11 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-Within the model of a Java web application, we can define validation rules using annotations from the `javax.validation.constraints` package. This package provides a variety of annotations that are useful in common circumstances, and which can be applied to model fields. 
+Within the model of a Java web application, we can define validation rules using annotations from the `jakarta.validation.constraints` package. This package provides a variety of annotations that are useful in common circumstances, and which can be applied to model fields. 
 
 ## Common Annotations
 
-We'll use only a few of these annotations, but you can find a full list in the [package documentation](https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/package-summary.html).
+We'll use only a few of these annotations, but you can find a full list in the [package documentation](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary.html).
 
 | Annotation | Description | Syntax |
 |------------|-------------|--------|
@@ -69,9 +69,9 @@ We will see how to ensure these messages are properly displayed in the next sect
 
 {{% notice blue "Note" "rocket" %}}
 
-   The starter code for this video is found at the `model-binding branch <https://github.com/LaunchCodeEducation/coding-events/tree/model-binding>`__. of the ``coding-events-demo`` repo. 
-   The final code presented in this video is found on the `add-validation-annotations branch <https://github.com/LaunchCodeEducation/coding-events/tree/add-validation-annotations>`__. As always, code along to the 
-   videos on your own ``coding-events`` project.
+   The starter code for this video is found at the [model-binding branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/model-binding) of the `CodingEventsJava` repo. 
+   The final code presented in this video is found on the [add-validation-annotations branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-validation-annotations). As always, code along to the 
+   videos on your own `codingevents` project.
 
 {{% /notice %}}
 
@@ -172,7 +172,7 @@ After adding this new field to our constructor, and generating a getter and sett
 
 {{% notice green "Tip" "rocket" %}}
 
-   The full list of Java validation annotations is in the [documentation](https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/package-summary.html) for `javax.validation.constraints`.
+   The full list of Java validation annotations is in the [documentation](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/jakarta/validation/constraints/package-summary.html) for `jakarta.validation.constraints`.
 
 {{% /notice %}}
 
