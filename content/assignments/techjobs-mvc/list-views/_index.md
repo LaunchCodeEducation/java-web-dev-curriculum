@@ -1,5 +1,5 @@
 ---
-title: "Complete List Views"
+title: "Task 1: Complete List Views"
 date: 2023-05-22T10:20:54-05:00
 draft: false
 weight: 2
@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Sally Steuterman # update any time edits are made after review
+lastEditorGitHub: gildedgardenia # update any time edits are made after review
+lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Complete the List Views

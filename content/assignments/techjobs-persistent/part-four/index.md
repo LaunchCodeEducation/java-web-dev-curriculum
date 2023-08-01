@@ -1,5 +1,5 @@
 ---
-title: "Part Four"
+title: "Task 4: Setting Up a Many-to-Many Relationship"
 date: 2023-01-03T10:42:56-06:00
 draft: false
 weight: 5
@@ -7,19 +7,17 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Sally Steuterman # update any time edits are made after review
+lastEditorGitHub: gildedgardenia # update any time edits are made after review
+lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
 ---
-
-## Setting Up a Many-to-Many Relationship
 
 Using a many-to-many relationship, we can now use the `Skill` object to store a `Job` object's skills. At the moment,
 a job can have many skills listed as strings. In this section, you'll be tasked with changing this field type to be a list
 of skills. Just as a job requires many skills, any skill can be associated with several jobs. With this in mind, you'll also
 add a list of jobs as a field onto the skill class.
 
-{{% notice red Warning "rocket" %}}
+{{% notice orange Warning "rocket" %}}
 As before, there are a few tests in `TestTaskFour` that have been commented out because they depend on the code you wrote in Part 1. Open `TestTaskFour` in IntelliJ and find these tests. For each one:
 
 1. Select the entire commented-out method.

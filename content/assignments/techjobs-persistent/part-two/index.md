@@ -1,5 +1,5 @@
 ---
-title: "Part Two"
+title: "Task 2: Persisting Employers and Skills"
 date: 2023-01-03T10:42:56-06:00
 draft: false
 weight: 3
@@ -7,12 +7,10 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Sally Steuterman # update any time edits are made after review
+lastEditorGitHub: gildedgardenia # update any time edits are made after review
+lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
 ---
-
-## Persisting Employers and Skills
 
 You will need to have completed the [setup steps]({{< relref "../part-one/index.html" >}}) before starting this
 section.
