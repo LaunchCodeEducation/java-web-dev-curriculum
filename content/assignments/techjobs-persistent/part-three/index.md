@@ -1,5 +1,5 @@
 ---
-title: "Part Three"
+title: "Task 3: Setting Up a One-to-Many Relationship"
 date: 2023-01-03T10:42:56-06:00
 draft: false
 weight: 4
@@ -11,8 +11,6 @@ lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
-
-## Setting Up a One-to-Many Relationship
 
 In this application, any one `Job` object is affiliated with one employer while one `Employer` may contain several jobs.
 
