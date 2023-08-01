@@ -12,7 +12,7 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-Let’s revisit our `Cat` and `HouseCat` friends. In `java-web-dev-exercises`, open `src/org/launchcode/java/demos/inheritance` and examine the two classes inside.
+Let’s revisit our `Cat` and `HouseCat` friends. In `java-web-dev-projects`, open `inheritance/testing-inheritance/tale-of-two-cats/src/main/java` and examine the two classes inside.
 
 ## Inheriting Fields and Properties
 
