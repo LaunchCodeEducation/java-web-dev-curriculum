@@ -26,6 +26,8 @@ After completing this chapter, you should be able to do the following:
 
 ## Major Concepts & Key Terminology
 1. Authentication
+1. Authorization
+1. Sessions
 1. Cookies
 1. Two-way encryption
 1. one-way hash
