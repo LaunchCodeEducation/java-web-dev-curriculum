@@ -14,6 +14,10 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 With a `User` class in place, we can now create controllers and views for creating a user and verifying their credentials.
 
+{{% notice blue Note "rocket" %}}
+The code for this section begins with the [user-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-model) and ends with the [login-reg-forms branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/login-reg-forms) of the `CodingEventsJava` repository.
+{{% /notice %}}
+
 ## Creating `AuthenticationController`
 
 In the `controllers` package, create a new class named `AuthenticationController`. Since this controller will deal with `User` objects, it needs a `UserRepository` instance.
@@ -370,10 +374,6 @@ public String logout(HttpServletRequest request){
 To log out, we simply invalidate the session associated with the given user.
 This removes all data from the session, so that when the user makes a
 subsequent request, they will be forced to log in again.
-
-{{% notice blue Note "rocket" %}}
-The code for this section is available in the [login-reg-forms branch](https://github.com/LaunchCodeEducation/coding-events/tree/login-reg-forms) of the `CodingEventsJava` repository.
-{{% /notice %}}
 
 ## Check Your Understanding
 
