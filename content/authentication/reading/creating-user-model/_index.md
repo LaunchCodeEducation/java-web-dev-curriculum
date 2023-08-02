@@ -26,9 +26,6 @@ Before we can authenticate users, we need users to authenticate! We'll start by 
 You can use the [add-tags branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-tags) as your starting point for this section. 
 {{% /notice %}}
 
-
-
-
 A model class representing users needs, at a minimum, fields representing username and password.
 
 In the `models` package, create a `User` class with `@Entity` and extending `AbstractEntity`. It should have two string fields, `username` and `pwHash`. We only need a getter for `username`.
@@ -68,8 +65,7 @@ Our validation annotations on `User` are very lenient. This is okay, however, be
 We'll use the bycrypt hash algorithm. One way to access this algorithm is via the following dependency:
 
 ```console
-org.springframework.security:spring-security-crypto
-
+implementation("org.springframework.security:spring-security-crypto:5.5.1")
 ```
 
 Add this as an `implementation` dependency in your `build.gradle` file. 
@@ -78,8 +74,9 @@ This dependency provides the `BCryptPasswordEncoder` class, which we will use to
 
 ```java
 private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-
 ```
+
+Add the above line of code to your `User` class.
 
 In the constructor, we can use `encoder` to create a hash from the given password:
 
