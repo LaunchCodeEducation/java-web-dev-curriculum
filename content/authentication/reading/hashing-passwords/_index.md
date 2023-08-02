@@ -89,8 +89,6 @@ The conditional compares the values of the hash stored in the database with the 
 
 ### Hashing Isn't Perfect
 
-[](#hash-properties)
-
 Using hash functions to process passwords is not a cure-all. One vulnerability is the possibility for **collisions**. A collision occurs when two different messages have the same hash value. By [property 3]({{< relref "#hash-properties" >}}), this is supposed to be rare. However, if a collision is found for a given hash function, then it may be possible to create an algorithm to *generate* collisions. In other words, given a specific hash value, the algorithm could generate a string with the *same* hash value.
 
 The once-popular MD5 and SHA1 hash algorithms [quickly become obsolete](https://arstechnica.com/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/) (for cryptographic purposes, at least) once collisions were found. 

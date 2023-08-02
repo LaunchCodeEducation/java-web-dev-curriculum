@@ -81,6 +81,8 @@ Our login and registration forms will use DTOs to help with form rendering and p
 
 The DTO for the login form needs only `username` and `password` fields.
 
+Create a new `package` called `dto` within the `models` package.
+
 ```java {linenos=table}
 public class LoginFormDTO {
 
@@ -164,7 +166,7 @@ When passing an object into the view with `model.addAttribute`, specifying a lab
 In the method above, `model.addAttribute(new RegisterFormDTO())` will pass a `RegisterFormDTO` object in with the label `registerFormDTO`.
 {{% /notice %}}
 
-The registration form (in `templates/register.html`) uses the three DTO fields to render the form fields:
+Create a new `register.html` file inside of the `templates` directory that uses the three DTO fields to render the form fields:
 
 ```html {linenos = true}
 <!DOCTYPE html>
@@ -200,7 +202,7 @@ The registration form (in `templates/register.html`) uses the three DTO fields t
 </html>
 ```
 
-The form processing handler is more complicated. Let's look at it, and then break it down in detail.
+The form processing handler is more complicated. Add the following code to your `AuthenticationController` class so that we can look at it, and then break it down in detail.
 
 ```java {linenos = true}
 @PostMapping("/register")
@@ -233,7 +235,7 @@ public String processRegistrationForm(@ModelAttribute @Valid RegisterFormDTO reg
     userRepository.save(newUser);
     setUserInSession(request.getSession(), newUser);
 
-    return "redirect:/index";
+    return "redirect:";
 }
 ```
 
@@ -342,7 +344,7 @@ public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
 
     setUserInSession(request.getSession(), theUser);
 
-    return "redirect:/index";
+    return "redirect:";
 }
 ```
 
