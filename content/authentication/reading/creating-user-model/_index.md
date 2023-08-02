@@ -23,7 +23,7 @@ Before we can authenticate users, we need users to authenticate! We'll start by 
 ## A `User` Model
 
 {{% notice blue Note "rocket" %}}
-You can use the [add-tags branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-tags) as your starting point for this section. 
+You can use the [add-tags branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-tags) as your starting point for this section. Be sure to create a new branch as you begin your work.
 {{% /notice %}}
 
 A model class representing users needs, at a minimum, fields representing username and password.
