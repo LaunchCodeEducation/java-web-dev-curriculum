@@ -13,16 +13,14 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Learning Objectives
+Once you have completed everything in the chapter, you should be able to do the following:
+1. Use enum types to represent categories of related objects
 
 ## Key Terminology
-
-### Models in MVC
-
-### Creating a Model Class
-
-### Models and Data
-
-### Model-Binding
+1. enumeration types
+1. enums
+1. `select`
+1. log level
 
 ## Content Links
 
