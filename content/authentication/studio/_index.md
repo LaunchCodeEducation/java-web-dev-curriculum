@@ -15,11 +15,11 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 For this studio, you'll be tasked with adding simple user authentication to your 
 `techjobs` application. The steps to do this will match what you have already done 
 in `codingevents`. You should refer back to the tutorial starting 
-:ref:`here <user_auth_walkthrough>`.
+[here]({{< relref "../reading/creating-user-model/_index.md/#a-user-model" >}}).
 
-1. :ref:`auth_studio_user_model`
-1. :ref:`auth_studio_forms`
-1. :ref:`auth_studio_filter`
+1. [Create the User Model]({{< relref "#create-the-user-model" >}})
+1. [Create the Login and Registration Forms]({{< relref "#create-the-login-and-registration-forms" >}})
+1. [Filter Requests]({{< relref "#filter-requests" >}})
 
 ## The Starter Code
 
@@ -35,7 +35,7 @@ in `codingevents`. You should refer back to the tutorial starting
    ```console
    # Database connection settings
    spring.datasource.url=jdbc:mysql://localhost:3306/techjobs?useLegacyDatetimeCode=false&verifyServerCertificate=false&useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Chicago
-   
+
    spring.datasource.username=techjobs
    spring.datasource.password=techjobs
    ```
@@ -147,7 +147,7 @@ table.
 
 1. Create an `AuthenticationFilter` class in the `techjobsauth` package.
 
-   1. Have this class inherit from `HandlerInterceptorAdapter`.
+   1. Have this class implement the `HandlerInterceptor`.
    1. Add autowired instances of both `UserRepository` and `AuthenticationController`.
    1. Add a `preHandle` method.
 
