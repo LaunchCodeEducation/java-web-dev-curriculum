@@ -17,10 +17,15 @@ Get cozy with Java syntax by writing a console program that calculates the area 
 ## Creating your class
 Since you’re still new to Java and IntelliJ, we’ll provide some extra direction the first studio.
 
-1. Find the `java` folder inside the `datatypes-studio` module.
+1. Within the `datatypes-studio` directory create the following directory structure: `src/main/java`.
 1. Create a new package named `org.launchcode` by right-clicking (or ctrl-clicking for some Mac users) on the `java` directory and selecting _New_ > _Package_. Be sure to enter `org.launchcode` as the full name, or your package won’t be created in the correct location.
-1. Create a new class inside the package by right-clicking/ctrl-clicking on the `studios.areaofacircle` package/folder and selecting _New_ > _Java Class_. 
-1. Name the class `Area`.  Select the option to add the file to Git when the window appears.
+
+{{% notice blue Note "rocket" %}}
+You may have to right click on the `java` directory and mark the directory as "Sources root" in order to create a new package.
+{{% /notice %}}
+
+3. Create a new class inside the package by right-clicking/ctrl-clicking on the `org.launchcode` package/folder and selecting _New_ > _Java Class_. 
+4. Name the class `Area`.  Select the option to add the file to Git when the window appears.
 
 ## A. The `Area` Class
 
