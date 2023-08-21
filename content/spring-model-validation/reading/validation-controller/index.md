@@ -19,11 +19,11 @@ Validation involves both model and controller components of an MVC application. 
 Before diving into the details of the code, let's consider the logical flow of control for validating data in a request. Recall our `POST` handler from the previous chapter, which used model binding to create new `Event` objects from form submissions.
 
 ```java
-   @PostMapping("create")
-   public String processCreateEventForm(@ModelAttribute Event newEvent) {
-      EventData.add(newEvent);
-      return "redirect:";
-   }
+@PostMapping("create")
+public String processCreateEventForm(@ModelAttribute Event newEvent) {
+   EventData.add(newEvent);
+   return "redirect:";
+}
 ```
 
 The flow of this request can be described as follows:
@@ -84,11 +84,11 @@ Recall that *both* the model and controller play a role in validation. The model
 The first step to enable validation in a controller is to add `@Valid` to a method parameter that is created using model binding. 
 
 ```java
-   @PostMapping("create")
-   public String processCreateEventForm(@ModelAttribute @Valid Event newEvent) {
-      EventData.add(newEvent);
-      return "redirect:";
-   }
+@PostMapping("create")
+public String processCreateEventForm(@ModelAttribute @Valid Event newEvent) {
+   EventData.add(newEvent);
+   return "redirect:";
+}
 ```
 
 In lieu of explicit validation error handling (which we will cover below), Spring Boot throws an exception if validation fails for the new object. This means that an object that fails validation will NOT be saved. 
@@ -106,24 +106,24 @@ However, the user experience for this flow is not great. If a user submits bad d
 We can prevent a validation exception from being thrown by explicitly handling validation errors. Spring Boot makes an object of type `Errors` available when a method uses `@Valid`. As with `Model` objects, we can access this object by placing it in a method's parameter list. 
 
 ```java {linenos=table, linenostart=33}
-   @PostMapping("create")
-   public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
-                                       Errors errors, Model model) {
-      if(errors.hasErrors()) {
-         model.addAttribute("title", "Create Event");
-         model.addAttribute("errorMsg", "Bad data!");
-         return "events/create";
-      }
-
-      EventData.add(newEvent);
-      return "redirect:";
+@PostMapping("create")
+public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
+                                    Errors errors, Model model) {
+   if(errors.hasErrors()) {
+      model.addAttribute("title", "Create Event");
+      model.addAttribute("errorMsg", "Bad data!");
+      return "events/create";
    }
+
+   EventData.add(newEvent);
+   return "redirect:";
+}
 ```
 
 Here, we have added `Errors errors` to our handler. This object has a boolean method, `.hasErrors()` that we can use to check for the existence of validation errors. If there are validation errors, we return the form again, along with a simple message for the user. This message can be displayed in the `events/create` template by adding some code above the form:
 
 ```html
-   <p th:text="${errorMsg}" style="color:red;"></p>
+<p th:text="${errorMsg}" style="color:red;"></p>
 ```
 
 Now, when a user submits the form with bad data they will be notified and no exception will be thrown. However, the message "Bad data!" is far from ideal. The next section introduces a technique to display more useful error messages. 

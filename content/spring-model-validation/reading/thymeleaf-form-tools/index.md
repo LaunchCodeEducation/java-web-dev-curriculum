@@ -56,9 +56,9 @@ add field-specific attributes to the form, such as `name` and `id`.
 Consider our second input, which currently looks like this:
 
 ```html {linenos=table, linenostart=17}
-   <label>Description
-      <input type="text" name="description" class="form-control" />
-   </label>
+<label>Description
+   <input type="text" name="description" class="form-control" />
+</label>
 ```
 
 Above, we set the `name` attribute of the input element equal to
@@ -69,9 +69,9 @@ A better approach uses `th:field` to bind the `description` field
 *when the form is rendered*.
 
 ```html {linenos=table, linenostart=17}
-   <label>Description
-      <input type="text" th:field="${event.description}" class="form-control" />
-   </label>
+<label>Description
+   <input type="text" th:field="${event.description}" class="form-control" />
+</label>
 ```
 
 With this syntax, Thymeleaf will look for a variable named `event` and use
@@ -79,7 +79,7 @@ its `description` property to set the values of the `name` and `id`
 attributes. The generated input looks like this:
 
 ```html
-   <input type="text" id="description" name="description" class="form-control" />
+<input type="text" id="description" name="description" class="form-control" />
 ```
 
 We don't need to use the `id` attribute in this case, but it doesn't hurt
@@ -91,17 +91,17 @@ For this to work, two more steps are necessary. First, we add constructor to
 **no-arg constructor**.
 
 ```java {linenos=table, linenostart=27}
-   public Event(String name, String description, String contactEmail) {
-      this();
-      this.name = name;
-      this.description = description;
-      this.contactEmail = contactEmail;
-   }
+public Event(String name, String description, String contactEmail) {
+   this();
+   this.name = name;
+   this.description = description;
+   this.contactEmail = contactEmail;
+}
 
-   public Event() {
-      this.id = nextId;
-      nextId++;
-   }
+public Event() {
+   this.id = nextId;
+   nextId++;
+}
 ```
 
 This code includes two changes:
@@ -117,12 +117,12 @@ constructor when rendering the form. Back in `EventController`, we update the
 handler:
 
 ```java {linenos=table, linenostart=26}
-   @GetMapping("create")
-   public String displayCreateEventForm(Model model) {
-      model.addAttribute("title", "Create Event");
-      model.addAttribute("event", new Event());
-      return "events/create";
-   }
+@GetMapping("create")
+public String displayCreateEventForm(Model model) {
+   model.addAttribute("title", "Create Event");
+   model.addAttribute("event", new Event());
+   return "events/create";
+}
 ```
 
 Notice line 29, which passes in an `Event` object created by calling the
@@ -133,7 +133,7 @@ no-arg constructor.
    It's also allowable to pass in the `Event` object without a label:
 
    ```java
-      model.addAttribute(new Event());
+   model.addAttribute(new Event());
    ```
 
    In this case, Spring will implicitly create the label `"event"`, which is
@@ -145,29 +145,29 @@ Using this technique on our other form fields completes the task of binding the
 object to the form during rendering.
 
 ```html {linenos=table, linenostart=8}
-   <form method="post">
-      <div class="form-group">
-         <label>Name
-               <input type="text" th:field="${event.name}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.name}"></p>
-      </div>
-      <div class="form-group">
-         <label>Description
-               <input type="text" th:field="${event.description}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.description}"></p>
-      </div>
-      <div class="form-group">
-         <label>Contact Email
-               <input type="text" th:field="${event.contactEmail}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.contactEmail}"></p>
-      </div>
-      <div class="form-group">
-         <input type="submit" value="Create" class="btn btn-success" />
-      </div>
-   </form>
+<form method="post">
+   <div class="form-group">
+      <label>Name
+            <input type="text" th:field="${event.name}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.name}"></p>
+   </div>
+   <div class="form-group">
+      <label>Description
+            <input type="text" th:field="${event.description}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.description}"></p>
+   </div>
+   <div class="form-group">
+      <label>Contact Email
+            <input type="text" th:field="${event.contactEmail}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.contactEmail}"></p>
+   </div>
+   <div class="form-group">
+      <input type="submit" value="Create" class="btn btn-success" />
+   </div>
+</form>
 ```
 
 One additional result of using `th:field` is that if the `Event` object has
@@ -176,7 +176,7 @@ a value in any bound field, the input will be created with that value in its
 `contactEmail` of `me@me.com`, then the resulting form input would be:
 
 ```html
-   <input type="text" id="contactEmail" name="contactEmail" value="me@me.com" class="form-control" />
+<input type="text" id="contactEmail" name="contactEmail" value="me@me.com" class="form-control" />
 ```
 
 The value is then visible in the form field when the page loads. This may not
@@ -184,17 +184,17 @@ seem immediately useful, but it actually is. Recall our form submission
 handler:
 
 ```java {linenos=table, linenostart=33}
-   @PostMapping("create")
-   public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
-                                       Errors errors, Model model) {
-      if(errors.hasErrors()) {
-         model.addAttribute("title", "Create Event");
-         return "events/create";
-      }
-
-      EventData.add(newEvent);
-      return "redirect:";
+@PostMapping("create")
+public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
+                                    Errors errors, Model model) {
+   if(errors.hasErrors()) {
+      model.addAttribute("title", "Create Event");
+      return "events/create";
    }
+
+   EventData.add(newEvent);
+   return "redirect:";
+}
 ```
 
 This method checks for validation errors and returns the user to the form if it
@@ -215,12 +215,12 @@ a field will display any validation errors for that field.
 For example, let's add a new element to the first form group:
 
 ```html {linenos=table, linenostart=9}
-   <div class="form-group">
-      <label>Name
-         <input th:field="${event.name}" class="form-control" />
-      </label>
-      <p class="error" th:errors="${event.name}"></p>
-   </div>
+<div class="form-group">
+   <label>Name
+      <input th:field="${event.name}" class="form-control" />
+   </label>
+   <p class="error" th:errors="${event.name}"></p>
+</div>
 ```
 
 Setting `th:errors="${event.name}"` tells Thymeleaf to insert any error
@@ -229,9 +229,9 @@ We add `class="error"` to allow us to style this element, for example with
 red text. A simple rule in our `styles.css` file will do the trick:
 
 ```css
-   .error {
-     color: red;
-   }
+.error {
+   color: red;
+}
 ```
 
 {{% notice blue "Note" "rocket" %}}
@@ -242,29 +242,29 @@ Using this attribute on all of the fields gives us our final form template
 code:
 
 ```html {linenos=table, linenostart=8}
-   <form method="post">
-      <div class="form-group">
-         <label>Name
-               <input type="text" th:field="${event.name}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.name}"></p>
-      </div>
-      <div class="form-group">
-         <label>Description
-               <input type="text" th:field="${event.description}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.description}"></p>
-      </div>
-      <div class="form-group">
-         <label>Contact Email
-               <input type="text" th:field="${event.contactEmail}" class="form-control" />
-         </label>
-         <p class="error" th:errors="${event.contactEmail}"></p>
-      </div>
-      <div class="form-group">
-         <input type="submit" value="Create" class="btn btn-success" />
-      </div>
-   </form>
+<form method="post">
+   <div class="form-group">
+      <label>Name
+            <input type="text" th:field="${event.name}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.name}"></p>
+   </div>
+   <div class="form-group">
+      <label>Description
+            <input type="text" th:field="${event.description}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.description}"></p>
+   </div>
+   <div class="form-group">
+      <label>Contact Email
+            <input type="text" th:field="${event.contactEmail}" class="form-control" />
+      </label>
+      <p class="error" th:errors="${event.contactEmail}"></p>
+   </div>
+   <div class="form-group">
+      <input type="submit" value="Create" class="btn btn-success" />
+   </div>
+</form>
 ```
 
 Now, when the form is submitted with invalid data, our custom validation error
