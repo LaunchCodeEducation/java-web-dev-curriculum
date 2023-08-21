@@ -5,8 +5,8 @@ draft: false
 weight: 3
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -98,7 +98,7 @@ table in MySQL Workbench.
    1. A method to get the user information from the session.
    1. A method to set the user in the session.
 
-1. Create two DTOs for the user registration and login forms in a new package, `dto` under `models`.
+1. Create two DTOs for the user registration and login forms in a new package, `dto`, under `models`.
 
    1. Create a login form DTO with username and password fields.
    1. Create a register form DTO with the fields above and a field to verify a password.

@@ -5,8 +5,8 @@ draft: false
 weight: 1
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -104,7 +104,7 @@ If you are curious about simple authentication using Spring Security, check out 
 
 {{% notice green Question "rocket" %}}
 
-Which of the following are true:
+Which of the following are true?
 
 1. A session is stored on the server.
 1. A session is stored in the browser.

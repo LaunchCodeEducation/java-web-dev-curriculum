@@ -5,8 +5,8 @@ draft: false
 weight: 3
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -124,7 +124,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 
 While our repository extends `CrudRepository`, it also contains a new method, `findByUsername`. Based on the method signature, it appears that this method is intended to take a username, and return the given user with that username. Indeed, when our application runs, the `UserRepository` will have such a method.
 
-Spring allows for additional, custom methods to be added to repository interfaces, as long as they follow some basic naming conventions. These conventions are straightforward to use, and allow you to create additional, more sophisticated query methods. Methods created in this way are called **query methods**, and their rules are defined in [Springs documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation).
+Spring allows for additional, custom methods to be added to repository interfaces, as long as they follow some basic naming conventions. These conventions are straightforward to use, and allow you to create additional, more sophisticated query methods. Methods created in this way are called **query methods**, and their rules are defined in the [Spring documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation).
 
 {{% notice blue Note "rocket" %}}
 The final code for this section is available in the [user-model branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-model) of the `CodingEventsJava` repository.
@@ -140,7 +140,7 @@ Why can we not use Java string comparison when evaluating values generated with 
 1. Salting adds variance to hashes generated from the same plain text.
 1. Answers a and c.
 
-<!-- Solution: .. ans: 3, Salting adds variance to hashes generated from the same plain text.
+<!-- Solution: 3, Salting adds variance to hashes generated from the same plain text.
  -->
 {{% /notice %}}
 
@@ -158,6 +158,6 @@ True/False: From the code block above, the line `User findByUsername(String user
 1. True
 1. False
 
-<!-- Solution: .. ans: False, line 11 is a special query method that takes advantage of logic written in Spring to determine how it functions.
+<!-- Solution: False, line 11 is a special query method that takes advantage of logic written in Spring to determine how it functions.
  -->
 {{% /notice %}}
