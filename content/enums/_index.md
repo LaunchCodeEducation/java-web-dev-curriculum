@@ -17,6 +17,9 @@ Once you have completed everything in the chapter, you should be able to do the 
 1. Use enum types to represent categories of related objects
 
 ## Key Terminology
+
+Here is a list of key terms that you should make note of as you read through this chapter.
+
 1. enumeration types
 1. enums
 1. `select`
