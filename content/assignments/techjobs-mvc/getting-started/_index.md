@@ -163,30 +163,29 @@ the link text.
 
 The most interesting part of this template is how we generate the links:
 
-```html {lineno-start: 21}
-
-   <td th:each="category : ${tableChoices}">
-      <ul>
-         <li th:each="item : ${category.value}">
-            <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
-         </li>
-      </ul>
-   </td>
+```html {linenos=table}
+<td th:each="category : ${tableChoices}">
+   <ul>
+      <li th:each="item : ${category.value}">
+         <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
+      </li>
+   </ul>
+</td>
 ```
 
 1. `tableChoices` is a HashMap from `JobData`, and it contains the names of
    the `Job` fields as keys (`employer`, etc.). The value for each key is
    an ArrayList of `Employer`, `Location`, `CoreCompetency`, or
    `PositionType` objects.
-1. In line 21, `category` represents one key/value pair from
-   `tableChoices`, and in line 23, `item` represents one entry from the
+1. In line 1, `category` represents one key/value pair from
+   `tableChoices`, and in line 3, `item` represents one entry from the
    stored ArrayList.
 1. We’ve seen the syntax `@{/list/jobs}` to generate a link within a Thymeleaf
    template, but we haven’t seen the other portion of the link:
    `(column=${category.key},value=${position})`. This syntax causes Thymeleaf
    to dynamically generate query parameters for our URL.
 
-In line 24, we set these parameters by using `column=` and `value=`. The
+In line 4, we set these parameters by using `column=` and `value=`. The
 values of these parameters are determined dynamically based on
 `${category.key}` and `${item}`. Since these values come from
 `tableChoices`, the *keys* will be `employer`, `location`, etc. The
