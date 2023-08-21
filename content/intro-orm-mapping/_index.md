@@ -14,9 +14,31 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 ## Learning Objectives
 
+1. Understand how object-relational mapping allows object-oriented web applications to store data in relational databases
+1. Implement ORM for individual, non-related entities in Spring Boot
+1. Explain what object-relational mapping means
+1. Describe what a data layer is, and how it is used in ORM
+
 ## Key Terminology
 
-### Simple Controllers
+Here is a list of key terms that you should make note of as you read through this chapter.
+
+1. `@Entity`
+1. `@Id`
+1. `@GeneratedValue`
+1. `@Autowired`
+1. `@Repository`
+1. persistent class
+1. entity class
+1. CrudRepository
+1. Object-Relation Mapping
+1. ORM
+1. JPA
+1. Java Persistence API
+1. Data Layer
+1. object-relational mapper
+1. Environment Variables
+1. Hibernate
 
 ## Content Links
 
