@@ -5,8 +5,8 @@ draft: false
 weight: 5
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -44,7 +44,7 @@ a user's login status.
 ## Creating `AuthenticationFilter`
 
 In the top-level package of the app, `org.launchcode.codingevents`, create a
-class named `AuthenticationFilter` that implements `HandlerInterceptor`
+class named `AuthenticationFilter` that implements `HandlerInterceptor`.
 
 This class will need to access user data, so autowire a `UserRepository`
 field. We will also need to use the
@@ -65,7 +65,7 @@ public class AuthenticationFilter implements HandlerInterceptor {
 
 {{% notice blue Note "rocket" %}}
 For autowiring to work, a class must be Spring-managed. There are many ways
-a given class may registered as a Spring-managed class, but any class with
+a given class may be registered as a Spring-managed class, but any class with
 `@Controller` will be automatically registered. Thus, any controller class
 may be autowired.
 {{% /notice %}}
@@ -218,7 +218,7 @@ True/False: Request filtering takes place before any controller is called.
 1. True
 1. False
 
-<!-- Solution: .. ans: True -->
+<!-- Solution: True -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -228,5 +228,5 @@ it must match exactly in order for the path to be accessed without logging in.
 1. True
 1. False
 
-<!-- Solution: .. ans: False, Whitelisted paths as listed in this application can be just a root address. -->
+<!-- Solution: False, Whitelisted paths as listed in this application can be just a root address. -->
 {{% /notice %}}

@@ -5,14 +5,14 @@ draft: false
 weight: 2
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-Simple authentication allows users to log in to a site with a username and password. To implement authentication, we need to be able to verify that a user's password is correct. However, **you should NEVER store passwords in a database.** Seriously. Don't do it. Ever.
+Simple authentication allows users to log in to a site with a username and password. To implement authentication, we need to be able to verify that a user's password is correct. However, *you should NEVER store passwords in a database.* Seriously. Don't do it. Ever.
 
 Storing passwords in a database is incredibly insecure. A hacker may break into the database, gaining access to every user account. Or a deviant employee with access to the database may do the same. 
 
@@ -62,7 +62,7 @@ Then we store Jamie's username along with her hashed password in our `user` tabl
 |-------------|----------------------------------------|
 | tswizzle_fan | bd62d7e13ef465fa705f30de198ba0cb       |
 
-This is very secure. Even if somebody breaks into the database and finds Jamie's info, they will not be able to log in. Since we used a hash function, the hacker will have a very hard time turning the hash into a password (see [property 2]({{< relref "#hash-properties" >}})).
+This is very secure. Even if somebody breaks into the database and finds Jamie's info, they will not be able to log in. Since we used a hash function, the hacker will have a very hard time turning the hash into a password (see [property 2]({{< relref "#hash-properties" >}}) above).
 
 We can still authenticate Jamie, however. When they come to our site to log in, they will submit a username and password. Let's call the password value `submittedPassword`. Some basic logic will allow us to determine, with an *extremely* high rate of probability, whether or not the pair is valid.
 
@@ -107,7 +107,7 @@ When trying to crack a password hash using brute force, these are the first item
 
 ## Which Hash Function Should I Use?
 
-You should use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). This hash function is considered not only the best hash function at the moment, but also likely to be able to stand the test of time. Bcrypt uses hashing best practices (such as [salts](https://en.wikipedia.org/wiki/Salt_(cryptography))) along with an algorithm that can be made to run as long as you like. So even as computing power grows, bcrypt will be resistant to brute force techniques.
+You should use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). This hash function is considered not only the best hash function at the moment, but also likely to be able to stand the test of time. bcrypt uses hashing best practices (such as [salts](https://en.wikipedia.org/wiki/Salt_(cryptography))) along with an algorithm that can be made to run as long as you like. So even as computing power grows, bcrypt will be resistant to brute force techniques.
 
 ## Check Your Understanding
 
@@ -117,7 +117,7 @@ True/False: One-way encryption does not involve decryption.
 1. True
 1. False
 
-<!-- Solution: .. ans: 1, one-way encryption is only responsible for encrypting a message, not deciphering it
+<!-- Solution: 1, one-way encryption is only responsible for encrypting a message, not deciphering it
  -->
 {{% /notice %}}
 
@@ -129,6 +129,6 @@ Which of the following best describes hashing?
 1. Hashing cannot confirm that two passwords are the same because the original values are never saved.
 1. Hashing smashing.
 
-<!-- Solution: .. ans: 1, Hashing is the process of encrypting plaintext so that it is very difficult to obtain the original message.
+<!-- Solution: 1, Hashing is the process of encrypting plaintext so that it is very difficult to obtain the original message.
  -->
 {{% /notice %}}

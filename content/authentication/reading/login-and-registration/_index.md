@@ -5,8 +5,8 @@ draft: false
 weight: 4
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -380,14 +380,14 @@ subsequent request, they will be forced to log in again.
 ## Check Your Understanding
 
 {{% notice green Question "rocket" %}}
-What is the name of the new method we have introduced on the ``Errors`` object?
+What is the name of the new method we have introduced on the `Errors` object?
 
-1. ``Errors.hasErrors()``
-1. ``Errors.errors()``
-1. ``Errors.isNotEmpty()``
-1. ``Errors.rejectValue()``
+1. `Errors.hasErrors()`
+1. `Errors.errors()`
+1. `Errors.isNotEmpty()`
+1. `Errors.rejectValue()`
 
-<!-- Solution: .. ans: 4, ``Errors.rejectValue()`` -->
+<!-- Solution: 4, Errors.rejectValue() -->
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}

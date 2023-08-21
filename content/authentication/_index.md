@@ -5,8 +5,8 @@ draft: false
 weight: 19
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
@@ -24,7 +24,7 @@ After completing this chapter, you should be able to do the following:
 1. Describe how one-way hashes allow for passwords to be compared
 1. Describe the general authentication flow for a web app
 
-## Major Concepts & Key Terminology
+## Key Terminology
 1. Authentication
 1. Authorization
 1. Sessions
