@@ -25,13 +25,30 @@ After completing this chapter, you should be able to do the following:
 1. Describe the general authentication flow for a web app
 
 ## Key Terminology
-1. Authentication
-1. Authorization
-1. Sessions
-1. Cookies
-1. Two-way encryption
-1. one-way hash
+
+### Introduction to Authentication
+1. cookies
+1. authorization
+1. authentication
+1. sessions
+
+### Hashing Password
+1. two-way encryption
+1. one-way encryption
+1. password hashing
+1. collision
+1. bcrypt
+1. MD5, SHA1
+1. hash function
+
+### Creating a User Model
+1. bcrypt
+1. query methods
+
+### Filtering Requests
 1. request filters
+1. whitelist
+1. code-based configuration
 
 ## Content Links
 
