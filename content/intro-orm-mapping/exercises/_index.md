@@ -134,7 +134,8 @@ public String displayAllCategories(Model model) {
 `processCreateEventCategoryForm` needs to do the following:
 
 1. Use `@PostMapping`.
-1. Use error validation and the `Errors` object appropriately. If you want to review how to use the `Errors` object, check out the section on :ref:`error validation <validating-models>`.
+<!-- TODO: Update below link when content is added to book -->
+1. Use error validation and the `Errors` object appropriately. If you want to review how to use the `Errors` object, check out the section on [error validation]().
 1. Add an attribute for the `title` and assign it `"Create Category"`.
 1. Add an attribute for a new instance of `EventCategory`.
 1. Either return `"eventCategories/create"` or `"redirect:"`.
