@@ -17,7 +17,7 @@ class, adding in model validation.
 
 ## Getting Started
 
-Open up your `spaday` application and checkout the [user-signup-pt2](https://github.com/LaunchCodeEducation/Java17-Spa-Day/tree/user-signup-pt2) branch. 
+Open up your `spaday` application and checkout the [user-signup-pt2](https://github.com/LaunchCodeEducation/Java17-SpaDay/tree/user-signup-pt2) branch. 
 
 ## Add Validation Annotations
 
@@ -37,15 +37,15 @@ In the `UserController`, modify the `add` method that displays the
 form so that it passes in an empty `User` object with:
 
 ```java
-   model.addAttribute(new User());
+model.addAttribute(new User());
 ```
 
 This object will be accessible in the template, by name, as `user`.
 
 {{% notice green "Tip" "rocket" %}}
-   Now that you're passing in an empty `User` object, you may notice some redundant code
-   in your `processAddUserForm` controller. Remove the model attribute additions
-   and update the `user/add` template to make use of the model fields (eg. `user.username`).
+Now that you're passing in an empty `User` object, you may notice some redundant code
+in your `processAddUserForm` controller. Remove the model attribute additions
+and update the `user/add` template to make use of the model fields (eg. `user.username`).
 {{% /notice %}}
 
 While you’re in the `add.html` template remove the `type="email"` designation from the email 
@@ -67,11 +67,9 @@ the `User` parameter that is bound, along with an additional
 parameter: `Errors errors`. 
 
 {{% notice orange "Warning" "rocket" %}}
-
-   Remember, you must put this parameter directly
-   after the `User` parameter in the method definition for it to work
-   properly.
-
+Remember, you must put this parameter directly
+after the `User` parameter in the method definition for it to work
+properly.
 {{% /notice %}}
 
 Within the `processAddUserForm` handler, check for errors configured by the
@@ -93,11 +91,9 @@ other to properly return to the form if any of the validation conditions
 fail.
 
 {{% notice green "Tip" "rocket" %}}
-
-   You can, in fact, validate that passwords match using annotations by
-   taking a slightly more difficult approach than we’ve done here. We
-   outline how to do so in the Bonus Mission section.
-
+You can, in fact, validate that passwords match using annotations by
+taking a slightly more difficult approach than we’ve done here. We
+outline how to do so in the Bonus Mission section.
 {{% /notice %}}
 
 ## Test, Test, Test!
