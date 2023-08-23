@@ -32,63 +32,59 @@ the capabilities of an alternative CodingEvents API project.
 You can think of shape like a class definition in an object-oriented codebase:
 
 {{% notice blue "Example" "rocket" %}}
-```csharp {linenos=table}
-public class CodingEvent {
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public DateTime Date { get; set; }
+```java
+public class Event {
+    public int id;
+    public string name;
+    public string description;
 }
+
+...getters
+
+...setters
 ```
 
-Notice, the class called `CodingEvent` is equivalent to the `Event` class in our MVC application.
+The output resource shape of an `Event` entity:
 
-The output resource shape of a CodingEvent entity:
-
-```bash {linenos=table}
-CodingEvent {
-    Id: integer
-    Title: string
-    Description: string
-    Date: string (ISO 8601 date format)
+```bash
+Event {
+    id: integer
+    name: string
+    description: string
 }
 ```
 {{% /notice %}}
 
-The JSON representation of the resource that the API sends out is then based on the shape. This is like how an object is based on 
-the blueprint of its class.
+The JSON representation of the resource that the API sends out is then based on the shape. This is like how an object is based on the blueprint of its class.
 
-Here's a CodingEvent JSON Representation:
+Here's an Event JSON Representation:
 
 {{% notice blue "Example" "rocket" %}}
 ```bash {linenos=table}
 {
-    "Id": 1,
-    "Title": "Halloween Hackathon!",
-    "Description": "A gathering of nerdy ghouls to work on GitHub Hacktoberfest contributions",
-    "Date": "2020-10-31"
+    "id": 1,
+    "name": "Halloween Hackathon!",
+    "description": "A gathering of nerdy ghouls to work on GitHub Hacktoberfest contributions",
 }
 ```
 {{% /notice %}}
 
-We can think of inputs as a *partial state* provided by the client during create and update operations. Only some of the fields 
-are included because the API is responsible for providing the others.
+We can think of inputs as a *partial state* provided by the client during create and update operations. Only some of the fields are included because the API is responsible for providing the others.
 
-Consider the following example of an input shape used to create an event. Notice that the `Id` field is not included:
+Consider the following example of an input shape used to create an event. Notice that the `id` field is not included:
 
 {{% notice blue "Example" "rocket" %}}
 ```bash {linenos=table}
-CodingEvent {
-    Title: string
-    Description: string
-    Date: string (ISO 8601 date format)
+Event {
+    name: string
+    description: string
 }
 ```
 {{% /notice %}}
 
 Some of the common fields the API is responsible for managing:
 
-- the unique identifier (`Id`) 
+- the unique identifier (`id`) 
 - the "created on" or "last updated" timestamp
 - links for relationships between resources
 
@@ -109,8 +105,7 @@ exists within a collection. RESTful APIs separate the resources they expose into
 Let's consider two resources exposed by a RESTful API:
 
 {{% notice blue "Example" "rocket" %}}
-The CodingEvents API would have the following familiar resources (among others):
-
+The `codingevents` API would have the following familiar resources (among others):
 | Resource | Path |
 |----------|-------|
 | Coding Event | /events |
@@ -169,16 +164,15 @@ file within a directory. You need both the directory (collection) name and a sub
 {{% notice blue "Example" "rocket" %}}
 The generic path to identify a `CodingEvent` resource is noted as `/events/{codingEventId}`.
 
-Let's assume a CodingEvent entity exists with an `Id` of `12`.
+Let's assume a CodingEvent entity exists with an `id` of `12`.
 
 We could make a request to the `GET /events/12` endpoint to read its current state and receive this response:
 
 ```bash {linenos=table}
 {
-    "Id": 12,
-    "Title": "Halloween Hackathon!",
-    "Description": "A gathering of nerdy ghouls...",
-    "Date": "2020-10-31"
+    "id": 12,
+    "name": "Halloween Hackathon!",
+    "description": "A gathering of nerdy ghouls...",
 }
 ```
 {{% /notice %}}
@@ -231,9 +225,8 @@ We refer to this shape as a `NewCodingEvent` to distinguish it from the `CodingE
 
 ```bash {linenos=table}
 NewCodingEvent {
-    Title: string
-    Description: string
-    Date: string (ISO 8601 date format)
+    name: string
+    description: string
 }
 ```
 
@@ -268,7 +261,7 @@ After sending this request, the response includes:
 When removing a resource, the client is requesting a transition to an empty state. This means that both the request body and response body that are transferred (the representations of state) are empty. We can see this behavior in action with a request to the `DELETE` endpoint for a single resource entity in our example API:
 
 {{% notice blue "Example" "rocket" %}}
-Let's once again assume a `CodingEvent` resource exists with an `Id` of `12`. If we want to remove this entity, we need to issue a request to its uniquely identified `DELETE` endpoint:
+Let's once again assume a `CodingEvent` resource exists with an `id` of `12`. If we want to remove this entity, we need to issue a request to its uniquely identified `DELETE` endpoint:
 
 `DELETE /events/12 -> 204`
 
@@ -279,7 +272,7 @@ The `204`, or `No Content`, status code in the response indicates that the actio
 {{% notice blue "Example" "rocket" %}}
 What would happen if we made another request to the endpoint of a resource entity that doesn't exist, `DELETE /events/999`?
 
-We would receive a`404`, or `Not Found`, status code that lets us know the request failed because of a client error (providing an `Id` for a nonexistent resource).
+We would receive a`404`, or `Not Found`, status code that lets us know the request failed because of a client error (providing an `id` for a nonexistent resource).
 {{% /notice %}}
 
 ### Headers & Status Codes
@@ -305,10 +298,6 @@ When a request is successful, the `2XX` status codes are used. These codes commu
 | `GET`| `200` | `OK` | Resource entity or collection |
 | `DELETE` | `204` | `No Content` | empty response body |
 
-.. list-table:: Common client success status codes for each action
-   :header-rows: 1
-   :widths: 20 20 20 40
-
 #### Failure Status Codes
 
 Requests can fail. Status code groups categorize two types of failure:
@@ -332,38 +321,28 @@ Let's look at some of the common client error status codes:
 A bad request will include an error message in its response. The message should indicate what the client must change in their request body to succeed. This failure is seen when creating or updating a resource entity:
 
 {{% notice blue "Example" "rocket" %}}
-In the CodingEvents API, the state of a `CodingEvent` is validated using the following criteria:
+In the upcoming SpringRestApiApplication, the state of a `Event` is validated using the following criteria:
 
-- `Title`: 10-100 characters
-- `Description`: less than 1000 characters
+- `name`: "string text"
+- `description`: "string text"
 
-Imagine a client sending a `PATCH` request to update the `CodingEvents` resource entity with an `Id` of `6`. 
+Imagine a client sending a `PATCH` request to update the `Event` resource entity with an `Id` of `6`. 
 
 `PATCH /events/6 (PartialCodingEvent) -> CodingEvent`
 
-If their request body contains a `Title` field that is too short, the request will receive a `400` status code:
+If their request body contains a `name` field that is empty, the request will receive a `400` status code:
 
 Here is a portion of an invalid request to the `PATCH /events/6` endpoint:
 
 ```bash {linenos=table}
 {
-    "Title": "Foo"
+    "name":
+    "description": "Event without a name"
 }
 ```
 
-`Foo` does not contain enough characters to be a valid CodingEvent title. The CodingEvents API response to such a request therefore includes a `400` status code. 
-This alerts the client that they must correct their data representation. The response body indicates which aspects of the request are invalid. This is a 400 failed response body:
-
-```bash
-{
-    "error": "invalid fields",
-    "fields": [
-    {
-        "Title": "must be between 10 and 100 characters in length"
-    }
-    ]
-}
-```
+`name` does not contain any content, making it an invalid Event name. The SpringRestApiApplication API response to such a request therefore includes a `400` status code. 
+This alerts the client that they must correct their data representation. The response body indicates which aspects of the request are invalid.
 
 Using the information in the response, the client can fix their request body and reissue the request successfully.
 {{% /notice %}}
