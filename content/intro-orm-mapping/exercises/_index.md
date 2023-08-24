@@ -5,8 +5,8 @@ draft: false
 weight: 2
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub:  # update any time edits are made after review
 lastMod: 2023-30-06T10:28:27-05:00 # UPDATE ANY TIME CHANGES ARE MADE
@@ -163,31 +163,31 @@ To finish the exercises, we need to make two new templates.
 
 1. `eventCategories/index`, which will contain a table of the event categories.
 
-{{% expand "Check Your Solution" %}}
-```html
-<!DOCTYPE html>
-   <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-      <head th:replace="fragments :: head"></head>
-      <body class="container">
+   {{% expand "Check Your Solution" %}}
+   ```html
+   <!DOCTYPE html>
+      <html lang="en" xmlns:th="http://www.thymeleaf.org/">
+         <head th:replace="fragments :: head"></head>
+         <body class="container">
 
-         <header th:replace="fragments :: header"></header>
+            <header th:replace="fragments :: header"></header>
 
-         <table class="table table-striped">
-            <thead>
-            <tr>
-               <th>Category Name</th>
-            </tr>
-            </thead>
-            <tr th:each="category : ${categories}">
-               <td th:text="${category.name}"></td>
-            </tr>
+            <table class="table table-striped">
+               <thead>
+               <tr>
+                  <th>Category Name</th>
+               </tr>
+               </thead>
+               <tr th:each="category : ${categories}">
+                  <td th:text="${category.name}"></td>
+               </tr>
 
-         </table>
+            </table>
 
-      </body>
-   </html>
-```
-{{% /expand %}}
+         </body>
+      </html>
+   ```
+   {{% /expand %}}
 
 1. `eventCategories/create`, which will contain a form for adding new event categories.
 
