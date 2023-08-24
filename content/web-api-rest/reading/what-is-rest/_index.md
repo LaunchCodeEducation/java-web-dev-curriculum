@@ -152,10 +152,6 @@ defines the shape, or structure, of its resources along with the hierarchal orga
 {{% notice green "Question" "rocket" %}}
 True or False: Using HTTP requests, we can perform all four CRUD operations.
 
-1. True
-
-1. False
-
 <!-- Solution: True! REST API design relies on HTTP request types to perform CRUD operations on application data -->
 {{% /notice %}}
 
