@@ -5,14 +5,14 @@ draft: false
 weight: 3
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer:  # to be set by the page reviewer
-reviewerGitHub:  # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-In [Exercise: OMG the ORM!]({{< relref "../exercises/_index.md" >}}), you created a new persistent class, `EventCategory`. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. "DRY out your code") using inheritance and abstract classes.
+In [Exercises: OMG the ORM!]({{< relref "../exercises/_index.md" >}}), you created a new persistent class, `EventCategory`. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. "DRY out your code") using inheritance and abstract classes.
 
 ## Getting Ready
 
@@ -56,7 +56,7 @@ In the `models` package, create a new class named `AbstractEntity`. Add the `abs
 {{% notice green Tip "rocket" %}}
 This class name seems a little odd at first, but it makes sense after a brief explanation. 
 
-It is a commonly used convention in Java to prefix the name of an abstract class with ``Abstract``, to make it obvious to other developers that they can't create instances of the class. 
+It is a commonly used convention in Java to prefix the name of an abstract class with `Abstract`, to make it obvious to other developers that they can't create instances of the class. 
 
 Additionally, *every* entity class that we create will extend `AbstractEntity`. (Recall that an entity is a class/object that can be stored in a database.)
 {{% /notice %}}
