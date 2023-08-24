@@ -26,19 +26,19 @@ Same buttons with Bootstrap:
 
 ![Some simple Bootstrap buttons.](pictures/bootstrapButtonOptions.png?classes=border)
 
-## Adding Bootstrap to "coding-events"
+## Adding Bootstrap to "codingevents"
 
 ### Bootstrap - Video
 
 {{< youtube w-f3NYHHe9Q >}}
 
-> The starter code for this video is found at the [static-resources branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/static-resources) of the `coding-events` repo. The final code presented in this video is found on the [add-bootstrap branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-bootstrap). As always, code along to the videos on your own "coding-events" project.
+> The starter code for this video is found at the [static-resources branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/static-resources) of the `codingevents` repo. The final code presented in this video is found on the [add-bootstrap branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-bootstrap). As always, code along to the videos on your own "codingevents" project.
 
-Apart from adding the library to your Spring Boot project, we won't focus much time on the individual Bootstrap updates to "coding-events" but we want you to know what they are and where they come from. Feel free to add as much or as little Bootstrap styling to your own version.
+Apart from adding the library to your Spring Boot project, we won't focus much time on the individual Bootstrap updates to "codingevents" but we want you to know what they are and where they come from. Feel free to add as much or as little Bootstrap styling to your own version.
 
 You'll see from the [Getting Started](https://getbootstrap.com/docs/5.3/getting-started/introduction/) page that there are few ways to incorporate Bootstrap as a dependency in your project. One method is with a link to a **content delivery network**, or **CDN** for short. Linking to a CDN allows you to take advantage of the publicly available library without downloading the entire codebase yourself. Think of the practice like using a web address of an image hosted somewhere else on the web. Unlike downloading the image and including it directly in your own repository, you are not the steward of the image's longevity. The path to an externally hosted image may get moved at some point, or even removed entirely. The same is true with CDNs. So when you use a dependency from a CDN, know that you may need to update the link at some point in your project's lifetime.
 
-From [Bootstrap CDN](https://www.bootstrapcdn.com/), copy the *Complete CSS* and *Complete JavaScript* addresses and drop them into the head tag of `fragments.html` in your "coding-events" project.
+From [Bootstrap CDN](https://www.bootstrapcdn.com/), copy the *Complete CSS* and *Complete JavaScript* addresses and drop them into the head tag of `fragments.html` in your "codingevents" project.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
@@ -55,7 +55,7 @@ Much of what makes Bootstrap a powerfully helpful and time-saving style library 
 
 ### Bootstrap Tables
 
-Bootstrap gives us some table styling that we can use to display events in "coding-events". Some table styling is customizable, so read around Bootstrap's site and explore adding different options to your table.
+Bootstrap gives us some table styling that we can use to display events in "codingevents". Some table styling is customizable, so read around Bootstrap's site and explore adding different options to your table.
 
 [Bootstrap Tables](https://getbootstrap.com/docs/4.4/content/tables/).
 

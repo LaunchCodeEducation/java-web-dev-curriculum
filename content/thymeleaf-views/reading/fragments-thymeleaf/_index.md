@@ -133,7 +133,7 @@ Code along with the following video to practice using fragments in your template
 {{< youtube rbIyV6OoS-o >}}
 
 {{% notice blue Note "rocket" %}}
-The starter code for this video is found at the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued) of the `CodingEventsJava` repo. The final code presented in this video is found on the [fragments branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/fragments). As always, code along to the videos on your own `coding-events` project.
+The starter code for this video is found at the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued) of the `CodingEventsJava` repo. The final code presented in this video is found on the [fragments branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/fragments). As always, code along to the videos on your own `codingevents` project.
 {{% /notice %}}
 
 Remember that the summary text for the `fragment` and `replace` keywords supports the video and is NOT intended as a replacement.

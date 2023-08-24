@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Java Web Development"
 date: 2021-10-01T09:28:27-05:00
 draft: false
 originalAuthor: John Woolbright # to be set by page creator
@@ -11,9 +11,9 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-## Course Summary
+# Java Web Development
 
-# Why Learn Java?
+## Course Summary
 
 This course is an introduction to **Java** and the Spring Boot framework. Java is a
 powerful programming language and one of the most widely used across the globe. 
@@ -33,3 +33,19 @@ program called **IntelliJ IDE** to get familiar with the tools of the Java devel
 In the final lessons of this course, you will use a Java framework called **Spring Boot**.
 This framework gives us the scaffolding necessary to create *MVC* programs, another
 concept we'll cover, effectively and efficiently.
+
+## Where this Course Leads
+
+Upon completion of the content within this course you will be capable of building a web application with Spring MVC that can store data in a local database. You will also be ready to start reviewing the Liftoff materials, which focus on career-readiness and building a personal project.
+
+While you are entering a new career in technology, we hope you use the tools you learned in this program to learn new skills. You may find yourself wanting to learn more about the cloud, advanced testing tools, or building bigger and better APIs. Whatever it is, now that you have conquered the foundations of computer programming, we know you are ready for the challenge!
+
+## Chapters
+
+{{% children %}}
+
+## Pre-Course Requirements
+
+You should already have completed Unit 1 of our Web Development program, *Introduction to Professional Web Development in JavaScript*.
+
+The first steps you will take in programming in Java is setting up your programming environment.
