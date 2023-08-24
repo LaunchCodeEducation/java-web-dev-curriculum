@@ -24,7 +24,7 @@ Here, we dive into what differentiates all web APIs from MVC applications.
 
 ### MVC Without the V
 
-Web APIs are actually similar to MVC web applications but for one major distinction: Web APIs are not concerned with the presentation of data. A web API 
+Web APIs are actually similar to MVC web applications but for one major distinction: web APIs are not concerned with the presentation of data. A web API 
 encompasses the model and controller aspects of MVC, but is not responsible for the view layer. In a web API, the view, or presentation of data, is decoupled 
 from the model and controller that manage and transfer data. This separation leads to the development of two different applications, a client (front-end)
 and a web API (back-end). 
@@ -232,10 +232,6 @@ Only when a change must be made to either the client AJAX requests or API behavi
 
 {{% notice green "Question" "rocket" %}}
 True or False: Web API programmers must be knowledgeable in HTML/CSS/Javascript to create a client application.
-
-1. True
-
-1. False
 
 <!-- Solution: An API is view-agnostic so its programmers are not responsible for creating a corresponding client application. -->
 {{% /notice %}}

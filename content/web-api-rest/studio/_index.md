@@ -5,11 +5,11 @@ draft: false
 weight: 3
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
-reviewer: Kimberly Horan # to be set by the page reviewer
-reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
+reviewer: Sally Steuterman # to be set by the page reviewer
+reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
 lastEditorGitHub: # update any time edits are made after review
-lastMod: 12/15/22 # UPDATE ANY TIME CHANGES ARE MADE
+lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 The UI of a browser is designed to make simple `GET` requests for URLs entered into its address bar. This design works great for browsing sites, but falls short when working with APIs. Anything beyond a `GET` request is difficult to send via a browser address bar alone. Think about what is needed to create a new `Event`. This type of request contains a body. Our MVC application included a view to allow us to test inputs. Our API, however, is **headless**. It does not contain the client-side form. In order to test how it handles requests then, we need a way to interact with the API server without the browser. In this studio, we work with Postman to explore how APIs can be consumed.
@@ -134,7 +134,7 @@ If you get a connection refused error, it means you likely forgot to start the A
 
 ![Error message displayed in Postman from a refused connection](pictures/connection-refused.png?classes=border)
 
-If sending the request results in a connection error, check your setup and request settings
+If sending the request results in a connection error, check your setup and request settings.
 {{% /notice %}}
 
 ### Create an `Event`
@@ -172,7 +172,7 @@ The body of the request must be in a raw JSON format. In the *Body* tab, you wil
 
 Before sending the request, check that your configuration matches the above settings.
 
-Hit send and we'll take a look at the result.
+Hit *Send* and we'll take a look at the result.
 
 ### Analyzing the Response
 
