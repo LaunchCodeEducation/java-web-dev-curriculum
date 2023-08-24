@@ -22,7 +22,7 @@ The previous section established a persistent many-to-one relationship between `
 
    The starter code for this video is found at the [many-to-one branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/many-to-one) of the `CodingEventsJava` repo. 
    The final code presented in this video is found on the [one-to-many branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/one-to-many). As always, code along to the 
-   videos on your own `coding-events` project.
+   videos on your own `codingevents` project.
 
 {{% /notice %}}
 
@@ -33,7 +33,7 @@ Creating a one-to-many relationship from categories to events means that each `E
 ### Model Configuration
 
 ```java {linenostart = 19}
-   private final List<Event> events = new ArrayList<>();
+private final List<Event> events = new ArrayList<>();
 ```
 
 The `events` field will be initialized when an `EventCategory` object is created. It is marked `final` to ensure that the collection isn't deleted or replaced. Since it is final, only a getter is needed; add one near the bottom of the class.
@@ -47,8 +47,8 @@ The `events` field will be initialized when an `EventCategory` object is created
 To establish a persistent relationship, we use the `@OneToMany` annotation on `events`. This annotation requires a parameter to let Hibernate know *how* to determine which events belong to a given category object.
 
 ```java {linenostart = 18}
-   @OneToMany(mappedBy = "eventCategory")
-   private final List<Event> events = new ArrayList<>();
+@OneToMany(mappedBy = "eventCategory")
+private final List<Event> events = new ArrayList<>();
 ```
 
 By specifying `mappedBy = "eventCategory"`, we are telling Hibernate that for a given category object, `someCategory`, the `events` collection should be populated by all events for which the `eventCategory` field is set to `someCategory`. To determine this, Hibernate will look at the foreign key column on the `events` table.
@@ -75,26 +75,26 @@ The method at the route `/events` is `displayAllEvents`. Since this handler will
 
 Let's view the finished handler method and break down the changes one-by-one:
 
-```java {linenostart = 29}
-   @GetMapping
-   public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model) {
+```java {linenos=true linenostart = 29}
+@GetMapping
+public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model) {
 
-      if (categoryId == null) {
-         model.addAttribute("title", "All Events");
-         model.addAttribute("events", eventRepository.findAll());
+   if (categoryId == null) {
+      model.addAttribute("title", "All Events");
+      model.addAttribute("events", eventRepository.findAll());
+   } else {
+      Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
+      if (result.isEmpty()) {
+            model.addAttribute("title", "Invalid Category ID: " + categoryId);
       } else {
-         Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
-         if (result.isEmpty()) {
-               model.addAttribute("title", "Invalid Category ID: " + categoryId);
-         } else {
-               EventCategory category = result.get();
-               model.addAttribute("title", "Events in category: " + category.getName());
-               model.addAttribute("events", category.getEvents());
-         }
+            EventCategory category = result.get();
+            model.addAttribute("title", "Events in category: " + category.getName());
+            model.addAttribute("events", category.getEvents());
       }
-
-      return "events/index";
    }
+
+   return "events/index";
+}
 ```
 
 #### Update 1: Optional `categoryId` Parameter
@@ -102,7 +102,7 @@ Let's view the finished handler method and break down the changes one-by-one:
 In order to filter events by category, we need the ID of a category to filter by. The handler now has a new parameter:
 
 ```java
-   @RequestParam(required = false) Integer categoryId
+@RequestParam(required = false) Integer categoryId
 ```
 
 This allows requests to URLs like `/events?categoryId=1`. By specifying `required = false` we are telling Spring that it should call this handler for requests to the path `/events` even if no such ID is specified. This allows us to preserve our existing behavior that lists *all* events at `/events`. If no `categoryId` is specified in the request, then the `categoryId` parameter will be `null` when the handler is called.
@@ -113,11 +113,11 @@ Much of the method consists of a large `if`/`else if`/`else` block.
 
 Before filtering by category, we check for the existence of the `categoryId` parameter. The first part of the conditional block is:
 
-```java {linenostart = 32}
-   if (categoryId == null) {
-      model.addAttribute("title", "All Events");
-      model.addAttribute("events", eventRepository.findAll());
-   }
+```java
+if (categoryId == null) {
+   model.addAttribute("title", "All Events");
+   model.addAttribute("events", eventRepository.findAll());
+}
 ```
 
 If no `categoryId` is passed in, we carry out the same behavior as before, passing all events into the view.
@@ -128,18 +128,18 @@ If the conditional check above fails, then we have a non-null `categoryId`. Howe
 
 Here's our conditional block with the next piece added:
 
-```java {linenostart = 32}
-   if (categoryId == null) {
-      model.addAttribute("title", "All Events");
-      model.addAttribute("events", eventRepository.findAll());
+```java {linenos=true linenostart = 32}
+if (categoryId == null) {
+   model.addAttribute("title", "All Events");
+   model.addAttribute("events", eventRepository.findAll());
+} else {
+   Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
+   if (result.isEmpty()) {
+         model.addAttribute("title", "Invalid Category ID: " + categoryId);
    } else {
-      Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
-      if (result.isEmpty()) {
-            model.addAttribute("title", "Invalid Category ID: " + categoryId);
-      } else {
-            // TODO 
-      }
+         // TODO 
    }
+}
 ```
 
 Line 36 queries our repository for a category object with the given ID. Notice that the `findById` method returns not an `EventCategory` object, but something of type `Optional<EventCategory>`. Huh? 
@@ -160,20 +160,20 @@ On lines 37-38 we use this fact to check to see if an `EventCategory` object was
 
 We are finally ready to consider the full conditional:
 
-```java {linenostart = 32}
-   if (categoryId == null) {
-      model.addAttribute("title", "All Events");
-      model.addAttribute("events", eventRepository.findAll());
+```java {linenos=true linenostart = 32}
+if (categoryId == null) {
+   model.addAttribute("title", "All Events");
+   model.addAttribute("events", eventRepository.findAll());
+} else {
+   Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
+   if (result.isEmpty()) {
+         model.addAttribute("title", "Invalid Category ID: " + categoryId);
    } else {
-      Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
-      if (result.isEmpty()) {
-            model.addAttribute("title", "Invalid Category ID: " + categoryId);
-      } else {
-            EventCategory category = result.get();
-            model.addAttribute("title", "Events in category: " + category.getName());
-            model.addAttribute("events", category.getEvents());
-      }
+         EventCategory category = result.get();
+         model.addAttribute("title", "Events in category: " + category.getName());
+         model.addAttribute("events", category.getEvents());
    }
+}
 ```
 
 Lines 39-42 will only execute if we know for sure that a category with the given ID exists. In this case, we extract the category from the `Optional` object `result` using the `get()` method. Then we create an appropriate title using the category name, and pass the events belonging to the category into the view.
@@ -188,10 +188,10 @@ With our new controller logic in place, we have one small update to make before 
 
 We need to provide a way for the user to access our new filtered views. In the `eventCategories/index.html` template, modify the loop within the table to include a link to the filtered view for each category:
 
-```html {linenostart = 14}
-   <tr th:each="category : ${categories}">
-      <td><a th:text="${category.name}" th:href="'/events?categoryId=' + ${category.id}"></a></td>
-   </tr>
+```html
+<tr th:each="category : ${categories}">
+   <td><a th:text="${category.name}" th:href="'/events?categoryId=' + ${category.id}"></a></td>
+</tr>
 ```
 
 The logic in `th:href` uses string concatenation to create the appropriate URL for each category.

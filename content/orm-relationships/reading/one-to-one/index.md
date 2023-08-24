@@ -24,7 +24,7 @@ Such a relationship can be configured using the JPA annotation `@OneToOne`.
 
    The starter code for this video is found at the [one-to-many branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/one-to-many) of the `CodingEventsJava` repo. 
    The final code presented in this video is found on the [one-to-one branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/one-to-one). As always, code along to the 
-   videos on your own `coding-events` project.
+   videos on your own `codingevents` project.
 
 {{% /notice %}}
 
@@ -42,40 +42,40 @@ To start, create a new class in the `models` packaged named `EventDetails`. Like
 
 `EventDetails` now looks like this:
 
-```java {linenostart = 11}
-   @Entity
-   public class EventDetails extends AbstractEntity {
+```java {linenos=true linenostart = 11}
+@Entity
+public class EventDetails extends AbstractEntity {
 
-      @Size(max = 500, message = "Description too long!")
-      private String description;
+   @Size(max = 500, message = "Description too long!")
+   private String description;
 
-      @NotBlank(message = "Email is required")
-      @Email(message = "Invalid email. Try again.")
-      private String contactEmail;
+   @NotBlank(message = "Email is required")
+   @Email(message = "Invalid email. Try again.")
+   private String contactEmail;
 
-      public EventDetails(String description, String contactEmail) {
-         this.description = description;
-         this.contactEmail = contactEmail;
-      }
-
-      public EventDetails() {}
-
-      public String getDescription() {
-         return description;
-      }
-
-      public void setDescription(String description) {
-         this.description = description;
-      }
-
-      public String getContactEmail() {
-         return contactEmail;
-      }
-
-      public void setContactEmail(String contactEmail) {
-         this.contactEmail = contactEmail;
-      }
+   public EventDetails(String description, String contactEmail) {
+      this.description = description;
+      this.contactEmail = contactEmail;
    }
+
+   public EventDetails() {}
+
+   public String getDescription() {
+      return description;
+   }
+
+   public void setDescription(String description) {
+      this.description = description;
+   }
+
+   public String getContactEmail() {
+      return contactEmail;
+   }
+
+   public void setContactEmail(String contactEmail) {
+      this.contactEmail = contactEmail;
+   }
+}
 ```
 
 Back in the `Event` class, clean up by removing all references to `description` and `contactEmail`. 
@@ -86,11 +86,11 @@ Each `Event` should have a single `EventDetails` object, and vice versa. Breakin
 
 To establish the relationship, add a new field of type `EventDetails` to `Event` and annotate it with `@OneToOne`. Additionally, add the validation annotations `@Valid` and `@NotNull`. 
 
-```java {linenostart = 22}
-   @OneToOne
-   @Valid
-   @NotNull
-   private EventDetails eventDetails;
+```java
+@OneToOne
+@Valid
+@NotNull
+private EventDetails eventDetails;
 ```
 
 This is the first time we have used `@Valid` on a class member. 
@@ -109,33 +109,33 @@ Our `events/create.html` and `events/index.html` templates reference the fields 
 
 In `events/index.html`:
 
-```java {linenostart = 18}
-   <tr th:each="event : ${events}">
-      <td th:text="${event.id}"></td>
-      <td th:text="${event.name}"></td>
-      <td th:text="${event.eventDetails.description}"></td>
-      <td th:text="${event.eventDetails.contactEmail}"></td>
-      <td th:text="${event.eventCategory.name}"></td>
-   </tr>
+```java {linenos=true linenostart = 18}
+<tr th:each="event : ${events}">
+   <td th:text="${event.id}"></td>
+   <td th:text="${event.name}"></td>
+   <td th:text="${event.eventDetails.description}"></td>
+   <td th:text="${event.eventDetails.contactEmail}"></td>
+   <td th:text="${event.eventCategory.name}"></td>
+</tr>
 ```
 
 Notice that lines 21 and 22 now reference `description` and `contactEmail` off of `event.eventDetails`.
 
 Similarly, update `events/create.html`:
 
-```java {linenostart = 15}
-   <div class="form-group">
-      <label>Description
-         <input th:field="${event.eventDetails.description}" class="form-control">
-      </label>
-      <p class="error" th:errors="${event.eventDetails.description}"></p>
-   </div>
-   <div class="form-group">
-      <label>Contact Email
-         <input th:field="${event.eventDetails.contactEmail}" class="form-control">
-      </label>
-      <p class="error" th:errors="${event.eventDetails.contactEmail}"></p>
-   </div>
+```java {linenos=true linenostart = 15}
+<div class="form-group">
+   <label>Description
+      <input th:field="${event.eventDetails.description}" class="form-control">
+   </label>
+   <p class="error" th:errors="${event.eventDetails.description}"></p>
+</div>
+<div class="form-group">
+   <label>Contact Email
+      <input th:field="${event.eventDetails.contactEmail}" class="form-control">
+   </label>
+   <p class="error" th:errors="${event.eventDetails.contactEmail}"></p>
+</div>
 ```
 
 The inputs and error elements associated with `description` and `contactEmail` have now similarly been updated. With these changes in place, model binding in our controller will take place properly.
@@ -144,18 +144,18 @@ The inputs and error elements associated with `description` and `contactEmail` h
 
 We have one final update to make. To illustrate, let's look at our `POST` handler for creating and saving `Event` objects:
 
-```java {linenostart = 65}
-   @PostMapping("create")
-   public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
-                                       Errors errors, Model model) {
-      if(errors.hasErrors()) {
-         model.addAttribute("title", "Create Event");
-         return "events/create";
-      }
-
-      eventRepository.save(newEvent);
-      return "redirect:";
+```java {linenos=true linenostart = 65}
+@PostMapping("create")
+public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
+                                    Errors errors, Model model) {
+   if(errors.hasErrors()) {
+      model.addAttribute("title", "Create Event");
+      return "events/create";
    }
+
+   eventRepository.save(newEvent);
+   return "redirect:";
+}
 ```
 
 The `newEvent` parameter is created by Spring Boot using model binding. As usual, we validate the new model object using `@Valid` in conjunction with the `errors` object. 
@@ -167,10 +167,10 @@ Recall that validation annotations within `EventDetails` will be checked (for th
 If you were to start your application and run it at this point, an exception would occur when attempting to save `newEvent` on line 73 (`eventRepository.save(newEvent)`). Specifically, the root exception would be:
 
 ```console
-   org.hibernate.TransientPropertyValueException: Not-null property references a transient value - 
-   transient instance must be saved before current operation : 
-   org.launchcode.codingevents.models.Event.eventDetails -> 
-   org.launchcode.codingevents.models.EventDetails
+org.hibernate.TransientPropertyValueException: Not-null property references a transient value - 
+transient instance must be saved before current operation : 
+org.launchcode.codingevents.models.Event.eventDetails -> 
+org.launchcode.codingevents.models.EventDetails
 ```
 
 This exception refers to the transient value `Event.eventDetails`. A **transient** value is a an object that *can* be saved to the database (i.e. is of an entity type) but has NOT been saved yet. In our case, trying to save `newEvent` causes problems because its `eventDetails` field can not be null in the database, but the value of this field---a new `EventDetails` object created on form submission---has not been saved yet.
@@ -179,11 +179,11 @@ The fix for this problem is simple, and allows us to introduce the concept of ca
 
 To cascade our save operation, go into the `Event` class and add a `cascade` parameter to the `@OneToOne` annotation:
 
-```java {linenostart = 22}
-   @OneToOne(cascade = CascadeType.ALL)
-   @Valid
-   @NotNull
-   private EventDetails eventDetails;
+```java
+@OneToOne(cascade = CascadeType.ALL)
+@Valid
+@NotNull
+private EventDetails eventDetails;
 ```
 
 The `cascade` parameter specifies which ORM operations should cascade from `Event` to its `eventDetails` field. Setting this to `CascadeType.ALL` specifies that *all* database operations---including save and delete---should cascade. 
@@ -201,8 +201,8 @@ Once we have set up the relationship from `Event` to `EventDetails`, it is easy 
 To do so, add a field of type `Event` to `EventDetails`. Then add `@OneToOne` to the new field with a `mappedBy` parameter.
 
 ```java
-   @OneToOne(mappedBy = "eventDetails")
-   private Event event;
+@OneToOne(mappedBy = "eventDetails")
+private Event event;
 ```
 
 Setting `mappedBy = "eventDetails"` will ensure that the field is populated correctly. For a specific `EventDetails` object `details`, `event` will be populated with the `Event` object that contains `details`. Then both sides of the one-to-one relationship will have a reference to the other.

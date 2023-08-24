@@ -59,7 +59,7 @@ Currently, similar functionality is enabled via the `EventType` field of `Event`
 In the `Event` class, replace the `type` field with a new private field of type `EventCategory`:
 
 ```java {linenostart=25}
-   private EventCategory eventCategory;
+private EventCategory eventCategory;
 ```
 
 This will introduce compiler errors wherever `type` is referenced. We will fix these shortly.
@@ -73,9 +73,9 @@ First, however, update `Event` so that:
 This establishes a relationship between the two classes, but that relationship is not yet *persistent*. To configure Hibernate to keep track of this relationship in the database, we add the `@ManyToOne` annotation to `eventCategory`. 
 
 ```java {linenostart=27}
-   @ManyToOne
-   @NotNull(message = "Category is required")
-   private EventCategory eventCategory;
+@ManyToOne
+@NotNull(message = "Category is required")
+private EventCategory eventCategory;
 ```
 
 This annotation informs Hibernate that there can be many events for each category, but only one category per event. 
@@ -87,7 +87,7 @@ Before we can start up the app and test our changes, we need to remove the code 
 The first occurrence is in `EventController.displayCreateEventForm`:
 
 ```java {linenostart=35}
-   model.addAttribute("types", EventType.values());
+model.addAttribute("types", EventType.values());
 ```
 
 This line passes a collection of all of the values of `EventType` into the view, to be rendered in the form used to create new events.
@@ -95,31 +95,31 @@ This line passes a collection of all of the values of `EventType` into the view,
 Since we are now using `EventCategory` to group events, our code should instead be passing in all of the category objects in our app. To fetch category objects, we need an instance of `EventCategoryRepository` in our controller. Add an `@Autowired` instance to the top of the controller:
 
 ```java {linenostart=24}
-   @Autowired
-   private EventCategoryRepository eventCategoryRepository;
+@Autowired
+private EventCategoryRepository eventCategoryRepository;
 ```
 
 Now, use the repository to fetch all saved categories:
 
-```java {linenostart=40}
-   model.addAttribute("categories", eventCategoryRepository.findAll());
+```java
+model.addAttribute("categories", eventCategoryRepository.findAll());
 ```
 
 This line replaces the line references `EventType.values()`. Notice that we have relabeled this attribute `"categories"` 
 to be more consistent. This also requires updating the `events/create.html` template:
 
-```html {linenostart=27}
-   <div class="form-group">
-      <label>Category
-      <select th:field="${event.eventCategory}">
-         <option th:each="eventCategory : ${categories}"
-                  th:value="${eventCategory.id}"
-                  th:text="${eventCategory.name}"
-         ></option>
-      </select>
-      <p class="error" th:errors="${event.eventCategory}"></p>
-      </label>
-   </div>
+```html {linenos=true linenostart = 27}
+<div class="form-group">
+   <label>Category
+   <select th:field="${event.eventCategory}">
+      <option th:each="eventCategory : ${categories}"
+               th:value="${eventCategory.id}"
+               th:text="${eventCategory.name}"
+      ></option>
+   </select>
+   <p class="error" th:errors="${event.eventCategory}"></p>
+   </label>
+</div>
 ```
 
 This new template code includes several changes:
@@ -141,14 +141,14 @@ Removing this unneeded code resolves all remaining compiler errors.
 
 The `events/index.html` template needs to be updated as well, since it still contains a reference to the `type` field of `Event`:
 
-```html {linenostart=23}
-   <td th:text="${event.type}"></td>
+```html
+<td th:text="${event.type}"></td>
 ```
 
 This usage wasn't found by IntelliJ because templates do not receive compile-time type checking like classes do. The updated version looks like this:
 
-```html {linenostart=23}
-   <td th:text="${event.eventCategory.name}"></td>
+```html
+<td th:text="${event.eventCategory.name}"></td>
 ```
 
 ### Testing and Database Updates

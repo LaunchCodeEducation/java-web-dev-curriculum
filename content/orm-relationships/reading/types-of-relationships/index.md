@@ -91,7 +91,10 @@ A many-to-one relationship operates in the opposite direction of a one-to-many r
 
 **Many-to-many** relationships occur when each instance of type A can be related to multiple instances of type B, and vice versa. 
 
-![Three Event objects on the left, with various relationships to three Tag objects on the right](pictures/many-to-many.png)
+{{< rawhtml >}}
+   <img src="pictures/many-to-many.png" alt="Three Event objects on the left, with various relationships to three Tag objects on the right" width=50% />
+{{< /rawhtml >}}
+
 
 An event can have multiple tags, and a tag may be associated with multiple events. Thus, we have a many-to-many relationship.
 
