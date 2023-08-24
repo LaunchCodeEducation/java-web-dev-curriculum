@@ -161,7 +161,8 @@ We have one final update to make. To illustrate, let's look at our `POST` handle
 The `newEvent` parameter is created by Spring Boot using model binding. As usual, we validate the new model object using `@Valid` in conjunction with the `errors` object. 
 
 {{% notice blue "Note" "rocket" %}}
-   Recall that validation annotations within `EventDetails` will be checked (for the `Event.eventDetails` field) since we added `@Valid` to that field.
+Recall that validation annotations within `EventDetails` will be checked (for the `Event.eventDetails` field) since we added `@Valid` to that field.
+{{% /notice %}}
 
 If you were to start your application and run it at this point, an exception would occur when attempting to save `newEvent` on line 73 (`eventRepository.save(newEvent)`). Specifically, the root exception would be:
 
