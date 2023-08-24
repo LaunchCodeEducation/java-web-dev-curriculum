@@ -23,22 +23,27 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 Here is a list of key terms that you should make note of as you read through this chapter.
 
-1. `@Entity`
-1. `@Id`
-1. `@GeneratedValue`
-1. `@Autowired`
-1. `@Repository`
-1. persistent class
-1. entity class
-1. CrudRepository
+### Object-Relational Mapping
 1. Object-Relation Mapping
 1. ORM
-1. JPA
 1. Java Persistence API
+1. JPA
 1. Data Layer
 1. object-relational mapper
 1. Environment Variables
 1. Hibernate
+
+### Accessing Data
+1. CrudRepository
+1. `@Repository`
+1. `@Entity`
+1. `@Id`
+1. `@GeneratedValue`
+1. persistent class
+1. entity class
+
+### Repositories
+1. `@Autowired`
 
 ## Content Links
 

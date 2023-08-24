@@ -51,7 +51,7 @@ Your objective in this studio is to reduce this repetition by creating a class t
 
 ### Create and Extend `AbstractEntity`
 
-In the `models` package, create a new class named `AbstractEntity`. Add the `abstract` keyword to the class declaration. We do this because, while we want to share code across our two models, we'll never need to create an instance of `AbstractEntity`. If you need a quick refresher, review our section on :ref:`abstract-classes`.
+In the `models` package, create a new class named `AbstractEntity`. Add the `abstract` keyword to the class declaration. We do this because, while we want to share code across our two models, we'll never need to create an instance of `AbstractEntity`. If you need a quick refresher, review our section on [abstract classes]({{< relref "../../inheritance/reading/abstract-inheritance/_index.md#abstract-classes" >}}).
 
 {{% notice green Tip "rocket" %}}
 This class name seems a little odd at first, but it makes sense after a brief explanation. 
