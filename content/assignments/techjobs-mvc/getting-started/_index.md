@@ -163,14 +163,14 @@ the link text.
 
 The most interesting part of this template is how we generate the links:
 
-```html {linenos=table}
-<td th:each="category : ${tableChoices}">
-   <ul>
-      <li th:each="item : ${category.value}">
-         <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
-      </li>
-   </ul>
-</td>
+```html {linenos=true}
+   <td th:each="category : ${tableChoices}">
+      <ul>
+         <li th:each="item : ${category.value}">
+            <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
+         </li>
+      </ul>
+   </td>
 ```
 
 1. `tableChoices` is a HashMap from `JobData`, and it contains the names of
