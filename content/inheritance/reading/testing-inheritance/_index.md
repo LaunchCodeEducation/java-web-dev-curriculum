@@ -40,8 +40,6 @@ It's a good practice to test your subclasses to verify the items that they inher
 
 ## Check Your Understanding
 
-**Question:**
-
 {{% notice green Question "rocket" %}}
 Fill in the blank to test that the default constructor of `Cat` is called when the second 
 constructor on `HouseCat` is used.
@@ -62,13 +60,13 @@ public void inheritsDefaultCatInSecondConstructor() {
 }
 ```
 
-1. assertEquals(13, keyboardCat.getWeight());
+1. `assertEquals(13, keyboardCat.getWeight());`
 
-1. assertNotNull(keyboardCat.getWeight());
+1. `assertNotNull(keyboardCat.getWeight());`
 
-1. assertEquals(13, keyboardCat.getWeight(), .001);
+1. `assertEquals(13, keyboardCat.getWeight(), .001);`
 
-1. assertNotNull(keyboardCat.weight);
+1. `assertNotNull(keyboardCat.weight);`
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
@@ -86,11 +84,11 @@ public void isNotInitiallyTired() {
 ```
 
 
-1. assertFalse(keyboardCat.isTired());
+1. `assertFalse(keyboardCat.isTired());`
 
-1. assertTrue(keyboardCat.isTired());
+1. `assertTrue(keyboardCat.isTired());`
 
-1. assertTrue(keyboardCat.isHungry());
+1. `assertTrue(keyboardCat.isHungry());`
 
-1. assertFalse(keyboardCat.tired);
+1. `assertFalse(keyboardCat.tired);`
 {{% /notice %}}
