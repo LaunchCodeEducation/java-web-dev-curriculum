@@ -50,18 +50,18 @@ As you might guess, a many-to-many relationship can be configured with the JPA a
 
 In `Event`:
 
-```java {linenostart = 30}
-   @ManyToMany
-   private final List<Tag> tags = new ArrayList<>();
+```java
+@ManyToMany
+private final List<Tag> tags = new ArrayList<>();
 ```
 
 This ensures that Hibernate creates a relationship from a given event to every `Tag` instance placed in its `tags` collection.
 
 In `Tag`:
 
-```java {linensostart = 20}
-   @ManyToMany(mappedBy = "tags")
-   private final List<Event> events = new ArrayList<>();
+```java
+@ManyToMany(mappedBy = "tags")
+private final List<Event> events = new ArrayList<>();
 ```
 
 Along with the `@ManyToMany` annotation, the `mappedBy` parameter ensures that Hibernate populates the `events` collection of a given `Tag` object with every `Event` object that has that specific tag in *its* `tags` collection.
@@ -90,33 +90,33 @@ A **data transfer object** (or DTO) is an object that enables multiple other obj
 
 A DTO for these two classes is very simple. It contains two fields, a no-arg constructor, and accessors for the fields. Each field is annotated with `@NotNull` because we will use this class in conjunction with model binding and form processing. 
 
-```java {linenostart = 11}
-   public class EventTagDTO {
+```java {linenos=true linenostart = 11}
+public class EventTagDTO {
 
-      @NotNull
-      private Event event;
+   @NotNull
+   private Event event;
 
-      @NotNull
-      private Tag tag;
+   @NotNull
+   private Tag tag;
 
-      public EventTagDTO() {}
+   public EventTagDTO() {}
 
-      public Event getEvent() {
-         return event;
-      }
-
-      public void setEvent(Event event) {
-         this.event = event;
-      }
-
-      public Tag getTag() {
-         return tag;
-      }
-
-      public void setTag(Tag tag) {
-         this.tag = tag;
-      }
+   public Event getEvent() {
+      return event;
    }
+
+   public void setEvent(Event event) {
+      this.event = event;
+   }
+
+   public Tag getTag() {
+      return tag;
+   }
+
+   public void setTag(Tag tag) {
+      this.tag = tag;
+   }
+}
 ```
 
 We place this class in a new package, `dto`, contained within the `models` package. It is a model since it structures data that our application uses. However, it is not persistent (there is no `@Entity` annotation) because we won't need to store it in the database. 
@@ -133,18 +133,18 @@ For example, say a user wants to add a tag to the `Event` object with ID 13. To 
 
 Here is the handler method in `EventController` that renders the form, broken down line-by-line just below.
 
-```java {linenostart=112}
-   @GetMapping("add-tag")
-   public String displayAddTagForm(@RequestParam Integer eventId, Model model){
-      Optional<Event> result = eventRepository.findById(eventId);
-      Event event = result.get();
-      model.addAttribute("title", "Add Tag to: " + event.getName());
-      model.addAttribute("tags", tagRepository.findAll());
-      EventTagDTO eventTag = new EventTagDTO();
-      eventTag.setEvent(event);
-      model.addAttribute("eventTag", eventTag);
-      return "events/add-tag.html";
-   }
+```java {linenos=true linenostart=112}
+@GetMapping("add-tag")
+public String displayAddTagForm(@RequestParam Integer eventId, Model model){
+   Optional<Event> result = eventRepository.findById(eventId);
+   Event event = result.get();
+   model.addAttribute("title", "Add Tag to: " + event.getName());
+   model.addAttribute("tags", tagRepository.findAll());
+   EventTagDTO eventTag = new EventTagDTO();
+   eventTag.setEvent(event);
+   model.addAttribute("eventTag", eventTag);
+   return "events/add-tag.html";
+}
 ```
 
 1. **Line 112**: Specifies that the handler will be available at the route `/events/add-tag`, and will respond to `GET` requests.
@@ -162,29 +162,29 @@ While this may seem like a lot of new concepts, it really isn't. If you look clo
 
 Now let's look at the form in `events/add-tag.html`.
 
-```html {linenos=table}
-   <!DOCTYPE html>
-   <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-   <head th:replace="fragments :: head"></head>
-   <body class="container">
+```html {linenos=true linenos=table}
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
 
-   <header th:replace="fragments :: header"></header>
+<header th:replace="fragments :: header"></header>
 
-   <form method="post">
-      <div class="form-group">
-         <input type="hidden" th:field="${eventTag.event}">
-         <select th:field="${eventTag.tag}">
-               <option th:each="tag : ${tags}"
-                     th:value="${tag.id}"
-                     th:text="${tag.name}"
-               ></option>
-         </select>
-      </div>
-      <input type="submit" class="btn btn-success" value="Add Tag">
-   </form>
+<form method="post">
+   <div class="form-group">
+      <input type="hidden" th:field="${eventTag.event}">
+      <select th:field="${eventTag.tag}">
+            <option th:each="tag : ${tags}"
+                  th:value="${tag.id}"
+                  th:text="${tag.name}"
+            ></option>
+      </select>
+   </div>
+   <input type="submit" class="btn btn-success" value="Add Tag">
+</form>
 
-   </body>
-   </html>
+</body>
+</html>
 ```
 
 This form has two inputs. The first---with `th:field="${eventTag.event}"`---is hidden, since it should not be modified by the user. We use it to keep track of the specific event that we are about to add a tag to.
@@ -197,24 +197,24 @@ When this form is submitted, it will have all of the information necessary to cr
 
 As with `displayAddTagForm`, we will break down the form's `POST` handler in `EventController` in detail.
 
-```java {linenostart = 124}
-   @PostMapping("add-tag")
-   public String processAddTagForm(@ModelAttribute @Valid EventTagDTO eventTag,
-                                 Errors errors,
-                                 Model model){
+```java {linenos=true linenostart = 124}
+@PostMapping("add-tag")
+public String processAddTagForm(@ModelAttribute @Valid EventTagDTO eventTag,
+                              Errors errors,
+                              Model model){
 
-      if (!errors.hasErrors()) {
-         Event event = eventTag.getEvent();
-         Tag tag = eventTag.getTag();
-         if (!event.getTags().contains(tag)){
-               event.addTag(tag);
-               eventRepository.save(event);
-         }
-         return "redirect:detail?eventId=" + event.getId();
+   if (!errors.hasErrors()) {
+      Event event = eventTag.getEvent();
+      Tag tag = eventTag.getTag();
+      if (!event.getTags().contains(tag)){
+            event.addTag(tag);
+            eventRepository.save(event);
       }
-
-      return "redirect:add-tag";
+      return "redirect:detail?eventId=" + event.getId();
    }
+
+   return "redirect:add-tag";
+}
 ```
 
 Using model binding, our method takes a valid parameter of type `EventTagDTO`. Since we referenced the `event` and `tag` fields of our DTO when rendering the form (in the template, using `th:field`), our submitted form should contain all of the data necessary to create an `EventTagDTO` instance. This instance will be valid if both `event` and `tag` are non-null. 
@@ -264,7 +264,9 @@ If we want to relate the `ios` tag to the `WWDC` event, we create a new row in `
 
 We can do this again and again to generate more relationships. Let's revisit the many-to-many diagram from earlier in the chapter. 
 
-![Three Event objects on the left, with various relationships to three Tag objects on the right](pictures/many-to-many.png)
+{{< rawhtml >}}
+   <img src="pictures/many-to-many.png" alt="Three Event objects on the left, with various relationships to three Tag objects on the right" width=50% />
+{{< /rawhtml >}}
 
 The join table representing these relationships looks like this:
 
