@@ -2,7 +2,7 @@
 title: "Chapter 16: Enums"
 date: 2021-10-01T09:28:27-05:00
 draft: false
-weight: 14
+weight: 16
 originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer:  Sally Steuterman # to be set by the page reviewer
