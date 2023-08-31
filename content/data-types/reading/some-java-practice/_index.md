@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Courtney Frey # update any time edits are made after review
-lastEditorGitHub: speudusa # update any time edits are made after review
-lastMod: 2023-06-27T09:27:57-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-08-31T06:16:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Let’s move beyond our “Hello, World” example and explore a simple temperature conversion program. We want our function to convert a Fahrenheit temperature to Celsius.
@@ -60,7 +60,7 @@ Line 1 of of the program above, `package org.launchcode.java.demos.lsn1datatypes
 Packages help to **encapsulate** your code. Encapsulation refers to the practice of shielding your code from outside influences. It’s an essential component of good object oriented programming, and package declaration in Java is just one application of this principle. Without declaring a package, a Java class exists within the default package. In larger applications, leaving all classes in the default package risks naming conflicts and bugs.
 
 ## `import`
-The `import` statement in Java allows us to access the class, methods, and data stored a different file. `import` tells the compiler that we are going to use a shortened version of the class name. In this example, we are going to use the class `java.util.Scanner`, but we can refer to it as just `Scanner`. We could use the `java.util.Scanner` class without any problem and without any import statement, provided that we always refer to it by its full name.
+The `import` statement in Java allows us to access the class, methods, and data stored in a different file. `import` tells the compiler that we are going to use a shortened version of the class name. In this example, we are going to use the class `java.util.Scanner`, but we can refer to it as just `Scanner`. We could use the `java.util.Scanner` class without any problem and without any import statement, provided that we always refer to it by its full name.
 
 This idea bears repeating. In Java, you can use any available class WITHOUT having to import it, but you must use the full name of the class. “Available” classes include:
 
