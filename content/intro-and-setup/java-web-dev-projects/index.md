@@ -9,7 +9,7 @@ reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: Terri Penn # update any time edits are made after review
 lastEditorGitHub: tpenn # update any time edits are made after review
-lastMod: 2023-08-29 # UPDATE ANY TIME CHANGES ARE MADE
+lastMod: 2023-08-31T10:16:27-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Initial Setup
@@ -64,8 +64,7 @@ assignment of this unit.
 1. When your project is ready, you'll see a page that looks like the image
    below. Click on Load, if you are prompted to load the Gradle Build Scripts.
    
-   ![Screenshot of IntelliJ window of your fork of `java-web-dev-projects`]
-   (figures/IntelliJWindow.png?classes=border)
+   ![Screenshot of IntelliJ window of your fork of `java-web-dev-projects`](figures/IntelliJWindow.png?classes=border)
 
 1. You should see the file structure of the project you have just set up.  If
    you do not, click on the folder icon in the upper left corner.
