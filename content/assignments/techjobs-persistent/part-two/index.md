@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Sally Steuterman # update any time edits are made after review
-lastEditorGitHub: gildedgardenia # update any time edits are made after review
-lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: colinbrock # update any time edits are made after review
+lastMod: 2023-09-06 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 You will need to have completed the [setup steps]({{< relref "../part-one/index.html" >}}) before starting this
@@ -40,7 +40,7 @@ For the purposes of this application, an employer can only have one location.
 {{% /notice %}}
 
 2. `Employer` is a class that will be mapped to one of our tables. Make sure the class has the `@Entity` annotation, as well as the no-arg constructor required for Hibernate to create an object.
-3. In the model class `Skill`, add a field for a longer description of the skill, named `description`, with public accessor methods. Some hiring managers like to havemore information available about the nature of a given programming language or framework.
+3. In the model class `Skill`, add a field for a longer description of the skill, named `description`, with public accessor methods. Some hiring managers like to have more information available about the nature of a given programming language or framework.
 4. As with `Employer`, give this class the `@Entity` annotation and be sure it contains a no-arg constructor.
 
 ## Data Layer
@@ -94,7 +94,7 @@ and view them.
 {{% notice green Tip "rocket" %}}
 If everything seems to work – that is, you are able to submit the form without any errors – but you don’t see your employers or skills in the list after submission, here’s what you should check:
 1. Is there any data in the `employers` and `skills` table? Check by going to MySQL Workbench and looking for the employer/skill data within your schema.
-2. If there’s data in the database, check that you are correctly querying for the list of all objects in the controller Are you calling `.findAll()` on the repository?
+2. If there’s data in the database, check that you are correctly querying for the list of all objects in the controller. Are you calling `.findAll()` on the repository?
 3. Ensure you’re passing the list into the view, and it is named the same as the variable in the ThymeLeaf template.
 
 When everything works, move on to Part 3 below.

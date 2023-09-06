@@ -84,7 +84,7 @@ this, right-click on the `main` method in the `TechJobs` class and select
 
 
 {{% notice red Warning "rocket" %}}
-The application will run until you force it to quit, re-prompting time after time. To kill it, press the red "stop" icon in the Run pane *or* entering `x` from the initial prompt. We'll learn precisely how the program manages to work this way below.
+The application will run until you force it to quit, re-prompting time after time. To kill it, press the red "stop" icon in the Run pane *or* enter `x` from the initial prompt. We'll learn precisely how the program manages to work this way below.
 
 Let's explore the code by starting with the source of the data our program is
 providing access to.

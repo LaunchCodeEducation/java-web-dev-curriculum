@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-09-06 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Before diving in and starting to code, make sure you understand what the code you've been given does. Since you're starting with a functioning---albeit unfinished---program, go ahead and run it to get an idea of how it works.
@@ -17,7 +17,7 @@ Before diving in and starting to code, make sure you understand what the code yo
 {{% notice orange "Warning" "rocket" %}}
 
 The application will run until you force it to quit, re-prompting time
-after time. To kill it, press the "stop" icon in the upper corner the of Run pane. We'll learn precisely how the program manages to work this way below.
+after time. To kill it, press the "stop" icon in the upper corner of the Run pane. We'll learn precisely how the program manages to work this way below.
 
 {{% /notice %}}
 
