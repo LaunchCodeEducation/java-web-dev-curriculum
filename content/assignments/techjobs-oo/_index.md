@@ -52,7 +52,7 @@ In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub s
 ## Introduction
 Sally has gotten the ball rolling by adding a `Job` class, along with classes to represent the individual properties of a job: `Employer`, `Location`, `PositionType`, and `CoreCompetency`. She completed the Employer class, and she left you the task of filling in the others.
 
-As the team gets closer to deploying the app—and abandoning the test data they’ve been using—they’ll want an easy way to add and remove jobs via an user interface. Before that, however, you need to finish shifting the project to an object-oriented design.
+As the team gets closer to deploying the app—and abandoning the test data they’ve been using—they’ll want an easy way to add and remove jobs via a user interface(UI). Before that, however, you need to finish shifting the project to an object-oriented design.
 
 ## Why Change to Object-Oriented?
 Working with data stored as strings in HashMaps and ArrayLists isn’t a good long-term solution, for reasons that we point out below.
