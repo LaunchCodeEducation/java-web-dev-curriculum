@@ -9,7 +9,7 @@ reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
 lastEditor: Terri Penn # update any time edits are made after review
 lastEditorGitHub: tpenn # update any time edits are made after review
-lastMod: 2023-09-01T12:49:50-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastMod: 2023-09-12T13:54:20-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Instead of manually creating sample `Job` objects to verify that your class works correctly, you will use unit tests instead.
@@ -43,7 +43,7 @@ Fill out the resulting form using the values:
    1. **Name:** JobTest
    1. **Java version:** Java 17 
    1. **Module:** `techjobs-oo-java17-graded.test`
-   1. **Class:** `org.launchcode.techjobs.oo.JobTest` (You will have to type/paste this in. If the class already contained a test, you would be able to click on the icon at the right side of this field and select the `JobTest` class from the modal that opens.)
+   1. **Class:** `org.launchcode.techjobs.oo.JobTest` (You will need to type or paste this. If the class contained a test, you could also click the icon at the right of this field and select the class from the window that opens.)
 
 {{< rawhtml >}}
 <img src="../figures/jobtest-junit-configuration.png" alt="JobTest Configuration Settings">
