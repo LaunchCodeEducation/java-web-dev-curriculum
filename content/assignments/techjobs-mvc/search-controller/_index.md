@@ -1,5 +1,5 @@
 ---
-title: "Task 2: Complete SearchController"
+title: "Task 3: Complete SearchController"
 date: 2023-05-22T10:20:54-05:00
 draft: false
 weight: 3
@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Sally Steuterman # update any time edits are made after review
-lastEditorGitHub: gildedgardenia # update any time edits are made after review
-lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-23T10:03:23-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Add a `displaySearchResults` handler method to `SearchController`:
