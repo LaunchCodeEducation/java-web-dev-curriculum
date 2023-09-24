@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-24T09:41:55-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 By now you have created at least two Spring projects using Gradle. If you recall, Spring is the framework that will enable us to create an MVC application. When we created each project, we selected "Gradle Project", but what is Gradle?
@@ -32,7 +32,7 @@ So far we have included Gradle in our Spring Boot projects.
 
 ## How Gradle Works
 
-A Gradle build represents one or more **projects**. Projects are craeted from a series of **tasks**. Gradle manages tasks based on their function in the build. Some tasks run tests, some compile, etc. Gradle organizes these tasks in the `build.gradle` file. 
+A Gradle build represents one or more **projects**. Projects are created from a series of **tasks**. Gradle manages tasks based on their function in the build. Some tasks run tests, some compile, etc. Gradle organizes these tasks in the `build.gradle` file. 
 
 ### `build.gradle`
 
@@ -83,8 +83,7 @@ Some projects contain a stand-alone `configurations` method. This method bundles
    
 {{% notice blue "Note" "rocket" %}}
 
-   In the `hello-spring` project, the `build.gradle` file contains a configurations method.  
-   The `hello-spring` project does not.
+   None of the `build.gradle` files in projects up to this point contained a configurations method.  The upcoming studio `Spa Day!` will.
 
 {{% /notice %}}
 
@@ -107,7 +106,7 @@ IntelliJ’s built-in IntelliSense should prompt you to refresh your build.gradl
 you change a file. You should see a small icon appear in the top right corner of the `build.gradle` file. 
 If you click on the icon, it will refresh your build.
 If you update `build.gradle` and the icon does not appear, you can manually refresh the build. 
-**Mac Users** try *Up + Command + I* and **Windows/Linux Users** try *Control + Shift + O*.
+**Mac Users** try *Shift + Command + I* and **Windows/Linux Users** try *Control + Shift + O*.
 
 For more on Gradle and IntelliJ, visit this [website](https://www.jetbrains.com/idea/guide/tutorials/working-with-gradle/gradle-dependencies/).
 

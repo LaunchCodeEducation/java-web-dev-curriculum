@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-24T09:55:31-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 {{< youtube 1bCgzjatcr4 >}}
@@ -38,15 +38,15 @@ You should have already downloaded this code from `java-web-dev-projects`.
 1. Run your program in **Debug mode**.
 1. Inspect the values of your variables in the **Debugger Pane**.
 1. If needed, use the **Add/Watch** button to watch a specific expression as your program executes.
-1. You can also set a **conditional breakpoint** to pause the execution of the code when a certain condition is a method.
+1. You can also set a **conditional breakpoint** to pause the execution of the code when a certain condition is met.
 
 ## Control the Flow of Execution
 
 1. **Step-over** button executes a given line then steps to the next executable line
-1. **Step-into** button allows you to review a called method and see what is going to line within the method
+1. **Step-into** button allows you to review a called method and step line by line within the method
 1. **Step-out-of** button allows you to move out of the method you stepped into and resume stepping through the main code
-1. **Variables Pane** allows you to examine how variables are manipulated within your code.  Also allows you to identify specific *Watch expressions*
-1. **Frames Pane** tracks any method calls and threads in your code line by line.  Best used with breakpoints.
+1. **Variables Pane** allows you to examine the current values of variables and how they are manipulated within your code.  Also allows you to identify specific *Watch expressions*
+1. **Frames Pane** tracks any method calls and threads in your code.  This provides a stack trace view, showing the call hierarchy of methods and threads currently in execution.  Best used with breakpoints.
 
 ## Advantage of Debugger Over Printing to the Console
 
