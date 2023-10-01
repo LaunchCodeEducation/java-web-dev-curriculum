@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-10-01T12:05:00-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 To get started, open up `java-web-dev-projects` on your machine.
@@ -21,10 +21,10 @@ The professor you TA for, Professor Jackson, shared with you the code she uses t
 She and the other TAs have encountered some problems with the code in the past when they enter the total possible point value for an assignment.
 Occasionally, they accidentally enter `0` for the total number of possible points and the program encounters a fatal error when trying to divide by 0.
 
-To help out with this issue, complete a function called `Divide()` in `Main`.
+To help out with this issue, complete a method called `Divide()` in `Main`.
 The `Divide()` method takes in two parameters: `x` and `y`.
 
-Your function should return the result of `x/y`.
+Your method should return the result of `x/y`.
 
 However, if `y` is zero, you should throw an exception.
 Try to use an `ArithmeticException` and put your `try/catch` block in `Divide()` to test out your error-handling skills.
@@ -33,7 +33,7 @@ If an exception is caught, make sure to print out a helpful message.
 ## Test Student Labs
 
 After mentioning to Professor Jackson that you would like to get some more practice with exceptions, she offered to let you write some grading software!
-Before she gives you full control over auto-grading students' work, she asked if you could write a function called `CheckFileExtension()`.
+Before she gives you full control over auto-grading students' work, she asked if you could write a method called `CheckFileExtension()`.
 The `CheckFileExtension()` method takes in one parameter: `fileName`.
 
 `CheckFileExtension()` should return an integer representing the number of points a student receives for properly submitting a file in Java.
