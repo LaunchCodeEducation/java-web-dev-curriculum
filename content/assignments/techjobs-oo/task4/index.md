@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: speudusa # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Courtney Frey # update any time edits are made after review
-lastEditorGitHub: speudusa # update any time edits are made after review
-lastMod: 2023-06-26T10:20:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-12T13:54:20-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Instead of manually creating sample `Job` objects to verify that your class works correctly, you will use unit tests instead.
@@ -42,10 +42,14 @@ Fill out the resulting form using the values:
 
    1. **Name:** JobTest
    1. **Java version:** Java 17 
-   1. **Module:** `techjobs-oo.test`
-   1. **Class:** `org.launchcode.techjobs.oo.test.JobTest` (Click on the icon at the right side of this field and select the `JobTest` class from the modal that opens.)
+   1. **Module:** `techjobs-oo-java17-graded.test`
+   1. **Class:** `org.launchcode.techjobs.oo.JobTest` (You will need to type or paste this. If the class contained a test, you could also click the icon at the right of this field and select the class from the window that opens.)
 
-Then hit _Apply_ and _OK_.
+{{< rawhtml >}}
+<img src="../figures/jobtest-junit-configuration.png" alt="JobTest Configuration Settings">
+{{< /rawhtml >}}
+
+Ignore the message that says _Class 'org.launchcode.techjobs.oo.JobTest' is not a test_ since you haven't written any yet. Then hit _Apply_ and _OK_.
 
 To run the tests, select the _JobTest_ configuration from the configurations menu and hit the green _Run_ button.
 
@@ -67,7 +71,7 @@ Each `Job` object should have a unique ID that is an integer.
    1. “Drat! I need to fix my `Job()` constructor code.”
 
    {{% notice orange "Warning" "rocket" %}} 
-   The answer is NOT “a”.
+   The answer is NOT “1”.
 
    Your test code might be incorrect, but that should not be your FIRST thought. TDD begins with writing tests for desired behaviors. If the tests fail, that indicates errors in the methods trying to produce the behavior rather than in the tests that define that behavior.
   {{% /notice %}}
