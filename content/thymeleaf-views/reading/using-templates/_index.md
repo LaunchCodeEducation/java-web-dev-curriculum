@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-22T08:34:55-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 In the [next video]({{< relref "../conditionals-templates/_index.md#try-it" >}}), you will extend your `hello-spring` project and practice using Thymeleaf templates as you code along with the clip.
@@ -58,7 +58,7 @@ For example, if the controller stores data in the `name` variable, then the
 template can display that value like so:
 
 ```html
-<tag th:keyword = "..."></tag>
+<p th:text = "${name}"></p>
 
 ```
 
