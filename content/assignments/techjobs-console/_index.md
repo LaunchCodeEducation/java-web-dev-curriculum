@@ -7,8 +7,8 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
+lastEditor: colinbrock # update any time edits are made after review
+lastEditorGitHub: colinbrock # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
@@ -71,7 +71,7 @@ or more of the [bonus missions]({{< relref "./submission/#bonus-missions" >}}).
 ## Getting Started
 
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autograding Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
 {{% /notice %}}
 
 In Canvas, **Graded Assignment #1: TechJobs Console** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
@@ -84,7 +84,7 @@ this, right-click on the `main` method in the `TechJobs` class and select
 
 
 {{% notice red Warning "rocket" %}}
-The application will run until you force it to quit, re-prompting time after time. To kill it, press the red "stop" icon in the Run pane *or* entereing `x` from the initial prompt. We'll learn precisely how the program manages to work this way below.
+The application will run until you force it to quit, re-prompting time after time. To kill it, press the red "stop" icon in the Run pane *or* enter `x` from the initial prompt. We'll learn precisely how the program manages to work this way below.
 
 Let's explore the code by starting with the source of the data our program is
 providing access to.

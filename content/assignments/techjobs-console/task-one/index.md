@@ -1,5 +1,5 @@
 ---
-title: "Task One"
+title: "Task 1: Implement printJobs()"
 date: 2023-01-03T10:42:56-06:00
 draft: false
 weight: 2
@@ -7,12 +7,10 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Sally Steuterman # update any time edits are made after review
+lastEditorGitHub: gildedgardenia # update any time edits are made after review
+lastMod: 2023-08-01 # UPDATE ANY TIME CHANGES ARE MADE
 ---
-
-## Implement `printJobs`
 
 When trying out the program, and later when reading the code, you
 hopefully noticed that there's some work to do in the `printJobs`
@@ -21,7 +19,7 @@ method. As it stands, it currently just prints a message:
 
 Complete this method. It should print out jobs *in this precise format*:
 
-```bash
+```console
 *****
 position type: Data Scientist / Business Intelligence
 name: Sr. IT Analyst (Data/BI)
@@ -41,7 +39,18 @@ core competency: Javascript
 
 For the autograding script to correctly grade your code, you'll need to match this format *exactly*. In particular, note the number of asterisks surrounding each listing, and the blank line between listings.
 
-If there are no results, it should print `No Results`. Again, you should use this *exact* message.
+If there are no results, it should print `No Results` in the following format:
+
+```console
+Search term:
+Example Search Term with No Results
+No Results
+View jobs by (type 'x' to quit):
+0 - Search
+1 - List
+```
+
+Again, you should use this *exact* message.
 
 {{% notice green Tip "rocket" %}}
 To do this, you'll need to iterate over an `ArrayList` of jobs. Each job is itself a `HashMap`. While you can get each of the items out of

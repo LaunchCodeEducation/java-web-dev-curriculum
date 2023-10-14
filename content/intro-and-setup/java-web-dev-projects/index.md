@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-08-31T10:16:27-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Initial Setup
@@ -62,18 +62,27 @@ assignment of this unit.
 1. If you're asked about other settings for your project. Select the *Next*
    button every time to accept the default options.
 1. When your project is ready, you'll see a page that looks like the image
-   below. Click on the area in the top left labelled *Project*.
+   below. Click on Load, if you are prompted to load the Gradle Build Scripts.
+   
+   ![Screenshot of IntelliJ window of your fork of `java-web-dev-projects`](figures/IntelliJWindow.png?classes=border)
 
-1. Clicking on *Project* opens a side panel, displaying the file structure of
-   the project you have just set up.
+1. You should see the file structure of the project you have just set up.  If
+   you do not, click on the folder icon in the upper left corner.
 
-1. Double-clicking on the *Hello* file opens it in the workspace to the right.
+1. Navigate down *datatypes/datatype-examples/src/main/java/org.launchcode*
+   and double-click on the *HelloMethods* file.  This will open it in the
+   workspace to the right.
 
-1. To run the *Hello* program, click on the green arrow next to the class
-   definition and select *Run 'Hello.main()'* from the dropdown menu.
+1. To run the *HelloMethods* program, click on the green arrow next to the class
+   definition and select *Run 'HelloMethods.main()'* from the dropdown menu.
 
    After a few seconds, you should see a new window appear with your program's
    output.
+   
+   {{% notice blue "Note" "rocket" %}}
+   You may have a message saying the Project JDK is not defined. Click on
+   'Setup SDK' and select the Java 17 version.
+   {{% /notice %}}
 
 With that, you’re ready to go!
 

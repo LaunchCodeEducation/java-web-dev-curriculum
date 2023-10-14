@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-08-29 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 For the entirety of this course, we will be coding in Java. Besides installing Java on your machine, you must also add some support technologies to 
@@ -18,7 +18,7 @@ allow you to run and edit Java code.
 ## Java Development Kit
 
 Installing Java means downloading a package of software called the **Java Development Kit**,
-or **JDK**, for short. The JDK contains software the tools needed to develop and
+or **JDK**, for short. The JDK contains the software tools needed to develop and
 run Java code, namely the Java compiler, **javac**, and the 
 **Java Virtual Machine (JVM)**. 
 
@@ -58,7 +58,7 @@ Be sure to select your Operating System from the tab options.
 
 The figure above shows options for downloading Java 17.
 
-- **Mac users**: we recommend the `.dmg` option
+- **Mac users**: we recommend the `.dmg` option.  The ARM64 option is preferred if you have a recent Mac with an Apple Silicon processor (M1, M2, M...), otherwise choose the x64 option for Macs with an Intel processor.
 - **Windows users**: we recommend the `.exe` option
 
 To install, you must first select *Accept License Agreement*. 

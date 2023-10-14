@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub:  ColinBrock # update any time edits are made after review
+lastMod: 2023-09-06 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 The purpose of this initial assignment is to familiarize yourself with the process of running the autograding tests with Github Actions and submitting your work. Even if you are familiar with GitHub Actions, this assignment will contain several new items that are specific to working with Java assignments.
@@ -36,7 +36,7 @@ Where you save your project matters! IntelliJ will only save it to a folder that
 
 After IntelliJ clones your repository, it will ask you if you trust the contents in the repository. Select *Trust Project*.
 
-When the project opens initially, the *Project* pane at the left of the screen, should be open and will show you the files within your project. If it is closed, click on the pane's button at the top left to open it.
+When the project opens initially, the *Project* pane at the left of the screen should be open and will show you the files within your project. If it is closed, click on the pane's button at the top left to open it.
 
 Navigate though the directories down to the `HelloWorld` class. This will be in the `src/main/java/org.launchcode` directory. For all of the assignments we work on in this unit, our source code will live within this directory.
 
@@ -76,7 +76,7 @@ In this case, the test expected our code to output `Hello, World!`. Instead, it 
 
 {{% notice orange "Warning" "rocket" %}}
 
-   The autograding tests are VERY exacting. A difference of just one character will result in a failed test. The tests are also case-sensitive. You'll need to pay attention to detail in order complete your assignments.
+   The autograding tests are VERY exacting. A difference of just one character will result in a failed test. The tests are also case-sensitive. You'll need to pay attention to detail in order to complete your assignments.
 
 {{% /notice %}}
 

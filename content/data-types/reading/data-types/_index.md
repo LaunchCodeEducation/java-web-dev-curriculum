@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-08-31T06:16:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Static vs. Dynamic Typing
@@ -108,7 +108,7 @@ The table below summarizes some of the most common string methods available in J
 
 A primitive data type is a basic building block. Using primitive data types, we can build more complex data structures called _object_ data types.
 
-Java uses its own a set of primitive data types. The table below shows the most common types that beginners are likely to encounter. A more complete list can be found on the [Oracle website](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html).
+Java uses its own set of primitive data types. The table below shows the most common types that beginners are likely to encounter. A more complete list can be found on the [Oracle website](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html).
 
 #### Java Primitive Data Types
 

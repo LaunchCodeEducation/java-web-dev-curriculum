@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-22T19:10:33-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Templates allow you to build generic forms. This lets you reuse the structure
@@ -130,7 +130,7 @@ Now that you have created and rendered a form in your `codingevents` project, yo
 The starter code for this video is found at the [form branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms) of the `CodingEventsJava` repo. 
 The final code presented in this video is found on the [forms-continued branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/forms-continued). As always, code along to the videos on your own `codingevents` project.
 
-If you are having trouble with the redirect from creating a new event via the `events/create` endpoint you may need to update your redirect within the `createEvent` method to point to the desired location:
+If you are having trouble with the redirect, from creating a new event via the `events/create` endpoint, you may need to update your redirect within the `createEvent` method to point to the desired location:
 
 ```java
 @PostMapping("create")
