@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-10-02 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 After all of the hard work we have put into learning about Thymeleaf, it is time for a spa day! First, we need to put our knowledge of Thymeleaf to the test. Instead of heading out to our favorite spa, let's make an application for the
@@ -25,7 +25,7 @@ As always, read through the whole page before starting to code.
 
 ## Setup
 
-Fork and clone the appropriate [repository](https://github.com/LaunchCodeEducation/spa-day-starter-code). Check out the project via Version Control in IntelliJ.
+Fork and clone the appropriate [repository](https://github.com/LaunchCodeEducation/Java17-SpaDay). Check out the project via Version Control in IntelliJ.
 
 When you open the project and run it using `bootRun`, go to `localhost:8080` and you should see a form!
 

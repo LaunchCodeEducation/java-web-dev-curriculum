@@ -23,12 +23,10 @@ This course covers **unit testing** in Java with a test runner called
 **JUnit**. Unit testing breaks down the codebase into its smallest
 building blocks, which are individual statements and methods. 
 
-<!-- TODO: After JavaScript migration, update this link -->
-
 {{% notice green "Tip" "rocket" %}}
 
    If you're not yet familiar with the benefits of automated testing,
-   you can familiarize yourself [here](https://education.launchcode.org/intro-to-professional-web-dev/chapters/unit-testing/why-test.html).
+   you can familiarize yourself [here](https://education.launchcode.org/intro-to-web-dev-curriculum/unit-testing/reading/why-test/index.html).
 
 {{% /notice %}}
 

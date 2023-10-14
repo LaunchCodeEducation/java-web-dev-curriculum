@@ -1,5 +1,5 @@
 ---
-title: "Getting to Know the Starter Code"
+title: "Task 1: Getting to Know the Starter Code"
 date: 2023-05-22T10:20:54-05:00
 draft: false
 weight: 1
@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Colin Brock # update any time edits are made after review
-lastEditorGitHub: colinbrock # update any time edits are made after review
-lastMod: 2023-09-06 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-23T09:59:59-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Getting Started
