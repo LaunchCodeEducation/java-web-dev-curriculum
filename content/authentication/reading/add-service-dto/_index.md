@@ -247,7 +247,9 @@ current request context
 #### Add methods to expose `UserRepository` functionality
 
 Our `UserService` needs to expose some of the basic functionalities of the
-`UserRepository` to the controllers.
+`UserRepository` to the controllers. Add the following methods to your
+`UserRepository` class. Don't worry about the `userNotFoundException` --- we
+will add this definition in the next section.
 
 ```java
     public User findByUsername(String username) {
@@ -270,7 +272,58 @@ Our `UserService` needs to expose some of the basic functionalities of the
     }
 ```
 
+#### Add custom error handlers
+
+We have to add proper error handling to
+our site. When we throw an error during request handling, we can trigger an
+automatic error page template to be shown. The automatic error page
+will be covered in the next lesson, but for now, we can add our custom
+`Exception` type when a resource is not found.
+
+First we need to add a definition for the `userNotFoundException`in `UserService`.
+This is a method that supplies a more generic `ResourceNotFoundException` with a
+custom message. Add this method to the end of your `UserService` class.
+
+```java
+    private Supplier<ResourceNotFoundException> userNotFoundException(Integer id) {
+        return () -> new ResourceNotFoundException("User with id %d could not be found");
+    }
+```
+
+Next we need to define our custom exceptions that will be used to trigger the
+error template. Add a new package called `exceptions` in `org.launchcode.codingevents`.
+Then create a new class in that package called `ResourceNotFoundException`. This
+will extend `RuntimeException` and give us a new exception type for our needs.
+
+```java
+public class ResourceNotFoundException extends RuntimeException {
+    public  ResourceNotFoundException() {
+
+    }
+
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+
+    public ResourceNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public ResourceNotFoundException(Throwable cause) {
+        super(cause);
+    }
+
+    public ResourceNotFoundException(String message, Throwable cause,
+                                     boolean enableSuppression,
+                                     boolean writeableStackTrace) {
+        super(message, cause, enableSuppression, writeableStackTrace);
+    }
+}
+```
+
 #### Add `getCurrentUser()` method
+
+One more piece to add in `UserService`, we have to add a `getCurrentUser()` method.
 
 We will do some fancy Spring Framework logic to retrieve the `HttpSession` from
 the current HTTP request context, and then get the `User` object similarly to
@@ -278,7 +331,7 @@ how we do it in `AuthenticationController`.
 
 Add this method to your `UserService` below the fields.
 
-```java {linenos=true}
+```java
     public User getCurrentUser() {
         ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
         HttpSession session = attr.getRequest().getSession(true);
@@ -301,4 +354,358 @@ Add this method to your `UserService` below the fields.
 ### Adding `EventService` and `EventCategoryService`
 
 We will add a service "layer" to our design that will be responsible for
-translating DTOs to Models and communication between the 
+translating DTOs to Models and communication between the `EventController` and
+`EventRepository`
+
+#### `EventService`
+
+Let's create another class in the `services` package named `EventService`.
+
+```java
+@Service
+public class EventService {
+
+    @Autowired
+    private EventRepository eventRepository;
+
+    @Autowired
+    private EventCategoryRepository categoryRepository;
+
+    @Autowired
+    private UserService userService;
+
+}
+```
+
+Our service will need references to the repositories so that it can access
+the database, and a reference to `UserService` so that it can retrieve the
+currently logged-in user.
+
+Next let's add some methods that will expose database functionality. Notice
+how we use the new `findAllByCreator` and `findByIdAndCreator` repository
+methods to filter events by user.
+
+```java
+    public List<Event> getAllEvents() {
+        return (List<Event>) eventRepository.findAll();
+    }
+
+    public List<Event> getAllEventsByCreator(User creator) {
+        return eventRepository.findAllByCreator(creator);
+    }
+
+    public Event getEventById(int id) {
+        return eventRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
+    }
+
+    public Event getEventByIdAndCreator(int id, User creator) {
+        return eventRepository.findByIdAndCreator(id, creator).orElseThrow(ResourceNotFoundException::new);
+    }
+
+    public void removeEventById(int id) {
+        eventRepository.deleteById(id);
+    }
+```
+
+Last, we must add a `save` method, which
+takes in an `EventDTO` object and will translate it to our `Event` and
+`EventDetails` models before saving to the database.
+
+```java
+    public Event save(EventDTO eventDTO) {
+        Event event = new Event();
+        event.setName(eventDTO.getName());
+
+        EventDetails details = new EventDetails(eventDTO.getDescription(), eventDTO.getContactEmail());
+        event.setEventDetails(details);
+
+        event.setEventCategory(categoryRepository.findById(eventDTO.getCategoryId()).get());
+
+        event.setCreator(userService.getCurrentUser());
+
+        eventRepository.save(event);
+
+        return event;
+    }
+```
+
+#### `EventCategoryService`
+
+Similar to our `EventService`, we must add methods to the `EventCategoryService`
+to expose functionality of the `EventCategoryRepository` to the controllers.
+
+```java
+@Service
+public class EventCategoryService {
+
+    @Autowired
+    private EventCategoryRepository categoryRepository;
+
+    @Autowired
+    private UserService userService;
+
+    public List<EventCategory> getAllCategories() {
+        return (List<EventCategory>) categoryRepository.findAll();
+    }
+
+    public List<EventCategory> getAllCategoriesByCreator(User creator) {
+        return categoryRepository.findAllByCreator(creator);
+    }
+
+    public List<EventCategory> getAllCategoriesByCurrentUser() {
+        return categoryRepository.findAllByCreator(userService.getCurrentUser());
+    }
+
+    public EventCategory getCategoryById(int id) {
+        return categoryRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
+    }
+
+    public EventCategory getCategoryByIdAndCreator(int id, User creator) {
+        return categoryRepository.findByIdAndCreator(id, creator).orElseThrow(ResourceNotFoundException::new);
+    }
+
+    public EventCategory save(EventCategoryDTO categoryDTO) {
+        EventCategory category = new EventCategory();
+        category.setName(categoryDTO.getName());
+        category.setCreator(userService.getCurrentUser());
+
+        categoryRepository.save(category);
+
+        return category;
+    }
+
+}
+```
+
+Now that our service layer is added, we can refactor our controllers to use them
+and our form views to use DTOs.
+
+### Refactoring Controllers & Views
+
+For now, we will continue to use `authController` to retrieve the current user
+in the controller. In the next lesson, we will remove all references to
+`authController` in `EventController` and `EventCategoryController`, which is
+how the sequence diagram above is organized.
+
+#### `EventCategoryController`
+
+Let's start by refactoring our `EventCategoryController` to use the
+`EventCategoryService` and `EventCategoryDTO`.
+
+Change the `EventCategoryRepository` field to be `EventCategoryService`, like below:
+
+```java
+    @Autowired
+    private EventCategoryService eventCategoryService;
+```
+
+Now, we can refactor all references to the `eventCategoryRepository` to be
+`eventCategoryService` references and we can use `EventCategoryDTO` in the
+create form.
+
+```java {hl_lines="5"}
+    @GetMapping
+    public String displayAllCategories(Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+        model.addAttribute("title", "All Categories");
+        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
+        return "eventCategories/index";
+    }
+```
+
+```java {hl_lines="3"}
+    @GetMapping("create")
+    public String renderCreateEventCategoryForm(Model model) {
+        model.addAttribute("title", "Create Category");
+        model.addAttribute(new EventCategoryDTO());
+        return "eventCategories/create";
+    }
+```
+
+```java {wrap="true" hl_lines="2 10"}
+    @PostMapping("create")
+    public String processCreateEventCategoryForm(@Valid @ModelAttribute EventCategoryDTO eventCategoryDto,
+                                                 Errors errors, Model model, HttpSession session) {
+
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Create Category");
+            return "eventCategories/create";
+        }
+
+        eventCategoryService.save(eventCategoryDto);
+        return "redirect:/eventCategories";
+    }
+```
+
+#### `EventController`
+
+Similar to above, let's start by changing the repository fields to service fields, like below:
+
+```java
+    @Autowired
+    private EventService eventService;
+
+    @Autowired
+    private EventCategoryService eventCategoryService;
+```
+
+Now to update the request handlers to use `eventService` and `eventCategoryService`.
+For now we will add a `try/catch` block to catch `ResourceNotFoundException` if the
+category ID is invalid.
+
+```java {hl_lines="7 9-16"}
+    @GetMapping
+    public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+
+        if (categoryId == null) {
+            model.addAttribute("title", "All Events");
+            model.addAttribute("events", eventService.getAllEventsByCreator(currUser));
+        } else {
+            try {
+                EventCategory category = eventCategoryService.getCategoryByIdAndCreator(categoryId, currUser);
+
+                model.addAttribute("title", "Events in category: " + category.getName());
+                model.addAttribute("events", category.getEvents());
+            } catch(ResourceNotFoundException ex) {
+                model.addAttribute("title", "Invalid Category ID: " + categoryId);
+            }
+        }
+
+        return "events/index";
+    }
+```
+
+```java {hl_lines="5-6"}
+    @GetMapping("create")
+    public String displayCreateEventForm(Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+        model.addAttribute("title", "Create Event");
+        model.addAttribute(new EventDTO());
+        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
+        return "events/create";
+    }
+```
+
+```java {hl_lines="2 7 11"}
+    @PostMapping("create")
+    public String processCreateEventForm(@ModelAttribute @Valid EventDTO newEventDto,
+                                         Errors errors, Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+        if(errors.hasErrors()) {
+            model.addAttribute("title", "Create Event");
+            model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
+            return "events/create";
+        }
+
+        eventService.save(newEventDto);
+        return "redirect:/events";
+    }
+```
+
+```java {hl_lines="5 14"}
+    @GetMapping("delete")
+    public String displayDeleteEventForm(Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+        model.addAttribute("title", "Delete Events");
+        model.addAttribute("events", eventService.getAllEventsByCreator(currUser));
+        return "events/delete";
+    }
+
+    @PostMapping("delete")
+    public String processDeleteEventsForm(@RequestParam(required = false) int[] eventIds) {
+
+        if (eventIds != null) {
+            for (int id : eventIds) {
+                eventService.removeEventById(id);
+            }
+        }
+
+        return "redirect:/events";
+    }
+```
+
+```java {hl_lines="5-12"}
+    @GetMapping("detail")
+    public String displayEventDetails(@RequestParam Integer eventId, Model model, HttpSession session) {
+        User currUser = authController.getUserFromSession(session);
+
+        try {
+            Event event = eventService.getEventByIdAndCreator(eventId, currUser);
+
+            model.addAttribute("title", event.getName() + " Details");
+            model.addAttribute("event", event);
+        } catch (ResourceNotFoundException ex) {
+            model.addAttribute("title", "Invalid Event ID: " + eventId);
+        }
+
+        return "events/detail";
+    }
+```
+
+#### Updating Views to use DTOs
+
+Now that we have our controllers updated to use services, we have to update
+our views to make use of DTOs for the `create` forms.
+
+First we will update `events/create.html`. We will use the `eventDTO`
+attribute that we passed in to the template for model binding.
+
+```html {hl_lines="4 6 10 12 16 18 22 28" title="events/create.html"}
+<form method="post">
+    <div class="form-group">
+        <label>Name
+            <input th:field="${eventDTO.name}" class="form-control">
+        </label>
+        <p class="error" th:errors="${eventDTO.name}"></p>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <input th:field="${eventDTO.description}" class="form-control">
+        </label>
+        <p class="error" th:errors="${eventDTO.description}"></p>
+    </div>
+    <div class="form-group">
+        <label>Contact Email
+            <input th:field="${eventDTO.contactEmail}" class="form-control">
+        </label>
+        <p class="error" th:errors="${eventDTO.contactEmail}"></p>
+    </div>
+    <div class="form-group">
+        <label>Category
+            <select th:field="${eventDTO.categoryId}">
+                <option th:each="eventCategory : ${categories}"
+                        th:value="${eventCategory.id}"
+                        th:text="${eventCategory.name}"
+                ></option>
+            </select>
+            <p class="error" th:errors="${eventDTO.categoryId}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
+```
+
+Lastly, we will update `eventCategories/create.html` and use the
+`eventCategoryDTO` that we passed in for model binding.
+
+```html {hl_lines="4 6"}
+<form method="post">
+  <div class="form-group">
+    <label>Name
+      <input th:field="${eventCategoryDTO.name}" class="form-control">
+    </label>
+    <span th:errors="${eventCategoryDTO.name}" class="error"></span>
+  </div>
+  <input type="submit" value="Create" class="btn btn-primary">
+</form>
+```
+
+Our updates should be complete. There should be no change in functionality
+for Coding Events. Be sure to test the create, read, and delete functions.
+
+The next section will begin a process to add user roles and privileges
+to Coding Events. First, we will introduce `Role` and `Privilege` models
+that can be associated with `User` models.
