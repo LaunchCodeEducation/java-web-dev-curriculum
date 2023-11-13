@@ -1,0 +1,250 @@
+---
+title: "User Roles & Privileges"
+date: 2023-11-08T23:36:10-06:00
+draft: false
+weight: 8
+originalAuthor: Ben Clark # to be set by page creator
+originalAuthorGitHub: brclark # to be set by page creator
+reviewer: # to be set by the page reviewer
+reviewerGitHub: # to be set by the page reviewer
+lastEditor: # update any time edits are made after review
+lastEditorGitHub: # update any time edits are made after review
+lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+---
+
+We are going to add some additional features to Coding Events in the next three
+lessons. We currently have ability for users to manage their own data. Our next
+feature is to bring roles and privileges to our users. We will be able to
+configure users as admin, event creator, or event attendee.
+
+With roles and privileges in place, we are able to restrict certain functions
+to specific users. This is a common feature of many applications. Consider how
+we might associate users to the roles they hold, and how we might associate
+privileges to roles.
+
+Also, consider that your future apps may not need both roles AND privileges,
+and may just require one or the other. There is flexibility in how you design
+and implement future projects.
+
+## Adding Roles & Privileges to Users - VIDEO
+
+**TODO**
+
+## Adding Roles & Privileges to Users - TEXT
+
+This lesson describes how to add new models for `Role` and `Privilege` and
+associate them with the `User` model. This lesson will *not* add role-based
+functionality. That will be added in another lesson.
+
+Some definitions:
+
+- **Privilege**: access to a function or feature, such as `READ_EVENTS` or
+`CREATE_EVENTS`
+- **Role**: can be assigned to a user and combines multiple privileges in a
+distinct role, such as `ROLE_ADMIN` or `ROLE_CREATOR`
+
+### `Role` & `Privilege` Models
+
+Our `Role` model will need a database relationship with the `Privilege` model. We
+can say that a role can have many privileges, and a privilege can belong to many
+roles, giving us a **Many-to-Many** relationship.
+
+#### Adding the `Privilege` Model
+
+Create a new `Privilege` in your `models` package and make this class
+inherit from `AbstractEntity` and require the `@Entity` annotation.
+
+This class will only require a `String name` field to track what the privilege
+is. Add the field, constructor, getter/setter, and `toString` method for this
+class.
+
+In addition to this Model, we need to create some predefined privilege types
+for our application, which we can do with an `enum`. We will define privileges
+for being able to CRUD events and users. Some users will only have privileges
+to *read events* while others will have privileges to *read and create events*.
+
+Create a new `enum` in `models` package named `PrivilegeType`.
+
+```java
+public enum PrivilegeType {
+    READ_EVENTS,
+    CREATE_EVENTS,
+    DELETE_EVENTS,
+    READ_USERS,
+    UPDATE_USERS,
+    DELETE_USERS
+}
+```
+
+#### Adding the `Role` Model
+
+Similar to our `Privilege` model, we need to create a `Role` model that
+inherits from `AbstractEntity` and defines a field `String name`, along
+with a constructor, getter/setter, and `toString` method.
+
+Create the `Role` class within your `models` package.
+
+Once you have created this base for the `Role` class, we have to define
+the relationship between a `Role` object and `Privilege` object. We are
+going to define a **Many-to-Many** relationship, but we are going to do
+it slightly differently than we did in the previous chapter.
+
+Add the following field to the `Role` class after the `name` field definition.
+
+```java
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "roles_privileges",
+            joinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "privilege_id", referencedColumnName = "id"))
+    private Collection<Privilege> privileges;
+```
+
+Here, we are defining the `@ManyToMany` relationship between roles and
+privileges, and we are manually defining the *Join Table* that we want
+to be created. This requires us to specify which fields in the join
+table are foreign keys used to link roles to privileges. It is not
+required to define the join table in this way, but it gives us an example
+of how we can have more control over the database tables via our ORM
+definitions.
+
+Add a getter/setter for this `privileges` field as well.
+
+Similar to the `PrivilegeType` definition we added, we need a `RoleType`
+enum definition to specify the types of roles our app allows. For now,
+we will say that there can be *admin*, *event creator*, and *regular* users.
+
+Add a new `enum` definition `RoleType` to the `models` package.
+
+```java
+public enum RoleType {
+    ROLE_USER("User"),
+    ROLE_ORGANIZER("Organizer"),
+    ROLE_ADMIN("Admin");
+
+    private final String displayName;
+
+    RoleType(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+}
+```
+
+Admin users will be able to manage user accounts. Event creators will be able
+to create new events for the event listing. Regular users will be able to read
+the event listing and RSVP to the events they want to attend.
+
+Lastly, we need a special getter in the `Role` class that allows us to retrieve
+the `RoleType` enum from a `Role` object. Add the following method to your `Role`
+class:
+
+```java
+    public RoleType getType() {
+        return RoleType.valueOf(name);
+    }
+```
+
+#### Associating Users with Roles
+
+Our `User` model needs the ability to be assigned certain roles. In this regard,
+we need to set up a **Many-to-Many** relationship between `User` and `Role`. 
+
+We will make a few other additions to our `User` model as well, such as a
+constraint on unique usernames, and a field to store when the user account
+was created.
+
+First, add this `@Table` annotation above the `User` class (after `@Entity`):
+
+```java
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+```
+
+Next, we will add two new fields:
+
+```java
+    private LocalDateTime createDate;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name="users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
+```
+
+The `createDate` field will store info about when the user account is created.
+And similar to our Many-to-Many relationship between `Role` and `Privilege`,
+here we have manually set up the join table for our M2M relationship between
+`User` and `Role`.
+
+Next, let's add a new constructor that would allow us to initialize a `User`
+object and specify their roles:
+
+```java
+    public User(String username, String pwHash, Collection<Role> roles) {
+        this.username = username;
+        this.pwHash = pwHash;
+        this.roles = roles;
+    }
+```
+
+Our `createDate` field will be populated by a special method that runs
+automatically. Add this method after the constructors:
+
+```java
+    @PrePersist
+    public void setUpCreateDate() {
+        createDate = LocalDateTime.now();
+    }
+```
+
+Notice the `@PrePersist` annotation, which will automatically call this method
+before a new `User` instance gets created in the database.
+
+Lastly, we need a getter/setter for our the `roles` field. Add your getter/
+setter below the other methods.
+
+### Adding `Role` & `Privilege` Repositories
+
+Now that we have models defined for our database schema, we need to define a
+repository interface for each class so that we can interact with their database
+entries. We will define and override some of the repository methods to give more
+customized control over the database.
+
+First, let's create the `PrivilegeRepository` interface in the `data` package:
+
+```java
+@Repository
+public interface PrivilegeRepository extends CrudRepository<Privilege, Integer> {
+
+    Privilege findByName(String name);
+
+    @Override
+    void delete(Privilege privilege);
+}
+```
+
+The `findByName` method creates a custom database query that allows us to
+provide the name of a privilege and retrieve the `Privilege` object.
+
+Next, let's create the `RoleRepository` interface in the `data` package.
+
+```java
+@Repository
+public interface RoleRepository extends CrudRepository<Role, Integer> {
+    Role findByName(String name);
+
+    @Override
+    void delete(Role role);
+}
+```
+
+
