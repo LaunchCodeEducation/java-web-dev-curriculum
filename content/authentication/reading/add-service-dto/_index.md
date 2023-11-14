@@ -143,6 +143,57 @@ public class EventCategoryDTO {
 }
 ```
 
+### Prepping `User` model for `UserService`
+
+We have a few updates we need to make to the `User` model to prep it for use
+with the `UserService`. Namely, we need to move the `PasswordEncoder` class to
+its own managed config. Our password encoder is currently a static instance
+in the `User` model, but we will need access to our encoder within the
+`UserService` so that we can validate a login password against the user's
+encrypted password.
+
+#### Creating `PasswordEncoder` bean
+
+This password encoder object will be a managed Java bean, similar to a
+controller, that can be referenced using an `@Autowired` field.
+
+First, create a new package `config` within your `codingevents` package. Then,
+create a new class `EncoderConfig` in the package.
+
+```java
+@Configuration
+public class EncoderConfig {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+```
+
+The `@Configuration` annotation tells Spring that this class will contain
+`@Bean` definitions for Spring managed objects. Inside the class, we
+define a `@Bean` that will return an instance of the `BCryptPasswordEncoder`
+that we were using the `User` class.
+
+#### Refactoring `User` model
+
+Next, we need to modify our `User` model for use of the `PasswordEncoder`.
+We are going to rework our constructor so that a new `User` instance gets
+the encoded password passed in, and the `User` object will not be responsible
+for doing any encoding.
+
+Remove the field containing the `static final BCryptPasswordEncoder`.
+
+Modify the `User` constructor so that it takes in `String pwHash` as an argument
+and uses it to set the field directly, removing the call to `encode`.
+
+Lastly, remove the `isMatchingPassword` method and replace it with a getter for
+the `pwHash` field.
+
+Our `User` class is now refactored. Instead of having the `User` class be
+responsible for encoding passwords, we will do password encryption in the
+`UserService` and pass encrypted passwords to new `User` instances.
+
 ### Adding `UserService`
 
 The reponsibilities of the service layer are to translate DTOs to Models
