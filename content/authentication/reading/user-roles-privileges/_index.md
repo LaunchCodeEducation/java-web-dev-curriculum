@@ -247,4 +247,105 @@ public interface RoleRepository extends CrudRepository<Role, Integer> {
 }
 ```
 
+### Preloading Initial Data
 
+Until this point, if we needed any data in our database, we had to directly
+update the database or use the forms in our app to create new data. Sometimes,
+we have relational data that we need preloaded into the database, and we
+want to be certain it is added before our application is served to users.
+
+In this case, we can set up a component that will preload the database with
+some specific entries *when the application boots*. This requires us to listen
+for an `ApplicationReadyEvent` and trigger some writes to the database when
+it occurs.
+
+Create a new class `InitialDataLoader` within the `data`
+package. The following code block introduces some new Spring annotations:
+
+```java
+@Component
+@Transactional
+public class InitialDataLoader implements ApplicationListener<ApplicationReadyEvent> {
+
+    @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
+    private PrivilegeRepository privilegeRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+}
+```
+
+Setting up our `InitialDataLoader` class, it has `@Component` and
+`@Transactional` annotations. `@Component` tells Spring to manage this class
+instance similar to `@Controller`, and it is necessary so that the class
+can handle the `ApplicationListener` event. `@Transactional` is applied to the
+whole class and makes sure that our method for loading data either applies
+successfully or not at all.
+
+Next, we'll add a method for initializing data when the application is ready:
+
+```java
+    @Override
+    public void onApplicationEvent(final ApplicationReadyEvent event) {
+        Privilege createEvents = createPrivilegeIfNotFound(PrivilegeType.CREATE_EVENTS.toString());
+        Privilege readEvents = createPrivilegeIfNotFound(PrivilegeType.READ_EVENTS.toString());
+        Privilege deleteEvents = createPrivilegeIfNotFound(PrivilegeType.DELETE_EVENTS.toString());
+        Privilege readUsers = createPrivilegeIfNotFound(PrivilegeType.READ_USERS.toString());
+        Privilege updateUsers = createPrivilegeIfNotFound(PrivilegeType.UPDATE_USERS.toString());
+        Privilege deleteUsers = createPrivilegeIfNotFound(PrivilegeType.DELETE_USERS.toString());
+
+        Role adminRole = createRoleIfNotFound(RoleType.ROLE_ADMIN.toString(),
+                Arrays.asList(readUsers, updateUsers, deleteUsers));
+        Role organizerRole = createRoleIfNotFound(RoleType.ROLE_ORGANIZER.toString(),
+                Arrays.asList(createEvents, deleteEvents));
+        Role userRole = createRoleIfNotFound(RoleType.ROLE_USER.toString(),
+                Arrays.asList(readEvents));
+
+        User admin = new User("admin", passwordEncoder.encode("launchcode"),
+                Arrays.asList(adminRole, organizerRole, userRole));
+
+        createUserIfNotFound(admin);
+    }
+```
+
+We will load entries for the different `Privilege` types, `Role` types, and
+create a default admin user. `ROLE_ADMIN` is associated with user CRUD.
+`ROLE_ORGANIZER` is associated with event creation and deletion. `ROLE_USER`
+is associated with reading events.
+
+Finally, we need to add the methods that will create the entries if they don't
+already exist in the database.
+
+```java
+    private User createUserIfNotFound(User user) {
+        if (userRepository.findByUsername(user.getUsername()) == null) {
+            userRepository.save(user);
+        }
+        return user;
+    }
+
+    private Privilege createPrivilegeIfNotFound(String name) {
+        Privilege privilege = privilegeRepository.findByName(name);
+        if (privilege == null) {
+            privilege = new Privilege(name);
+            privilegeRepository.save(privilege);
+        }
+        return privilege;
+    }
+
+    private Role createRoleIfNotFound(String name, Collection<Privilege> privileges) {
+        Role role = roleRepository.findByName(name);
+        if (role == null) {
+            role = new Role(name);
+            role.setPrivileges(privileges);
+            roleRepository.save(role);
+        }
+        return role;
+    }
+```
