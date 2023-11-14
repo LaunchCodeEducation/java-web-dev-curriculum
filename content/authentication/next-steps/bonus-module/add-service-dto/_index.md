@@ -2,7 +2,7 @@
 title: "Data Transfer Objects & Services"
 date: 2023-10-17T00:02:24-05:00
 draft: false
-weight: 7
+weight: 2
 originalAuthor: Ben Clark # to be set by page creator
 originalAuthorGitHub: brclark # to be set by page creator
 reviewer: # to be set by the page reviewer

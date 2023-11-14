@@ -1,8 +1,8 @@
 ---
 title: "User Owned Data"
-date: 2021-10-01T09:28:27-05:00
+date: 2023-11-14T09:28:27-05:00
 draft: false
-weight: 6
+weight: 1
 originalAuthor: Ben Clark # to be set by page creator
 originalAuthorGitHub: brclark # to be set by page creator
 reviewer: <no-value> # to be set by the page reviewer

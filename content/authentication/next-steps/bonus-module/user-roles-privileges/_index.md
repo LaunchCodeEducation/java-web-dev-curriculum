@@ -2,7 +2,7 @@
 title: "User Roles & Privileges"
 date: 2023-11-08T23:36:10-06:00
 draft: false
-weight: 8
+weight: 3
 originalAuthor: Ben Clark # to be set by page creator
 originalAuthorGitHub: brclark # to be set by page creator
 reviewer: # to be set by the page reviewer
