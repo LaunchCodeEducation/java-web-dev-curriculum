@@ -173,7 +173,7 @@ public class EncoderConfig {
 The `@Configuration` annotation tells Spring that this class will contain
 `@Bean` definitions for Spring managed objects. Inside the class, we
 define a `@Bean` that will return an instance of the `BCryptPasswordEncoder`
-that we were using the `User` class.
+that we were using in the `User` class.
 
 #### Refactoring `User` model
 
@@ -321,7 +321,72 @@ public class ResourceNotFoundException extends RuntimeException {
 }
 ```
 
-#### Add `getCurrentUser()` method
+We need one other custom exception that will be thrown if the user does not
+provide matching `password` and `verifyPassword` fields when registering. Create
+another new class in `exceptions` named `UserRegistrationException`.
+
+```java
+public class UserRegistrationException extends RuntimeException {
+    public  UserRegistrationException() { }
+
+    public UserRegistrationException(String message) {
+        super(message);
+    }
+
+    public UserRegistrationException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public UserRegistrationException(Throwable cause) {
+        super(cause);
+    }
+
+    public UserRegistrationException(String message, Throwable cause, boolean enableSuppression,
+                                     boolean writeableStackTrace) {
+        super(message, cause, enableSuppression, writeableStackTrace);
+    }
+}
+```
+
+#### Add `save` and `validateUser` methods
+
+Two very important methods in our `UserService` will be `save` and
+`validateUser` methods.
+
+The `save` method will be responsible for taking a `RegisterFormDTO` instance,
+translating it to a new `User` instance, and saving to the database. It will
+be responsible for comparing the `verifyPassword` field and encoding the
+password for use in the `User` instance.
+
+```java
+    public User save(RegisterFormDTO registration) {
+        String password = registration.getPassword();
+        String verifyPassword = registration.getVerifyPassword();
+        if (!password.equals(verifyPassword)) {
+            throw new UserRegistrationException("Passwords do not match");
+        }
+
+        String pwHash = passwordEncoder.encode(registration.getPassword());
+        User user = new User(registration.getUsername(), pwHash);
+
+        return userRepository.save(user);
+    }
+```
+
+When a user is attempting to login, we will need to validate the password
+provided in the `LoginFormDTO` against the `pwHash` of the user.
+
+```java
+    public boolean validateUser(User user, String password) {
+        if (user == null) {
+            return false;
+        }
+
+        return passwordEncoder.matches(password, user.getPwHash());
+    }
+```
+
+#### Add `getCurrentUser` method
 
 One more piece to add in `UserService`, we have to add a `getCurrentUser()` method.
 
