@@ -320,7 +320,9 @@ create a default admin user. `ROLE_ADMIN` is associated with user CRUD.
 is associated with reading events.
 
 Finally, we need to add the methods that will create the entries if they don't
-already exist in the database.
+already exist in the database. Notice how the relationships are set up when
+creating a `Role`, by setting the list of `Privilege` objects associated with
+that `Role`.
 
 ```java
     private User createUserIfNotFound(User user) {
@@ -349,3 +351,85 @@ already exist in the database.
         return role;
     }
 ```
+
+Now, when you boot your application, these entries will be added to the database
+automatically the first time. Test it out.
+
+### Adding a `SecurityService`
+
+With roles and privileges added to our database, the last piece to add here is
+a service that can check whether the current user has a specific role or
+privilege. We will not make use of this service in our application yet, but
+recognize that this could be used to determine if an action can be taken in the
+controller.
+
+Create a new package named `security` inside the `codingevents` package. Then,
+create a new class `SecurityService` inside the `security` package.
+
+```java
+@Service
+public class SecurityService {
+    @Autowired
+    private AuthenticationController authController;
+}
+```
+
+We will add two methods that allow us to check if a user has a certain privilege
+or a certain role. Add the following `hasPrivilege` method to this service.
+
+{{% notice blue Note "rocket" %}}
+The `hasPrivilege` method below uses Java streams and lambda expressions to
+simplify the code for searching for a matching privilege within a user's
+associated roles. Take a look at the [Java docs for Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+for more background on this syntax.
+{{% /notice %}}
+
+```java
+    public boolean hasPrivilege(String privilege) {
+        final ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+        final HttpSession session = attr.getRequest().getSession(false);
+        final User theUser = authController.getUserFromSession(session);
+        if (session != null && theUser != null) {
+            Boolean hasPrivilege = theUser.getRoles()
+                .stream()
+                .map(Role::getPrivileges)
+                .flatMap(coll -> coll.stream())
+                .map(Privilege::getName)
+                .anyMatch(p -> p.equals(privilege));
+            return hasPrivilege;
+        }
+        return false;
+    }
+```
+
+This method will take a privilege, such as `"READ_EVENTS"`, and check if the
+current user has a role with the associated privilege. For each role, we get
+the privileges and gather them in a large collection, where we then check to
+see if the given argument matches any in the collection.
+
+Similary, we will add a `hasRole` method to the service as well.
+
+```java
+    public boolean hasRole(String role) {
+        final ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+        final HttpSession session = attr.getRequest().getSession(false);
+        final User theUser = authController.getUserFromSession(session);
+        if (session != null && theUser != null) {
+            Boolean hasRole = theUser.getRoles()
+                .stream()
+                .map(Role::getName)
+                .anyMatch(r -> r.equals(role));
+            return hasRole;
+        }
+        return false;
+    }
+```
+
+This method is similar to `hasPrivilege` but simpler, as we only need to compare
+the argument to the user's associated roles.
+
+With this service in place, we could check in each controller request handler
+whether we want to allow the current user to take action. But, Spring provides
+a larger framework for us to use in order to handle security, authentication,
+and checking user roles & privileges. In the next lesson, we will set up that
+framework and plug our existing models into it.
