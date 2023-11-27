@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: John Woolbright # to be set by the page reviewer
 reviewerGitHub: jwoolbright23 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 To write an **ArrayList** version of the program, we will have to introduce
@@ -17,7 +17,7 @@ several new Java concepts, including the class `ArrayList`. We will also
 review different kinds of `for` loops used in Java.
 
 Before going any further, we suggest you run the `ArrayListGradebook`
-program in IntelliJ. You can view this program in `java-web-dev-projects/chapter-example/student-example` directory.
+program in IntelliJ. You can view this program in the `java-web-dev-projects/chapter-example/student-example` directory.
 Once you’ve done that, let’s look at what is happening in the Java source code.
 
 ```java {linenos=table}

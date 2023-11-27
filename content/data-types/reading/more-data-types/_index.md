@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Arrays
@@ -95,7 +95,7 @@ Visually, we can represent these four variables as shown below.
 
 Since `int` is a primitive type, the variables `firstCatAge` and `secondCatAge` function like separate boxes, each one holding the integer value `11`. On the other hand, `myCat` is a reference variable, since it refers to an object of type `Cat`. The variable actually stores the memory address of the object, which we visualize as an arrow pointing from the variable box to where the data is stored. Instead of holding the actual `Cat` data, `myCat` stores directions for finding the data in memory.
 
-When we to assign `myCat` to another variable, as in `Cat sameCat = myCat`, we do NOT create a second copy of the object or its data. Instead, we make a second arrow pointing to the same memory location.
+When we assign `myCat` to another variable, as in `Cat sameCat = myCat`, we do NOT create a second copy of the object or its data. Instead, we make a second arrow pointing to the same memory location.
 
 The distinction between object types and primitives is important, if subtle. As you continue learning Java, you will see that object types are handled differently in essential and important ways.
 

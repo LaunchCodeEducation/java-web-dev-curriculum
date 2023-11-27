@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Terri Penn # update any time edits are made after review
-lastEditorGitHub: tpenn # update any time edits are made after review
-lastMod: 2023-08-31T06:16:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Let’s move beyond our “Hello, World” example and explore a simple temperature conversion program. We want our function to convert a Fahrenheit temperature to Celsius.
@@ -55,7 +55,7 @@ There are several new concepts introduced in this example. We will look at them 
 
 ## Java Packages
 
-Line 1 of of the program above, `package org.launchcode.java.demos.lsn1datatypes;` declares the package in which the file resides. For this simple program, your code could run without this line. However, you want to get used to always declaring the package of your Java classes.
+Line 1 of the program above, `package org.launchcode.java.demos.lsn1datatypes;` declares the package in which the file resides. For this simple program, your code could run without this line. However, you want to get used to always declaring the package of your Java classes.
 
 Packages help to **encapsulate** your code. Encapsulation refers to the practice of shielding your code from outside influences. It’s an essential component of good object oriented programming, and package declaration in Java is just one application of this principle. Without declaring a package, a Java class exists within the default package. In larger applications, leaving all classes in the default package risks naming conflicts and bugs.
 

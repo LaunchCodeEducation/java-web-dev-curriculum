@@ -7,15 +7,15 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 IntelliJ is an **integrated development environment (IDE)**. An IDE is like a text
 editor on steroids. It not only allows you to write and edit code, but also contains many 
 features that enhance the coding experience. IntelliJ offers
-code completion hints, debugging, and even it's own compiler. We'll be using it throughout
+code completion hints, debugging, and even its own compiler. We'll be using it throughout
 this course, so it's time to get familiar with some of the basics.
 
 ## Install IntelliJ
