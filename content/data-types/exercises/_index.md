@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Courtney Frey # update any time edits are made after review
-lastEditorGitHub: speudusa # update any time edits are made after review
-lastMod: 2023-06-27T09:27:57-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Getting Started
@@ -167,7 +167,7 @@ The first sentence of _Alice’s Adventures in Wonderland_ is below. Store this 
    > Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
 
    {{% notice blue "Note" "rocket" %}} 
-   You may want to write the string above on more than one line in your solution. Java 17 and IntelliJ gives you a few options to do so. The easiest, thanks to your IDE, is to press Enter as you type the string. IntelliJ will close the string and concatenate it with the next line to create one longer string.
+   You may want to write the string above on more than one line in your solution. Java 17 and IntelliJ give you a few options to do so. The easiest, thanks to your IDE, is to press Enter as you type the string. IntelliJ will close the string and concatenate it with the next line to create one longer string.
    {{% /notice %}}
 
 ### E. Strings

@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: John Woolbright # to be set by the page reviewer
 reviewerGitHub: jwoolbright23 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 <!-- TODO: Add link to Chapter 1, naming conventions -->
@@ -65,9 +65,9 @@ Now you are ready to start creating new classes and practice using different col
 
 {{% notice blue "Note" "rocket" %}}
    Some characters, like a period `"."`, have special meanings when used with
-   the `split` method. They cannot be used as-is for the deliminator.
+   the `split` method. They cannot be used as-is for the delimiter.
 
-   To use these characters as the deliminator, we must *escape* their special
+   To use these characters as the delimiter, we must *escape* their special
    meanings. Instead of `.split(".")`, we need to use `.split("\\.")`.
 {{% /notice %}}
 

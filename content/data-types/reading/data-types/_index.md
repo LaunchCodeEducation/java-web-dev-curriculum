@@ -7,9 +7,9 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Terri Penn # update any time edits are made after review
-lastEditorGitHub: tpenn # update any time edits are made after review
-lastMod: 2023-08-31T06:16:54-05:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Static vs. Dynamic Typing
@@ -133,7 +133,7 @@ Primitive data types are immutable and can be combined to build larger data stru
 `String` is a non-primitive data type, also called an _object type_. As we saw in the `String` table above, object types have methods which we can call using dot notation. Primitive data types do not have methods.
 
 {{% notice blue "Note" "rocket" %}} 
- Primitive data types in Java begin with a lower case letter, while object data types in Java begin with a capital letter.
+ Primitive data types in Java begin with a lowercase letter, while object data types in Java begin with a capital letter.
 {{% /notice %}}
 
 Later in this chapter, we will explore the Array and Class object types.
