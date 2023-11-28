@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: Courtney Frey # to be set by the page reviewer
 reviewerGitHub: speudusa # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 So far, we have been designing our applications by diagramming classes, drawing connections, and abstracting via interfaces.
@@ -23,7 +23,7 @@ Design patterns provide a set of conventions that we follow to build an applicat
 A **model** handles the data and business logic of the application. A **view** handles the user interface elements.
 A **controller** passes information from the models to the views. Controllers are the traffic cops of the application, capable of passing data back and forth to the browser in MVC web applications. This process will be covered in depth later on in this chapter.
 
-Because MVC breaks down all of the programming logic of an application into three digestable components, we can use this particular design pattern to make extensible applications.
+Because MVC breaks down all of the programming logic of an application into three digestible components, we can use this particular design pattern to make extensible applications.
 We also use MVC because it separates the components of the programs that the user interacts with from the underlying business logic.
 
 ## Spring

@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 For this studio, you will be writing unit tests to help you find 
@@ -21,7 +21,7 @@ errors in provided code.
 1. Open the `balanced-brackets` project in IntelliJ.
 1. Write unit tests to find the errors in `BalancedBrackets`.
    
-   1. The tests you write should guide how you revise the sourcecode. Use TDD to 
+   1. The tests you write should guide how you revise the source code. Use TDD to 
       first write tests that will work for the desired behavior of `BalancedBrackets`.
       When your tests fail, correct the class to pass your tests.
    1. The content of your tests is up to you, but you should write at least 12 tests.

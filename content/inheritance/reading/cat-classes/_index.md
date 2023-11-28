@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Let’s revisit our `Cat` and `HouseCat` friends. In `java-web-dev-projects`, open `inheritance/testing-inheritance/tale-of-two-cats/src/main/java` and examine the two classes inside.
@@ -109,7 +109,7 @@ public HouseCat(double aWeight) {
 ```
 
 {{% notice red Warning "rocket" %}}
-The above constructor is a bad one, and is included merly to introduce syntax and usage. We would not want to have a constructor for `HouseCat` that didn't initialize an essential field such as `name`.
+The above constructor is a bad one, and is included merely to introduce syntax and usage. We would not want to have a constructor for `HouseCat` that didn't initialize an essential field such as `name`.
 {{% /notice %}}
 
 

@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 
@@ -48,7 +48,7 @@ Imagine this common workflow:
    different syntax.
 
 The features will be the same, but the implementation changes. 
-Unit tests help in this scenario in that, changes to implementation
+Unit tests help in this scenario in that changes to implementation
 should not require changes to outcome. Thus, if your tests continue
 to pass after the refactor, you can move on, knowing you have not 
 inadvertently introduced a bug. When you write tests once, they provide a code 
