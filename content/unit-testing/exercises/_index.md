@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-09-05T12:05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Work on these exercises in the IntelliJ `car-exercises` 
@@ -58,7 +58,7 @@ Add a test for the fourth TODO, "gasTankLevel is accurate after attempting to dr
 @Test
 public void testGasTankAfterExceedingTankRange() {
    test_car.drive(501);
-   assertEquals(test_car.getGasTankLevel(), 0, .001);
+   assertEquals(0, test_car.getGasTankLevel(), .001);
 }
 ```
 
@@ -78,7 +78,7 @@ to our car that exceeds the gas tank size.
       //TODO: can't have more gas than tank size, expect an exception
       @Test()
       public void testGasOverfillException() {
-         assertthrows(IllegalArgumentException.class, () -> );
+         assertThrows(IllegalArgumentException.class, () -> );
       }
    ```
 
