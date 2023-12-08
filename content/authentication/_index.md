@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-12-08T15:28:21-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Learning Objectives
@@ -47,7 +47,7 @@ After completing this chapter, you should be able to do the following:
 
 ### Filtering Requests
 1. request filters
-1. whitelist
+1. allowlist
 1. code-based configuration
 
 ## Content Links

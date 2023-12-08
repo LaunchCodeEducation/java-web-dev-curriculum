@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-12-08T15:38:27-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Our application now allows users to register and log in. However, access to
@@ -119,24 +119,24 @@ Let's break down this method.
 
 This method has the effect of preventing access to *every* page on the app if a user is not logged in. This creates one not-so-minor problem: How will a user access the login page if they are not logged in?
 
-### Creating a Whitelist
+### Creating an Allowlist
 
-The term **whitelist** often refers to a list of items that are NOT subject to a given restriction. For our filter to fully work, we need a whitelist of pages that may be accessed by *any* user, regardless of whether or not they are logged in.
+The term **allowlist** often refers to a list of items that are NOT subject to a given restriction. For our filter to fully work, we need an allowlist of pages that may be accessed by *any* user, regardless of whether or not they are logged in.
 
-Let's define our whitelist above `preHandle`:
+Let's define our allowlist above `preHandle`:
 
 ```java
-private static final List<String> whitelist = Arrays.asList("/login", "/register", "/logout", "/css");
+private static final List<String> allowlist = Arrays.asList("/login", "/register", "/logout", "/css");
 
 ```
 
-At minimum, users should be able to access the routes associated with logging in and out. Depending on the desired use-cases for your application, you may want to add additional pages to the whitelist. For example, many web apps have a home page that does not require being logged in to view.
+At minimum, users should be able to access the routes associated with logging in and out. Depending on the desired use-cases for your application, you may want to add additional pages to the allowlist. For example, many web apps have a home page that does not require being logged in to view.
 
-We now need a way to check whether or not a given request is whitelisted. The following utility method does the trick:
+We now need a way to check whether or not a given request is allowlisted. The following utility method does the trick:
 
 ```java {linenos=table}
-private static boolean isWhitelisted(String path) {
-    for (String pathRoot : whitelist) {
+private static boolean isAllowlisted(String path) {
+    for (String pathRoot : Allowlist) {
         if (path.startsWith(pathRoot)) {
             return true;
         }
@@ -145,9 +145,9 @@ private static boolean isWhitelisted(String path) {
 }
 ```
 
-This method takes a string representing a URL path and checks to see if it *starts with* any of the entries in `whitelist`. If you wanted to be more restrictive, you could use `.equals()` instead of `.startsWith()`. If the path is whitelisted, we return true. Otherwise, we return false.
+This method takes a string representing a URL path and checks to see if it *starts with* any of the entries in `allowlist`. If you wanted to be more restrictive, you could use `.equals()` instead of `.startsWith()`. If the path is allowlisted, we return true. Otherwise, we return false.
 
-We can now check all requests against the whitelist within `preHandle`:
+We can now check all requests against the allowlist within `preHandle`:
 
 ```java {linenos=table}
 @Override
@@ -155,8 +155,8 @@ public boolean preHandle(HttpServletRequest request,
                         HttpServletResponse response,
                         Object handler) throws IOException {
 
-    // Don't require sign-in for whitelisted pages
-    if (isWhitelisted(request.getRequestURI())) {
+    // Don't require sign-in for allowlisted pages
+    if (isAllowlisted(request.getRequestURI())) {
         // returning true indicates that the request may proceed
         return true;
     }
@@ -175,7 +175,7 @@ public boolean preHandle(HttpServletRequest request,
 }
 ```
 
-`request.getRequestURI()` returns the request path (see [the docs](https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServletRequest.html) for more details). Lines 6-10 check the path against the whitelist, returning true (that is, allowing the request to proceed) if the path is whitelisted.
+`request.getRequestURI()` returns the request path (see [the docs](https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServletRequest.html) for more details). Lines 6-10 check the path against the allowlist, returning true (that is, allowing the request to proceed) if the path is allowlisted.
 
 With our filter complete, we simply need to let Spring know about it to complete our authentication code.
 
@@ -222,11 +222,11 @@ True/False: Request filtering takes place before any controller is called.
 {{% /notice %}}
 
 {{% notice green Question "rocket" %}}
-True/False: When our code checks a path against entries in the whitelist,
+True/False: When our code checks a path against entries in the allowlist,
 it must match exactly in order for the path to be accessed without logging in.
 
 1. True
 1. False
 
-<!-- Solution: False, Whitelisted paths as listed in this application can be just a root address. -->
+<!-- Solution: False, Allowlisted paths as listed in this application can be just a root address. -->
 {{% /notice %}}
