@@ -9,7 +9,7 @@ reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
 lastEditor: Terri Penn # update any time edits are made after review
 lastEditorGitHub: tpenn # update any time edits are made after review
-lastMod: 2023-12-08T15:38:27-06:00 # UPDATE ANY TIME CHANGES ARE MADE
+lastMod: 2023-12-08T15:44:11-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Our application now allows users to register and log in. However, access to
@@ -136,7 +136,7 @@ We now need a way to check whether or not a given request is allowlisted. The fo
 
 ```java {linenos=table}
 private static boolean isAllowlisted(String path) {
-    for (String pathRoot : Allowlist) {
+    for (String pathRoot : allowlist) {
         if (path.startsWith(pathRoot)) {
             return true;
         }
