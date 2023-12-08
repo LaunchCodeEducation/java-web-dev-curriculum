@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 JUnit is a library that provides the classes, methods, and assertions
@@ -124,7 +124,7 @@ Of course, `10` equals `10`. But let's run it so
 we know our test runner works. Click the green arrow to the left of 
 `public class CarTest` to run the test. Once run, you'll see a new output panel with a 
 green check mark indicating the test passed and a message stating the test passed. We 
-know now how the test runner behaves when a test passes and begin the real work of unit 
+now know how the test runner behaves when a test passes and begin the real work of unit 
 testing the `Car` class.
 
 Under your second TODO, write a test to verify that the constructor sets the 
@@ -139,7 +139,7 @@ Under your second TODO, write a test to verify that the constructor sets the
    }
 ```
 
-Here, we give the test a descriptive name, `testInitialGasTank()`, initialized a new 
+Here, we give the test a descriptive name, `testInitialGasTank()`, initialize a new 
 `Car` object, and test that the constructor correctly handles the `gasTankLevel` property.
 Run `CarTest` to see that both tests pass. 
 

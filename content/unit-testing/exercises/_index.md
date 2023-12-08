@@ -7,9 +7,9 @@ originalAuthor: Sally Steuterman # to be set by page creator
 originalAuthorGitHub: gildedgardenia # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Colin Brock # update any time edits are made after review
+lastEditorGitHub: ColinBrock # update any time edits are made after review
+lastMod: 2023-11-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Work on these exercises in the IntelliJ `car-exercises` 
@@ -50,7 +50,7 @@ public void testGasTankAfterDriving() {
 Add a test for the fourth TODO, "gasTankLevel is accurate after attempting to drive past tank range".
 
 1. You're on your own for this one. You'll need to simulate the `Car`
-   travelling farther than it's `gasTankLevel` allows.
+   traveling farther than it's `gasTankLevel` allows.
 
 {{% expand "Check your solution" %}}
 
