@@ -34,6 +34,7 @@ The code for this section begins with the [auth-filter branch](https://github.co
 ## Creating User Specific Data - Text
 
 ### Updating the models with a `User` field
+
 Users *own* their data when the entities that they create (events, categories, etc) have their
 `user_id` associated with each new entity as a foreign key. That would allow us to, 
 say "get all events for a specific user". We need to set up a **One-To-Many** relationship
@@ -61,18 +62,26 @@ and setters in `Event` class.
     }
 ```
 
-`Event` is not the only model that we want to be user-owned. Let's repeat the above steps to
-add the `creator` field/getters/setters to `EventCategory` and `Tag`.
+`Event` is not the only model that we want to be user-owned. **Repeat the above
+steps** to add the `creator` field/getters/setters to `EventCategory`.
+
+{{% notice blue Note "rocket" %}}
+The `Tag` resource will be your task to update throughout this bonus module. We
+will leave hints that you should continue updating that resource but will not
+explicitly include instructions on keeping the tag feature updated.
+
+You should update the `Tag` class as well to track `User creator`.
+{{% /notice %}}
 
 ### Saving the `User` when creating new data
 
-Now that we can store the associated User as the creator of an Event/Category/Tag, we need
-to make sure that the current logged-in User is set as the creator before saving new entries.
-Let's update the `EventController` to get the currently logged in user when creating a new
-event and setting that user as the `creator`.
+We can store an associated User as the creator of an Event/Category/Tag. Next
+we need to make sure that the currently logged-in User is set as the creator
+before saving new entries. Let's update the `EventController` first to set
+the `User creator` field in new events.
 
-To get the currently logged-in user in `EventController`, we need references to the
-`AuthenticationController` and the `HttpSession`.
+To get the currently logged-in user in `EventController`, we need references to
+the `AuthenticationController` and the `HttpSession`.
 
 In `EventController`, add the following below your other autowired fields:
 
@@ -81,10 +90,13 @@ In `EventController`, add the following below your other autowired fields:
     private AuthenticationController authController;
 ```
 
-With that reference, we can now get the current logged-in user during the POST handler for
-create.
+With that reference, we can now get the current logged-in user during the POST
+handler for create. We need to add a parameter for the incoming `HttpSession`
+so that we can get the currently logged in user from the `authController`. If
+there are no errors in the form, we set the creator of the `newEvent` to
+`currUser`.
 
-```java(hl_lines=3-4 10)
+```java{hl_lines="3-4 10"}
     @PostMapping("create")
     public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
                                          Errors errors, Model model, HttpSession session) {
@@ -100,10 +112,6 @@ create.
         return "redirect:/events";
     }
 ```
-
-We need to add a parameter for the incoming `HttpSession` so that we can get the currently
-logged in user from the `authController`. If there are no errors in the form, we set
-the creator of the `newEvent` to `currUser`.
 
 We need to repeat the above steps for the `EventCategoryController` and `TagController`.
 
@@ -135,7 +143,7 @@ and `TagRepository` interfaces that will allow us to retrieve all entries for a 
 
 In `EventRepository` add:
 
-```java(hl_lines=4-5)
+```java{hl_lines="4-5"}
 @Repository
 public interface EventRepository extends CrudRepository<Event, Integer> {
 
@@ -166,7 +174,7 @@ the `AuthenticationController`, `HttpSession`, and the repository methods we add
 First, we'll update `displayEvents` method that handles `GET /events?categoryId=` requests. We will receive the `HttpSession` as a param, use it to get the current user with `authController`,
 and finally pass the user to the `eventRepository` methods that we created.
 
-```java(hl_lines=2-3 7 9)
+```java{hl_lines="2-3 7 9"}
     @GetMapping
     public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
@@ -192,7 +200,7 @@ and finally pass the user to the `eventRepository` methods that we created.
 In the `displayCreateEventForm` method, we need to pass in the user-created categories instead
 of passing in all categories. Update your function like below.
 
-```java(hl_lines=2-3 6)
+```java{hl_lines="2-3 6"}
     @GetMapping("create")
     public String displayCreateEventForm(Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
@@ -206,7 +214,7 @@ of passing in all categories. Update your function like below.
 Don't forget to update the same in the **error** case of the POST request handler. If
 there are form errors, we want to pass the user-created categories back to the form.
 
-```java(hl_lines=7)
+```java{hl_lines="7"}
     @PostMapping("create")
     public String processCreateEventForm(@ModelAttribute @Valid Event newEvent,
                                          Errors errors, Model model, HttpSession session) {
@@ -222,7 +230,7 @@ When we display the delete events form, we want to make sure it displays the use
 events. Let's repeat the same procress to retrieve events for the current user in the
 `displayDeleteEventsForm` method.
 
-```java(hl_lines=2-3 5)
+```java{hl_lines="2-3 5"}
     @GetMapping("delete")
     public String displayDeleteEventForm(Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
@@ -239,7 +247,7 @@ and we'll retrieve the event based on its ID and the current user.
 
 In the `displayEventDetails` method, let's add:
 
-```java(hl_lines=2-5)
+```java{hl_lines="2-5"}
     @GetMapping("detail")
     public String displayEventDetails(@RequestParam Integer eventId, Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
@@ -257,35 +265,13 @@ Let's update the `displayAllCategories` method that handles `GET
 use `authController` to retrieve the current user. We'll pass the categories
 for the current user as the model attribute.
 
-```java(hl_lines=2-3 5)
+```java{hl_lines="2-3 5"}
 @GetMapping
     public String displayAllCategories(Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
         model.addAttribute("title", "All Categories");
         model.addAttribute("categories", eventCategoryRepository.findAllByCreator(currUser));
         return "eventCategories/index";
-    }
-```
-
-Next, we'll update the `processCreateEventCategoryForm` method that handles
-`POST /eventCategories/create` requests, by getting a reference to the current
-user and setting the `creator` field in the new `eventCategory`.
-
-```java(hl_lines=3 10-11)
-    @PostMapping("create")
-    public String processCreateEventCategoryForm(@Valid @ModelAttribute EventCategory eventCategory,
-                                                 Errors errors, Model model, HttpSession session) {
-
-        if (errors.hasErrors()) {
-            model.addAttribute("title", "Create Category");
-            return "eventCategories/create";
-        }
-
-        User currUser = authController.getUserFromSession(session);
-        eventCategory.setCreator(currUser);
-
-        eventCategoryRepository.save(eventCategory);
-        return "redirect:/eventCategories";
     }
 ```
 

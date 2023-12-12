@@ -101,8 +101,8 @@ every field from our `Create Event` form. Notice the flattening of the
 `EventDetails`, meaning that the DTO has the fields from `EventDetails`
 instead of a separate class/object for them.
 
-Create a new package inside `codingevents` named `dto`, and move your
-`RegisterFormDTO` and `LoginFormDTO` into the package.
+Move the `dto` package from `codingevents.models.dto` to `codingevents.dto`, so
+that it's no longer nested inside the `models` package.
 
 Next, let's create the `EventDTO` class in the same package.
 
