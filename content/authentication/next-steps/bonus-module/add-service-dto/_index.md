@@ -188,7 +188,8 @@ Modify the `User` constructor so that it takes in `String pwHash` as an argument
 and uses it to set the field directly, removing the call to `encode`.
 
 Lastly, remove the `isMatchingPassword` method and replace it with a getter for
-the `pwHash` field.
+the `pwHash` field. This will cause an issue in `AuthenticationController` that
+we will fix after adding `UserService`.
 
 Our `User` class is now refactored. Instead of having the `User` class be
 responsible for encoding passwords, we will do password encryption in the
@@ -408,11 +409,101 @@ Add this method to your `UserService` below the fields.
 
         Optional<User> user = findById(userId);
 
-        if (user.isEmpty()) {
+        return user.orElse(null);
+    }
+```
+
+With these methods added to `UserService`, we can refactor some of our
+`AuthenticationController` to make use of the service.
+
+### Refactor `AuthenticationController` to use `UserService`
+
+Our goal in `AuthenticationController` is to remove references to
+`UserRepository` and replace them with references to methods from
+`UserService`. To begin, update the `userRepository` field to:
+
+```java
+    private UserService userService;
+```
+
+With `userRepository` removed, we can update `getUserFromSession`,
+`processRegistrationForm`, and `processLoginForm`.
+
+First, update `getUserFromSession` to use `userService.findById`, along with
+helpful code to deal with `Optional`:
+
+```java{ hl_lines="7" }
+    public User getUserFromSession(HttpSession session) {
+        Integer userId = (Integer) session.getAttribute(userSessionKey);
+        if (userId == null) {
             return null;
         }
 
-        return user.get();
+        return userService.findById(userId).orElse(null);
+    }
+```
+
+Next, update `processRegistrationForm` to use `userService.save` with our
+`RegistrationFormDTO`:
+
+```java{ hl_lines="4 9 16-21" }
+    @PostMapping("/register")
+    public String processRegistrationForm(@ModelAttribute @Valid RegisterFormDTO registerFormDTO,
+                                          Errors errors, Model model) {
+        model.addAttribute("title", "Register");
+        if (errors.hasErrors()) {
+            return "register";
+        }
+
+        User existingUser = userService.findByUsername(registerFormDTO.getUsername());
+
+        if (existingUser != null) {
+            errors.rejectValue("username", "username.alreadyexists", "A user with that username already exists");
+            return "register";
+        }
+
+        try {
+            User newUser = userService.save(registerFormDTO);
+        } catch (UserRegistrationException ex) {
+            errors.rejectValue("password", "passwords.mismatch", "Passwords do not match");
+            return "register";
+        }
+
+        return "redirect:/login";
+    }
+```
+
+Last, we need to update `processLoginForm` to use `userService` and the new
+`validateUser` method:
+
+```java{ hl_lines="11 20" }
+    @PostMapping("/login")
+    public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
+                                   Errors errors, HttpServletRequest request,
+                                   Model model) {
+        model.addAttribute("title", "Log In");
+
+        if (errors.hasErrors()) {
+            return "login";
+        }
+
+        User theUser = userService.findByUsername(loginFormDTO.getUsername());
+
+        if (theUser == null) {
+            errors.rejectValue("username", "user.invalid", "The given username does not exist");
+            return "login";
+        }
+
+        String password = loginFormDTO.getPassword();
+
+        if (!userService.validateUser(theUser, password)) {
+            errors.rejectValue("password", "password.invalid", "Invalid password");
+            return "login";
+        }
+
+        setUserInSession(request.getSession(), theUser);
+
+        return "redirect:";
     }
 ```
 
@@ -425,6 +516,10 @@ translating DTOs to Models and communication between the `EventController` and
 #### `EventService`
 
 Let's create another class in the `services` package named `EventService`.
+
+Our service will need references to the repositories so that it can access
+the database, and a reference to `UserService` so that it can retrieve the
+currently logged-in user.
 
 ```java
 @Service
@@ -442,13 +537,11 @@ public class EventService {
 }
 ```
 
-Our service will need references to the repositories so that it can access
-the database, and a reference to `UserService` so that it can retrieve the
-currently logged-in user.
-
 Next let's add some methods that will expose database functionality. Notice
 how we use the new `findAllByCreator` and `findByIdAndCreator` repository
-methods to filter events by user.
+methods to filter events by user. We also want to create method definitions
+that assume the creator is the current user, such as
+`getAllEventsByCurrentUser()`.
 
 ```java
     public List<Event> getAllEvents() {
@@ -459,6 +552,10 @@ methods to filter events by user.
         return eventRepository.findAllByCreator(creator);
     }
 
+    public List<Event> getAllEventsByCurrentUser() {
+        return getAllEventsByCreator(userService.getCurrentUser());
+    }
+
     public Event getEventById(int id) {
         return eventRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
     }
@@ -466,6 +563,10 @@ methods to filter events by user.
     public Event getEventByIdAndCreator(int id, User creator) {
         return eventRepository.findByIdAndCreator(id, creator).orElseThrow(ResourceNotFoundException::new);
     }
+
+	public Event getEventByIdForCurrentUser(int id) {
+        return getEventByIdAndCreator(id, userService.getCurrentUser());
+	}
 
     public void removeEventById(int id) {
         eventRepository.deleteById(id);
@@ -481,10 +582,12 @@ takes in an `EventDTO` object and will translate it to our `Event` and
         Event event = new Event();
         event.setName(eventDTO.getName());
 
-        EventDetails details = new EventDetails(eventDTO.getDescription(), eventDTO.getContactEmail());
+        EventDetails details = new EventDetails(eventDTO.getDescription(),
+                                                eventDTO.getContactEmail());
         event.setEventDetails(details);
 
-        event.setEventCategory(categoryRepository.findById(eventDTO.getCategoryId()).get());
+        event.setEventCategory(categoryRepository.findById(eventDTO.getCategoryId())
+                                                 .orElse(null));
 
         event.setCreator(userService.getCurrentUser());
 
@@ -494,117 +597,43 @@ takes in an `EventDTO` object and will translate it to our `Event` and
     }
 ```
 
-#### `EventCategoryService`
+#### Add `EventCategoryService`
 
 Similar to our `EventService`, we must add methods to the `EventCategoryService`
 to expose functionality of the `EventCategoryRepository` to the controllers.
 
-```java
-@Service
-public class EventCategoryService {
+We will only need `EventCategoryRepository` and `UserService` autowired fields
+in this class.
 
-    @Autowired
-    private EventCategoryRepository categoryRepository;
+Write the following methods, using the previous section on `EventService` as a
+guide:
 
-    @Autowired
-    private UserService userService;
-
-    public List<EventCategory> getAllCategories() {
-        return (List<EventCategory>) categoryRepository.findAll();
-    }
-
-    public List<EventCategory> getAllCategoriesByCreator(User creator) {
-        return categoryRepository.findAllByCreator(creator);
-    }
-
-    public List<EventCategory> getAllCategoriesByCurrentUser() {
-        return categoryRepository.findAllByCreator(userService.getCurrentUser());
-    }
-
-    public EventCategory getCategoryById(int id) {
-        return categoryRepository.findById(id).orElseThrow(ResourceNotFoundException::new);
-    }
-
-    public EventCategory getCategoryByIdAndCreator(int id, User creator) {
-        return categoryRepository.findByIdAndCreator(id, creator).orElseThrow(ResourceNotFoundException::new);
-    }
-
-    public EventCategory save(EventCategoryDTO categoryDTO) {
-        EventCategory category = new EventCategory();
-        category.setName(categoryDTO.getName());
-        category.setCreator(userService.getCurrentUser());
-
-        categoryRepository.save(category);
-
-        return category;
-    }
-
-}
-```
+* `List<EventCategory> getAllCategories()`
+* `List<EventCategory> getAllCategoriesByCreator(User creator)`
+* `List<EventCategory> getAllCategoriesByCurrentUser()`
+* `EventCategory getCategoryById(int id)`
+* `EventCategory getCategoryByIdAndCreator(int id, User creator)`
+* `EventCategory getCategoryByIdForCurrentUser(int id)`
+* `EventCategory save(EventCategoryDTO categoryDTO)`
 
 Now that our service layer is added, we can refactor our controllers to use them
 and our form views to use DTOs.
 
 ### Refactoring Controllers & Views
 
-For now, we will continue to use `authController` to retrieve the current user
-in the controller. In the next lesson, we will remove all references to
-`authController` in `EventController` and `EventCategoryController`, which is
-how the sequence diagram above is organized.
-
-#### `EventCategoryController`
-
-Let's start by refactoring our `EventCategoryController` to use the
-`EventCategoryService` and `EventCategoryDTO`.
-
-Change the `EventCategoryRepository` field to be `EventCategoryService`, like below:
-
-```java
-    @Autowired
-    private EventCategoryService eventCategoryService;
-```
-
-Now, we can refactor all references to the `eventCategoryRepository` to be
-`eventCategoryService` references and we can use `EventCategoryDTO` in the
-create form.
-
-```java {hl_lines="5"}
-    @GetMapping
-    public String displayAllCategories(Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
-        model.addAttribute("title", "All Categories");
-        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
-        return "eventCategories/index";
-    }
-```
-
-```java {hl_lines="3"}
-    @GetMapping("create")
-    public String renderCreateEventCategoryForm(Model model) {
-        model.addAttribute("title", "Create Category");
-        model.addAttribute(new EventCategoryDTO());
-        return "eventCategories/create";
-    }
-```
-
-```java {wrap="true" hl_lines="2 10"}
-    @PostMapping("create")
-    public String processCreateEventCategoryForm(@Valid @ModelAttribute EventCategoryDTO eventCategoryDto,
-                                                 Errors errors, Model model, HttpSession session) {
-
-        if (errors.hasErrors()) {
-            model.addAttribute("title", "Create Category");
-            return "eventCategories/create";
-        }
-
-        eventCategoryService.save(eventCategoryDto);
-        return "redirect:/eventCategories";
-    }
-```
+We will remove all references to `authController` in `EventController` and
+`EventCategoryController`, which is how the sequence diagram above is organized.
+We will also make use of the service classes instead of the repository classes.
 
 #### `EventController`
 
-Similar to above, let's start by changing the repository fields to service fields, like below:
+Let's start by refactoring our `EventController` to use the `EventService`,
+`EventCategoryService` and `EventDTO`.
+
+Change the `EventRepository` field to be `EventService`, as well as
+`EventCategoryRepository` to `EventCategoryService`, like below. Also, remove
+the `AuthenticationController` field as we will not be using it to retrieve
+the current user anymore.
 
 ```java
     @Autowired
@@ -614,21 +643,24 @@ Similar to above, let's start by changing the repository fields to service field
     private EventCategoryService eventCategoryService;
 ```
 
-Now to update the request handlers to use `eventService` and `eventCategoryService`.
-For now we will add a `try/catch` block to catch `ResourceNotFoundException` if the
-category ID is invalid.
+Now, we have to to update the request handlers to use `eventService` and
+`eventCategoryService`.
 
-```java {hl_lines="7 9-16"}
+In `displayEvents` we will add a `try/catch` block to catch
+`ResourceNotFoundException` if the category ID is invalid. We will also
+remove the use of `HttpSession` and `authController`. Instead, we use
+the `eventService.getAllEventsByCurrentUser()` that we wrote to find the
+current user information:
+
+```java {hl_lines="2 5 7-14"}
     @GetMapping
-    public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
-
+    public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model) {
         if (categoryId == null) {
             model.addAttribute("title", "All Events");
-            model.addAttribute("events", eventService.getAllEventsByCreator(currUser));
+            model.addAttribute("events", eventService.getAllEventsByCurrentUser());
         } else {
             try {
-                EventCategory category = eventCategoryService.getCategoryByIdAndCreator(categoryId, currUser);
+                EventCategory category = eventCategoryService.getCategoryByIdForCurrentUser(categoryId);
 
                 model.addAttribute("title", "Events in category: " + category.getName());
                 model.addAttribute("events", category.getEvents());
@@ -641,39 +673,52 @@ category ID is invalid.
     }
 ```
 
-```java {hl_lines="5-6"}
+In the `displayCreateEventForm` method, we have to make sure we switch to using
+`EventDTO` as our model-binding object. We can also remove references to
+`currUser` and `authController`.
+
+```java {hl_lines="4-5"}
     @GetMapping("create")
-    public String displayCreateEventForm(Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
+    public String displayCreateEventForm(Model model) {
         model.addAttribute("title", "Create Event");
         model.addAttribute(new EventDTO());
-        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
+        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCurrentUser());
         return "events/create";
     }
 ```
 
-```java {hl_lines="2 7 11"}
+In our `processCreateEventForm` method, we can remove the logic that prepares
+the `newEvent` for saving in `eventRepository`, and instead we can pass our
+`newEventDTO` directly to the `eventService` for processing and saving.
+
+```java {hl_lines="2 6 10"}
     @PostMapping("create")
-    public String processCreateEventForm(@ModelAttribute @Valid EventDTO newEventDto,
-                                         Errors errors, Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
+    public String processCreateEventForm(@ModelAttribute @Valid EventDTO newEventDTO,
+                                         Errors errors, Model model) {
         if(errors.hasErrors()) {
             model.addAttribute("title", "Create Event");
-            model.addAttribute("categories", eventCategoryService.getAllCategoriesByCreator(currUser));
+            model.addAttribute("categories", eventCategoryService.getAllCategoriesByCurrentUser());
             return "events/create";
         }
 
-        eventService.save(newEventDto);
+        eventService.save(newEventDTO);
         return "redirect:/events";
     }
 ```
 
+Our `displayDeleteEventForm` method should show events that the current user
+has created. We will update our `processDeleteEventsForm` method to call
+`eventService`, but recognize that we are leaving this method unsecure.
+
+Can a user submit a request to delete events that they do not own? It appears
+so. How can we protect this method so that we only delete events with ids that
+the user owns?
+
 ```java {hl_lines="5 14"}
     @GetMapping("delete")
-    public String displayDeleteEventForm(Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
+    public String displayDeleteEventForm(Model model) {
         model.addAttribute("title", "Delete Events");
-        model.addAttribute("events", eventService.getAllEventsByCreator(currUser));
+        model.addAttribute("events", eventService.getAllEventsByCurrentUser());
         return "events/delete";
     }
 
@@ -690,13 +735,15 @@ category ID is invalid.
     }
 ```
 
-```java {hl_lines="5-12"}
-    @GetMapping("detail")
-    public String displayEventDetails(@RequestParam Integer eventId, Model model, HttpSession session) {
-        User currUser = authController.getUserFromSession(session);
+Lastly, we need to update `displayEventDetails` to validate that a user owns
+the `eventId` that is passed in. We can achieve this with the
+`getEventByIdForCurrentUser` method that we added in `eventService`.
 
+```java {hl_lines="4-10"}
+    @GetMapping("detail")
+    public String displayEventDetails(@RequestParam Integer eventId, Model model) {
         try {
-            Event event = eventService.getEventByIdAndCreator(eventId, currUser);
+            Event event = eventService.getEventByIdForCurrentUser(eventId);
 
             model.addAttribute("title", event.getName() + " Details");
             model.addAttribute("event", event);
@@ -707,6 +754,20 @@ category ID is invalid.
         return "events/detail";
     }
 ```
+
+That takes care of the `EventController`. Updating the `EventCategoryController`
+will be very similar and more simple.
+
+#### `EventCategoryController`
+
+Update `EventCategoryController` to use the `EventCategoryService` and
+`EventCategoryDTO`.
+
+Change the `EventCategoryRepository` field to be `EventCategoryService`.
+
+Now, refactor all references to the `eventCategoryRepository` to be
+`eventCategoryService` references and use `EventCategoryDTO` in the
+create form, similar to how we did it in the previous section.
 
 #### Updating Views to use DTOs
 
