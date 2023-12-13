@@ -55,8 +55,8 @@ Create a new `Privilege` in your `models` package and make this class
 inherit from `AbstractEntity` and require the `@Entity` annotation.
 
 This class will only require a `String name` field to track what the privilege
-is. Add the field, constructor, getter/setter, and `toString` method for this
-class.
+is. Add the field, constructors (including the empty constructor), getter/setter,
+and `toString` method for this class.
 
 In addition to this Model, we need to create some predefined privilege types
 for our application, which we can do with an `enum`. We will define privileges
@@ -80,7 +80,7 @@ public enum PrivilegeType {
 
 Similar to our `Privilege` model, we need to create a `Role` model that
 inherits from `AbstractEntity` and defines a field `String name`, along
-with a constructor, getter/setter, and `toString` method.
+with the constructors, getter/setter, and `toString` method.
 
 Create the `Role` class within your `models` package.
 
@@ -357,7 +357,7 @@ automatically the first time. Test it out.
 
 ### Adding a `SecurityService`
 
-With roles and privileges added to our database, the last piece to add here is
+With roles and privileges added to our database, the last piece to add is
 a service that can check whether the current user has a specific role or
 privilege. We will not make use of this service in our application yet, but
 recognize that this could be used to determine if an action can be taken in the
