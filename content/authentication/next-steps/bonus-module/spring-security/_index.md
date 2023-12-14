@@ -90,33 +90,33 @@ a custom `IUserService` interface that we create. Our `IUserService` interface
 will extend the `UserDetailsService` interface that we are required to use for
 Spring Security.
 
-```mermaid { align="left" zoom="false" }
+```mermaid{ zoom="false" }
 classDiagram
-    UserDetailsService <|-- IUserService
-    IUserService <|.. UserService
-    <<interface>> UserDetailsService{
-        +loadUserByUsername(String username) : UserDetails
+    UserDetailsService <|-- IUserService : extends
+    IUserService <|.. UserService : implements
+    class UserDetailsService{
+        loadUserByUsername(String username) UserDetails
     }
-    <<interface>> IUserService{
-        +findByUsername(String username) : User
-        +save(RegisterFormDTO registration) : User
-        +getCurrentUser() : User
-        +findById(Integer id) : Optional~User~
-        +findAll() : List~User~
-        +deleteUser(Integer id) : User
+    class IUserService{
+        findByUsername(String username) User
+        save(RegisterFormDTO registration) User
+        getCurrentUser() User
+        findById(Integer id) Optional~User~
+        findAll() List~User~
+        deleteUser(Integer id) User
     }
     class UserService{
-        +loadUserByUsername(String username) : UserDetails
-        +save(RegisterFormDTO registration) : User
-        +getCurrentUser() : User
-        +findByUsername(String username) : User
-        +findById(Integer id) : Optional~User~
-        +findAll() : List~User~
-        +deleteUser(Integer id) : User
+        loadUserByUsername(String username) UserDetails
+        save(RegisterFormDTO registration) User
+        getCurrentUser() User
+        findByUsername(String username) User
+        findById(Integer id) Optional~User~
+        findAll() List~User~
+        deleteUser(Integer id) User
     }
 ```
 
-Create a new *interface* in the `codingevents.security` package named
+Create a new *interface* in the `codingevents.services` package named
 `IUserService`.
 
 This interface should **extend** the `UserDetailsService` interface, which
@@ -427,12 +427,14 @@ Lastly, we are going to update the `processLoginForm` to use the
 session management. The `processLoginForm` is going to completely change with
 this refactoring, so you can start by **deleting** the contents of the method.
 We will start from scratch (including our error check and the title of the page
-in case of errors):
+in case of errors). Also, add the parameter for `HttpServletResponse` to the
+method.
 
-```java
+```java{ hl_lines="4" }
     @PostMapping("/login")
     public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
                                    Errors errors, HttpServletRequest request,
+                                   HttpServletResponse response,
                                    Model model) {
         model.addAttribute("title", "Log In");
         if (errors.hasErrors()) {
@@ -444,7 +446,7 @@ in case of errors):
 The next portion of this method will be a `try/catch` block that protects from
 the possibility of an `AuthenticationException`.
 
-Take a look at the [`AuthenticationManager` documentation](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/authentication/AuthenticationManager.html)
+Take a look at the [AuthenticationManager documentation](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/authentication/AuthenticationManager.html)
 which has a method `authenticate()`. We will create a Username/Password token
 that we send to the `authenticate()` method for username/password validation.
 We will also use the `securityContextRepository` field to save the new
@@ -546,7 +548,9 @@ Now we can update the `EventController displayEvents` method to use
     }
 ```
 
-Update the other methods to use `eventCategoryService.getEventsByIdForCurrentId()`.
+Update the other methods to use
+`eventCategoryService.getAllCategoriesByCurrentUser()` and
+`eventService.getAllEventsByCurrentUser()` functions.
 For the `displayEventDetails` method, we need to add a similar method to the
 `EventService` class:
 
