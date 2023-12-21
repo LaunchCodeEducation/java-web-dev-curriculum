@@ -36,7 +36,7 @@ evolved and changed from version to version. We will be implementing the
 Spring Security 6 framework.
 
 Another helpful resource in preparing this tutorial was the
-[Baeldung blog](#),
+[Baeldung blog](https://www.baeldung.com/spring-security-authentication-and-registration),
 which provides walkthroughs on a number of Spring related features and
 frameworks.
 {{% /notice %}}
@@ -73,7 +73,7 @@ request filtering
 
 ### Authentication in Spring Security 6
 
-First, it is important to take a look at the [Spring Security Authentication
+Before diving in, take a look at the [Spring Security Authentication
 documentation](https://docs.spring.io/spring-security/reference/servlet/authentication/architecture.html),
 which describes the classes and components that implement the
 behaviors we want to use.
@@ -125,8 +125,8 @@ is found in the `org.springframework.security.core.userdetails` package.
 `IUserService` should include two method definitions, which mirror the
 methods we have already implemented in `UserService`.
 
-* `User findByUsername(String username);`
-* `User save(RegisterFormDTO registration);`
+1. `User findByUsername(String username);`
+1. `User save(RegisterFormDTO registration);`
 
 All together, our new interface should look like this:
 
@@ -268,7 +268,7 @@ annotations to secure specific controller methods
 1. `@EnableTransactionManagement` annotation allows our Spring project to use
 the `@Transactional` annotation elsewhere
 
-To set up the `SecurityFilterChain` we will use method chaining to build an
+To set up the `SecurityFilterChain`, we will use method chaining to build an
 `http` object that contains filtering rules for requests, meaning which
 routes are permitted and which ones require authentication,
 as well as error routes. We build this filter chain using a design pattern known
@@ -504,16 +504,15 @@ call `eventCategoryService.getAllCategoriesByCurrentUser()`, like below:
 
 #### Update `EventController`
 
-Our goal for `EventController` will be the same as `EventCategoryController`
---- we want to remove all references to `AuthenticationController` and the
-code that was necessary to grab the current user. Instead, we will make
-calls to `eventService` and `eventCategoryService` methods that assume the
-current user.
+Our goal for `EventController` will be the same as `EventCategoryController`:
+to remove all references to `AuthenticationController` and the code to grab the
+current user. Instead, we will make calls to `eventService` and
+`eventCategoryService` methods that assume the current user.
 
 First, **remove** the `AuthenticationController` autowired field.
 
 Next, we need one new method in `EventCategoryService` for retrieving a
-category by an id but also assuming the current user. We want to prevent
+category that the current user created by the category id. We want to prevent
 the ability for a user to look up any event category instance by id.
 
 Add the following method to `EventCategoryService`:

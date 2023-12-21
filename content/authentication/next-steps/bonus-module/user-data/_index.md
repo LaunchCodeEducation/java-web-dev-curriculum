@@ -15,13 +15,12 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 With the authentication filter additions, our application now requires users
 to log in before they can access any features of the site. However, users
 will want the data that they create to be associated with their account. How
-can we make sure that the events and categories that a user create will be
+can we ensure that the events and categories that a user creates are
 associated with their account?
 
-Let's associate the new data with the logged-in user using one-to-many database relationships.
-We will specify that a `User` has a one-to-many relationship with the `Event` objects
-that they create, along with `EventCategory` and `Tag`. This way, we can specify that
-we want to load all events or save an event *for a specific user*.
+Users *own* their data when the entities that they create (events, categories,
+etc) have their `user_id` associated with each new entity as a foreign key. That
+would allow us to, say "get all events for a specific user".
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the [auth-filter branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/auth-filter) and ends with the [user-data branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-data) of the `CodingEventsJava` repository.
@@ -35,22 +34,18 @@ The code for this section begins with the [auth-filter branch](https://github.co
 
 ### Updating the models with a `User` field
 
-Users *own* their data when the entities that they create (events, categories, etc) have their
-`user_id` associated with each new entity as a foreign key. That would allow us to, 
-say "get all events for a specific user". We need to set up a **One-To-Many** relationship
-between the `User` model and the different data models (`Event`, `EventCategory`, `Tag`).
+We need to set up a **One-To-Many** relationship between the `User` model and
+the different data models (`Event`, `EventCategory`, `Tag`).
 
-Open the `Event` model and add a `User` field to the field definitions. We will call it `creator`
-as it's a reference to the user that created the event, and we will give it a `@ManyToOne` annotation
-as there can be many events associated with a single creator.
+Open the `Event` model and add a `User` field to the field definitions. Call it `creator`
+and give it a `@ManyToOne` annotation.
 
 ```java
     @ManyToOne
     private User creator;
 ```
 
-We'll also need to add a getter and setter. Add the following to your getters
-and setters in `Event` class.
+We'll also need to add a getter and setter for `creator`.
 
 ```java
     public User getCreator() {
@@ -62,8 +57,8 @@ and setters in `Event` class.
     }
 ```
 
-`Event` is not the only model that we want to be user-owned. **Repeat the above
-steps** to add the `creator` field/getters/setters to `EventCategory`.
+Repeat the above steps to add the `creator` field/getters/setters to
+`EventCategory`.
 
 {{% notice blue Note "rocket" %}}
 The `Tag` resource will be your task to update throughout this bonus module. We
@@ -75,10 +70,10 @@ You should update the `Tag` class as well to track `User creator`.
 
 ### Saving the `User` when creating new data
 
-We can store an associated User as the creator of an Event/Category/Tag. Next
-we need to make sure that the currently logged-in User is set as the creator
-before saving new entries. Let's update the `EventController` first to set
-the `User creator` field in new events.
+We can now store a `User` as the creator of an `Event`/`EventCategory`/ `Tag`.
+Next, we need to make sure that the currently logged-in user is set as the creator
+before saving new entries. Let's update the `EventController` to set
+the `creator` field in new events.
 
 To get the currently logged-in user in `EventController`, we need references to
 the `AuthenticationController` and the `HttpSession`.
@@ -224,6 +219,12 @@ there are form errors, we want to pass the user-created categories back to the f
             model.addAttribute("categories", eventCategoryRepository.findAllByCreator(currUser));
             return "events/create";
         }
+
+        newEvent.setCreator(currUser);
+
+        eventRepository.save(newEvent);
+        return "redirect:/events";
+    }
 ```
 
 When we display the delete events form, we want to make sure it displays the user-created
@@ -242,8 +243,7 @@ events. Let's repeat the same procress to retrieve events for the current user i
 
 Finally, we want to make sure that the event details page will show events owned by the
 currently logged in user and reject any event ID's owned by other users. Once again,
-we'll use `HttpSession` and `AuthenticationController` to retrieve the current user,
-and we'll retrieve the event based on its ID and the current user.
+we'll retrieve the current user and the event based on its ID and the current user.
 
 In the `displayEventDetails` method, let's add:
 
@@ -253,6 +253,17 @@ In the `displayEventDetails` method, let's add:
         User currUser = authController.getUserFromSession(session);
 
         Optional<Event> result = eventRepository.findByIdAndCreator(eventId, currUser);
+
+        if (result.isEmpty()) {
+            model.addAttribute("title", "Invalid Event ID: " + eventId);
+        } else {
+            Event event = result.get();
+            model.addAttribute("title", event.getName() + " Details");
+            model.addAttribute("event", event);
+        }
+
+        return "events/detail";
+    }
 ```
 
 The rest of the function can stay the same. If a valid event ID is provided but
@@ -266,7 +277,7 @@ use `authController` to retrieve the current user. We'll pass the categories
 for the current user as the model attribute.
 
 ```java{hl_lines="2-3 5"}
-@GetMapping
+    @GetMapping
     public String displayAllCategories(Model model, HttpSession session) {
         User currUser = authController.getUserFromSession(session);
         model.addAttribute("title", "All Categories");

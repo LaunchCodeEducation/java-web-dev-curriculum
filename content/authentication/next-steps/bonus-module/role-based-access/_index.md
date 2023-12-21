@@ -36,7 +36,7 @@ access to.
 
 ## Adding Role-Based Features for Users - TEXT
 
-The first portion of this lesson will be add event attendance relationships
+The first portion of this lesson will add event attendance relationships
 to our models, as well as the ability to mark in login that you want to be
 an event organizer.
 
@@ -146,7 +146,7 @@ marked for attendance, and routes to allow for easy setting/unsetting of
 attendance for an event by the current user.
 
 In `EventController`, let's first add a route at `GET /events/attending` that
-will load the table of events that the current user has rsvped to:
+will load the table of events that the current user has RSVP'd to:
 
 ```java
     @GetMapping("attending")
@@ -242,7 +242,7 @@ In `UserService` add a new autowired field for the `RoleRepository`:
     private RoleRepository roleRepository;
 ```
 
-#### Update `getAuthorities` to pull roles & privileges for User
+#### Update `getAuthorities` to pull roles & privileges for `User`
 
 We want to modify `getAuthorities` to take an argument for a `Collection<Role>`
 object that is a list of the roles for a user. We'll refactor this method
@@ -372,8 +372,8 @@ organizer. Add the following input to the `register.html` template:
     <input type="submit" class="btn btn-primary" value="Register" />
 ```
 
-Now someone can successfully register as a different user type with
-`ROLE_ORGANIZER` set.
+Now when someone checks the option for "I am an event organizer", their user
+type for `ROLE_ORGANIZER` is set.
 
 In the next section, we will add security annotations to the controllers to
 limit access depending on user role.
@@ -492,19 +492,36 @@ the following method:
 ```
 
 For the rest of CRUD, add the same `@PreAuthorize` annotation so that only
-`ROLE_ORGANIZER` can create and delete events:
+`ROLE_ORGANIZER` can create and delete events.
 
-```java{hl_lines="1"}
+In `displayCreateEventForm`, we want to pass all of the categories to the view
+so that organizers can use categories created by others.
+
+```java{hl_lines="1 6"}
     @PreAuthorize("hasRole('ROLE_ORGANIZER')")
     @GetMapping("create")
     public String displayCreateEventForm(Model model) {
+        model.addAttribute("title", "Create Event");
+        model.addAttribute(new EventDTO());
+        model.addAttribute("categories", eventCategoryService.getAllCategories());
+        return "events/create";
+    }
 ```
 
-```java{hl_lines="1"}
+```java{hl_lines="1 7"}
     @PreAuthorize("hasRole('ROLE_ORGANIZER')")
     @PostMapping("create")
     public String processCreateEventForm(@ModelAttribute @Valid EventDTO newEventDto,
                                          Errors errors, Model model) {
+        if(errors.hasErrors()) {
+            model.addAttribute("title", "Create Event");
+            model.addAttribute("categories", eventCategoryService.getAllCategories());
+            return "events/create";
+        }
+
+        eventService.save(newEventDTO);
+        return "redirect:/events";
+    }
 ```
 
 ```java{hl_lines="1"}
@@ -519,6 +536,27 @@ For the rest of CRUD, add the same `@PreAuthorize` annotation so that only
     public String processDeleteEventsForm(@RequestParam(required = false) int[] eventIds) {
 ```
 
+Last, we want our `displayEventDetails` handler to show any event id that is
+passed. Update the method to retrieve the event without checking the current
+user:
+
+```java{ hl_lines="4" }
+    @GetMapping("detail")
+    public String displayEventDetails(@RequestParam Integer eventId, Model model) {
+        try {
+            Event event = eventService.getEventById(eventId);
+
+            model.addAttribute("title", event.getName() + " Details");
+            model.addAttribute("event", event);
+            model.addAttribute("userAttendance", eventService.getUserEventAttendance(event));
+        } catch (ResourceNotFoundException ex) {
+            model.addAttribute("title", "Invalid Event ID: " + eventId);
+        }
+
+        return "events/detail";
+    }
+```
+
 ### Update Navigation by Role
 
 Depending on which role is logged-in, we can selectively display certain content
@@ -527,10 +565,10 @@ has some background on the `sec:authorize` attribute that we can use. It is
 similar to the `th:if` attribute that will selectively include an HTML element
 depending on the condition.
 
-We will either use:
+We will use one of the following:
 
-* `sec:authorize="isAuthenticated()"`
-* `sec:authorize="hasRole('ROLE_ORGANIZER')"`
+1. `sec:authorize="isAuthenticated()"`
+1. `sec:authorize="hasRole('ROLE_ORGANIZER')"`
 
 Let's redesign our navbar to show all `ROLE_USER` links first, and then hide
 `ROLE_ORGANIZER` links in some dropdown menus.

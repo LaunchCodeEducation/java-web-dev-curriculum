@@ -767,7 +767,9 @@ Change the `EventCategoryRepository` field to be `EventCategoryService`.
 
 Now, refactor all references to the `eventCategoryRepository` to be
 `eventCategoryService` references and use `EventCategoryDTO` in the
-create form, similar to how we did it in the previous section.
+create form, similar to how we did it in the previous section. You should
+be able to remove all references to `authController` that were needed
+to get `currUser`, since we have helpful methods in `EventCategoryService` now.
 
 #### Updating Views to use DTOs
 
