@@ -35,6 +35,9 @@ called **Services** to manage the interactions between the **Controllers** and t
 Services are a design concept laid out in [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design).
 Any logic that does not fit neatly in to an object, such as the Controller
 or Model, can be expressed as a service.
+
+The benefits of a Service layer in an MVC app are described nicely in
+[this StackOverflow piece](https://stackoverflow.com/questions/31180816/mvc-design-pattern-service-layer-purpose).
 {{% /notice %}}
 
 ```mermaid { align="left" zoom="false" }
@@ -229,19 +232,19 @@ public class UserService {
 
 Our `UserService` is going to expose a few methods:
 
-* `User findByUsername(String username)`: retrieves `User` from
+1. `User findByUsername(String username)`: retrieves `User` from
 `UserRepository` by the `username`
-* `Optional<User> findById(Integer id)`: expose `UserRepository`
+1. `Optional<User> findById(Integer id)`: expose `UserRepository`
 functionality for possible use
-* `List<User> findAll()`: expose `UserRepository` functionality
+1. `List<User> findAll()`: expose `UserRepository` functionality
 for possible use
-* `User deleteUser(Integer id)`: expose `UserRepository` functionality
+1. `User deleteUser(Integer id)`: expose `UserRepository` functionality
 for possible use
-* `User save(RegisterFormDTO registration)`: validates data in
+1. `User save(RegisterFormDTO registration)`: validates data in
 `RegisterFormDTO` and creates a new `User` in `UserRepository`
-* `boolean validateUser(User user, String password)`: validate a password
+1. `boolean validateUser(User user, String password)`: validate a password
 by encoding it and comparing to the encoded `User` password.
-* `User getCurrentUser()`: retrieves currently logged in `User` from
+1. `User getCurrentUser()`: retrieves currently logged in `User` from
 the `user` attribute in `HttpSession` which is loaded from the
 current request context
 
@@ -509,9 +512,9 @@ Last, we need to update `processLoginForm` to use `userService` and the new
 
 ### Adding `EventService` and `EventCategoryService`
 
-We will add a service "layer" to our design that will be responsible for
-translating DTOs to Models and communication between the `EventController` and
-`EventRepository`
+The `EventService` and `EventCategoryService` will be responsible for
+translating `EventDTO` and `EventCategoryDTO` to model objects and
+communication between the `EventController` and `EventRepository`.
 
 #### `EventService`
 
@@ -608,13 +611,13 @@ in this class.
 Write the following methods, using the previous section on `EventService` as a
 guide:
 
-* `List<EventCategory> getAllCategories()`
-* `List<EventCategory> getAllCategoriesByCreator(User creator)`
-* `List<EventCategory> getAllCategoriesByCurrentUser()`
-* `EventCategory getCategoryById(int id)`
-* `EventCategory getCategoryByIdAndCreator(int id, User creator)`
-* `EventCategory getCategoryByIdForCurrentUser(int id)`
-* `EventCategory save(EventCategoryDTO categoryDTO)`
+1. `List<EventCategory> getAllCategories()`
+1. `List<EventCategory> getAllCategoriesByCreator(User creator)`
+1. `List<EventCategory> getAllCategoriesByCurrentUser()`
+1. `EventCategory getCategoryById(int id)`
+1. `EventCategory getCategoryByIdAndCreator(int id, User creator)`
+1. `EventCategory getCategoryByIdForCurrentUser(int id)`
+1. `EventCategory save(EventCategoryDTO categoryDTO)`
 
 Now that our service layer is added, we can refactor our controllers to use them
 and our form views to use DTOs.

@@ -384,22 +384,7 @@ Add this last method to the `WebSecurity` class:
     }
 ```
 
-In the next section, our task will be to update our controllers to use the new
-`UserService` and make use of the `Authentication` in the
-`AuthenticationController`.
-
-### Refactoring Controllers & Services
-
-We have to update the following classes in this section:
-
-1. `AuthenticationController` to use `AuthenticationManager` for login
-1. `SecurityService` to use `UserService` and `SecurityContextHolder`
-1. `EventCategoryService` to use updated `getCurrentUser`
-1. `EventCategoryController` to use updated service
-1. `EventService` to use updated `getCurrentUser`
-1. `EventController` to use updated service
-
-#### Update `AuthenticationController`
+### Refactoring `AuthenticationController`
 
 Recall that we have plugged in to the Spring Security framework by using
 `UserDetailsService` interface and relying on `Authentication` objects
@@ -482,94 +467,7 @@ included the `/logout` route as part of our security filter setup in
 `WebSecurity`. Navigating to `/logout` will invalidate the security session
 automatically.
 
-#### Update `EventCategoryController`
-
-To update `EventCategoryController`, we want to remove the reference to
-`authController` that is used to retrieve the current user. Instead we'll
-make a call to a `eventCategoryService` method that assumes the current
-user.
-
-In `EventCategoryController`, remove the field that references
-`AuthenticationController`, and update the `displayAllCategories` method to
-call `eventCategoryService.getAllCategoriesByCurrentUser()`, like below:
-
-```java
-    @GetMapping
-    public String displayAllCategories(Model model, HttpSession session) {
-        model.addAttribute("title", "All Categories");
-        model.addAttribute("categories", eventCategoryService.getAllCategoriesByCurrentUser());
-        return "eventCategories/index";
-    }
-```
-
-#### Update `EventController`
-
-Our goal for `EventController` will be the same as `EventCategoryController`:
-to remove all references to `AuthenticationController` and the code to grab the
-current user. Instead, we will make calls to `eventService` and
-`eventCategoryService` methods that assume the current user.
-
-First, **remove** the `AuthenticationController` autowired field.
-
-Next, we need one new method in `EventCategoryService` for retrieving a
-category that the current user created by the category id. We want to prevent
-the ability for a user to look up any event category instance by id.
-
-Add the following method to `EventCategoryService`:
-
-```java
-    public EventCategory getCategoryByIdForCurrentUser(int id) {
-        return getCategoryByIdAndCreator(id, userService.getCurrentUser());
-    }
-```
-
-Now we can update the `EventController displayEvents` method to use
-`eventService` and `eventCategory` service only:
-
-```java
-    @GetMapping
-    public String displayEvents(@RequestParam(required = false) Integer categoryId, Model model, HttpSession session) {
-        if (categoryId == null) {
-            model.addAttribute("title", "All Events");
-            model.addAttribute("events", eventService.getAllEventsByCurrentUser());
-        } else {
-            try {
-                EventCategory category = eventCategoryService.getCategoryByIdForCurrentUser(categoryId);
-
-                model.addAttribute("title", "Events in category: " + category.getName());
-                model.addAttribute("events", category.getEvents());
-            } catch(ResourceNotFoundException ex) {
-                model.addAttribute("title", "Invalid Category ID: " + categoryId);
-            }
-        }
-
-        return "events/index";
-    }
-```
-
-Update the other methods to use
-`eventCategoryService.getAllCategoriesByCurrentUser()` and
-`eventService.getAllEventsByCurrentUser()` functions.
-For the `displayEventDetails` method, we need to add a similar method to the
-`EventService` class:
-
-```java
-    public Event getEventByIdForCurrentUser(int id) {
-        return getEventByIdAndCreator(id, userService.getCurrentUser());
-    }
-```
-
-With that method, we can update `displayEventDetails` to use
-`eventService.getEventByIdForCurrentUser(eventId)` like the lines below:
-
-```java
-    @GetMapping("detail")
-    public String displayEventDetails(@RequestParam Integer eventId, Model model, HttpSession session) {
-        try {
-            Event event = eventService.getEventByIdForCurrentUser(eventId);
-```
-
-### Updating Error Handling & `SecurityService`
+### Updating Error Handling
 
 When a user tries to access a route that does not exist, or a resource id
 that they don't own, we need to send them to a predesigned error page. We
@@ -665,59 +563,6 @@ Create `404.html` that has the following message:
 <div>
     <p>Resource not found</p>
 </div>
-```
-
-#### Updating `SecurityService`
-
-Our last miscellaneous task is to update the `SecurityService` class to use
-the Security framework. We do not currently use this service for any
-functionality but its methods can be used for role authorization if needed.
-
-Our goal is to remove the use of `AuthenticationController` and instead use the
-`SecurityContext` and `UserService` for our needs. Replace the
-`AuthenticationController` field with `UserService`:
-
-```java
-    @Autowired
-    private UserService userService;
-```
-
-The `hasPrivilege` method will be completely refactored, so you can delete the
-body of the method. We will use the `SecurityContextHolder` to retrieve any
-currently stored `Authentication` object and use that to get the current `User`
-and their privileges:
-
-```java
-    public boolean hasPrivilege(String privilege) {
-        final User theUser = userService.getCurrentUser();
-        if (theUser == null) {
-            return false;
-        }
-
-        Boolean hasPrivilege = theUser.getRoles()
-            .stream()
-            .map(Role::getPrivileges)
-            .flatMap(coll -> coll.stream())
-            .map(Privilege::getName)
-            .anyMatch(p -> p.equals(privilege));
-        return hasPrivilege;
-    }
-```
-
-Update the `hasRole` method similarly:
-
-```java
-    public boolean hasRole(String role) {
-        final User theUser = userService.getCurrentUser();
-        if (theUser == null) {
-            return false;
-        }
-        Boolean hasRole = theUser.getRoles()
-            .stream()
-            .map(Role::getName)
-            .anyMatch(r -> r.equals(role));
-        return hasRole;
-    }
 ```
 
 That wraps up our Spring Security refactoring. Be sure to test and

@@ -110,7 +110,8 @@ required to define the join table in this way, but it gives us an example
 of how we can have more control over the database tables via our ORM
 definitions.
 
-Add a getter/setter for this `privileges` field as well.
+Add a constructor to set the `name` and a no-argument constructor as well. Also,
+add a getter/setter for the `privileges` field as well.
 
 Similar to the `PrivilegeType` definition we added, we need a `RoleType`
 enum definition to specify the types of roles our app allows. For now,
@@ -226,9 +227,6 @@ First, let's create the `PrivilegeRepository` interface in the `data` package:
 public interface PrivilegeRepository extends CrudRepository<Privilege, Integer> {
 
     Privilege findByName(String name);
-
-    @Override
-    void delete(Privilege privilege);
 }
 ```
 
@@ -240,10 +238,8 @@ Next, let's create the `RoleRepository` interface in the `data` package.
 ```java
 @Repository
 public interface RoleRepository extends CrudRepository<Role, Integer> {
-    Role findByName(String name);
 
-    @Override
-    void delete(Role role);
+    Role findByName(String name);
 }
 ```
 
@@ -370,7 +366,7 @@ create a new class `SecurityService` inside the `security` package.
 @Service
 public class SecurityService {
     @Autowired
-    private AuthenticationController authController;
+    private UserService userService;
 }
 ```
 
@@ -386,10 +382,8 @@ for more background on this syntax.
 
 ```java
     public boolean hasPrivilege(String privilege) {
-        final ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        final HttpSession session = attr.getRequest().getSession(false);
-        final User theUser = authController.getUserFromSession(session);
-        if (session != null && theUser != null) {
+        final User theUser = userService.getCurrentUser();
+        if (theUser != null) {
             Boolean hasPrivilege = theUser.getRoles()
                 .stream()
                 .map(Role::getPrivileges)
@@ -411,10 +405,8 @@ Similary, we will add a `hasRole` method to the service as well.
 
 ```java
     public boolean hasRole(String role) {
-        final ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        final HttpSession session = attr.getRequest().getSession(false);
-        final User theUser = authController.getUserFromSession(session);
-        if (session != null && theUser != null) {
+        final User theUser = userService.getCurrentUser();
+        if (theUser != null) {
             Boolean hasRole = theUser.getRoles()
                 .stream()
                 .map(Role::getName)
