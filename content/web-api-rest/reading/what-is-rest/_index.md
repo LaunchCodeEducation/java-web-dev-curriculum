@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01T06:46:43-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 **REST** is an acronym that stands for **REpresentational State Transfer**. **RESTful web services** refer to web technologies that use
@@ -144,8 +144,8 @@ In order to fulfill these operations, you need to know:
 - what collection the entity belongs to
 - how to uniquely identify the entity within the collection
 
-This hierarchal relationship between collections and the entities within them is an integral aspect of RESTful design. The contract of a RESTful API 
-defines the shape, or structure, of its resources along with the hierarchal organization of the endpoints used for interacting with them.
+This hierarchical relationship between collections and the entities within them is an integral aspect of RESTful design. The contract of a RESTful API 
+defines the shape, or structure, of its resources along with the hierarchical organization of the endpoints used for interacting with them.
 
 ### Check Your Understanding
 
