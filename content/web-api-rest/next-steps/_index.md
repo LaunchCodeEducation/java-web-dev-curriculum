@@ -7,12 +7,12 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01:T07:17:31-06:00# UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-We have covered the fundamentals aspects of the RESTful mental model and practical usage. However, RESTful design is a deep topic that even extends beyond the web and use of HTTP!
+We have covered the fundamental aspects of the RESTful mental model and practical usage. However, RESTful design is a deep topic that even extends beyond the web and use of HTTP!
 
 If you want to learn more, the following links are a good start:
 

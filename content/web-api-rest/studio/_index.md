@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01T16:02:52-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 The UI of a browser is designed to make simple `GET` requests for URLs entered into its address bar. This design works great for browsing sites, but falls short when working with APIs. Anything beyond a `GET` request is difficult to send via a browser address bar alone. Think about what is needed to create a new `Event`. This type of request contains a body. Our MVC application included a view to allow us to test inputs. Our API, however, is **headless**. It does not contain the client-side form. In order to test how it handles requests then, we need a way to interact with the API server without the browser. In this studio, we work with Postman to explore how APIs can be consumed.
@@ -25,7 +25,7 @@ If you haven't done so already, [install Postman]({{< relref "../../../appendice
 With Postman installed, we're ready to fork and clone the [API located here](https://github.com/LaunchCodeEducation/events-api). Although it is implemented differently from CodingEvents MVC, you will find that most of the features from the MVC application have been supported through endpoints in the API.
 
 {{% notice blue "Note" "rocket" %}}
-Our focus in this studio is on operations and as such we will not be going into the development of the API. However, feel free to explore the source code if you are curious about the similarities and differences between the .NET MVC and API implementations.
+Our focus in this studio is on operations and as such we will not be going into the development of the API. However, feel free to explore the source code if you are curious about the similarities and differences between the Spring MVC and API implementations.
 {{% /notice %}}
 
 ### Start the API Server
@@ -34,7 +34,7 @@ Open the project within IntelliJ and start the application.
 
 ### Swagger Documentation
 
-This application also implements [Swagger](https://swagger.io/) for an api documentation page. Once your application is running you can view the swagger docs here at the following location: http://localhost:8080/swagger-ui/index.html.
+This application also implements [Swagger](https://swagger.io/) for an API documentation page. Once your application is running you can view the Swagger docs here at the following location: http://localhost:8080/swagger-ui/index.html.
 
 You'll see a page that looks nothing like any view we created in our other MVC applications. What you see running in the browser is not at all a client-side application, but rather, some documentation resources for the API itself.
 
