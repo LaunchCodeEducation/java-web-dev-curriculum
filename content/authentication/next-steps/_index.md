@@ -7,8 +7,8 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
+lastEditor: Ben Clark # update any time edits are made after review
+lastEditorGitHub: brclark # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
@@ -21,4 +21,4 @@ Now that you have successfully added authentication to an existing project you c
 1. View [this guide](https://spring.io/guides/gs/securing-web/) that walks through the creation of a spring MVC web application using Spring Security.
 1. [Baeldung Spring Security Basic Authentication](https://www.baeldung.com/spring-security-basic-authentication) walkthrough. This will walk through the process of basic authentication with Spring with an MVC application.
 
-{{% children %}}
+{{% children style="h4" %}}

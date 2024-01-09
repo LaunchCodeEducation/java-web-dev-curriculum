@@ -96,6 +96,12 @@ sequenceDiagram
 
 **TODO**
 
+{{% notice blue Note "rocket" %}}
+The code for this section begins with the [user-data branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-data)
+and ends with the [add-service-dto branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-service-dto)
+of the `CodingEventsJava` repository.
+{{% /notice %}}
+
 ## Adding DTOs & Services to CodingEvents - Text
 
 ### Adding `EventDTO` & `EventCategoryDTO`
@@ -145,6 +151,8 @@ public class EventCategoryDTO {
     // Add getters & setters...
 }
 ```
+
+You should also add a DTO for the `Tag` model.
 
 ### Prepping `User` model for `UserService`
 
@@ -619,6 +627,8 @@ guide:
 1. `EventCategory getCategoryByIdForCurrentUser(int id)`
 1. `EventCategory save(EventCategoryDTO categoryDTO)`
 
+You should add the corresponding service for `Tag` as well.
+
 Now that our service layer is added, we can refactor our controllers to use them
 and our form views to use DTOs.
 
@@ -834,7 +844,8 @@ Lastly, we will update `eventCategories/create.html` and use the
 </form>
 ```
 
-Our updates should be complete. There should be no change in functionality
+Make the necessary updates for `TagController` and our updates should be
+complete. There should be no change in functionality
 for Coding Events. Be sure to test the create, read, and delete functions.
 
 The next section will begin a process to add user roles and privileges

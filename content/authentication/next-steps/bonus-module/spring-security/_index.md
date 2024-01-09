@@ -31,7 +31,9 @@ is much left that can be improved. Take this as an introduction to the more
 advanced Spring Security framework.
 
 {{% notice blue Note "rocket" %}}
-The Spring Security documentation can be found [here](#). This framework has
+The Spring Security documentation can be found
+[here](https://docs.spring.io/spring-security/reference/servlet/index.html).
+This framework has
 evolved and changed from version to version. We will be implementing the
 Spring Security 6 framework.
 
@@ -44,6 +46,14 @@ frameworks.
 ## Implementing Spring Security 6 for Authentication - VIDEO
 
 **TODO**
+
+{{% notice blue Note "rocket" %}}
+The code for this section begins with the
+[user-roles-privileges branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-roles-privileges)
+and ends with the
+[spring-security-features branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/spring-security-features)
+of the `CodingEventsJava` repository.
+{{% /notice %}}
 
 ## Implementing Spring Security 6 for Authentication - TEXT
 

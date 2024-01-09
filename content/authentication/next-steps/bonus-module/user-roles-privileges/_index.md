@@ -30,6 +30,14 @@ and implement future projects.
 
 **TODO**
 
+{{% notice blue Note "rocket" %}}
+The code for this section begins with the
+[add-service-dto branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-service-dto)
+and ends with the
+[user-roles-privileges branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-roles-privileges)
+of the `CodingEventsJava` repository.
+{{% /notice %}}
+
 ## Adding Roles & Privileges to Users - TEXT
 
 This lesson describes how to add new models for `Role` and `Privilege` and
@@ -383,16 +391,16 @@ for more background on this syntax.
 ```java
     public boolean hasPrivilege(String privilege) {
         final User theUser = userService.getCurrentUser();
-        if (theUser != null) {
-            Boolean hasPrivilege = theUser.getRoles()
-                .stream()
-                .map(Role::getPrivileges)
-                .flatMap(coll -> coll.stream())
-                .map(Privilege::getName)
-                .anyMatch(p -> p.equals(privilege));
-            return hasPrivilege;
+        if (theUser == null) {
+            return false;
         }
-        return false;
+        Boolean hasPrivilege = theUser.getRoles()
+            .stream()
+            .map(Role::getPrivileges)
+            .flatMap(coll -> coll.stream())
+            .map(Privilege::getName)
+            .anyMatch(p -> p.equals(privilege));
+        return hasPrivilege;
     }
 ```
 
@@ -407,13 +415,13 @@ Similary, we will add a `hasRole` method to the service as well.
     public boolean hasRole(String role) {
         final User theUser = userService.getCurrentUser();
         if (theUser != null) {
-            Boolean hasRole = theUser.getRoles()
-                .stream()
-                .map(Role::getName)
-                .anyMatch(r -> r.equals(role));
-            return hasRole;
+            return false;
         }
-        return false;
+        Boolean hasRole = theUser.getRoles()
+            .stream()
+            .map(Role::getName)
+            .anyMatch(r -> r.equals(role));
+        return hasRole;
     }
 ```
 

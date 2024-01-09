@@ -34,6 +34,12 @@ access to.
 
 **TODO**
 
+{{% notice blue Note "rocket" %}}
+The code for this section begins with the [spring-security-features branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/spring-security-features)
+and ends with the [role-based-access branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/role-based-access)
+of the `CodingEventsJava` repository.
+{{% /notice %}}
+
 ## Adding Role-Based Features for Users - TEXT
 
 The first portion of this lesson will add event attendance relationships
@@ -557,6 +563,13 @@ user:
     }
 ```
 
+
+{{% notice blue Note "rocket" %}}
+The `detail` template shows the `Tag` entries associated with an `Event`.
+Consider how you might display the tags to all users but restrict the ability
+to add tags to `ROLE_ORGANIZER` only.
+{{% /notice %}}
+
 ### Update Navigation by Role
 
 Depending on which role is logged-in, we can selectively display certain content
@@ -618,5 +631,3 @@ can mark their attendance and that they do not have access to routes like
 `/events/create` which are reserved for `ROLE_ORGANIZER`. Also test that a user
 with `ROLE_ORGANIZER` can access all of the restricted routes and see the
 updated navigation.
-
-**TODO** last instruction about Add Tag in `details.html`

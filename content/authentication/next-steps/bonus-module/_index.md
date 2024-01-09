@@ -12,4 +12,14 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
+This section contains 5 lessons to build out the **authentication**
+and **authorization** features in Coding Events. The video shows the
+final features added as a result of the lessons. You will add user-owned
+data, refactored controllers to make use of services, refactored
+authentication and authorization using Spring Security framework,
+and roles & privileges to restrict access to the Coding Events based
+on assigned user roles.
+
+### TODO: Add Embedded Intro video
+
 {{% children %}}
