@@ -26,9 +26,7 @@ Also, consider that your future apps may not need both roles AND privileges,
 and may just require one or the other. There is flexibility in how you design
 and implement future projects.
 
-## Adding Roles & Privileges to Users - VIDEO
-
-**TODO**
+## Adding Roles & Privileges to Users
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the
@@ -37,8 +35,6 @@ and ends with the
 [user-roles-privileges branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-roles-privileges)
 of the `CodingEventsJava` repository.
 {{% /notice %}}
-
-## Adding Roles & Privileges to Users - TEXT
 
 This lesson describes how to add new models for `Role` and `Privilege` and
 associate them with the `User` model. This lesson will *not* add role-based

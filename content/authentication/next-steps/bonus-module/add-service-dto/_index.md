@@ -92,17 +92,13 @@ sequenceDiagram
     E->>User: redirect: /events
 ```
 
-## Adding DTOs & Services to CodingEvents - Video
-
-**TODO**
+## Adding DTOs & Services to CodingEvents
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the [user-data branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-data)
 and ends with the [add-service-dto branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/add-service-dto)
 of the `CodingEventsJava` repository.
 {{% /notice %}}
-
-## Adding DTOs & Services to CodingEvents - Text
 
 ### Adding `EventDTO` & `EventCategoryDTO`
 We'll start by adding the `EventDTO`. This will be a POJO class that contains

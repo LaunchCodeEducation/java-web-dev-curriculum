@@ -43,9 +43,7 @@ which provides walkthroughs on a number of Spring related features and
 frameworks.
 {{% /notice %}}
 
-## Implementing Spring Security 6 for Authentication - VIDEO
-
-**TODO**
+## Implementing Spring Security 6 for Authentication
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the
@@ -54,8 +52,6 @@ and ends with the
 [spring-security-features branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/spring-security-features)
 of the `CodingEventsJava` repository.
 {{% /notice %}}
-
-## Implementing Spring Security 6 for Authentication - TEXT
 
 To begin, we need to make sure that our Gradle project includes the necessary
 dependencies for Spring Security 6.

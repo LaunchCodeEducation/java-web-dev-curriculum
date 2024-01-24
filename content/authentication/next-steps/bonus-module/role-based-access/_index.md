@@ -30,17 +30,13 @@ associated with their account. We will expand the access and view of the menu
 bar for `ROLE_ORGANIZER` so that they can see links to the routes they have
 access to.
 
-## Adding Role-Based Features for Users - VIDEO
-
-**TODO**
+## Adding Role-Based Features for Users
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the [spring-security-features branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/spring-security-features)
 and ends with the [role-based-access branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/role-based-access)
 of the `CodingEventsJava` repository.
 {{% /notice %}}
-
-## Adding Role-Based Features for Users - TEXT
 
 The first portion of this lesson will add event attendance relationships
 to our models, as well as the ability to mark in login that you want to be

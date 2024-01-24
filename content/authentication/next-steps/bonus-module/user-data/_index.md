@@ -22,9 +22,7 @@ Users *own* their data when the entities that they create (events, categories,
 etc) have their `user_id` associated with each new entity as a foreign key. That
 would allow us to, say "get all events for a specific user".
 
-## Creating User Specific Data - Video
-
-**TODO**
+## Creating User Specific Data
 
 {{% notice blue Note "rocket" %}}
 The code for this section begins with the
@@ -33,8 +31,6 @@ and ends with the
 [user-data branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/user-data)
 of the `CodingEventsJava` repository.
 {{% /notice %}}
-
-## Creating User Specific Data - Text
 
 ### Updating the models with a `User` field
 
