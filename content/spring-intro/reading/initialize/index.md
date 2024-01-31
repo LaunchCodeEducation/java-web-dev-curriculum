@@ -84,7 +84,7 @@ your git workflow.
 {{% notice green "Tip" "rocket" %}}
    
 Below are some troubleshooting tips we've found to be helpful. If these are not relevant to you and you experience issues, 
-check out [help.launchcode.org](https://help.launchcode.org/) for more support.
+reach out to course staff for more support.
 
 1. After you select to open the Spring project, if you encounter an alert that the selected folder is not empty, choose
    the option to overwrite it.
