@@ -7,14 +7,14 @@ originalAuthor: Courtney Frey # to be set by page creator
 originalAuthorGitHub: Courtney Frey # to be set by page creator
 reviewer: Kimberly Horan # to be set by the page reviewer
 reviewerGitHub: codinglikeagirl42 # to be set by the page reviewer
-lastEditor: Colin Brock # update any time edits are made after review
-lastEditorGitHub: ColinBrock # update any time edits are made after review
-lastMod: 2023-11-27 # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Sally Steuterman # update any time edits are made after review
+lastEditorGitHub: gildedgardena # update any time edits are made after review
+lastMod: 2024-03-28 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Getting Started
 
-Work on these exercises in the IntelliJ `java-web-dev-exercises` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) and make sure that the file name matches the class name.
+Work on these exercises in the IntelliJ `java-web-dev-projects` project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper [Java Naming Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) and make sure that the file name matches the class name.
 
 
 
