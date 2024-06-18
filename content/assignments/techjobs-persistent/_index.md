@@ -27,5 +27,5 @@ Each of the four sections of this assignment will also ask you to demonstrate yo
 The demo app is expected to lead you to a default error whitepage if you try to create a job without adding either a skill or employer.
 {{% /notice %}}
 
-As you work through each part, refer to our [demo app](https://techjobs-persistent.launchcodetechnicaltraining.org/) to clarify questions about intended application behavior.
+As you work through each part, refer to our [demo app](https://techjobs-persistent.launchcodelearning.org/) to clarify questions about intended application behavior.
 
