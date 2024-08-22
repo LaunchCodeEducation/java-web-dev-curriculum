@@ -47,7 +47,7 @@ Open a terminal window on your machine and enter the following command:
 java -version
 ```
 
-If the response returns a major version 17, you can move on to the next page, [Java in the Terminal]({{< relref "../java-terminal/" >}}).
+If the response returns a major version 17, you can move on to the next page, [Java in the Terminal]({{< relref "../java-terminal/index.md" >}}).
 
 If you do not have Java 17, or the command does not work, you can download 
 it [here](https://www.oracle.com/java/technologies/downloads/#java17). 
