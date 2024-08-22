@@ -44,10 +44,10 @@ In this project, you’ll show that you can:
 ### Get the Starter Code
 
 {{% notice blue Note "rocket" %}}
-You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{< relref "../hello-world/#running-the-autograding-tests-through-github-actions" >}}) section of `Assignment 0` 
+You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autogtrading Tests through Github Actions]({{% relref "../hello-world/#running-the-autograding-tests-through-github-actions" %}}) section of `Assignment 0` 
 {{% /notice %}}
 
-In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{< relref "../hello-world/#getting-started" >}}) for more details. 
+In Canvas, **Graded Assignment #2: Object-Oriented Edition** contains a GitHub starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{% relref "../hello-world/#getting-started" %}}) for more details. 
 
 ## Introduction
 Sally has gotten the ball rolling by adding a `Job` class, along with classes to represent the individual properties of a job: `Employer`, `Location`, `PositionType`, and `CoreCompetency`. She completed the Employer class, and she left you the task of filling in the others.
@@ -112,7 +112,7 @@ If we were to store these four new properties as strings within the `Job` class,
 
 ### Running the Autograding Tests
 
-Before diving into your tasks, review [Assignment #0: Hello, World!]({{< relref "../hello-world/_index.md" >}}) for details on running the autograding tests for this assignment. This assignment has many more tests than the previous two, so we’ve organized them into separate files.
+Before diving into your tasks, review [Assignment #0: Hello, World!]({{% relref "../hello-world/_index.md" %}}) for details on running the autograding tests for this assignment. This assignment has many more tests than the previous two, so we’ve organized them into separate files.
 
 {{< rawhtml >}}
 <img src="figures/test-files.png" alt="File tree image">
@@ -150,4 +150,4 @@ The list below provides a general overview of your assigned tasks. Specific deta
 1. Use TDD to design and code a custom `toString` method for the `Job` class.
 1. Use inheritance to DRY the code within `Employer`, `Location`, `CoreCompetency`, and `PositionType`.
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task1/index.md" >}})
+[Next]({{% relref "../../../assignments/techjobs-oo/task1/index.md" %}})

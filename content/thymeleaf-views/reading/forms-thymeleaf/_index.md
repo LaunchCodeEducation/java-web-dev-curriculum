@@ -40,7 +40,7 @@ Now that you have `codingevents` up and running, add features to it by coding al
 {{% notice blue Note "rocket" %}}
 The following videos will demonstrate features we've added to a new MVC application we'll be working with called `codingevents`. You may notice that parts of this video include references to `Java11`. Your project should be using `Java17`.
 
-You should create your own version of `codingevents` from [Spring Initializer](https://start.spring.io/) and refer to [this branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/starter) and the [Coding Events Setup - Text]({{< relref "#codingevents-setup---text" >}}) walkthrough to replicate our code. You may fork and clone from the `CodingEventsJava` project for reference.
+You should create your own version of `codingevents` from [Spring Initializer](https://start.spring.io/) and refer to [this branch](https://github.com/LaunchCodeEducation/CodingEventsJava/tree/starter) and the [Coding Events Setup - Text]({{% relref "#codingevents-setup---text" %}}) walkthrough to replicate our code. You may fork and clone from the `CodingEventsJava` project for reference.
 {{% /notice %}}
 
 ## Coding Events Setup - Text

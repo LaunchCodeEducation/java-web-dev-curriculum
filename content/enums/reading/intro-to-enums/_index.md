@@ -279,7 +279,7 @@ An application can change the way it logs messages by changing the log level.
 {{% /notice %}}
 
 {{% notice blue Example "note" %}}
-An enum that you have [already encountered]({{< relref "../../../controllers-and-routing/reading/simple-controllers/_index.md" >}}) is `RequestMapping`, which we have used to specify which HTTP methods a controller method can respond to. This enum has values `RequestMapping.GET`, `RequestMapping.POST`, `RequestMapping.DELETE`, and so on.
+An enum that you have [already encountered]({{% relref "../../../controllers-and-routing/reading/simple-controllers/_index.md" %}}) is `RequestMapping`, which we have used to specify which HTTP methods a controller method can respond to. This enum has values `RequestMapping.GET`, `RequestMapping.POST`, `RequestMapping.DELETE`, and so on.
 {{% /notice %}}
 
 ## Adding Properties to Enums

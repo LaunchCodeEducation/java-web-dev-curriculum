@@ -151,7 +151,7 @@ Let’s examine two classes in Java to explore defining and using methods. The f
 
 We won’t explore every new aspect of this example, but instead focus on the two methods.
 
-1. The `main` method in the `HelloMethods` class has the same structure as that of our [temperature conversion example]({{< relref "../../../data-types/reading/some-java-practice/#temperature-conversion" >}}).
+1. The `main` method in the `HelloMethods` class has the same structure as that of our [temperature conversion example]({{% relref "../../../data-types/reading/some-java-practice/#temperature-conversion" %}}).
 
 1. Take a look at the `Message` class. Note that it does NOT have a `main` method, so it can’t be run on its own. Code within the `Message` class must be called from elsewhere in order to execute.
 

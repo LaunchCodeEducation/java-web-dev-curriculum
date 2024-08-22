@@ -12,7 +12,7 @@ lastEditorGitHub: # update any time edits are made after review
 lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-In [Exercises: OMG the ORM!]({{< relref "../exercises/_index.md" >}}), you created a new persistent class, `EventCategory`. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. "DRY out your code") using inheritance and abstract classes.
+In [Exercises: OMG the ORM!]({{% relref "../exercises/_index.md" %}}), you created a new persistent class, `EventCategory`. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. "DRY out your code") using inheritance and abstract classes.
 
 ## Getting Ready
 
@@ -51,7 +51,7 @@ Your objective in this studio is to reduce this repetition by creating a class t
 
 ### Create and Extend `AbstractEntity`
 
-In the `models` package, create a new class named `AbstractEntity`. Add the `abstract` keyword to the class declaration. We do this because, while we want to share code across our two models, we'll never need to create an instance of `AbstractEntity`. If you need a quick refresher, review our section on [abstract classes]({{< relref "../../inheritance/reading/abstract-inheritance/_index.md#abstract-classes" >}}).
+In the `models` package, create a new class named `AbstractEntity`. Add the `abstract` keyword to the class declaration. We do this because, while we want to share code across our two models, we'll never need to create an instance of `AbstractEntity`. If you need a quick refresher, review our section on [abstract classes]({{% relref "../../inheritance/reading/abstract-inheritance/_index.md#abstract-classes" %}}).
 
 {{% notice green Tip "rocket" %}}
 This class name seems a little odd at first, but it makes sense after a brief explanation. 

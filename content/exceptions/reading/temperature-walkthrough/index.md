@@ -14,7 +14,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 To get started with exceptions, open up `java-web-dev-projects/exceptions/chapter-example` on your machine so you can code along.
 Inside the `Temperature` package, take a look at the `Temperature` class.
-We worked with this exact class when learning more about [classes]({{< relref "../../../classes/reading/encapsulation/#getters-and-setters">}}).
+We worked with this exact class when learning more about [classes]({{% relref "../../../classes/reading/encapsulation/#getters-and-setters" %}}).
 
 ```java {linenos=table, linenostart=3}
    public class Temperature {

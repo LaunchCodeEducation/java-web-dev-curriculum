@@ -18,7 +18,7 @@ As a new Java coder, it might take you some time to recognize the usefulness of 
 
 To help overcome this, let’s consider a common occurrence—sorting an `ArrayList` of objects.
 
-If the list contains `String` or numerical entries, then sorting the list is [trivial]({{< relref "../../../control-flow-and-collections/reading/arraylist/" >}}):
+If the list contains `String` or numerical entries, then sorting the list is [trivial]({{% relref "../../../control-flow-and-collections/reading/arraylist/" %}}):
    ```java
    Collections.sort(arrayListName);
    ```

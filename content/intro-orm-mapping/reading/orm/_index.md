@@ -56,7 +56,7 @@ CREATE TABLE contactinfo (
 
 In Java, this API is called a **JPA** or **Java Persistence API**.
 JPAs makes use of **data layers**.
-When we learned about models, we learned that [data layers]({{< relref "../../../models-and-model-binding/reading/models-and-data/_index.md" >}}) add abstraction between models and the data we want to store.
+When we learned about models, we learned that [data layers]({{% relref "../../../models-and-model-binding/reading/models-and-data/_index.md" %}}) add abstraction between models and the data we want to store.
 Models are NOT persistent data stores and relational databases do NOT shape the Java objects we will be using.
 We want to make sure that the two remain separate.
 

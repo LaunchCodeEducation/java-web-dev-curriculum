@@ -49,4 +49,4 @@ locally in the browser at `http://localhost:8080` (unless of course you have cha
 
 Your running application still has limited functionality. You won't yet be able to add a job with the *Add Job* form. You also
 won't yet be able to view the list of jobs or search for jobs - but this is mostly because you have no job data. Move on to
-[Part 2]({{< relref "../part-two/index.html" >}}) below to start adding these functionalities.
+[Part 2]({{% relref "../part-two/index.html" %}}) below to start adding these functionalities.

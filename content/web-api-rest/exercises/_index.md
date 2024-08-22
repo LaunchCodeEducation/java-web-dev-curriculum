@@ -197,4 +197,4 @@ Some items to consider:
 
 ### Install Postman
 Now that we've explored working with those endpoints, we're almost ready to start running the API and test sending those requests. 
-You'll need to [install Postman]({{< relref "../../../appendices/install-postman/_index.md" >}}) to work with this lesson's studio and practice running these requests.
+You'll need to [install Postman]({{% relref "../../../appendices/install-postman/_index.md" %}}) to work with this lesson's studio and practice running these requests.

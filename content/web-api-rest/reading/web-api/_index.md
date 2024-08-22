@@ -125,7 +125,7 @@ While there are many languages and frameworks available in web development, they
 JSON is currently a universal representation of data accepted by client applications. This means our web API packages data 
 requested by a client application as JSON. The web API also transfers this JSON in its communication with a client application.
 
-Let's revisit the last two steps from our [Web API work flow]({{< relref "_index.md#transference-of-data" >}})
+Let's revisit the last two steps from our [Web API work flow]({{% relref "_index.md#transference-of-data" %}})
 
 1. The controller transforms the object into a JSON representation.
 1. The controller responds to the client with the JSON representation.

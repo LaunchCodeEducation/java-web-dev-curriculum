@@ -57,7 +57,7 @@ You should see your greeting printed!
    Whenever using the terminal in this course, use Git Bash as opposed to Windows Command Prompt.
 {{% /notice %}}
 
-Recall from the walk-through on the [previous page]({{< relref "../setup/">}}), Java needs to be compiled before executing. Java version 17 has
+Recall from the walk-through on the [previous page]({{% relref "../setup/index.md" %}}), Java needs to be compiled before executing. Java version 17 has
 the capability to compile single-file Java programs without explicitly running a command to compile. If our 
 `Hello, World` program were more complex and contained another file, we would need to first run 
 `javac HelloWorld.java`, to compile, followed by `java HelloWorld.java`.

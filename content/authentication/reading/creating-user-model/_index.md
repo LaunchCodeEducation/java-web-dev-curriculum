@@ -54,7 +54,7 @@ public class User extends AbstractEntity {
 }
 ```
 
-Notice that the constructor takes a parameter named `password` and uses it to set the value of `pwHash`. We mentioned [previously]({{< relref "../hashing-passwords/_index.md" >}}) that we should never store passwords, so in a moment, we will update line 26 by creating a hash from the given password to store.
+Notice that the constructor takes a parameter named `password` and uses it to set the value of `pwHash`. We mentioned [previously]({{% relref "../hashing-passwords/_index.md" %}}) that we should never store passwords, so in a moment, we will update line 26 by creating a hash from the given password to store.
 
 {{% notice blue Note "rocket" %}}
 Our validation annotations on `User` are very lenient. This is okay, however, because we will validate user input used to make `User` objects using a DTO with more restrictive validation.
