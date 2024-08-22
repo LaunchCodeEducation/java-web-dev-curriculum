@@ -68,4 +68,4 @@ Rerun your unit tests to verify that your classes and methods still work.
  You know you need to do this, but here is the reminder anyway. `Save`, `commit`, and `push` your work to GitHub.
 {{% /notice %}}
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task7/index.md" >}})
+[Next]({{% relref "../../../assignments/techjobs-oo/task7/index.md" %}})

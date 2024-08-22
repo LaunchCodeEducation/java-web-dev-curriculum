@@ -12,7 +12,7 @@ lastEditorGitHub: tpenn # update any time edits are made after review
 lastMod: 2023-09-22T08:34:55-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-In the [next video]({{< relref "../conditionals-templates/_index.md#try-it" >}}), you will extend your `hello-spring` project and practice using Thymeleaf templates as you code along with the clip.
+In the [next video]({{% relref "../conditionals-templates/_index.md#try-it" %}}), you will extend your `hello-spring` project and practice using Thymeleaf templates as you code along with the clip.
 
 Before you get there, however, we need to review a few core skills and best-practices.
 

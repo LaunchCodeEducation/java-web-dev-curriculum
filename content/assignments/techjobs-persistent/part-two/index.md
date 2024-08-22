@@ -12,7 +12,7 @@ lastEditorGitHub: colinbrock # update any time edits are made after review
 lastMod: 2023-09-06 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
-You will need to have completed the [setup steps]({{< relref "../part-one/index.html" >}}) before starting this
+You will need to have completed the [setup steps]({{% relref "../part-one/index.html" %}}) before starting this
 section.
 
 ### AbstractEntity

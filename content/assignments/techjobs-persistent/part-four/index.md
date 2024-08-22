@@ -40,7 +40,7 @@ As before, there are a few tests in `TestTaskFour` that have been commented out 
 ## Updating `HomeController`, Again
 
 You next need to wire `HomeController` with the skills data in order to add skills objects to a new job.
-This will look almost precisely like what you have done for employer data above. Refer back to [that section]({{< relref "../part-three/index.md#updating-homecontroller" >}}) to inject the controller with skill data.
+This will look almost precisely like what you have done for employer data above. Refer back to [that section]({{% relref "../part-three/index.md#updating-homecontroller" %}}) to inject the controller with skill data.
 
 There is, however, one difference to keep in mind. The job form being processed only accepts one employer by an `id` field. Many skills can be added to a single job, though. Here's what we'll say about how to send the right skills along with the job form.
 
@@ -64,7 +64,7 @@ As with a job's employer, you only need to query your database for skills if the
 
 ## It's Your Job, List It and Re-Search It
 
-You now have all the tools in place to re-implement the list and search views from [TechJobs MVC]({{< relref "../../techjobs-mvc/_index.md" >}}).
+You now have all the tools in place to re-implement the list and search views from [TechJobs MVC]({{% relref "../../techjobs-mvc/_index.md" %}}).
 
 1. In the `ListController` class, add fields for `EmployerRepository ` and `SkillRepository`, both annotated with `@Autowired`.
 1. You'll also need to pass the employer and skill data from those repositories into the view template rendered at `list/`. Add the right `model.addAttribute(name, value)` statements to pass this info into `templates/list.html`.

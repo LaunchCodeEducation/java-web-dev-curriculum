@@ -28,4 +28,4 @@ Now open the `Job` file. OOF! There are a lot of fields declared and not much el
  Now would be a good time to `save`, `commit`, and `push` your work up to GitHub.
 {{% /notice %}}
 
-[Next]({{< relref "../../../assignments/techjobs-oo/task4/index.md" >}})
+[Next]({{% relref "../../../assignments/techjobs-oo/task4/index.md" %}})

@@ -16,7 +16,7 @@ Not sure you get the whole inheritance idea? Still not sure which fields and met
 which are overridden? Looking to *test* your understanding? (wink)
 
 <!-- TODO: Add link to Unit testing chapter below -->
-Knowing what we know now about [unit-testing](unit-testing) and [inheritance]({{< relref "../../_index.md" >}}), we can test that our 
+Knowing what we know now about [unit-testing](unit-testing) and [inheritance]({{% relref "../../_index.md" %}}), we can test that our 
 subclasses extend their base classes.
 
 We can add a `test` folder to our `inheritance` package and write some code to ensure that 

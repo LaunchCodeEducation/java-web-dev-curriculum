@@ -28,7 +28,7 @@ Before submitting, make sure that your application:
 {{< youtube Ai9ceGDWkac >}}
 
 ### How to Submit
-To turn in your assignment and get credit, follow the [submission instructions]({{< relref "../../hello-world/_index.md#submitting-your-work-on-canvas" >}}).
+To turn in your assignment and get credit, follow the [submission instructions]({{% relref "../../hello-world/_index.md#submitting-your-work-on-canvas" %}}).
 
 ### Bonus Missions
 

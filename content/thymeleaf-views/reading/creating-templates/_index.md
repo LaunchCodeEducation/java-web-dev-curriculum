@@ -82,8 +82,8 @@ In the `dependencies` block, just paste in the `implementation` statement seen i
 Open up your `hello-spring` project in IntelliJ and code along with the following video.
 
 {{% notice blue Note "rocket" %}}
-We're assuming you've completed these [Controllers and Routing Exercises]({{< relref "../../../controllers-and-routing/exercises/" >}}) on your own ``hello-spring`` application and committed your changes to a branch reserved for the exercises. No matter where you are with those exercises, be sure that your own `hello-spring` application roughly matches the [hello-spring forms branch](https://github.com/LaunchCodeEducation/hello-spring/tree/forms) so that you can follow along with the video lessons in this chapter. If you are using git branches to track your work, you can simply return to the branch you were on before starting the video walkthrough
-on [this page]({{< relref "../../../controllers-and-routing/reading/controllers-classes/" >}}).
+We're assuming you've completed these [Controllers and Routing Exercises]({{% relref "../../../controllers-and-routing/exercises/" %}}) on your own ``hello-spring`` application and committed your changes to a branch reserved for the exercises. No matter where you are with those exercises, be sure that your own `hello-spring` application roughly matches the [hello-spring forms branch](https://github.com/LaunchCodeEducation/hello-spring/tree/forms) so that you can follow along with the video lessons in this chapter. If you are using git branches to track your work, you can simply return to the branch you were on before starting the video walkthrough
+on [this page]({{% relref "../../../controllers-and-routing/reading/controllers-classes/" %}}).
 {{% /notice %}}
 
 {{% notice orange Warning "rocket" %}}

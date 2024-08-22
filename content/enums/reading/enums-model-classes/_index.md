@@ -38,7 +38,7 @@ types.
 
 ![Enum type selection.](pictures/enumTypeSelection.png?classes=border)
 
-Because enum values are constants, we use [naming-conventions]({{< relref "../../../intro-and-setup/naming-conventions/index.md" >}}) and write them in all caps. Each value is demarcated with a comma and the list is completed with a semicolon.
+Because enum values are constants, we use [naming-conventions]({{% relref "../../../intro-and-setup/naming-conventions/index.md" %}}) and write them in all caps. Each value is demarcated with a comma and the list is completed with a semicolon.
 
 `EventType`:
 
@@ -182,7 +182,7 @@ In `templates/events/create.html`:
 
 As with the other form inputs on the page, the `th:field` attribute determines the `name`
 and `id` attributes for the `select` tag. We make an `option` tag for each of the `EventType`
-values, making use of the `types` variable we passed in from the controller in [the previous step]({{< relref "./_index.md#pass-enum-values-through-the-controller" >}}). We set the `value` attribute for the 
+values, making use of the `types` variable we passed in from the controller in [the previous step]({{% relref "./_index.md#pass-enum-values-through-the-controller" %}}). We set the `value` attribute for the 
 model data to be the `EventType` value using `th:value`. And the type name shown to the user 
 of the form as the `displayName` of the type, using `th:text`.
 

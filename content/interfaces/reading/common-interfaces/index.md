@@ -27,7 +27,7 @@ The first situations where you’ll want to use interfaces involve applying pre-
 
 [Comparator Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
 
-This interface can be used to determine, given two objects of the given type, which one is “greater” than the other. It is also used by collections such as an [ArrayList]({{< relref "../../../control-flow-and-collections/reading/arraylist/" >}}) to sort its contents with the `sort()` method.
+This interface can be used to determine, given two objects of the given type, which one is “greater” than the other. It is also used by collections such as an [ArrayList]({{% relref "../../../control-flow-and-collections/reading/arraylist/" %}}) to sort its contents with the `sort()` method.
 
 {{% notice blue "Note" "rocket" %}} 
  For more on the differences between Comparator and Comparable, see [this article](https://www.javatpoint.com/difference-between-comparable-and-comparator).

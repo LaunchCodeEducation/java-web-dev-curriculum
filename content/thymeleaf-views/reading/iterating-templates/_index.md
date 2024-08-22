@@ -203,7 +203,7 @@ Assume you have a collection of different coffee shop objects, and each object s
 
 ## Check Your Understanding
 
-Use the three code samples listed in the [location matters]({{< relref "#location-matters" >}}) section to answer the following questions:
+Use the three code samples listed in the [location matters]({{% relref "#location-matters" %}}) section to answer the following questions:
 
 {{% notice green Question "rocket" %}}
 Which option produces one heading, 4 ordered lists, and 4 coffee names (each name labeled as "1")?

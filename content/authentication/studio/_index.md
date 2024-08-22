@@ -15,11 +15,11 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 For this studio, you'll be tasked with adding simple user authentication to your 
 `techjobs` application. The steps to do this will match what you have already done 
 in `codingevents`. You should refer back to the tutorial starting 
-[here]({{< relref "../reading/creating-user-model/_index.md/#a-user-model" >}}).
+[here]({{% relref "../reading/creating-user-model/_index.md/#a-user-model" %}}).
 
-1. [Create the User Model]({{< relref "#create-the-user-model" >}})
-1. [Create the Login and Registration Forms]({{< relref "#create-the-login-and-registration-forms" >}})
-1. [Filter Requests]({{< relref "#filter-requests" >}})
+1. [Create the User Model]({{% relref "#create-the-user-model" %}})
+1. [Create the Login and Registration Forms]({{% relref "#create-the-login-and-registration-forms" %}})
+1. [Filter Requests]({{% relref "#filter-requests" %}})
 
 ## The Starter Code
 

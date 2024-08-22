@@ -70,4 +70,4 @@ You have changed the architecture of your job table. You will still be able to a
 The *List* and *Search* functionality still isn't quite fixed so to view a job in the application, make a note
 of the job's id in the SQL table. Back in your browser, enter the path for `/view/{jobId}`.
 
-When everything works, move on to [Part 4]({{< relref "../part-four/index.html" >}}) below.
+When everything works, move on to [Part 4]({{% relref "../part-four/index.html" %}}) below.
