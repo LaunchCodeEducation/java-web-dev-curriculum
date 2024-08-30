@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignment #2: Tech Jobs OO :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-oo/index.html</link>
+    <description>Assignment #2: Tech Jobs (Object-Oriented Edition) Introduction Your apprenticeship at LaunchCode is going well! Only a few weeks in and you’re regularly making contributions to code that will eventually be used by all LaunchCode staff.&#xA;Your last task was to get the prototype Tech Jobs app in good shape. Now it’s time to advance the underlying structure of the program.&#xA;Your mentor on this project is Sally, one of the developers at LaunchCode.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Sep 2023 13:54:20 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-oo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Task 1: Explore the Employer Class</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task1/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task1/index.html</guid>
+      <description>Open the Employer file in IntelliJ and examine the code. In addition to the two fields—id and value—the class includes the standard getters and setters as well as some custom methods like toString and equals.&#xA;You can refer to these examples as you fill in the missing pieces in the other classes, but for now let’s take a closer look at the constructors.&#xA;Assign a Unique ID One neat trick we can use is to automatically assign each new object a unique ID number.</description>
+    </item>
+    <item>
+      <title>Task 2: Create the Support Classes</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task2/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task2/index.html</guid>
+      <description>Sally needs you to build up the remaining classes. In each case, refer to the Employer class for hints on how to structure your code.&#xA;The Location Class Open the Location.java file. Note that the getters, setters, and custom methods for this class are done, as is the constructor for initializing the id field.&#xA;Sally left you a TODO comment with instructions for coding a second constructor:&#xA;It should call the first constructor to initialize the id field.</description>
+    </item>
+    <item>
+      <title>Task 3: Complete the Job Class</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task3/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task3/index.html</guid>
+      <description>Now open the Job file. OOF! There are a lot of fields declared and not much else.&#xA;Code a constructor to initialize the id field with a unique value. This constructor should take no parameters.&#xA;Code a second constructor that takes 5 parameters and assigns values to name, employer, location, positionType, and coreCompetency. Also, this constructor should call the first in order to initialize the id field. Make sure the parameters are defined in the specified order.</description>
+    </item>
+    <item>
+      <title>Task 4: Use Unit Testing to Verify Parts of the Job Class</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task4/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task4/index.html</guid>
+      <description>Instead of manually creating sample Job objects to verify that your class works correctly, you will use unit tests instead.&#xA;Navigate to the package org.launchcode.techjobs.oo.test package and open the JobTest class. This file will hold all of the tests for the Job class.&#xA;Creating a JUnit Run Configuration Since this project contains two sets of tests used for different purposes—the autograding tests and the JUnit tests you are about to write—we have to set up a run configuration to allow us to run them independently.</description>
+    </item>
+    <item>
+      <title>Task 5: Use TDD to Build The toString Method</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task5/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task5/index.html</guid>
+      <description>To display the data for a particular Job object, you need to implement a custom toString method. Rather than creating this method and then testing it, you will flip that process using TDD.&#xA;Create First Test for toString Before writing your first test, consider how we want the method to behave:&#xA;When passed a Job object, it should return a string that contains a blank line before and after the job information.</description>
+    </item>
+    <item>
+      <title>Task 6: Refactor to DRY the Support Classes</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task6/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task6/index.html</guid>
+      <description>Review the code in the Employer, Location, CoreCompetency, and PositionType classes. What similarities do you see?&#xA;There is a fair amount of repetition between the classes. As a good coder, anytime you find yourself adding identical code in multiple locations you should consider how to streamline the process.&#xA;DRY = “Don’t Repeat Yourself”.&#xA;Create a Base Class Let’s move all of the repeated code into a separate class. We will then have Employer, Location, CoreCompetency, and PositionType inherit this common code.</description>
+    </item>
+    <item>
+      <title>Task 7: Final Steps</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/task7/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/task7/index.html</guid>
+      <description>Run the Tests At this point, all autograding tests should be passing. To be sure, right-click on the org.launchcode.techjobs.oo package in src/test/java and select Run tests in…&#xA;If ANY fail: Evaluate the failure/error message and go back to fix your code.&#xA;If ALL pass: Excellent work! You successfully shifted the old console app into a more useful object oriented configuration.&#xA;Now that the new structure is ready, another team member can refactor the import and display methods to use the new classes.</description>
+    </item>
+  </channel>
+</rss>

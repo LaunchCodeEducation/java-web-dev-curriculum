@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Models and Data :: Java Web Development</title>
+    <link>http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html</link>
+    <description>In order to work with data, we need to add another element to our MVC application. Say, for example, we want to do things like remove an event from our list. Well, if two events both have the same name, how might we identify which of those items to delete? We can’t yet. So we need to tweak how we store event data.&#xA;Add a Unique Id - Video Note The starter code for this video is found at the add-property branch of the CodingEventsJava repo.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/models-and-model-binding/reading/models-and-data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

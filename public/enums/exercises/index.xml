@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Enum Practice :: Java Web Development</title>
+    <link>http://localhost:1313/enums/exercises/index.html</link>
+    <description>Fork and clone EnumerablePlanets .&#xA;Use the Get from Version Control option to open the project in IntelliJ.&#xA;In the project, create a data package.&#xA;Create a new public enum called Planets.&#xA;1 2 3 4 5 6 7 public enum Planets { // list the planets here. // Mercury, Venus, Earth, Mars, Jupiter, // Saturn, Uranus, Neptune // Don&#39;t forget to capitalization convention and enum // syntax to separate value and end the list } Before adding any other fields to Planets, go to PlanetController and update the index handler to pass in a Model class argument (e.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/enums/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

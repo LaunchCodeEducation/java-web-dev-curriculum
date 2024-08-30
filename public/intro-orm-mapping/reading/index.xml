@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/reading/index.html</link>
+    <description>Reading Content Links Object-Relational Mapping Accessing Data Repositories </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Object-Relational Mapping</title>
+      <link>http://localhost:1313/intro-orm-mapping/reading/orm/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/reading/orm/index.html</guid>
+      <description>With all that we have learned about MVC applications and relational databases, we are ready to connect the two and add persistent data storage to our apps! To do so, we need to use object-relational mapping.&#xA;Object-Relational Mapping or ORM is a technique for converting data between Java objects and relational databases. ORM converts data between two incompatible type systems (Java and MySQL), such that each model class becomes a table in our database and each instance a row of the table.</description>
+    </item>
+    <item>
+      <title>Accessing Data</title>
+      <link>http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html</guid>
+      <description>Now that we have connected our Java application to a MySQL database, we need to set up our Java classes and interfaces.&#xA;In the previous lessons, we learned about performing CRUD operations on a database and its tables. One of the reasons we use ORM is so that now we can write Java code in our application to manage our relational database.&#xA;Persistent Classes Our JPA needs to know what Java class is going to be converted to a table in the MySQL database.</description>
+    </item>
+    <item>
+      <title>Repositories</title>
+      <link>http://localhost:1313/intro-orm-mapping/reading/repositories/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/reading/repositories/index.html</guid>
+      <description>Now that we have a general idea of how to set up our entity classes and repositories, let’s take a deeper dive into how repositories are used to perform CRUD operations on a database.&#xA;CRUD Operations Previously, we learned that we can create a repository to fetch rows of a table in a database. To do so, we need to create a corresponding controller.&#xA;When creating our controller, we add a variable of the repository type that has the annotation @Autowired.</description>
+    </item>
+  </channel>
+</rss>

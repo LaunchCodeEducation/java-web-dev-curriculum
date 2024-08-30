@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Task 3: Complete SearchController :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html</link>
+    <description>Add a displaySearchResults handler method to SearchController:&#xA;Use the correct annotation for the method. To configure the correct mapping type and mapping route, refer to the form tag in the search.html template. (Use @GetMapping or @PostMapping rather than @RequestMapping.) The displaySearchResults method should take in a Model parameter. The method should also take in two other parameters, specifying the type of search and the search term. In order for these last two parameters to be properly passed in by Spring Boot, you need to use the correct annotation.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-mvc/search-controller/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

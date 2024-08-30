@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: TechJobs Authentication :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/studio/index.html</link>
+    <description>For this studio, you’ll be tasked with adding simple user authentication to your techjobs application. The steps to do this will match what you have already done in codingevents. You should refer back to the tutorial starting here .&#xA;Create the User Model Create the Login and Registration Forms Filter Requests The Starter Code Fork and clone the starter code for TechJobs (Auth Edition) .&#xA;The dependencies for the database connection and hashing function are already added for you in build.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

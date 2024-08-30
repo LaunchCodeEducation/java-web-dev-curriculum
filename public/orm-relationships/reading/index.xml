@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/orm-relationships/reading/index.html</link>
+    <description>Reading Content Links Types of Relationships Creating a Many-to-One Relationship Creating a One-to-Many Relationship Creating a One-to-One Relationship Creating a Many-to-Many Relationship </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Aug 2023 14:38:32 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/orm-relationships/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Types of Relationships</title>
+      <link>http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html</guid>
+      <description>Just as data in different database tables can have relationships to each other, so can classes and objects. In fact, relationships between objects will translate into relationships between rows in a database when using ORM.&#xA;This chapter introduces the tools needed to create meaningful relationships using ORM. Before considering how to do this with Spring Boot, however, let’s consider the different types of relationships at a conceptual level.&#xA;For the examples below, we use four classes:</description>
+    </item>
+    <item>
+      <title>Creating a Many-to-One Relationship</title>
+      <link>http://localhost:1313/orm-relationships/reading/many-to-one/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/many-to-one/index.html</guid>
+      <description>The first relationship we implement will be between the Event and EventCategory classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.&#xA;Before diving in, let’s reduce repetition in our persistent classes, that is, let’s DRY out our code.&#xA;Creating an AbstractEntity - Video Note The starter code for this video is found at the event-category branch of the CodingEventsJava repo.</description>
+    </item>
+    <item>
+      <title>Creating a One-to-Many Relationship</title>
+      <link>http://localhost:1313/orm-relationships/reading/one-to-many/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/one-to-many/index.html</guid>
+      <description>The previous section established a persistent many-to-one relationship between Event objects and EventCategory objects. This section demonstrates how to create the inverse one-to-many relationship.&#xA;Setting Up the Relationship - Video Note The starter code for this video is found at the many-to-one branch of the CodingEventsJava repo. The final code presented in this video is found on the one-to-many branch . As always, code along to the videos on your own codingevents project.</description>
+    </item>
+    <item>
+      <title>Creating a One-to-One Relationship</title>
+      <link>http://localhost:1313/orm-relationships/reading/one-to-one/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/one-to-one/index.html</guid>
+      <description>We defined a one-to-one relationship between two objects, A and B, as occurring when an object of type A can be related to only one instance of an object of type B, and vice versa.&#xA;Such a relationship can be configured using the JPA annotation @OneToOne.&#xA;Creating a One-to-One Relationship - Video Note The starter code for this video is found at the one-to-many branch of the CodingEventsJava repo. The final code presented in this video is found on the one-to-one branch .</description>
+    </item>
+    <item>
+      <title>Creating a Many-to-Many Relationship</title>
+      <link>http://localhost:1313/orm-relationships/reading/many-to-many/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/many-to-many/index.html</guid>
+      <description>Just as when introducing one-to-one relationships, our first step in exploring many-to-many relationships is to introduce a new class to relate to Event.&#xA;Persistent Tags - Video Note The starter code for this video is found at the one-to-one branch of the CodingEventsJava repo. The final code presented in this video is found on the add-tags branch . As always, code along to the videos on your own coding-events project.</description>
+    </item>
+  </channel>
+</rss>

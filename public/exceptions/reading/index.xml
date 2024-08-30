@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/exceptions/reading/index.html</link>
+    <description> Check the Temperature with Exceptions </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jul 2023 15:35:30 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/exceptions/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Check the Temperature with Exceptions</title>
+      <link>http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html</link>
+      <pubDate>Wed, 19 Jul 2023 15:35:30 -0500</pubDate>
+      <guid>http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html</guid>
+      <description>To get started with exceptions, open up java-web-dev-projects/exceptions/chapter-example on your machine so you can code along. Inside the Temperature package, take a look at the Temperature class. We worked with this exact class when learning more about classes .&#xA;3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 public class Temperature { private double fahrenheit; public double getFahrenheit() { return fahrenheit; } public void setFahrenheit(double aFahrenheit) { double absoluteZeroFahrenheit = -459.</description>
+    </item>
+  </channel>
+</rss>

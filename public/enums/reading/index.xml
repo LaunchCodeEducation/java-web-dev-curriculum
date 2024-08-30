@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/enums/reading/index.html</link>
+    <description>Content Links Introduction to Enums Enums in Model Classes </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/enums/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Enums</title>
+      <link>http://localhost:1313/enums/reading/intro-to-enums/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/enums/reading/intro-to-enums/index.html</guid>
+      <description>Many statically-typed programming languages provide a feature called enumeration types, or enum types for short. Enum types are special classes that should have only one of a set of fixed values, such as days of the week.&#xA;Imagine that we wanted to add a field to Event to specify which day of the week an event takes place. You might start by creating a new field:&#xA;@NotBlank private String dayOfWeek;As defined here, a user could submit any of the following values representing Wednesday:</description>
+    </item>
+    <item>
+      <title>Enums in Model Classes</title>
+      <link>http://localhost:1313/enums/reading/enums-model-classes/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/enums/reading/enums-model-classes/index.html</guid>
+      <description>One application of enum types is to represent categories of objects. We will take this approach in our coding-events application to categorize events based on their type, such as conference or meetup.&#xA;Enum Types in Models - Video Note The starter code for this video is found at the display-errors branch of the CodingEventsJava repo. The final code presented in this video is found on the enums branch . As always, code along to the videos on your own codingevents project.</description>
+    </item>
+  </channel>
+</rss>

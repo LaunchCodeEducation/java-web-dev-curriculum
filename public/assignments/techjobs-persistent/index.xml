@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignment #4: Tech Jobs Persistent :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-persistent/index.html</link>
+    <description>Your Task You will once again work with the Tech Jobs application. This time around you’ll add ORM functionality by using Spring Data. You will be responsible for completing the code to allow users to create new job data.&#xA;Your final application will have the same list and search capabilities as your Tech Jobs (MVC Edition) but you’ll need to do the work to connect the project to a database for storing user-submitted job data.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-persistent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review the Starter Code</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html</guid>
+      <description>Checkout and Review the Starter Code Set up a local copy of the project:&#xA;In Canvas, find Graded Assignment #4: TechJobs (Persistent Edition) and click on the starter code repo link. Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. Refer back to the instructions from assignment0 for more details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up properly.</description>
+    </item>
+    <item>
+      <title>Task 1: Connect a Database to a Spring App</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/part-one/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/part-one/index.html</guid>
+      <description>Start MySQL Workbench and create a new schema named techjobs. Tip Remember to double click on the schema name in the file tree to make it the default schema.&#xA;In the administration tab, create a new user, techjobs with the same settings as described in the lesson tutorial. This user should have the password techjobs as well. Update build.gradle with the necessary dependencies. At this point, you should be able to run the tests.</description>
+    </item>
+    <item>
+      <title>Task 2: Persisting Employers and Skills</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/part-two/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/part-two/index.html</guid>
+      <description>You will need to have completed the setup steps before starting this section.&#xA;AbstractEntity We’ve replaced the abstract class JobField with an even more abstracted class aptly named, AbstractEntity. This class holds the fields and methods that are common across the Job class and the classes it contains as fields.&#xA;We will be creating tables for the subclasses that inherit from AbstractEntity but not a table for this parent class. Therefore, give AbstractEntity the @MappedSuperclass annotation.</description>
+    </item>
+    <item>
+      <title>Task 3: Setting Up a One-to-Many Relationship</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/part-three/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/part-three/index.html</guid>
+      <description>In this application, any one Job object is affiliated with one employer while one Employer may contain several jobs.&#xA;Now that you have set up persistence for the Employer and Skill classes, it is time to update the Job class to make use of these. Job is already using the Spring Data framework to be persistent and now you’ll update its Employer field to create a one-to-many relationship. You’ll also add a field on Employer to list the jobs associated with each instance.</description>
+    </item>
+    <item>
+      <title>Task 4: Setting Up a Many-to-Many Relationship</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/part-four/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/part-four/index.html</guid>
+      <description>Using a many-to-many relationship, we can now use the Skill object to store a Job object’s skills. At the moment, a job can have many skills listed as strings. In this section, you’ll be tasked with changing this field type to be a list of skills. Just as a job requires many skills, any skill can be associated with several jobs. With this in mind, you’ll also add a list of jobs as a field onto the skill class.</description>
+    </item>
+    <item>
+      <title>Submission and Bonus Missions</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/submission/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/submission/index.html</guid>
+      <description>Sanity Check At this point, all autograding tests should be passing. To be sure, right-click on the org.launchcode.techjobs.persistent package in src/test/java and select Run tests in… If any test fails, evaluate the failure/error message and go back to fix your code.&#xA;If a test in TestCommentedTests fails, this means that you failed to uncomment one or more tests in either TestTaskTwo or TestTaskFour. You will need to go back and uncomment the test(s) and make sure they pass.</description>
+    </item>
+  </channel>
+</rss>

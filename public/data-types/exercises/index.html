@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Relearn 6.1.1+tip">
+    <meta name="description" content="Getting Started Work on these exercises in the IntelliJ java-web-dev-projects project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper Java Naming Conventions and make sure that the file name matches the class name.
+Creating a Package and Classes Here is how to create a new module to store these exercises, and how to create new classes within this package:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Exercises: Data Types :: Java Web Development">
+    <meta name="twitter:description" content="Getting Started Work on these exercises in the IntelliJ java-web-dev-projects project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper Java Naming Conventions and make sure that the file name matches the class name.
+Creating a Package and Classes Here is how to create a new module to store these exercises, and how to create new classes within this package:">
+    <meta property="og:url" content="http://localhost:1313/data-types/exercises/index.html">
+    <meta property="og:site_name" content="Java Web Development">
+    <meta property="og:title" content="Exercises: Data Types :: Java Web Development">
+    <meta property="og:description" content="Getting Started Work on these exercises in the IntelliJ java-web-dev-projects project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper Java Naming Conventions and make sure that the file name matches the class name.
+Creating a Package and Classes Here is how to create a new module to store these exercises, and how to create new classes within this package:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Exercises: Data Types :: Java Web Development">
+    <meta itemprop="description" content="Getting Started Work on these exercises in the IntelliJ java-web-dev-projects project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper Java Naming Conventions and make sure that the file name matches the class name.
+Creating a Package and Classes Here is how to create a new module to store these exercises, and how to create new classes within this package:">
+    <meta itemprop="datePublished" content="2023-06-14T09:27:57-05:00">
+    <meta itemprop="dateModified" content="2024-03-28T00:00:00+00:00">
+    <meta itemprop="wordCount" content="944">
+    <title>Exercises: Data Types :: Java Web Development</title>
+    <link href="http://localhost:1313/data-types/exercises/index.xml" rel="alternate" type="application/rss+xml" title="Exercises: Data Types :: Java Web Development">
+    <link href="http://localhost:1313/images/favicon.png?1725032835" rel="icon" type="image/png">
+    <link href="http://localhost:1313/images/favicon.ico?1725032835" rel="icon" type="image/x-icon" sizes="any">
+    <link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/nucleus.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/perfect-scrollbar.min.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/theme.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/theme-lc-light.css?1725032835" rel="stylesheet" id="R-variant-style">
+    <link href="http://localhost:1313/css/chroma-relearn-light.css?1725032835" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="http://localhost:1313/css/variant.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/print.css?1725032835" rel="stylesheet" media="print">
+    <script src="http://localhost:1313/js/variant.js?1725032835"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="http://localhost:1313/index.search.js?1725032835";
+      // variant stuff
+      window.variants && variants.init( [ 'lc-light', 'lc-dark-blue', 'lc-dark-blue-two' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="http://localhost:1313/data-types/exercises/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#creating-a-package-and-classes">Creating a Package and Classes</a></li>
+    <li><a href="#the-exercises">The Exercises</a>
+      <ul>
+        <li><a href="#a-inputoutput">A. Input/Output</a></li>
+        <li><a href="#b-numeric-types">B. Numeric Types</a></li>
+        <li><a href="#c-numeric-types">C. Numeric Types</a></li>
+        <li><a href="#d-strings">D. Strings</a></li>
+        <li><a href="#e-strings">E. Strings</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/index.html"><span itemprop="name">Java Web Development</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/data-types/index.html"><span itemprop="name">Chapter 2: Data Types</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Exercises: Data Types</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/data-types/reading/more-data-types/index.html" title="More Data Types (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/data-types/studio/index.html" title="Studio: Area of a Circle (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="exercises-data-types">Exercises: Data Types</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>Work on these exercises in the IntelliJ <code>java-web-dev-projects</code> project.  Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper <a href="https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html" rel="external" target="_blank">Java Naming Conventions</a>
+ and make sure that the file name matches the class name.</p>
+<h2 id="creating-a-package-and-classes">Creating a Package and Classes</h2>
+<p>Here is how to create a new module to store these exercises, and how to create new classes within this package:</p>
+<ol>
+<li>
+<p>Click on the folder <code>java-web-dev-projects</code> in the Project pane.</p>
+</li>
+<li>
+<p>Open the package <code>datatypes-exercises</code>.</p>
+</li>
+<li>
+<p>Within the <code>datatypes-exercises</code> directory create the following directory structure: <code>src/main/java</code>.</p>
+</li>
+<li>
+<p>Right-click (or control-click for some Mac users) on the <code>java</code> folder and select <em>New</em> and then select <em>Package</em>.</p>
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>You may have to right click on the <code>java</code> directory and mark the directory as &ldquo;Sources root&rdquo; in order to create a new package.</p>
+</div>
+</div>
+</li>
+</ol>
+
+
+<img src="./images/create-newpackage.png" alt="Select New then Package to create a new package " />
+
+<ol start="5">
+<li>
+<p>Name the new package <code>org.launchcode</code>.
+
+
+<img src="./images/name-newpackage.png" alt="Name the new package 'org.launchcode`"  />
+</p>
+</li>
+<li>
+<p>Right click on the package and select <em>New</em> and then <em>Java Class</em>.</p>
+</li>
+<li>
+<p>Name this what you will name your class (for example, in the 1st exercise below, you might name the class <code>InputOutput</code> or <code>Hello</code>).
+
+
+<img src="./images/name-newclass.png" alt="Naming the new class InputOutput to match the theme of the exercise" width=60% />
+</p>
+</li>
+<li>
+<p>Repeat steps 7 and 8 to create new classes.</p>
+</li>
+</ol>
+
+<div class="box notices cstyle orange">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Warning</div>
+  <div class="box-content">
+
+<p>You will be asked whether you want to add this file to Git. Press the “Yes” or &ldquo;Add&rdquo; button.
+This is similar to <code>git init</code> and will allow you to stage your work later.</p>
+</div>
+</div>
+<ol start="9">
+<li>You created the new class! You should see it in the file tree.    You can proceed to write code within it. (Don’t forget to write the <code>main</code> method!)</li>
+</ol>
+
+
+<img src="./images/filetree-newclass.png" alt="File tree now contains the new class named InputOutput" />
+
+<h2 id="the-exercises">The Exercises</h2>
+<h3 id="a-inputoutput">A. Input/Output</h3>
+<p>Write a new “Hello, World” program to prompt the user for their name and greet them by name.</p>
+<ol>
+<li>
+<p>Follow steps 7 and 8 above to create a new <code>HelloWorld Class</code> inside of your <code>org.launchcode</code> folder.</p>
+</li>
+<li>
+<p>Add an <code>import</code> statement at the the top of the file to include <code>Scanner</code>:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;</span></span></code></pre></div></li>
+<li>
+<p>Declare a variable of type <code>Scanner</code> called <code>input</code>:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Scanner input <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);</span></span></code></pre></div></li>
+<li>
+<p>Add a question to ask the user:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello, what is your name:&#34;</span>);</span></span></code></pre></div></li>
+<li>
+<p>Create a variable to store the user’s response using the <code>Scanner</code>’s <code>.nextLine()</code> method</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String name <span style="color:#f92672">=</span> input.<span style="color:#a6e22e">nextLine</span>();</span></span></code></pre></div></li>
+<li>
+<p>Use concatenation to print the greeting:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#f92672">+</span> name);</span></span></code></pre></div></li>
+</ol>
+<p>Right-click/Control-click the arrow next to your class and run the program.</p>
+
+<div class="expand">
+    <input type="checkbox" id="R-expand-ccc9ec7ed4a6d08dd8396e95377fc056" aria-controls="R-expandcontent-ccc9ec7ed4a6d08dd8396e95377fc056" >
+    <label class="expand-label" for="R-expand-ccc9ec7ed4a6d08dd8396e95377fc056" >
+        <i class="fa-fw fas fa-chevron-down"></i>
+        <i class="fa-fw fas fa-chevron-right"></i>
+        Check your solution
+    </label>
+    <div id="R-expandcontent-ccc9ec7ed4a6d08dd8396e95377fc056" class="expand-content">
+
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> org.launchcode;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>      Scanner input <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello, what is your name:&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      String name <span style="color:#f92672">=</span> input.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#f92672">+</span> name);
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div>
+</div>
+<h3 id="b-numeric-types">B. Numeric Types</h3>
+<p>Write a program to calculate the area of a rectangle and print the answer to the console. You should prompt the user for the dimensions. (What data types should the dimensions be?)</p>
+<ol>
+<li>
+<p>Follow steps 7 and 8 above to create a new Class inside of your exercises.</p>
+</li>
+<li>
+<p>Add an <code>import</code> statement at the top of your file to use <code>Scanner</code>.</p>
+</li>
+<li>
+<p>Add a <code>Scanner</code> object to handle the user’s input.</p>
+</li>
+<li>
+<p>Add a print line to prompt the user for the length of the rectangle.</p>
+</li>
+<li>
+<p>Define a variable to handle the user’s response. Now is the time to know what type the dimension will be.</p>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>You’ll need to use a different Scanner method than what we used in Exercise 1 above.</p>
+</div>
+</div>
+</li>
+<li>
+<p>Repeat the previous two steps to ask for and store the rectangle’s width.</p>
+</li>
+<li>
+<p>Use the length and width values to calculate the rectangle’s area.</p>
+</li>
+<li>
+<p>Print a statement using concatenation to communicate to the user what the area of their rectangle is.</p>
+</li>
+<li>
+<p>Run the program to verify your code.</p>
+</li>
+</ol>
+<h3 id="c-numeric-types">C. Numeric Types</h3>
+<p>Write a program that asks a user for the number of miles they have driven and the amount of gas they’ve consumed (in gallons), and print their miles-per-gallon.</p>
+
+<div class="expand">
+    <input type="checkbox" id="R-expand-eb14c6957aae1cde2413096db622aafa" aria-controls="R-expandcontent-eb14c6957aae1cde2413096db622aafa" >
+    <label class="expand-label" for="R-expand-eb14c6957aae1cde2413096db622aafa" >
+        <i class="fa-fw fas fa-chevron-down"></i>
+        <i class="fa-fw fas fa-chevron-right"></i>
+        Check your solution
+    </label>
+    <div id="R-expandcontent-eb14c6957aae1cde2413096db622aafa" class="expand-content">
+
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>   <span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Miles</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>         Scanner input <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;How many miles have you driven?&#34;</span>);
+</span></span><span style="display:flex;"><span>         Double numMiles <span style="color:#f92672">=</span> input.<span style="color:#a6e22e">nextDouble</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;How much gas did you use? In gallons.&#34;</span>);
+</span></span><span style="display:flex;"><span>         Double numGallons <span style="color:#f92672">=</span> input.<span style="color:#a6e22e">nextDouble</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         Double mpg <span style="color:#f92672">=</span> numMiles <span style="color:#f92672">/</span> numGallons;
+</span></span><span style="display:flex;"><span>         System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;You are running on &#34;</span> <span style="color:#f92672">+</span> mpg <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; mpg.&#34;</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>   }</span></span></code></pre></div></div>
+</div>
+<h3 id="d-strings">D. Strings</h3>
+<p>The first sentence of <em>Alice’s Adventures in Wonderland</em> is below. Store this sentence in a string, and then prompt the user for a term to search for within this string. Print whether or not the search term was found. Make the search case-insensitive, so that searching for “alice”, for example, prints <code>true</code>.</p>
+
+<blockquote><p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, &lsquo;and what is the use of a book,&rsquo; thought Alice &lsquo;without pictures or conversation?&rsquo;</p>
+
+</blockquote>
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>You may want to write the string above on more than one line in your solution. Java 17 and IntelliJ give you a few options to do so. The easiest, thanks to your IDE, is to press Enter as you type the string. IntelliJ will close the string and concatenate it with the next line to create one longer string.</p>
+</div>
+</div>
+<h3 id="e-strings">E. Strings</h3>
+<p>Extend the previous exercise. Assume the user enters a word that is in the sentence. Print out its index within the string and its length. Next, remove the word from the string and print the sentence again to confirm your code. Remember that strings are <em>immutable</em>, so you will need to reassign the old sentence variable or create a new one to store the updated phrase.</p>
+
+<div class="expand">
+    <input type="checkbox" id="R-expand-5b19700845dc52ae12ec78cb680ac37c" aria-controls="R-expandcontent-5b19700845dc52ae12ec78cb680ac37c" >
+    <label class="expand-label" for="R-expand-5b19700845dc52ae12ec78cb680ac37c" >
+        <i class="fa-fw fas fa-chevron-down"></i>
+        <i class="fa-fw fas fa-chevron-right"></i>
+        Check your solution
+    </label>
+    <div id="R-expandcontent-5b19700845dc52ae12ec78cb680ac37c" class="expand-content">
+
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>   Integer index <span style="color:#f92672">=</span> firstSentence.<span style="color:#a6e22e">indexOf</span>(searchTerm);
+</span></span><span style="display:flex;"><span>   Integer length <span style="color:#f92672">=</span> searchTerm.<span style="color:#a6e22e">length</span>();
+</span></span><span style="display:flex;"><span>   System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Your search term first appears at index &#34;</span> <span style="color:#f92672">+</span> index <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;. Your term is &#34;</span> <span style="color:#f92672">+</span> length <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; characters long.&#34;</span>);
+</span></span><span style="display:flex;"><span>   String modifiedSentence <span style="color:#f92672">=</span> firstSentence.<span style="color:#a6e22e">replace</span>(searchTerm, <span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>   System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(modifiedSentence);</span></span></code></pre></div></div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a href="http://localhost:1313/"><img src="http://localhost:1313/images/LaunchCode_white.png" alt="LaunchCode" /></a>
+
+
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="http://localhost:1313/js/auto-complete.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.stemmer.support.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.multi.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.en.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/search.js?1725032835" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="http://localhost:1313/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/index.html">Chapter 1: Introduction and Setup</a><ul id="R-subsections-a304cdbbf4889d9e6404ee43fea352e5" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/setup/index.html">Setup for Java</a></li>
+          <li data-nav-id="/intro-and-setup/java-terminal/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-terminal/index.html">Java in the Terminal</a></li>
+          <li data-nav-id="/intro-and-setup/intellij/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/intellij/index.html">IntelliJ</a></li>
+          <li data-nav-id="/intro-and-setup/first-java-project/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/first-java-project/index.html">Your First Java Project</a></li>
+          <li data-nav-id="/intro-and-setup/java-web-dev-projects/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html">Java Web Dev Projects</a></li>
+          <li data-nav-id="/intro-and-setup/naming-conventions/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/naming-conventions/index.html">Java Naming Conventions</a></li></ul></li>
+          <li data-nav-id="/data-types/index.html" class="parent "><a class="padding" href="http://localhost:1313/data-types/index.html">Chapter 2: Data Types</a><ul id="R-subsections-4f4c361a0f66d2fbe943223a1e09f1c1" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/data-types/reading/index.html">Reading</a><ul id="R-subsections-8ef317bbe9656932b70c7c394963e07f" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/data-types/index.html">Data Types</a></li>
+          <li data-nav-id="/data-types/reading/some-java-practice/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/some-java-practice/index.html">Some Java Practice</a></li>
+          <li data-nav-id="/data-types/reading/more-data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/more-data-types/index.html">More Data Types</a></li></ul></li>
+          <li data-nav-id="/data-types/exercises/index.html" class="active"><a class="padding" href="http://localhost:1313/data-types/exercises/index.html">Exercises: Data Types</a></li>
+          <li data-nav-id="/data-types/studio/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/studio/index.html">Studio: Area of a Circle</a></li>
+          <li data-nav-id="/data-types/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/index.html">Chapter 3: Control Flow and Collections</a><ul id="R-subsections-64fc82378c2226d602885aa9de5624e0" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/index.html">Reading</a><ul id="R-subsections-c0447d0341a626759ce5a4f57a79b446" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/conditionals/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html">Conditionals</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/loops/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/loops/index.html">Loops</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/collections/index.html">Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/arraylist/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html">ArrayList</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/array/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/array/index.html">Array</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/hashmap/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html">HashMap</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/exercises/index.html">Exercises: Control Flow and Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/studio/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/studio/index.html">Studio: Counting Characters</a></li>
+          <li data-nav-id="/control-flow-and-collections/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes/index.html" class=""><a class="padding" href="http://localhost:1313/classes/index.html">Chapter 4: Classes</a><ul id="R-subsections-0b0cacde8a4e9970b227851692cc4392" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes/reading/index.html">Reading</a><ul id="R-subsections-5351516f5c13b92664ea994855398098" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/background/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/background/index.html">Classes for Java</a></li>
+          <li data-nav-id="/classes/reading/modifiers/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/modifiers/index.html">Modifiers in Java</a></li>
+          <li data-nav-id="/classes/reading/encapsulation/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/encapsulation/index.html">Encapsulation</a></li>
+          <li data-nav-id="/classes/reading/constructors/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/constructors/index.html">Constructors</a></li>
+          <li data-nav-id="/classes/reading/methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/methods/index.html">Methods</a></li>
+          <li data-nav-id="/classes/reading/srp/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/srp/index.html">Single Responsibility Principle</a></li></ul></li>
+          <li data-nav-id="/classes/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/classes/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes/studio/index.html">Studio: Restaurant Menu</a></li>
+          <li data-nav-id="/classes/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/index.html">Chapter 5: Classes Part 2</a><ul id="R-subsections-eb794f8ad5cdaf028c38962b8ee979c2" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes-part-2/reading/index.html">Reading</a><ul id="R-subsections-98891f511818aeb4fbacfaaad9477fa3" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/custom-fields/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/custom-fields/index.html">Customizing Fields</a></li>
+          <li data-nav-id="/classes-part-2/reading/instance-and-static-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html">Instance and Static Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/special-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/special-methods/index.html">Special Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/intellij-shortcut/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html">IntelliJ Generator Shortcut</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/exercises/index.html">Exercises: Objects and Classes Part 2</a></li>
+          <li data-nav-id="/classes-part-2/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/studio/index.html">Studio: Restaurant Menu Continued</a></li>
+          <li data-nav-id="/classes-part-2/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/index.html">Chapter 6: Unit Testing</a><ul id="R-subsections-3bc848ae4ad1b63821b742e20049724d" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/unit-testing/reading/index.html">Reading</a><ul id="R-subsections-33c30be509a93475c0cfd6456fd11949" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/testing-in-java/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/testing-in-java/index.html">Testing in Java</a></li>
+          <li data-nav-id="/unit-testing/reading/junit/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/junit/index.html">JUnit</a></li></ul></li>
+          <li data-nav-id="/unit-testing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/exercises/index.html">Exercises: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/studio/index.html">Studio: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/index.html">Chapter 7: Inheritance</a><ul id="R-subsections-f76bb91cb47b43b6c8406073622c8626" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/inheritance/reading/index.html">Reading</a><ul id="R-subsections-b913ce714c3c990c6ebc66a363cc4cc5" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/inheritance-oop/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-oop/index.html">Inheritance in OOP</a></li>
+          <li data-nav-id="/inheritance/reading/inheritance-java/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-java/index.html">Inheritance in Java</a></li>
+          <li data-nav-id="/inheritance/reading/cat-classes/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/cat-classes/index.html">A Tale of Two Cats</a></li>
+          <li data-nav-id="/inheritance/reading/abstract-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/abstract-inheritance/index.html">Inheriting from Abstraction</a></li>
+          <li data-nav-id="/inheritance/reading/casting/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/casting/index.html">Casting</a></li>
+          <li data-nav-id="/inheritance/reading/testing-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/testing-inheritance/index.html">Testing Inheritance</a></li>
+          <li data-nav-id="/inheritance/reading/class-diagrams/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/class-diagrams/index.html">Class Diagrams</a></li></ul></li>
+          <li data-nav-id="/inheritance/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/exercises/index.html">Exercises: Inheritance</a></li>
+          <li data-nav-id="/inheritance/studio/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/studio/index.html">Studio: Fun with Quizzes</a></li></ul></li>
+          <li data-nav-id="/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/index.html">Chapter 8: Interfaces and Polymorphism</a><ul id="R-subsections-a7b42a11dccec46c63e8912e4782805a" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/interfaces/reading/index.html">Reading</a><ul id="R-subsections-6335a240ba32af119c1069bc3a85b053" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/intro/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/intro/index.html">Introduction</a></li>
+          <li data-nav-id="/interfaces/reading/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/interfaces/index.html">Interfaces</a></li>
+          <li data-nav-id="/interfaces/reading/abstract-classes/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/abstract-classes/index.html">Interfaces and Abstract Classes</a></li>
+          <li data-nav-id="/interfaces/reading/common-interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/common-interfaces/index.html">Interfaces in the Wild</a></li>
+          <li data-nav-id="/interfaces/reading/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/unit-testing/index.html">Unit Testing and Interfaces</a></li></ul></li>
+          <li data-nav-id="/interfaces/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/exercises/index.html">Exercises: Interfaces and Polymorphism</a></li>
+          <li data-nav-id="/interfaces/studio/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/studio/index.html">Studio: Spinning the Discs</a></li>
+          <li data-nav-id="/interfaces/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/spring-intro/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/index.html">Chapter 9: Spring Into MVC</a><ul id="R-subsections-cf0c46215a72d339f4e4dd17c0c70eaa" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-intro/reading/index.html">Reading</a><ul id="R-subsections-bc70f54fc117dd2904466afb66645ef7" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/mvc/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/mvc/index.html">Design Patterns, MVC, and Spring, Oh My!</a></li>
+          <li data-nav-id="/spring-intro/reading/initialize/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/initialize/index.html">Initialize Spring</a></li></ul></li>
+          <li data-nav-id="/spring-intro/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/index.html">Chapter 10: Controllers and Routing</a><ul id="R-subsections-272eff95a8b0668f5d74ec0db7181773" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/index.html">Reading</a><ul id="R-subsections-9f0e1c083512826b353326ebfd24f974" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/simple-controllers/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html">Simple Controllers</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-parameters/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html">Controllers with Parameters</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-forms/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html">Controllers with Forms</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-classes/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html">Class Level Controller Annotations</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/controllers-and-routing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/studio/index.html">Studio: Skills Tracker</a></li></ul></li>
+          <li data-nav-id="/exceptions/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/index.html">Chapter 11: Rules to the Exceptions</a><ul id="R-subsections-8eec131254d454a0b50c147e55396a4d" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/exceptions/reading/index.html">Reading</a><ul id="R-subsections-1e6043265d0493fde6c17672620c53fa" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/temperature-walkthrough/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html">Check the Temperature with Exceptions</a></li></ul></li>
+          <li data-nav-id="/exceptions/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/exercises/index.html">Exercises: Exceptions</a></li>
+          <li data-nav-id="/exceptions/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/index.html">Chapter 12: Tools in Intellij</a><ul id="R-subsections-fef402651fa1cd96d424f39aeb4a97df" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/index.html">Reading</a><ul id="R-subsections-177859a1837a86915100ccf90606be6b" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/gradle/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/gradle/index.html">Gradle</a></li>
+          <li data-nav-id="/tools-in-intellij/reading/debugging/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/debugging/index.html">Debugging in IntelliJ</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/studio/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/studio/index.html">Studio: If It Ain&#39;t Broke, Add a Breakpoint!</a></li>
+          <li data-nav-id="/tools-in-intellij/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/index.html">Chapter 13: Thymeleaf Views</a><ul id="R-subsections-69fb4d24a47b3b6e4498eb9e2a83c96a" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/index.html">Reading</a><ul id="R-subsections-29877ec5a052d2a10717217b6707da5e" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/templates/index.html">Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/creating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">Creating Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/using-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/using-templates/index.html">Using Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/iterating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html">Iterating in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/conditionals-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html">Conditionals in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/forms-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html">Thymeleaf Forms</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/fragments-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html">Template Fragments</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/static-resources/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/static-resources/index.html">Static Resources</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/bootstrap/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html">Bootstrap</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/exercises/index.html">Exercises: Thymeleaf Views</a></li>
+          <li data-nav-id="/thymeleaf-views/studios/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/studios/index.html">Studio: Spa Day!</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/index.html">Chapter 14: Models and Model Binding</a><ul id="R-subsections-b425ab8120c8045a29686974292fab81" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/index.html">Reading</a><ul id="R-subsections-245ddf76889aac7272030a839961234a" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/models-in-mvc/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html">Models in MVC</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/create-model/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/create-model/index.html">Create a Model</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/models-and-data/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html">Models and Data</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/model-binding/index.html">Models Binding</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/exercises/index.html">Exercises: Edit Model Classes</a></li>
+          <li data-nav-id="/models-and-model-binding/studio/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/studio/index.html">Studio: Spa User Signup</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/index.html">Chapter 15: Model Validation</a><ul id="R-subsections-cc64ee7cea4ab3dca78461823b1296c0" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-model-validation/reading/index.html">Reading</a><ul id="R-subsections-cc1bbcfae946480bfeb052e688ea8592" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/server-side-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html">Server-Side Validation</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-annotations/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html">Validation Annotations</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-controller/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-controller/index.html">Validating Models in a Controller</a></li>
+          <li data-nav-id="/spring-model-validation/reading/thymeleaf-form-tools/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html">Thymeleaf Form Tools</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/exercises/index.html">Exercises: Model Validation</a></li>
+          <li data-nav-id="/spring-model-validation/studio/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/studio/index.html">Studio: Spa User Validation</a></li>
+          <li data-nav-id="/spring-model-validation/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/index.html">Chapter 16: Enums</a><ul id="R-subsections-831b138d2e9a513438884233b2f221f2" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/enums/reading/index.html">Reading</a><ul id="R-subsections-904b86ebee00756ee4747a4acbd69524" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/intro-to-enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/intro-to-enums/index.html">Introduction to Enums</a></li>
+          <li data-nav-id="/enums/reading/enums-model-classes/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/enums-model-classes/index.html">Enums in Model Classes</a></li></ul></li>
+          <li data-nav-id="/enums/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/enums/exercises/index.html">Exercises: Enum Practice</a></li>
+          <li data-nav-id="/enums/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/enums/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/index.html">Chapter 17: Introduction to Object-Relational Mapping</a><ul id="R-subsections-aa4987828deb901fc4f8215487106198" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/index.html">Reading</a><ul id="R-subsections-2f85f252dde5e5dff037908f20779885" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/orm/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/orm/index.html">Object-Relational Mapping</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/accessing-data/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html">Accessing Data</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/repositories/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/repositories/index.html">Repositories</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/exercises/index.html">Exercises: OMG the ORM!</a></li>
+          <li data-nav-id="/intro-orm-mapping/studio/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/studio/index.html">Studio: Creating an AbstractEntity</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/index.html">Chapter 18: Relationships in Object-Relational Mapping</a><ul id="R-subsections-14a4ceddf2743bbc7cc53e73d28e238c" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/orm-relationships/reading/index.html">Reading</a><ul id="R-subsections-fbbffc798bf994fdf98727229ef8c7bd" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/types-of-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html">Types of Relationships</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">Creating a Many-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-many/index.html">Creating a One-to-Many Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-one/index.html">Creating a One-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-many/index.html">Creating a Many-to-Many Relationship</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/exercises/index.html">Exercises: The Early Bird Gets the ORM!</a></li>
+          <li data-nav-id="/orm-relationships/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/index.html">Chapter 19: Authentication</a><ul id="R-subsections-1345916ddf39bfe2b504bc524b69e938" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/authentication/reading/index.html">Reading</a><ul id="R-subsections-90b7ce6ead6e2e6c918d107a10c0c053" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/intro-to-authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/intro-to-authentication/index.html">Introduction to Authentication</a></li>
+          <li data-nav-id="/authentication/reading/hashing-passwords/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/hashing-passwords/index.html">Hashing Passwords</a></li>
+          <li data-nav-id="/authentication/reading/creating-user-model/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/creating-user-model/index.html">Creating a User Model</a></li>
+          <li data-nav-id="/authentication/reading/login-and-registration/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/login-and-registration/index.html">Login and Registration Forms</a></li>
+          <li data-nav-id="/authentication/reading/filtering-requests/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/filtering-requests/index.html">Filtering Requests</a></li></ul></li>
+          <li data-nav-id="/authentication/studio/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/studio/index.html">Studio: TechJobs Authentication</a></li>
+          <li data-nav-id="/authentication/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/index.html">Chapter 20: Introduction to Web APIs &amp; REST</a><ul id="R-subsections-42481ec37d6e5cf75cb79d369c79632a" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/web-api-rest/reading/index.html">Reading</a><ul id="R-subsections-c70e9a362888ae84c94682e8f5c6a772" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/web-api/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/web-api/index.html">Web APIs</a></li>
+          <li data-nav-id="/web-api-rest/reading/what-is-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/what-is-rest/index.html">What is REST</a></li>
+          <li data-nav-id="/web-api-rest/reading/rest-practical-fundamentals/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/rest-practical-fundamentals/index.html">REST: Practical Fundamentals</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/exercises/index.html">Exercises: Web APIs and REST</a></li>
+          <li data-nav-id="/web-api-rest/studio/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/studio/index.html">Studio: Consuming the Coding Events API With Postman</a></li>
+          <li data-nav-id="/web-api-rest/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/index.html">Assignments</a><ul id="R-subsections-ac1a358b456bc5017269265633799872" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/hello-world/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/hello-world/index.html">Assignment #0: Hello, World!</a></li>
+          <li data-nav-id="/assignments/techjobs-console/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-console/index.html">Assignment #1: Tech Jobs Console</a><ul id="R-subsections-4b66cf2d2fe44b7bc1aa5c015f2d63d1" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-console/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-one/index.html">Task 1: Implement printJobs()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-two/index.html">Task 2: Create Method findByValue()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-three/index.html">Task 3: Make Search Methods Case-Insensitive</a></li>
+          <li data-nav-id="/assignments/techjobs-console/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-oo/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/index.html">Assignment #2: Tech Jobs OO</a><ul id="R-subsections-5c66abe3d5aa714badef7af5e2966996" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-oo/task1/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task1/index.html">Task 1: Explore the Employer Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task2/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task2/index.html">Task 2: Create the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task3/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task3/index.html">Task 3: Complete the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task4/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task4/index.html">Task 4: Use Unit Testing to Verify Parts of the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task5/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task5/index.html">Task 5: Use TDD to Build The toString Method</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task6/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task6/index.html">Task 6: Refactor to DRY the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task7/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task7/index.html">Task 7: Final Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-mvc/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/index.html">Assignment #3: Tech Jobs (MVC Edition)</a><ul id="R-subsections-e5504cec6daa245b0ddb75d60003ef1b" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-mvc/getting-started/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">Task 1: Getting to Know the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/list-views/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.html">Task 2: Complete List Views</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/search-controller/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html">Task 3: Complete SearchController</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/display-search-results/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html">Task 4: Display Search Results</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/submission/index.html">Submitting Your Work and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-persistent/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/index.html">Assignment #4: Tech Jobs Persistent</a><ul id="R-subsections-2de9dacd33f0514d2c2813740229e20c" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-persistent/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-one/index.html">Task 1: Connect a Database to a Spring App</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-two/index.html">Task 2: Persisting Employers and Skills</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-three/index.html">Task 3: Setting Up a One-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-four/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-four/index.html">Task 4: Setting Up a Many-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/appendices/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/index.html">Appendices</a><ul id="R-subsections-b483d80bdb9b2ad6e87ce036148cc8e4" class="morespace collapsible-menu">
+          <li data-nav-id="/appendices/install-postman/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/install-postman/index.html">Installing Postman</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="http://localhost:1313/data-types/exercises/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-lc-light" value="lc-light" selected>Lc Light</option>
+                      <option id="R-select-variant-lc-dark-blue" value="lc-dark-blue">Lc Dark Blue</option>
+                      <option id="R-select-variant-lc-dark-blue-two" value="lc-dark-blue-two">Lc Dark Blue Two</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="http://localhost:1313/js/clipboard.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/perfect-scrollbar.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/theme.js?1725032835" defer></script>
+  </body>
+</html>

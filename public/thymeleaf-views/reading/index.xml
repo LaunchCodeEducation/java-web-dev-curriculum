@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/index.html</link>
+    <description> Templates Creating Templates Using Templates Iterating in a Template Conditionals in a Template Thymeleaf Forms Template Fragments Static Resources Bootstrap </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2023 20:11:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Templates</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/templates/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/templates/index.html</guid>
+      <description>Take a look at the homepage for WebElements . The content includes text, images, a navigation bar, a search box, linked menu options at the bottom of the page, and 118 carefully colored boxes with links—one for each element on the periodic table. All of this content is very deliberately arranged and styled.&#xA;Imagine your boss tasks you with creating this website. Setting up the HTML tags for the navigation bar would be straightforward, but what about the element boxes?</description>
+    </item>
+    <item>
+      <title>Creating Templates</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html</guid>
+      <description>Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.&#xA;Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.&#xA;More information can be found on the introduction page of the Thymeleaf website.</description>
+    </item>
+    <item>
+      <title>Using Templates</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/using-templates/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/using-templates/index.html</guid>
+      <description>In the next video , you will extend your hello-spring project and practice using Thymeleaf templates as you code along with the clip.&#xA;Before you get there, however, we need to review a few core skills and best-practices.&#xA;Passing Data to a Template The controller class contains methods that send data to different templates. These methods have a structure similar to:&#xA;public String methodName(Model model) { // method code here model.</description>
+    </item>
+    <item>
+      <title>Iterating in a Template</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html</guid>
+      <description>Let’s revisit part of the non-efficient HTML from the introduction, where we hard-coded coffee options in a list.&#xA;&lt;ol&gt; &lt;li&gt;French Roast&lt;/li&gt; &lt;li&gt;Espresso&lt;/li&gt; &lt;li&gt;Kopi Luwak&lt;/li&gt; &lt;li&gt;Instant&lt;/li&gt; &lt;/ol&gt;If we want to add, remove, or edit the list items, we need to go in and change the individual tags, which is a poor use of our time. Fortunately, there is a way to streamline the process.&#xA;In Java, we use for/each loops to iterate through the items in a data collection.</description>
+    </item>
+    <item>
+      <title>Conditionals in a Template</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html</guid>
+      <description>In addition to iteration, Thymeleaf can also add or remove content on a webpage based on certain conditions. Going back to the coffee example, we could generate the ordered list ONLY IF coffeeOptions contains data. If the ArrayList is empty, then there is no need to include the &lt;ol&gt; element. Instead, the template could include a &lt;p&gt; element with text stating that there are no options to select.&#xA;Just like the for/each syntax differs between Java and Thymeleaf, we need to examine how to include conditionals in our templates.</description>
+    </item>
+    <item>
+      <title>Thymeleaf Forms</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html</guid>
+      <description>Templates allow you to build generic forms. This lets you reuse the structure by rendering the same template with different labels and data. Thus, a single form can serve different purposes, saving you extra effort.&#xA;Whenever possible, reuse existing templates!&#xA;Start a New Project You will build a new project so you can practice with templates and forms. If you have not done so, commit and push any unsaved work from your hello-spring project.</description>
+    </item>
+    <item>
+      <title>Template Fragments</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html</guid>
+      <description>Just like methods in Java provide us with the ability to reuse useful code, Thymeleaf allows us to do something similar with HTML.&#xA;Fragments are blocks of HTML elements that we want to use across multiple templates. The fragments are stored in a separate file, and they can be accessed by using the keywords fragment and replace.&#xA;A summary of these two keywords is given below, followed by another video walkthrough to give you some more live-coding practice.</description>
+    </item>
+    <item>
+      <title>Static Resources</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/static-resources/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/static-resources/index.html</guid>
+      <description>Up to now, we used templates to display controller data as text in the view. If we need to display an image or video, or if we want to create a link to a different file, then we need to move beyond a text output.&#xA;With Thymeleaf, we can set values for the HTML src and href attributes. Instead of hard-coding a file path or external URL inside a tag, th:src and th:href take advantage of a simpler syntax.</description>
+    </item>
+    <item>
+      <title>Bootstrap</title>
+      <link>http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html</guid>
+      <description>Introduction Bootstrap is a commonly-used style library. It allows users to quickly apply its CSS style rules with class selectors. Style updates can add features or improve the usability of an application. For example, Bootstrap, and other styling libraries for that matter, use a standardized color scheme for items like clickable buttons. As the user of the helper library, you can apply the btn btn-primary classes to a button on your page and Bootstrap works behind the CSS scenes to render a blue button with white text in a legible font.</description>
+    </item>
+  </channel>
+</rss>

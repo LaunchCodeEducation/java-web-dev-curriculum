@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create a Model :: Java Web Development</title>
+    <link>http://localhost:1313/models-and-model-binding/reading/create-model/index.html</link>
+    <description>In the next several pages, we will be making updates to codingevents to demonstrate model creation, how models relate to data, and the practice of model binding. The first of these steps is to move data handling out of our controller classes and into a model class. As we discussed on the previous page, the controller class is not responsible for holding data.&#xA;In codingevents, we’ll remove the ArrayList data from EventController and create a proper Java class to deal with event items.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/models-and-model-binding/reading/create-model/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/unit-testing/reading/index.html</link>
+    <description> Testing in Java JUnit </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/unit-testing/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing in Java</title>
+      <link>http://localhost:1313/unit-testing/reading/testing-in-java/index.html</link>
+      <pubDate>Wed, 28 Jun 2023 13:58:37 -0500</pubDate>
+      <guid>http://localhost:1313/unit-testing/reading/testing-in-java/index.html</guid>
+      <description>You already recognize the importance of testing your code. Automated testing in Java, like any language, ensures that your code works as expected, every time it runs. Tests also function as documentation, giving an observer instructions on how to properly execute your classes and methods.&#xA;This course covers unit testing in Java with a test runner called JUnit. Unit testing breaks down the codebase into its smallest building blocks, which are individual statements and methods.</description>
+    </item>
+    <item>
+      <title>JUnit</title>
+      <link>http://localhost:1313/unit-testing/reading/junit/index.html</link>
+      <pubDate>Wed, 28 Jun 2023 13:58:37 -0500</pubDate>
+      <guid>http://localhost:1313/unit-testing/reading/junit/index.html</guid>
+      <description>JUnit is a library that provides the classes, methods, and assertions for writing and executing unit tests in Java. In this course, we use JUnit 5.&#xA;Java Annotations On the topic of unit testing, the annotation @Test is used to indicate that a public void method should be treated as a test case.&#xA;In Java, annotations are formalized bits of information about a program. They operate somewhere between actual code syntax and a comment on the code.</description>
+    </item>
+  </channel>
+</rss>

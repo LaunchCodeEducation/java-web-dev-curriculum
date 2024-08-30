@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction to Enums :: Java Web Development</title>
+    <link>http://localhost:1313/enums/reading/intro-to-enums/index.html</link>
+    <description>Many statically-typed programming languages provide a feature called enumeration types, or enum types for short. Enum types are special classes that should have only one of a set of fixed values, such as days of the week.&#xA;Imagine that we wanted to add a field to Event to specify which day of the week an event takes place. You might start by creating a new field:&#xA;@NotBlank private String dayOfWeek;As defined here, a user could submit any of the following values representing Wednesday:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/enums/reading/intro-to-enums/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

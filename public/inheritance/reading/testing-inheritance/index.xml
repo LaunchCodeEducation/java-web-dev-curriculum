@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing Inheritance :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/reading/testing-inheritance/index.html</link>
+    <description>Not sure you get the whole inheritance idea? Still not sure which fields and methods get inherited and which are overridden? Looking to test your understanding? (wink)&#xA;Knowing what we know now about unit-testing and inheritance , we can test that our subclasses extend their base classes.&#xA;We can add a test folder to our inheritance package and write some code to ensure that HouseCat inherits what we expect it to.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/reading/testing-inheritance/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

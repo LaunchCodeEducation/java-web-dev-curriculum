@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Login and Registration Forms :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/reading/login-and-registration/index.html</link>
+    <description>With a User class in place, we can now create controllers and views for creating a user and verifying their credentials.&#xA;Note The code for this section begins with the user-model branch and ends with the login-reg-forms branch of the CodingEventsJava repository.&#xA;Creating AuthenticationController In the controllers package, create a new class named AuthenticationController. Since this controller will deal with User objects, it needs a UserRepository instance.&#xA;1 2 3 4 5 6 7 @Controller public class AuthenticationController { @Autowired UserRepository userRepository; } Session-Handling Utilities Before creating handler methods for rendering and processing our login and registration forms, we need some utility methods for working with sessions.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/reading/login-and-registration/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

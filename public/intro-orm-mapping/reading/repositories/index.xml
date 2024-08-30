@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Repositories :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/reading/repositories/index.html</link>
+    <description>Now that we have a general idea of how to set up our entity classes and repositories, let’s take a deeper dive into how repositories are used to perform CRUD operations on a database.&#xA;CRUD Operations Previously, we learned that we can create a repository to fetch rows of a table in a database. To do so, we need to create a corresponding controller.&#xA;When creating our controller, we add a variable of the repository type that has the annotation @Autowired.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/reading/repositories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

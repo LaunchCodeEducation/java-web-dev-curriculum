@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/exercises/index.html</link>
+    <description>While reading the chapter, you created a basic Hello, World application using Spring Boot called hello-spring. Open that project up in IntelliJ, and get ready to add some features!&#xA;Note Before you start these exercises, take a look at the hello-spring class-annotations branch to make sure your own application matches ours.&#xA;Create and checkout a branch for your exercises solution. Name it something useful, such as controller-exercises.&#xA;Modify your HelloController class to display a form on a GET request that asks the user for both their name and the language they would like to be greeted in.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

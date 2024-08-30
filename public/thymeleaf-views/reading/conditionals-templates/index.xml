@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conditionals in a Template :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html</link>
+    <description>In addition to iteration, Thymeleaf can also add or remove content on a webpage based on certain conditions. Going back to the coffee example, we could generate the ordered list ONLY IF coffeeOptions contains data. If the ArrayList is empty, then there is no need to include the &lt;ol&gt; element. Instead, the template could include a &lt;p&gt; element with text stating that there are no options to select.&#xA;Just like the for/each syntax differs between Java and Thymeleaf, we need to examine how to include conditionals in our templates.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

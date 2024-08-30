@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: OMG the ORM! :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/exercises/index.html</link>
+    <description>For the exercises, we are going to continue building on our codingevents application. The exercise instructions assume that your code resembles the persistent-controller branch of CodingEventsJava. Create a new branch off of your own persistent-controller code to get started on the exercises.&#xA;Note You will be making one entity class, one repository, and one controller. If you are not sure what these classes and interface should look like, refer back to the sections on persistent models and controllers and repositories .</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

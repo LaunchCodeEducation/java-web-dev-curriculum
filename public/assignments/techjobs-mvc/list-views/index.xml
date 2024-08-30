@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Task 2: Complete List Views :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-mvc/list-views/index.html</link>
+    <description>Complete the List Views Open the list-jobs.html template. Currently, the page just establishes the navigation bar and page title. You need to add code that will present relevant job information.&#xA;Display List of Jobs This page needs to show full job listings—ID, employer, location, etc.&#xA;In list-jobs.html, create a loop to display each job passed in from the controller. The job data should be presented in tables, with each job in its own table.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

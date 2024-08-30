@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Relearn 6.1.1+tip">
+    <meta name="description" content="The first relationship we implement will be between the Event and EventCategory classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.
+Before diving in, let’s reduce repetition in our persistent classes, that is, let’s DRY out our code.
+Creating an AbstractEntity - Video Note The starter code for this video is found at the event-category branch of the CodingEventsJava repo.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creating a Many-to-One Relationship :: Java Web Development">
+    <meta name="twitter:description" content="The first relationship we implement will be between the Event and EventCategory classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.
+Before diving in, let’s reduce repetition in our persistent classes, that is, let’s DRY out our code.
+Creating an AbstractEntity - Video Note The starter code for this video is found at the event-category branch of the CodingEventsJava repo.">
+    <meta property="og:url" content="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">
+    <meta property="og:site_name" content="Java Web Development">
+    <meta property="og:title" content="Creating a Many-to-One Relationship :: Java Web Development">
+    <meta property="og:description" content="The first relationship we implement will be between the Event and EventCategory classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.
+Before diving in, let’s reduce repetition in our persistent classes, that is, let’s DRY out our code.
+Creating an AbstractEntity - Video Note The starter code for this video is found at the event-category branch of the CodingEventsJava repo.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Chapter 18: Relationships in Object-Relational Mapping">
+    <meta property="article:published_time" content="2023-08-21T14:38:32-05:00">
+    <meta property="article:modified_time" content="2023-08-21T14:38:32-05:00">
+    <meta itemprop="name" content="Creating a Many-to-One Relationship :: Java Web Development">
+    <meta itemprop="description" content="The first relationship we implement will be between the Event and EventCategory classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.
+Before diving in, let’s reduce repetition in our persistent classes, that is, let’s DRY out our code.
+Creating an AbstractEntity - Video Note The starter code for this video is found at the event-category branch of the CodingEventsJava repo.">
+    <meta itemprop="datePublished" content="2023-08-21T14:38:32-05:00">
+    <meta itemprop="dateModified" content="2023-08-21T14:38:32-05:00">
+    <meta itemprop="wordCount" content="1252">
+    <title>Creating a Many-to-One Relationship :: Java Web Development</title>
+    <link href="http://localhost:1313/images/favicon.png?1725032835" rel="icon" type="image/png">
+    <link href="http://localhost:1313/images/favicon.ico?1725032835" rel="icon" type="image/x-icon" sizes="any">
+    <link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/nucleus.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/perfect-scrollbar.min.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/theme.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/theme-lc-light.css?1725032835" rel="stylesheet" id="R-variant-style">
+    <link href="http://localhost:1313/css/chroma-relearn-light.css?1725032835" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="http://localhost:1313/css/variant.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/print.css?1725032835" rel="stylesheet" media="print">
+    <script src="http://localhost:1313/js/variant.js?1725032835"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="http://localhost:1313/index.search.js?1725032835";
+      // variant stuff
+      window.variants && variants.init( [ 'lc-light', 'lc-dark-blue', 'lc-dark-blue-two' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#creating-an-abstractentity---video">Creating an <code>AbstractEntity</code> - Video</a></li>
+    <li><a href="#creating-an-abstractentity---text">Creating an <code>AbstractEntity</code> - Text</a></li>
+    <li><a href="#setting-up-the-relationship---video">Setting Up the Relationship - Video</a></li>
+    <li><a href="#setting-up-the-relationship---text">Setting Up the Relationship - Text</a>
+      <ul>
+        <li><a href="#replacing-eventtype-with-eventcategory">Replacing <code>EventType</code> With <code>EventCategory</code></a></li>
+        <li><a href="#testing-and-database-updates">Testing and Database Updates</a></li>
+      </ul>
+    </li>
+    <li><a href="#check-your-understanding">Check Your Understanding</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/index.html"><span itemprop="name">Java Web Development</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/orm-relationships/index.html"><span itemprop="name">Chapter 18: Relationships in Object-Relational Mapping</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/orm-relationships/reading/index.html"><span itemprop="name">Reading</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Creating a Many-to-One Relationship</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html" title="Types of Relationships (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/orm-relationships/reading/one-to-many/index.html" title="Creating a One-to-Many Relationship (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="creating-a-many-to-one-relationship">Creating a Many-to-One Relationship</h1>
+
+<p>The first relationship we implement will be between the <code>Event</code> and <code>EventCategory</code> classes. We will allow multiple events to be in the same category, but each event will only have one category. Thus, this will be a many-to-one relationship.</p>
+<p>Before diving in, let&rsquo;s reduce repetition in our persistent classes, that is, let&rsquo;s DRY out our code.</p>
+<h2 id="creating-an-abstractentity---video">Creating an <code>AbstractEntity</code> - Video</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/GKOCCjn86yk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>The starter code for this video is found at the <a href="https://github.com/LaunchCodeEducation/CodingEventsJava/tree/event-category" rel="external" target="_blank">event-category branch</a>
+ of the <code>CodingEventsJava</code> repo.
+The final code presented in this video is found on the <a href="https://github.com/LaunchCodeEducation/CodingEventsJava/tree/abstract-entity" rel="external" target="_blank">abstract-entity branch</a>
+. As always, code along to the
+videos on your own <code>coding-events</code> project.</p>
+</div>
+</div>
+<h2 id="creating-an-abstractentity---text">Creating an <code>AbstractEntity</code> - Text</h2>
+<!-- raw HTML omitted -->
+<p>The steps needed to implement <code>AbstractEntity</code> are outlined in studio in the previous chapter.</p>
+<h2 id="setting-up-the-relationship---video">Setting Up the Relationship - Video</h2>
+<p>We are now ready to create a relationship between <code>Event</code> and <code>EventCategory</code>.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/aFr_E2T7zZ8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>The starter code for this video is found at the <a href="https://github.com/LaunchCodeEducation/CodingEventsJava/tree/abstract-entity" rel="external" target="_blank">abstract-entity branch</a>
+  of the <code>CodingEventsJava</code> repo.
+The final code presented in this video is found on the <a href="https://github.com/LaunchCodeEducation/CodingEventsJava/tree/many-to-one" rel="external" target="_blank">many-to-one branch</a>
+. As always, code along to the
+videos on your own <code>codingevents</code> project.</p>
+</div>
+</div>
+<h2 id="setting-up-the-relationship---text">Setting Up the Relationship - Text</h2>
+<p>Our many-to-one relationship is established in the <code>Event</code> class; each event will have one category, and there may be many events in a given category.</p>
+<p>Currently, similar functionality is enabled via the <code>EventType</code> field of <code>Event</code>. However, <code>EventType</code> is an enum, which means that new values can not be added without changing the code and re-compiling. Using the persistent <code>EventCategory</code> class to organize events will be a much more flexible and user-friendly approach.</p>
+<h3 id="replacing-eventtype-with-eventcategory">Replacing <code>EventType</code> With <code>EventCategory</code></h3>
+<p>In the <code>Event</code> class, replace the <code>type</code> field with a new private field of type <code>EventCategory</code>:</p>
+<div class="highlight wrap-code" linenostart=%!q(float64=25)><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> EventCategory eventCategory;</span></span></code></pre></div><p>This will introduce compiler errors wherever <code>type</code> is referenced. We will fix these shortly.</p>
+<p>First, however, update <code>Event</code> so that:</p>
+<ol>
+<li>Its main constructor (i.e. NOT the no-arg constructor) takes a parameter of type <code>EventCategory</code> and uses it to initialize <code>eventCategory</code>.</li>
+<li>It has a getter/setter pair for <code>eventCategory</code>.</li>
+<li>The <code>eventCategory</code> field has the <code>@NotNull</code> validation annotation, along with an appropriate message.</li>
+</ol>
+<p>This establishes a relationship between the two classes, but that relationship is not yet <em>persistent</em>. To configure Hibernate to keep track of this relationship in the database, we add the <code>@ManyToOne</code> annotation to <code>eventCategory</code>.</p>
+<div class="highlight wrap-code" linenostart=%!q(float64=27)><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@ManyToOne</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@NotNull</span>(message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Category is required&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> EventCategory eventCategory;</span></span></code></pre></div><p>This annotation informs Hibernate that there can be many events for each category, but only one category per event.</p>
+<p>Before we can start up the app and test our changes, we need to remove the code that references the deleted <code>type</code> field. A quick way to find these references is to find <code>EventType</code> in the <em>Project</em> pane of IntelliJ, right-click, and select <em>Find Usages</em>. This will open a pane listing each location where <code>EventType</code> occurs in our project, whether that is an object of that type or a direct reference to the class itself.</p>
+<p><a href="#R-image-c109a1e7302df5515258568dc16e6e85" class="lightbox-link"><img alt="The search results pane after running Find Usages on EventType" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/find-usages.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c109a1e7302df5515258568dc16e6e85"><img alt="The search results pane after running Find Usages on EventType" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/find-usages.png"></a></p>
+<p>The first occurrence is in <code>EventController.displayCreateEventForm</code>:</p>
+<div class="highlight wrap-code" linenostart=%!q(float64=35)><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>model.<span style="color:#a6e22e">addAttribute</span>(<span style="color:#e6db74">&#34;types&#34;</span>, EventType.<span style="color:#a6e22e">values</span>());</span></span></code></pre></div><p>This line passes a collection of all of the values of <code>EventType</code> into the view, to be rendered in the form used to create new events.</p>
+<p>Since we are now using <code>EventCategory</code> to group events, our code should instead be passing in all of the category objects in our app. To fetch category objects, we need an instance of <code>EventCategoryRepository</code> in our controller. Add an <code>@Autowired</code> instance to the top of the controller:</p>
+<div class="highlight wrap-code" linenostart=%!q(float64=24)><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> EventCategoryRepository eventCategoryRepository;</span></span></code></pre></div><p>Now, use the repository to fetch all saved categories:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>model.<span style="color:#a6e22e">addAttribute</span>(<span style="color:#e6db74">&#34;categories&#34;</span>, eventCategoryRepository.<span style="color:#a6e22e">findAll</span>());</span></span></code></pre></div><p>This line replaces the line references <code>EventType.values()</code>. Notice that we have relabeled this attribute <code>&quot;categories&quot;</code>
+to be more consistent. This also requires updating the <code>events/create.html</code> template:</p>
+<div class="highlight wrap-code" linenos=%!q(bool=true) linenostart=%!q(float64=27)><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-group&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">label</span>&gt;Category
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">th:field</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${event.eventCategory}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">th:each</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;eventCategory : ${categories}&#34;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#a6e22e">th:value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${eventCategory.id}&#34;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${eventCategory.name}&#34;</span>
+</span></span><span style="display:flex;"><span>      &gt;&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">select</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;error&#34;</span> <span style="color:#a6e22e">th:errors</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${event.eventCategory}&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This new template code includes several changes:</p>
+<ol>
+<li>The <code>select</code> is now bound to the field <code>eventCategory</code>.</li>
+<li>The loop references <code>categories</code> and has an updated iterator variable name, <code>eventCategory</code>.</li>
+<li>The value of the <code>select</code> is now <code>eventCategory.id</code>. This allows model binding to occur upon form submission. Spring Boot will determine the category object to assign to the new event object by referencing the <code>id</code>.</li>
+<li>The text for each <code>option</code> is now <code>eventCategory.name</code>.</li>
+<li>The error message display now references the new field, <code>event.eventCategory</code>.</li>
+</ol>
+<p>The remaining usages of <code>EventType</code> refer to:</p>
+<ol>
+<li>An <code>Event</code> constructor parameter.</li>
+<li>The getter/setter pair for <code>type</code> in <code>Event</code>.</li>
+<li>An import statement in <code>EventController</code>.</li>
+<li>The <code>EventType</code> class itself.</li>
+</ol>
+<p>Removing this unneeded code resolves all remaining compiler errors.</p>
+<p>The <code>events/index.html</code> template needs to be updated as well, since it still contains a reference to the <code>type</code> field of <code>Event</code>:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${event.type}&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;</span></span></code></pre></div><p>This usage wasn&rsquo;t found by IntelliJ because templates do not receive compile-time type checking like classes do. The updated version looks like this:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${event.eventCategory.name}&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;</span></span></code></pre></div><h3 id="testing-and-database-updates">Testing and Database Updates</h3>
+<p>Before starting up the application, let&rsquo;s look at our <code>event</code> table:</p>
+<p><a href="#R-image-3778878f07ceaac755a4db5801a3bafd" class="lightbox-link"><img alt="The event table before starting up the application" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-before-update.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3778878f07ceaac755a4db5801a3bafd"><img alt="The event table before starting up the application" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-before-update.png"></a></p>
+<p>Notice that the <code>type</code> column remains, even though we have deleted the <code>type</code> field from the <code>Event</code> class. The next time we start up the application, Hibernate will attempt to update the schema to match the structure of our updated model class.</p>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>Notice that existing events will not have a category, which violates our new <code>@NotNull</code> validation rule. The easiest way to handle this is to delete all rows in <code>event</code>.</p>
+<p>To delete all events, truncate the <code>event</code> table in MySQL Workbench. (To <strong>truncate</strong> a SQL table is simply to delete all its rows.) To do this, select the table in the <em>Schemas</em> pane, right-click, and select <em>Truncate Table&hellip;</em></p>
+</div>
+</div>
+<p>Start up the application and refresh the view in MySQL Workbench.</p>
+<p><a href="#R-image-0133fbf524aaf602594970ccfce334a5" class="lightbox-link"><img alt="The event table after starting up the application" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-after-update.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0133fbf524aaf602594970ccfce334a5"><img alt="The event table after starting up the application" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-after-update.png"></a></p>
+<p>Notice that there is a new column, <code>event_category_id</code>. This new column has type <code>int</code> and is a foreign key column to the <code>event_category</code> table. References to objects in Java are translated into foreign-key references by Hibernate.</p>
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>You may find it odd that the <code>type</code> column is <em>still</em> present, even after restarting. Hibernate will not drop columns from a table even if that field is removed from the corresponding class.</p>
+<p>Hibernate will generally avoid deleting your data, since you may want to keep it around (even if just in the form of a backup). You can simply drop this column yourself.</p>
+</div>
+</div>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>If your table was not updating upon restarting, make sure you have <code>spring.jpa.hibernate.ddl-auto</code> set to <code>update</code> in <code>application.properties</code>.</p>
+</div>
+</div>
+<p>If we create some new events, we can see precisely how <code>event</code> rows are related to <code>event_category</code> rows.</p>
+<p><a href="#R-image-f331de66d78873f2110142bde43c7864" class="lightbox-link"><img alt="The event table with two rows" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-with-data.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f331de66d78873f2110142bde43c7864"><img alt="The event table with two rows" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-table-with-data.png"></a></p>
+<p><a href="#R-image-6667860d3edec376cdea1002f3e40b1a" class="lightbox-link"><img alt="The event_category table with two rows" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-category-table-with-data.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6667860d3edec376cdea1002f3e40b1a"><img alt="The event_category table with two rows" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/orm-relationships/reading/many-to-one/pictures/event-category-table-with-data.png"></a></p>
+<p>Notice that our events have <code>event_category_id</code> values of <code>12</code> and <code>13</code> (these values may differ slightly in your application). These are foreign keys into the <code>event_category</code> table. For example, in the tables above, the <code>event</code> row with <code>id</code> equal to <code>14</code> is related to the <code>event_category</code> row with <code>id</code> equal to <code>12</code>. This database relationship corresponds to the relationship between objects that was created by Spring Boot when we submitted the form.</p>
+<p>With this many-to-one relationship in place, we next look at how to establish a persistent one-to-many relationship.</p>
+<h2 id="check-your-understanding">Check Your Understanding</h2>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Question</div>
+  <div class="box-content">
+
+<p>What is the annotation that allows <code>@AbstractEntity</code> to handle logic related to IDs/primary keys of subclasses,
+yet not be mapped to a database table.</p>
+</div>
+</div>
+<!-- raw HTML omitted -->
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Question</div>
+  <div class="box-content">
+
+<p>You are working on a Spring application tracking elected officials. Your model class, <code>Senator</code> has a many-to-one relationship
+with another model class, <code>State</code>. To properly configure this relationship in the Hibernate context, what must be present?</p>
+<ol>
+<li>In <code>Senator</code>, a <code>state</code> field, annotated with <code>@OneToMany</code></li>
+<li>In <code>Senator</code>, a <code>state</code> field, annotated with <code>@ManyToOne</code></li>
+<li>In <code>State</code>, a <code>senator</code> field, annotated with <code>@OneToMany</code></li>
+<li>In <code>State</code>, a <code>senator</code> field, annotated with <code>@ManyToOne</code></li>
+</ol>
+</div>
+</div>
+<!-- raw HTML omitted -->
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a href="http://localhost:1313/"><img src="http://localhost:1313/images/LaunchCode_white.png" alt="LaunchCode" /></a>
+
+
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="http://localhost:1313/js/auto-complete.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.stemmer.support.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.multi.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.en.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/search.js?1725032835" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="http://localhost:1313/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/index.html">Chapter 1: Introduction and Setup</a><ul id="R-subsections-a304cdbbf4889d9e6404ee43fea352e5" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/setup/index.html">Setup for Java</a></li>
+          <li data-nav-id="/intro-and-setup/java-terminal/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-terminal/index.html">Java in the Terminal</a></li>
+          <li data-nav-id="/intro-and-setup/intellij/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/intellij/index.html">IntelliJ</a></li>
+          <li data-nav-id="/intro-and-setup/first-java-project/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/first-java-project/index.html">Your First Java Project</a></li>
+          <li data-nav-id="/intro-and-setup/java-web-dev-projects/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html">Java Web Dev Projects</a></li>
+          <li data-nav-id="/intro-and-setup/naming-conventions/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/naming-conventions/index.html">Java Naming Conventions</a></li></ul></li>
+          <li data-nav-id="/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/index.html">Chapter 2: Data Types</a><ul id="R-subsections-4f4c361a0f66d2fbe943223a1e09f1c1" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/data-types/reading/index.html">Reading</a><ul id="R-subsections-8ef317bbe9656932b70c7c394963e07f" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/data-types/index.html">Data Types</a></li>
+          <li data-nav-id="/data-types/reading/some-java-practice/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/some-java-practice/index.html">Some Java Practice</a></li>
+          <li data-nav-id="/data-types/reading/more-data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/more-data-types/index.html">More Data Types</a></li></ul></li>
+          <li data-nav-id="/data-types/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/exercises/index.html">Exercises: Data Types</a></li>
+          <li data-nav-id="/data-types/studio/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/studio/index.html">Studio: Area of a Circle</a></li>
+          <li data-nav-id="/data-types/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/index.html">Chapter 3: Control Flow and Collections</a><ul id="R-subsections-64fc82378c2226d602885aa9de5624e0" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/index.html">Reading</a><ul id="R-subsections-c0447d0341a626759ce5a4f57a79b446" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/conditionals/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html">Conditionals</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/loops/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/loops/index.html">Loops</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/collections/index.html">Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/arraylist/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html">ArrayList</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/array/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/array/index.html">Array</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/hashmap/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html">HashMap</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/exercises/index.html">Exercises: Control Flow and Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/studio/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/studio/index.html">Studio: Counting Characters</a></li>
+          <li data-nav-id="/control-flow-and-collections/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes/index.html" class=""><a class="padding" href="http://localhost:1313/classes/index.html">Chapter 4: Classes</a><ul id="R-subsections-0b0cacde8a4e9970b227851692cc4392" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes/reading/index.html">Reading</a><ul id="R-subsections-5351516f5c13b92664ea994855398098" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/background/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/background/index.html">Classes for Java</a></li>
+          <li data-nav-id="/classes/reading/modifiers/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/modifiers/index.html">Modifiers in Java</a></li>
+          <li data-nav-id="/classes/reading/encapsulation/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/encapsulation/index.html">Encapsulation</a></li>
+          <li data-nav-id="/classes/reading/constructors/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/constructors/index.html">Constructors</a></li>
+          <li data-nav-id="/classes/reading/methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/methods/index.html">Methods</a></li>
+          <li data-nav-id="/classes/reading/srp/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/srp/index.html">Single Responsibility Principle</a></li></ul></li>
+          <li data-nav-id="/classes/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/classes/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes/studio/index.html">Studio: Restaurant Menu</a></li>
+          <li data-nav-id="/classes/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/index.html">Chapter 5: Classes Part 2</a><ul id="R-subsections-eb794f8ad5cdaf028c38962b8ee979c2" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes-part-2/reading/index.html">Reading</a><ul id="R-subsections-98891f511818aeb4fbacfaaad9477fa3" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/custom-fields/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/custom-fields/index.html">Customizing Fields</a></li>
+          <li data-nav-id="/classes-part-2/reading/instance-and-static-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html">Instance and Static Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/special-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/special-methods/index.html">Special Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/intellij-shortcut/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html">IntelliJ Generator Shortcut</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/exercises/index.html">Exercises: Objects and Classes Part 2</a></li>
+          <li data-nav-id="/classes-part-2/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/studio/index.html">Studio: Restaurant Menu Continued</a></li>
+          <li data-nav-id="/classes-part-2/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/index.html">Chapter 6: Unit Testing</a><ul id="R-subsections-3bc848ae4ad1b63821b742e20049724d" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/unit-testing/reading/index.html">Reading</a><ul id="R-subsections-33c30be509a93475c0cfd6456fd11949" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/testing-in-java/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/testing-in-java/index.html">Testing in Java</a></li>
+          <li data-nav-id="/unit-testing/reading/junit/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/junit/index.html">JUnit</a></li></ul></li>
+          <li data-nav-id="/unit-testing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/exercises/index.html">Exercises: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/studio/index.html">Studio: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/index.html">Chapter 7: Inheritance</a><ul id="R-subsections-f76bb91cb47b43b6c8406073622c8626" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/inheritance/reading/index.html">Reading</a><ul id="R-subsections-b913ce714c3c990c6ebc66a363cc4cc5" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/inheritance-oop/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-oop/index.html">Inheritance in OOP</a></li>
+          <li data-nav-id="/inheritance/reading/inheritance-java/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-java/index.html">Inheritance in Java</a></li>
+          <li data-nav-id="/inheritance/reading/cat-classes/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/cat-classes/index.html">A Tale of Two Cats</a></li>
+          <li data-nav-id="/inheritance/reading/abstract-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/abstract-inheritance/index.html">Inheriting from Abstraction</a></li>
+          <li data-nav-id="/inheritance/reading/casting/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/casting/index.html">Casting</a></li>
+          <li data-nav-id="/inheritance/reading/testing-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/testing-inheritance/index.html">Testing Inheritance</a></li>
+          <li data-nav-id="/inheritance/reading/class-diagrams/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/class-diagrams/index.html">Class Diagrams</a></li></ul></li>
+          <li data-nav-id="/inheritance/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/exercises/index.html">Exercises: Inheritance</a></li>
+          <li data-nav-id="/inheritance/studio/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/studio/index.html">Studio: Fun with Quizzes</a></li></ul></li>
+          <li data-nav-id="/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/index.html">Chapter 8: Interfaces and Polymorphism</a><ul id="R-subsections-a7b42a11dccec46c63e8912e4782805a" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/interfaces/reading/index.html">Reading</a><ul id="R-subsections-6335a240ba32af119c1069bc3a85b053" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/intro/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/intro/index.html">Introduction</a></li>
+          <li data-nav-id="/interfaces/reading/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/interfaces/index.html">Interfaces</a></li>
+          <li data-nav-id="/interfaces/reading/abstract-classes/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/abstract-classes/index.html">Interfaces and Abstract Classes</a></li>
+          <li data-nav-id="/interfaces/reading/common-interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/common-interfaces/index.html">Interfaces in the Wild</a></li>
+          <li data-nav-id="/interfaces/reading/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/unit-testing/index.html">Unit Testing and Interfaces</a></li></ul></li>
+          <li data-nav-id="/interfaces/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/exercises/index.html">Exercises: Interfaces and Polymorphism</a></li>
+          <li data-nav-id="/interfaces/studio/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/studio/index.html">Studio: Spinning the Discs</a></li>
+          <li data-nav-id="/interfaces/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/spring-intro/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/index.html">Chapter 9: Spring Into MVC</a><ul id="R-subsections-cf0c46215a72d339f4e4dd17c0c70eaa" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-intro/reading/index.html">Reading</a><ul id="R-subsections-bc70f54fc117dd2904466afb66645ef7" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/mvc/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/mvc/index.html">Design Patterns, MVC, and Spring, Oh My!</a></li>
+          <li data-nav-id="/spring-intro/reading/initialize/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/initialize/index.html">Initialize Spring</a></li></ul></li>
+          <li data-nav-id="/spring-intro/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/index.html">Chapter 10: Controllers and Routing</a><ul id="R-subsections-272eff95a8b0668f5d74ec0db7181773" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/index.html">Reading</a><ul id="R-subsections-9f0e1c083512826b353326ebfd24f974" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/simple-controllers/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html">Simple Controllers</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-parameters/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html">Controllers with Parameters</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-forms/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html">Controllers with Forms</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-classes/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html">Class Level Controller Annotations</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/controllers-and-routing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/studio/index.html">Studio: Skills Tracker</a></li></ul></li>
+          <li data-nav-id="/exceptions/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/index.html">Chapter 11: Rules to the Exceptions</a><ul id="R-subsections-8eec131254d454a0b50c147e55396a4d" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/exceptions/reading/index.html">Reading</a><ul id="R-subsections-1e6043265d0493fde6c17672620c53fa" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/temperature-walkthrough/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html">Check the Temperature with Exceptions</a></li></ul></li>
+          <li data-nav-id="/exceptions/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/exercises/index.html">Exercises: Exceptions</a></li>
+          <li data-nav-id="/exceptions/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/index.html">Chapter 12: Tools in Intellij</a><ul id="R-subsections-fef402651fa1cd96d424f39aeb4a97df" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/index.html">Reading</a><ul id="R-subsections-177859a1837a86915100ccf90606be6b" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/gradle/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/gradle/index.html">Gradle</a></li>
+          <li data-nav-id="/tools-in-intellij/reading/debugging/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/debugging/index.html">Debugging in IntelliJ</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/studio/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/studio/index.html">Studio: If It Ain&#39;t Broke, Add a Breakpoint!</a></li>
+          <li data-nav-id="/tools-in-intellij/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/index.html">Chapter 13: Thymeleaf Views</a><ul id="R-subsections-69fb4d24a47b3b6e4498eb9e2a83c96a" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/index.html">Reading</a><ul id="R-subsections-29877ec5a052d2a10717217b6707da5e" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/templates/index.html">Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/creating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">Creating Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/using-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/using-templates/index.html">Using Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/iterating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html">Iterating in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/conditionals-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html">Conditionals in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/forms-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html">Thymeleaf Forms</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/fragments-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html">Template Fragments</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/static-resources/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/static-resources/index.html">Static Resources</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/bootstrap/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html">Bootstrap</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/exercises/index.html">Exercises: Thymeleaf Views</a></li>
+          <li data-nav-id="/thymeleaf-views/studios/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/studios/index.html">Studio: Spa Day!</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/index.html">Chapter 14: Models and Model Binding</a><ul id="R-subsections-b425ab8120c8045a29686974292fab81" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/index.html">Reading</a><ul id="R-subsections-245ddf76889aac7272030a839961234a" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/models-in-mvc/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html">Models in MVC</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/create-model/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/create-model/index.html">Create a Model</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/models-and-data/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html">Models and Data</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/model-binding/index.html">Models Binding</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/exercises/index.html">Exercises: Edit Model Classes</a></li>
+          <li data-nav-id="/models-and-model-binding/studio/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/studio/index.html">Studio: Spa User Signup</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/index.html">Chapter 15: Model Validation</a><ul id="R-subsections-cc64ee7cea4ab3dca78461823b1296c0" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-model-validation/reading/index.html">Reading</a><ul id="R-subsections-cc1bbcfae946480bfeb052e688ea8592" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/server-side-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html">Server-Side Validation</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-annotations/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html">Validation Annotations</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-controller/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-controller/index.html">Validating Models in a Controller</a></li>
+          <li data-nav-id="/spring-model-validation/reading/thymeleaf-form-tools/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html">Thymeleaf Form Tools</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/exercises/index.html">Exercises: Model Validation</a></li>
+          <li data-nav-id="/spring-model-validation/studio/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/studio/index.html">Studio: Spa User Validation</a></li>
+          <li data-nav-id="/spring-model-validation/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/index.html">Chapter 16: Enums</a><ul id="R-subsections-831b138d2e9a513438884233b2f221f2" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/enums/reading/index.html">Reading</a><ul id="R-subsections-904b86ebee00756ee4747a4acbd69524" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/intro-to-enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/intro-to-enums/index.html">Introduction to Enums</a></li>
+          <li data-nav-id="/enums/reading/enums-model-classes/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/enums-model-classes/index.html">Enums in Model Classes</a></li></ul></li>
+          <li data-nav-id="/enums/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/enums/exercises/index.html">Exercises: Enum Practice</a></li>
+          <li data-nav-id="/enums/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/enums/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/index.html">Chapter 17: Introduction to Object-Relational Mapping</a><ul id="R-subsections-aa4987828deb901fc4f8215487106198" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/index.html">Reading</a><ul id="R-subsections-2f85f252dde5e5dff037908f20779885" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/orm/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/orm/index.html">Object-Relational Mapping</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/accessing-data/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html">Accessing Data</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/repositories/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/repositories/index.html">Repositories</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/exercises/index.html">Exercises: OMG the ORM!</a></li>
+          <li data-nav-id="/intro-orm-mapping/studio/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/studio/index.html">Studio: Creating an AbstractEntity</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/index.html" class="parent "><a class="padding" href="http://localhost:1313/orm-relationships/index.html">Chapter 18: Relationships in Object-Relational Mapping</a><ul id="R-subsections-14a4ceddf2743bbc7cc53e73d28e238c" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/index.html" class="parent alwaysopen"><a class="padding" href="http://localhost:1313/orm-relationships/reading/index.html">Reading</a><ul id="R-subsections-fbbffc798bf994fdf98727229ef8c7bd" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/types-of-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html">Types of Relationships</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-one/index.html" class="active"><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">Creating a Many-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-many/index.html">Creating a One-to-Many Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-one/index.html">Creating a One-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-many/index.html">Creating a Many-to-Many Relationship</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/exercises/index.html">Exercises: The Early Bird Gets the ORM!</a></li>
+          <li data-nav-id="/orm-relationships/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/index.html">Chapter 19: Authentication</a><ul id="R-subsections-1345916ddf39bfe2b504bc524b69e938" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/authentication/reading/index.html">Reading</a><ul id="R-subsections-90b7ce6ead6e2e6c918d107a10c0c053" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/intro-to-authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/intro-to-authentication/index.html">Introduction to Authentication</a></li>
+          <li data-nav-id="/authentication/reading/hashing-passwords/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/hashing-passwords/index.html">Hashing Passwords</a></li>
+          <li data-nav-id="/authentication/reading/creating-user-model/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/creating-user-model/index.html">Creating a User Model</a></li>
+          <li data-nav-id="/authentication/reading/login-and-registration/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/login-and-registration/index.html">Login and Registration Forms</a></li>
+          <li data-nav-id="/authentication/reading/filtering-requests/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/filtering-requests/index.html">Filtering Requests</a></li></ul></li>
+          <li data-nav-id="/authentication/studio/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/studio/index.html">Studio: TechJobs Authentication</a></li>
+          <li data-nav-id="/authentication/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/index.html">Chapter 20: Introduction to Web APIs &amp; REST</a><ul id="R-subsections-42481ec37d6e5cf75cb79d369c79632a" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/web-api-rest/reading/index.html">Reading</a><ul id="R-subsections-c70e9a362888ae84c94682e8f5c6a772" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/web-api/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/web-api/index.html">Web APIs</a></li>
+          <li data-nav-id="/web-api-rest/reading/what-is-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/what-is-rest/index.html">What is REST</a></li>
+          <li data-nav-id="/web-api-rest/reading/rest-practical-fundamentals/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/rest-practical-fundamentals/index.html">REST: Practical Fundamentals</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/exercises/index.html">Exercises: Web APIs and REST</a></li>
+          <li data-nav-id="/web-api-rest/studio/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/studio/index.html">Studio: Consuming the Coding Events API With Postman</a></li>
+          <li data-nav-id="/web-api-rest/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/index.html">Assignments</a><ul id="R-subsections-ac1a358b456bc5017269265633799872" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/hello-world/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/hello-world/index.html">Assignment #0: Hello, World!</a></li>
+          <li data-nav-id="/assignments/techjobs-console/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-console/index.html">Assignment #1: Tech Jobs Console</a><ul id="R-subsections-4b66cf2d2fe44b7bc1aa5c015f2d63d1" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-console/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-one/index.html">Task 1: Implement printJobs()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-two/index.html">Task 2: Create Method findByValue()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-three/index.html">Task 3: Make Search Methods Case-Insensitive</a></li>
+          <li data-nav-id="/assignments/techjobs-console/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-oo/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/index.html">Assignment #2: Tech Jobs OO</a><ul id="R-subsections-5c66abe3d5aa714badef7af5e2966996" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-oo/task1/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task1/index.html">Task 1: Explore the Employer Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task2/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task2/index.html">Task 2: Create the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task3/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task3/index.html">Task 3: Complete the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task4/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task4/index.html">Task 4: Use Unit Testing to Verify Parts of the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task5/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task5/index.html">Task 5: Use TDD to Build The toString Method</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task6/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task6/index.html">Task 6: Refactor to DRY the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task7/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task7/index.html">Task 7: Final Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-mvc/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/index.html">Assignment #3: Tech Jobs (MVC Edition)</a><ul id="R-subsections-e5504cec6daa245b0ddb75d60003ef1b" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-mvc/getting-started/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">Task 1: Getting to Know the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/list-views/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.html">Task 2: Complete List Views</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/search-controller/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html">Task 3: Complete SearchController</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/display-search-results/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html">Task 4: Display Search Results</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/submission/index.html">Submitting Your Work and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-persistent/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/index.html">Assignment #4: Tech Jobs Persistent</a><ul id="R-subsections-2de9dacd33f0514d2c2813740229e20c" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-persistent/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-one/index.html">Task 1: Connect a Database to a Spring App</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-two/index.html">Task 2: Persisting Employers and Skills</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-three/index.html">Task 3: Setting Up a One-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-four/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-four/index.html">Task 4: Setting Up a Many-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/appendices/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/index.html">Appendices</a><ul id="R-subsections-b483d80bdb9b2ad6e87ce036148cc8e4" class="morespace collapsible-menu">
+          <li data-nav-id="/appendices/install-postman/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/install-postman/index.html">Installing Postman</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="http://localhost:1313/orm-relationships/reading/many-to-one/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-lc-light" value="lc-light" selected>Lc Light</option>
+                      <option id="R-select-variant-lc-dark-blue" value="lc-dark-blue">Lc Dark Blue</option>
+                      <option id="R-select-variant-lc-dark-blue-two" value="lc-dark-blue-two">Lc Dark Blue Two</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="http://localhost:1313/js/clipboard.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/perfect-scrollbar.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/theme.js?1725032835" defer></script>
+  </body>
+</html>

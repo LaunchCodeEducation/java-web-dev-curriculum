@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: If It Ain&#39;t Broke, Add a Breakpoint! :: Java Web Development</title>
+    <link>http://localhost:1313/tools-in-intellij/studio/index.html</link>
+    <description>The purpose of this studio is to expand your current debugging strategies. First, as a group, you will discuss your current debugging strategies. Next, you will explore the debugger tools addressed in this chapter.&#xA;This studio will use a previous studio assignment to explore IntelliJ’s Debugger. On your machine, open up your copy of java-web-dev-projects in IntelliJ and navigate to the project for the interfaces studio.&#xA;Part One: Pre-Debugger Debugging Share with the group one error you encountered when working on your version of the interfaces studio.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/tools-in-intellij/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

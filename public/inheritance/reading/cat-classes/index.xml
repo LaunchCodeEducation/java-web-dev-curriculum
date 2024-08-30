@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Tale of Two Cats :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/reading/cat-classes/index.html</link>
+    <description>Let’s revisit our Cat and HouseCat friends. In java-web-dev-projects, open inheritance/testing-inheritance/tale-of-two-cats/src/main/java and examine the two classes inside.&#xA;Inheriting Fields and Properties Notice that Cat has a private string field family, representing the biological family of all cats.&#xA;private String family = &#34;Felidae&#34;;This field is not directly accessible by HouseCat since it is private. However, it may be read via the public getter getFamily.&#xA;public String getFamily() { return family; }There is no setter for family, however.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/reading/cat-classes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

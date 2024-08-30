@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Types :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/reading/data-types/index.html</link>
+    <description>Static vs. Dynamic Typing In a dynamically typed programming language (like JavaScript or Python), a variable or parameter can refer to a value of any data type (string, number, object, etc.) at any time. When the variable is used, the interpreter figures out what type it is and behaves accordingly.&#xA;Java is a statically typed language. When a variable or parameter is declared in a statically typed language, the data type for the value must be specified.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/reading/data-types/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

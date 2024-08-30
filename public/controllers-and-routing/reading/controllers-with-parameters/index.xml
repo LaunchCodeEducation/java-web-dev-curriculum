@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Controllers with Parameters :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html</link>
+    <description>Controllers with Parameters Now that you know the basics of a controller method, we can start to add some more variables into the mix. Some controller methods can take in parameters in the form of query strings or sections of the URL path. Passing this URL data to the controller is one step closer to more flexible web applications.&#xA;A route is the mechanism by which a request path gets assigned to a controller within our application.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

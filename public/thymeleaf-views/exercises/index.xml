@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Thymeleaf Views :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/exercises/index.html</link>
+    <description>In the chapter, we started working on an application for tracking various coding events around town.&#xA;Open up your codingevents project in IntelliJ.&#xA;Getting Started From your own add-bootstrap branch, create and checkout a new branch called my-views-exercises-solution.&#xA;Note If you need to make sure your code matches ours to start, look at the add-bootstrap branch on CodingEventsJava.&#xA;Now, let’s add descriptions to our events!&#xA;Expanding our Events Schedule In the videos, we learned how to use templates to display the elements in a static list called events.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

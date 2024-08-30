@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Control Flow and Collections :: Java Web Development</title>
+    <link>http://localhost:1313/control-flow-and-collections/exercises/index.html</link>
+    <description>Work on these exercises in the java-web-dev-projects repo,creating a new class for each item. You may call these classes whatever you like, but remember to use the proper Java naming conventions.&#xA;Navigate inside control-flow-and-collections within java-web-dev-projects and create a new folder called exercises. Create a new IntelliJ project within your new exercises directory called collections-exercises. Now you are ready to start creating new classes and practice using different collections!</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/control-flow-and-collections/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

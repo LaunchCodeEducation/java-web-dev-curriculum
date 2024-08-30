@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Casting :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/reading/casting/index.html</link>
+    <description>When one class extends another, as HouseCat extends Cat, a field or local variable of the type of the base class may hold an object that is of the type of the child class.&#xA;In other words, this is allowed:&#xA;Cat suki = new HouseCat(&#34;Suki&#34;, 8);This is acceptable because a HouseCat is a Cat. Furthermore, when we call methods on such an object, the compiler is smart enough to determine which method it should call.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/reading/casting/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

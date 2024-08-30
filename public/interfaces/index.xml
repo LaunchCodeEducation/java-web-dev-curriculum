@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 8: Interfaces and Polymorphism :: Java Web Development</title>
+    <link>http://localhost:1313/interfaces/index.html</link>
+    <description>Major Concepts After completing everything in this chapter, you should be able to understand the following:&#xA;What polymorphism is. What interfaces are and the difference between interfaces and abstract classes. Different interfaces that are a part of Java, and how they can be used in our code. Best practices around unit tests and interfaces. Key Terminology Polymorphism Interface Method signature Default method Comparable&lt;T&gt; Comparator&lt;T&gt; Iterable&lt;T&gt; List&lt;E&gt; Map&lt;K,V&gt; Content Links Reading Exercises: Interfaces and Polymorphism Studio: Spinning the Discs Next Steps </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2023 14:01:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/interfaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/interfaces/reading/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/index.html</guid>
+      <description> Introduction Interfaces Interfaces and Abstract Classes Interfaces in the Wild Unit Testing and Interfaces </description>
+    </item>
+    <item>
+      <title>Exercises: Interfaces and Polymorphism</title>
+      <link>http://localhost:1313/interfaces/exercises/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/exercises/index.html</guid>
+      <description>Exercises As a new Java coder, it might take you some time to recognize the usefulness of interfaces. At first glance, these tools do not seem to provide much benefit over extending a base class, adding instance methods to a class, or overriding a method like toString.&#xA;To help overcome this, let’s consider a common occurrence—sorting an ArrayList of objects.&#xA;If the list contains String or numerical entries, then sorting the list is trivial :</description>
+    </item>
+    <item>
+      <title>Studio: Spinning the Discs</title>
+      <link>http://localhost:1313/interfaces/studio/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/studio/index.html</guid>
+      <description>Although they look the same, the old optical discs—CDs and DVDs—are quite different from each other. Let’s use them as the focus for creating a new interface.&#xA;Getting Ready Open the studio folder inside the interfaces directory within java-web-dev-projects.&#xA;Disc Project Overview In this activity, you will pair up to design a new custom interface.&#xA;Take a look at the prepared CD and DVD classes in the starter code—only their signatures are present.</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/interfaces/next-steps/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/next-steps/index.html</guid>
+      <description>Next Steps Java Interface Interfaces in Java Java Interfaces Java Polymorphism </description>
+    </item>
+  </channel>
+</rss>

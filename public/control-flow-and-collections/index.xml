@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 3: Control Flow and Collections :: Java Web Development</title>
+    <link>http://localhost:1313/control-flow-and-collections/index.html</link>
+    <description>Learning Objectives Upon completing all the material in this chapter, you should be able to do the following:&#xA;Use basic control flow structures Create and work with common collections objects Understand how to choose a collection type for a given problem Key Terminology Here is a list of the key terms you will find throughout the chapter organized by the page upon which they first appear.&#xA;Conditionals Operators if statements else clause else if switch case break fallthrough Loops for loop for-each loop while loop do-while loop continue Collections collections Java Collections Framework ArrayList ArrayList generic class generic type ArrayList.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/control-flow-and-collections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/index.html</guid>
+      <description> Conditionals Loops Collections ArrayList Array HashMap </description>
+    </item>
+    <item>
+      <title>Exercises: Control Flow and Collections</title>
+      <link>http://localhost:1313/control-flow-and-collections/exercises/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/exercises/index.html</guid>
+      <description>Work on these exercises in the java-web-dev-projects repo,creating a new class for each item. You may call these classes whatever you like, but remember to use the proper Java naming conventions.&#xA;Navigate inside control-flow-and-collections within java-web-dev-projects and create a new folder called exercises. Create a new IntelliJ project within your new exercises directory called collections-exercises. Now you are ready to start creating new classes and practice using different collections!</description>
+    </item>
+    <item>
+      <title>Studio: Counting Characters</title>
+      <link>http://localhost:1313/control-flow-and-collections/studio/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/studio/index.html</guid>
+      <description>In this studio, you will write a program to count the number of times each character occurs in a string and then print the results to the console.&#xA;Feel free to prompt the user for a string. However, for the sake of simplicity, you might want to start by hard-coding some text and storing it in a variable. For your convenience, here is a quote from the movie Hidden Figures:</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/control-flow-and-collections/next-steps/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/next-steps/index.html</guid>
+      <description>The next chapter covers classes. If you are unsure about the material in this chapter, here are some of our favorite additional resources so you can review before going on to the next chapter.&#xA;Arrays Tutorial Java Collections ArrayList Class Operators The if-then and if-then-else Statements The switch Statement HashMap Class The for statement The while and do-while Statements Break and Continue Statements Summary of Control Flow Statements </description>
+    </item>
+  </channel>
+</rss>

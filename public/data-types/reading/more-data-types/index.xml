@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>More Data Types :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/reading/more-data-types/index.html</link>
+    <description>Arrays In Java, an array is an ordered, fixed-size collection of elements. To comply with static typing, the items stored in an array must all be the same data type. We can create an array of integers or an array of strings, but we may NOT create an array that holds both integers and strings.&#xA;The syntax for creating an array capable of holding 10 integers is:&#xA;int[] someInts = new int[10];Note the square brackets next to int.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/reading/more-data-types/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

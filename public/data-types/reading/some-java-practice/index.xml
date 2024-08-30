@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Some Java Practice :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/reading/some-java-practice/index.html</link>
+    <description>Let’s move beyond our “Hello, World” example and explore a simple temperature conversion program. We want our function to convert a Fahrenheit temperature to Celsius.&#xA;Temperature Conversion Open the TempConverter file in the java-web-dev-projects/datatypes/datatypes-examples project in IntelliJ. Click through the folders until you find the TempConverter class.&#xA;Here’s what the file should look like. We will analyze the different statements in a moment.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import java.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/reading/some-java-practice/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 1: Introduction and Setup :: Java Web Development</title>
+    <link>http://localhost:1313/intro-and-setup/index.html</link>
+    <description>Learning Objectives Upon completing all the content in this chapter, you should be able to do the following:&#xA;Set up a Java development environment and execute Java programs. Write a “Hello, World!” program in Java. Connect an IntelliJ project to GitHub. Key Terminology Here is a list of the terms you should make note of as you read through this chapter. The list is broken down based on the page the word first appears on.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-and-setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup for Java</title>
+      <link>http://localhost:1313/intro-and-setup/setup/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/setup/index.html</guid>
+      <description>For the entirety of this course, we will be coding in Java. Besides installing Java on your machine, you must also add some support technologies to allow you to run and edit Java code.&#xA;Java Development Kit Installing Java means downloading a package of software called the Java Development Kit, or JDK, for short. The JDK contains the software tools needed to develop and run Java code, namely the Java compiler, javac, and the Java Virtual Machine (JVM).</description>
+    </item>
+    <item>
+      <title>Java in the Terminal</title>
+      <link>http://localhost:1313/intro-and-setup/java-terminal/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/java-terminal/index.html</guid>
+      <description>Let’s write a simple “Hello, World” program and watch the JDK in action.&#xA;In the future, we’ll be doing most of our Java coding with the IntelliJ IDE. IntelliJ contains many features to help us write Java properly and easily, including its own compiler. For now though, we’ll use a simpler text editor so we can demonstrate what we get with the JDK.&#xA;In the text editor of your choice, create and save a file called HelloWorld.</description>
+    </item>
+    <item>
+      <title>IntelliJ</title>
+      <link>http://localhost:1313/intro-and-setup/intellij/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/intellij/index.html</guid>
+      <description>IntelliJ is an integrated development environment (IDE). An IDE is like a text editor on steroids. It not only allows you to write and edit code, but also contains many features that enhance the coding experience. IntelliJ offers code completion hints, debugging, and even its own compiler. We’ll be using it throughout this course, so it’s time to get familiar with some of the basics.&#xA;Install IntelliJ Visit the IntelliJ download site .</description>
+    </item>
+    <item>
+      <title>Your First Java Project</title>
+      <link>http://localhost:1313/intro-and-setup/first-java-project/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/first-java-project/index.html</guid>
+      <description>Following the “Hello, World” trend, let’s create a new IntelliJ project.&#xA;Create a new folder to hold your Java practice files. Since you will be creating lots of small projects as you move through this course, we suggest that you also add sub-folders with names corresponding to the related chapters and projects. Something like java-practice/chapter-name/project-name.&#xA;Select the New Project option from the welcome screen.&#xA;Clicking New Project opens a window with a series of project settings to select.</description>
+    </item>
+    <item>
+      <title>Java Web Dev Projects</title>
+      <link>http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html</guid>
+      <description>Initial Setup The steps here will walk you through setting up the repository that you’ll use to study example code, work on studios, and complete your first assignment of this unit.&#xA;Create a Fork of LaunchCodeEducation/java-web-dev-projects . Do not clone and create a local version of this repo just yet.&#xA;Open IntelliJ.&#xA;Note If the app opens up to an existing project, simply close that window to return to the welcome screen.</description>
+    </item>
+    <item>
+      <title>Java Naming Conventions</title>
+      <link>http://localhost:1313/intro-and-setup/naming-conventions/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-and-setup/naming-conventions/index.html</guid>
+      <description>Java has some very straightforward naming conventions. These are universally used by Java programmers, and differ in some cases from conventions commonly used in other languages.&#xA;Again, these are conventions. Ignoring them will not prevent your code from running, as long as you are following Java’s naming rules . Java’s identifier naming rules are somewhat hard to parse, so a good rule-of-thumb is that you should use only letters, numbers, and the underscore character _, and they should always start with a letter.</description>
+    </item>
+  </channel>
+</rss>

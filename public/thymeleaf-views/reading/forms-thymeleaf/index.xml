@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thymeleaf Forms :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html</link>
+    <description>Templates allow you to build generic forms. This lets you reuse the structure by rendering the same template with different labels and data. Thus, a single form can serve different purposes, saving you extra effort.&#xA;Whenever possible, reuse existing templates!&#xA;Start a New Project You will build a new project so you can practice with templates and forms. If you have not done so, commit and push any unsaved work from your hello-spring project.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

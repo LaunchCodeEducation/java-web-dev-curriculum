@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 19: Authentication :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/index.html</link>
+    <description>Learning Objectives After completing this chapter, you should be able to do the following:&#xA;Understand the basic concepts of authentication Use request filters to enable basic authentication in a Spring app Explain what two-way encryption is, and why it is not ideal for storing sensitive user data, such as passwords Explain what a one-way hash is, and why it presents greater security for storing sensitive user data Describe the characteristics of a good one-way hash function Write code that uses a provided hash function to hash sensitive data Describe how one-way hashes allow for passwords to be compared Describe the general authentication flow for a web app Key Terminology Introduction to Authentication cookies authorization authentication sessions Hashing Password two-way encryption one-way encryption password hashing collision bcrypt MD5, SHA1 hash function Creating a User Model bcrypt query methods Filtering Requests request filters whitelist code-based configuration Content Links Reading Studio: TechJobs Authentication Next Steps </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/authentication/reading/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/index.html</guid>
+      <description> Introduction to Authentication Hashing Passwords Creating a User Model Login and Registration Forms Filtering Requests </description>
+    </item>
+    <item>
+      <title>Studio: TechJobs Authentication</title>
+      <link>http://localhost:1313/authentication/studio/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/studio/index.html</guid>
+      <description>For this studio, you’ll be tasked with adding simple user authentication to your techjobs application. The steps to do this will match what you have already done in codingevents. You should refer back to the tutorial starting here .&#xA;Create the User Model Create the Login and Registration Forms Filter Requests The Starter Code Fork and clone the starter code for TechJobs (Auth Edition) .&#xA;The dependencies for the database connection and hashing function are already added for you in build.</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/authentication/next-steps/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/next-steps/index.html</guid>
+      <description>Additional Content Now that you have successfully added authentication to an existing project you can further explore the topics below:&#xA;For a deeper dive into spring security you can visit the official docs . View this guide that walks through the creation of a spring MVC web application using Spring Security. Baeldung Spring Security Basic Authentication walkthrough. This will will walk through the process of basic authentication with Spring with an MVC application.</description>
+    </item>
+  </channel>
+</rss>

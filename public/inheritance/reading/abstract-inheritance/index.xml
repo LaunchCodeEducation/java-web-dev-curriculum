@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inheriting from Abstraction :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/reading/abstract-inheritance/index.html</link>
+    <description>abstract Classes We noted in the introduction to this section that inheritance is a way to share behaviors among classes. You’ll sometimes find yourself creating a base class as a way to share behaviors among related classes. However, in such situations, it is not always desirable for instances of the base class to be created.&#xA;For example, suppose we began coding two classes, HouseCat and Tiger. Upon writing the code, we realized that there was some common data and behaviors.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/reading/abstract-inheritance/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

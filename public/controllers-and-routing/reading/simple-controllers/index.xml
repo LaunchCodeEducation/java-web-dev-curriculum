@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple Controllers :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html</link>
+    <description>The first of the MVC elements we’ll work on implementing are the controllers. Recall that controllers are like the traffic cops of our application. They handle the requests made from users interacting with the application’s view and update model data accordingly. Conversely, changes to model data are sent to the view via controller methods.&#xA;Controllers and Static Responses - Video Note: The starter code for this video is found in the starter branch of the hello-spring repo.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

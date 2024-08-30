@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Class Diagrams :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/reading/class-diagrams/index.html</link>
+    <description>We have mentioned a few times the importance of designing your classes before starting to write code. It’s important to think about the fields, properties, and methods of your classes, as well as the relationship of your various classes to each other. Doing so will not only result in better code, but will also mean that you’re less likely to have to rewrite your code due to lack of foresight.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/reading/class-diagrams/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

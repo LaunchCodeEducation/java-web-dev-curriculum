@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: Spa User Validation :: Java Web Development</title>
+    <link>http://localhost:1313/spring-model-validation/studio/index.html</link>
+    <description>We’ll build on the User Signup studio from last class, adding in model validation.&#xA;Getting Started Open up your spaday application and checkout the user-signup-pt2 branch.&#xA;Add Validation Annotations Navigate to the User model class. Add validation annotations to ensure these conditions are satisfied:&#xA;Username, password, and verify are required (they can’t be empty) Username is between 5 and 15 characters Email is optional If provided, the email has the format of a valid email address.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/spring-model-validation/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

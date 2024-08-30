@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Model Validation :: Java Web Development</title>
+    <link>http://localhost:1313/spring-model-validation/exercises/index.html</link>
+    <description>Let’s practice adding more fields onto our event objects and validating them. Create a new branch from your own display-errors branch. Here’s the display-errors branch on CodingEventsJava if you need to get up to speed.&#xA;Below, we describe some new fields for you to add to the Event class. For each field, consider the following factors:&#xA;What will you call your field? Will you need accessors for this field? What type of input should be added to capture the field’s information from the user?</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/spring-model-validation/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

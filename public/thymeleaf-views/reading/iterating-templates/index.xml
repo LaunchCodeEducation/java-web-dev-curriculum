@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iterating in a Template :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html</link>
+    <description>Let’s revisit part of the non-efficient HTML from the introduction, where we hard-coded coffee options in a list.&#xA;&lt;ol&gt; &lt;li&gt;French Roast&lt;/li&gt; &lt;li&gt;Espresso&lt;/li&gt; &lt;li&gt;Kopi Luwak&lt;/li&gt; &lt;li&gt;Instant&lt;/li&gt; &lt;/ol&gt;If we want to add, remove, or edit the list items, we need to go in and change the individual tags, which is a poor use of our time. Fortunately, there is a way to streamline the process.&#xA;In Java, we use for/each loops to iterate through the items in a data collection.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

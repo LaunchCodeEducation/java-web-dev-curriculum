@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Inheritance :: Java Web Development</title>
+    <link>http://localhost:1313/inheritance/exercises/index.html</link>
+    <description>Work on these exercises within IntelliJ using the java-web-dev-projects project you already created. Add a new package called technology to your exercises directory.&#xA;Class design: Create a new class called Computer. Before you add any more code, know that you will need to add two additional classes: Laptop and SmartPhone. Before you start coding anything inside these classes, diagram how the three classes are going to be related to each other.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/inheritance/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
