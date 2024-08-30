@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/spring-model-validation/reading/index.html</link>
+    <description>Reading Content Links Server-Side Validation Validation Annotations Validating Models in a Controller Thymeleaf Form Tools </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jul 2023 15:23:11 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/spring-model-validation/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Server-Side Validation</title>
+      <link>http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html</link>
+      <pubDate>Mon, 17 Jul 2023 15:23:11 -0500</pubDate>
+      <guid>http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html</guid>
+      <description>Web applications work under the client-server model. We have been focusing on the server portion, using Spring Boot and Java to create server-side application code. A critical component of any well-made web application is validation, which is the process of checking that data conforms to certain criteria. Validation ensures that the application only stores meaningful data.&#xA;Example Consider a user registration form on a web site. Effective validation rules might require that:</description>
+    </item>
+    <item>
+      <title>Validation Annotations</title>
+      <link>http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html</link>
+      <pubDate>Mon, 17 Jul 2023 15:23:11 -0500</pubDate>
+      <guid>http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html</guid>
+      <description>Within the model of a Java web application, we can define validation rules using annotations from the jakarta.validation.constraints package. This package provides a variety of annotations that are useful in common circumstances, and which can be applied to model fields.&#xA;Common Annotations We’ll use only a few of these annotations, but you can find a full list in the package documentation .&#xA;Annotation Description Syntax @Size Specifies minimum and/or maximum length for a string.</description>
+    </item>
+    <item>
+      <title>Validating Models in a Controller</title>
+      <link>http://localhost:1313/spring-model-validation/reading/validation-controller/index.html</link>
+      <pubDate>Mon, 17 Jul 2023 15:23:11 -0500</pubDate>
+      <guid>http://localhost:1313/spring-model-validation/reading/validation-controller/index.html</guid>
+      <description>Validation involves both model and controller components of an MVC application. After we have defined validation rules using annotations on the model, we must also update the controller to ensure that the rules are checked and appropriate action is taken when validation fails.&#xA;Validation Flow Before diving into the details of the code, let’s consider the logical flow of control for validating data in a request. Recall our POST handler from the previous chapter, which used model binding to create new Event objects from form submissions.</description>
+    </item>
+    <item>
+      <title>Thymeleaf Form Tools</title>
+      <link>http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html</link>
+      <pubDate>Mon, 17 Jul 2023 15:23:11 -0500</pubDate>
+      <guid>http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html</guid>
+      <description>Thymeleaf provides some handy attributes for working with form fields. They make use of the fact that, when using model binding, each model field contains a lot of information about the corresponding form input needed. In particular, the model field and its annotations often determine:&#xA;The name of the form field (that is, the value of its name attribute). The validation rules and corresponding error messages for the field. Thymeleaf provides some convenient attributes to make wiring up a form much easier and cleaner.</description>
+    </item>
+  </channel>
+</rss>

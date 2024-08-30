@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filtering Requests :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/reading/filtering-requests/index.html</link>
+    <description>Our application now allows users to register and log in. However, access to pages on the site is NOT yet restricted in any way. Even if a user isn’t logged in, they may view any page on the site. To fully implement authentication, we need to be able to check a user’s login status on each request, before any controller methods are called.&#xA;We can do this by filtering requests. Request filtering is a mechanism available in many web frameworks.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/reading/filtering-requests/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Task 1: Getting to Know the Starter Code :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html</link>
+    <description>Getting Started Set up a local copy of the project:&#xA;In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

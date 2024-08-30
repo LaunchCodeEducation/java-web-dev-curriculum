@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignments :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/index.html</link>
+    <description>Major Concepts &amp; Key Terminology Content Links Assignment #0: Hello, World! Assignment #1: Tech Jobs Console Assignment #2: Tech Jobs OO Assignment #3: Tech Jobs (MVC Edition) Assignment #4: Tech Jobs Persistent Next Steps </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assignment #0: Hello, World!</title>
+      <link>http://localhost:1313/assignments/hello-world/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/hello-world/index.html</guid>
+      <description>The purpose of this initial assignment is to familiarize yourself with the process of running the autograding tests with Github Actions and submitting your work. Even if you are familiar with GitHub Actions, this assignment will contain several new items that are specific to working with Java assignments.&#xA;Getting Started Let’s set up the assignment on our computer and learn about its basic structure.&#xA;First, find Assignment #0 in Canvas and click on the starter code repo link.</description>
+    </item>
+    <item>
+      <title>Assignment #1: Tech Jobs Console</title>
+      <link>http://localhost:1313/assignments/techjobs-console/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-console/index.html</guid>
+      <description>Introduction Congratulations! Based on your hard work and strong coding skills, you have been brought on as an apprentice to the LaunchCode Tech Team. You will be paired with a mentor to help you get comfortable and continue learning.&#xA;The Company Team at LaunchCode works with employer partners to match qualified programmers with apprenticeships. They asked for a new tool to be built to help them easily manage data for currently available jobs.</description>
+    </item>
+    <item>
+      <title>Assignment #2: Tech Jobs OO</title>
+      <link>http://localhost:1313/assignments/techjobs-oo/index.html</link>
+      <pubDate>Mon, 05 Jun 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-oo/index.html</guid>
+      <description>Assignment #2: Tech Jobs (Object-Oriented Edition) Introduction Your apprenticeship at LaunchCode is going well! Only a few weeks in and you’re regularly making contributions to code that will eventually be used by all LaunchCode staff.&#xA;Your last task was to get the prototype Tech Jobs app in good shape. Now it’s time to advance the underlying structure of the program.&#xA;Your mentor on this project is Sally, one of the developers at LaunchCode.</description>
+    </item>
+    <item>
+      <title>Assignment #3: Tech Jobs (MVC Edition)</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/index.html</guid>
+      <description>Introduction Your first two tasks as an apprentice went well! You, Blake, and Sally built the TechJobs console prototype and then refactored the code to move it to an object-oriented format.&#xA;After demonstrating the prototype for the Company Team at LaunchCode, it received the green light to be fully built out as a web application.&#xA;The first step in this process will be to quickly develop a minimum viable product , or MVP.</description>
+    </item>
+    <item>
+      <title>Assignment #4: Tech Jobs Persistent</title>
+      <link>http://localhost:1313/assignments/techjobs-persistent/index.html</link>
+      <pubDate>Tue, 03 Jan 2023 10:42:56 -0600</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-persistent/index.html</guid>
+      <description>Your Task You will once again work with the Tech Jobs application. This time around you’ll add ORM functionality by using Spring Data. You will be responsible for completing the code to allow users to create new job data.&#xA;Your final application will have the same list and search capabilities as your Tech Jobs (MVC Edition) but you’ll need to do the work to connect the project to a database for storing user-submitted job data.</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/assignments/next-steps/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/next-steps/index.html</guid>
+      <description>Next Steps </description>
+    </item>
+  </channel>
+</rss>

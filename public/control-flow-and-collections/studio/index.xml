@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: Counting Characters :: Java Web Development</title>
+    <link>http://localhost:1313/control-flow-and-collections/studio/index.html</link>
+    <description>In this studio, you will write a program to count the number of times each character occurs in a string and then print the results to the console.&#xA;Feel free to prompt the user for a string. However, for the sake of simplicity, you might want to start by hard-coding some text and storing it in a variable. For your convenience, here is a quote from the movie Hidden Figures:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/control-flow-and-collections/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

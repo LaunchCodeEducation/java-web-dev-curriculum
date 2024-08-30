@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Data Types :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/exercises/index.html</link>
+    <description>Getting Started Work on these exercises in the IntelliJ java-web-dev-projects project. Create a new class for each numbered exercise. You may name the classes whatever you like, but use proper Java Naming Conventions and make sure that the file name matches the class name.&#xA;Creating a Package and Classes Here is how to create a new module to store these exercises, and how to create new classes within this package:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises :: Java Web Development</title>
+    <link>http://localhost:1313/classes/exercises/index.html</link>
+    <description>Classes and Objects Work on these exercises in the classes-part-one directory in java-web-dev-projects.&#xA;Note If you have not already cloned the java-web-dev-projects project repository you can find it here: Java Web Dev Projects Repository Open up the file, Student.java, and add all of the necessary getters and setters. Think about the access level each field and method should have, and try reducing the access level of at least one setter to less than public.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/classes/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

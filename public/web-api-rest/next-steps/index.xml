@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Next Steps :: Java Web Development</title>
+    <link>http://localhost:1313/web-api-rest/next-steps/index.html</link>
+    <description>We have covered the fundamentals aspects of the RESTful mental model and practical usage. However, RESTful design is a deep topic that even extends beyond the web and use of HTTP!&#xA;If you want to learn more, the following links are a good start:&#xA;Practical Understanding Craig Dennis: APIs for beginners (YouTube) REST sub-collections, relationships and links OpenAPI specification and Swagger REST tools The GitHub API and Stripe (payment processing) API are excellent examples of RESTful design (and fantastic documentation) Deep Understanding the REST constraints The Richardson REST maturity model the original REST doctoral thesis by Roy Fielding </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/web-api-rest/next-steps/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

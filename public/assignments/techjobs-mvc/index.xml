@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignment #3: Tech Jobs (MVC Edition) :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-mvc/index.html</link>
+    <description>Introduction Your first two tasks as an apprentice went well! You, Blake, and Sally built the TechJobs console prototype and then refactored the code to move it to an object-oriented format.&#xA;After demonstrating the prototype for the Company Team at LaunchCode, it received the green light to be fully built out as a web application.&#xA;The first step in this process will be to quickly develop a minimum viable product , or MVP.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Sep 2023 10:03:50 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-mvc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Task 1: Getting to Know the Starter Code</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html</guid>
+      <description>Getting Started Set up a local copy of the project:&#xA;In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .</description>
+    </item>
+    <item>
+      <title>Task 2: Complete List Views</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/list-views/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/list-views/index.html</guid>
+      <description>Complete the List Views Open the list-jobs.html template. Currently, the page just establishes the navigation bar and page title. You need to add code that will present relevant job information.&#xA;Display List of Jobs This page needs to show full job listings—ID, employer, location, etc.&#xA;In list-jobs.html, create a loop to display each job passed in from the controller. The job data should be presented in tables, with each job in its own table.</description>
+    </item>
+    <item>
+      <title>Task 3: Complete SearchController</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html</guid>
+      <description>Add a displaySearchResults handler method to SearchController:&#xA;Use the correct annotation for the method. To configure the correct mapping type and mapping route, refer to the form tag in the search.html template. (Use @GetMapping or @PostMapping rather than @RequestMapping.) The displaySearchResults method should take in a Model parameter. The method should also take in two other parameters, specifying the type of search and the search term. In order for these last two parameters to be properly passed in by Spring Boot, you need to use the correct annotation.</description>
+    </item>
+    <item>
+      <title>Task 4: Display Search Results</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html</guid>
+      <description>Once you have your displaySearchResults handler passing information to the view, you need to display the data.&#xA;In search.html, create a loop to display each job passed in from the controller. Put the job results into a set of tables, similar to what you did for the list-jobs view. Tip You can reuse the code you just wrote in list-jobs.html by defining a new fragment in that file. Then you need to include that fragment in search.</description>
+    </item>
+    <item>
+      <title>Submitting Your Work and Bonus Missions</title>
+      <link>http://localhost:1313/assignments/techjobs-mvc/submission/index.html</link>
+      <pubDate>Mon, 22 May 2023 10:20:54 -0500</pubDate>
+      <guid>http://localhost:1313/assignments/techjobs-mvc/submission/index.html</guid>
+      <description>Sanity Check At this point, all autograding tests should be passing. To be sure, right-click on the org.launchcode.techjobs.mvc package in src/test/java and select Run tests in… If any test fails, evaluate the failure/error message and go back to fix your code.&#xA;You might also want to check your app’s behavior against that of our demo app .&#xA;How to Submit To turn in your assignment and get credit, follow the submission instructions .</description>
+    </item>
+  </channel>
+</rss>

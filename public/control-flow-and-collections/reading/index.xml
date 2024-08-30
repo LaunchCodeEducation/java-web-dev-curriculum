@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/control-flow-and-collections/reading/index.html</link>
+    <description> Conditionals Loops Collections ArrayList Array HashMap </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/control-flow-and-collections/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conditionals</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html</guid>
+      <description>Control flow statements in Java — conditionals and loops — are very straightforward.&#xA;Operators Before we review the syntax for conditionals, let’s go over the comparison and logical operators that we need to use in control flow statements.&#xA;Comparison Operators Operator Description == Checks if two items are equal != Checks if two items are not equal &lt; Checks if item on left is lesser than item on right &lt;= Checks if item on left is lesser than or equal to item on right &gt; Checks if item on left is greater than item on right &gt;= Checks if item on left is greater than or equal to item on right Logical Operators Operator Description &amp;&amp; Combines two expressions with AND, returns true if both statements are true || Combines two expressions with OR, returns true if at least one of the statements is true !</description>
+    </item>
+    <item>
+      <title>Loops</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/loops/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/loops/index.html</guid>
+      <description>for Loop In Java we write a definite loop (aka a for loop) as:&#xA;1 2 3 4 5 public static void main(String [] args) { for (int i = 0; i &lt; 10; i++ ) { System.out.println(i); } } Output:&#xA;0 1 2 3 4 5 6 7 8 9 Note You may not be familiar with the expression i++ since it is not found in all languages. The ++ is an increment operator that has the same effect as i += 1.</description>
+    </item>
+    <item>
+      <title>Collections</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/collections/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/collections/index.html</guid>
+      <description>Data Structures A data structure lets us hold on to lots of data in a single place. It is a programming construct to aggregate lots of values into one value. Many types of data structures exist in various languages. A few examples are lists, dictionaries, arrays, tuples, etc.&#xA;Java Collections Framework Java provides powerful and flexible structures to store data, known as collections. The Java collections framework refers to the various interfaces the language provides for implementing collection types.</description>
+    </item>
+    <item>
+      <title>ArrayList</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html</guid>
+      <description>To write an ArrayList version of the program, we will have to introduce several new Java concepts, including the class ArrayList. We will also review different kinds of for loops used in Java.&#xA;Before going any further, we suggest you run the ArrayListGradebook program in IntelliJ. You can view this program in the java-web-dev-projects/chapter-example/student-example directory. Once you’ve done that, let’s look at what is happening in the Java source code.</description>
+    </item>
+    <item>
+      <title>Array</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/array/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/array/index.html</guid>
+      <description>We learned about arrays in Java in a previous lesson, so let’s spend a moment comparing them to ArrayLists. ArrayLists are generally easier to use than Java’s Array. Let’s see why this is.&#xA;Why does Java have both Arrays and ArrayLists? The answer is historical, at least in part. Java is a C-style language, and arrays are the most basic data structure in C. Using an Array over an ArrayList might be preferred in some circumstances, primarily for performance reasons (array operations are generally faster than ArrayList operations).</description>
+    </item>
+    <item>
+      <title>HashMap</title>
+      <link>http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html</link>
+      <pubDate>Thu, 22 Jun 2023 09:45:23 -0500</pubDate>
+      <guid>http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html</guid>
+      <description>Java also provides us a structure to store data as key/value pairs. Java calls these objects hashmaps (or maps, more generally), and they are provided by the HashMap class.&#xA;Considering the gradebook example, we can improve our program using a map. We’ll store the students’ grades along with their names in the same data structure. The names will be the keys, and the grades will be the values.&#xA;As with the other collection structures, in Java we must specify the types of the objects we’ll be storing when we declare a variable or parameter to be a map.</description>
+    </item>
+  </channel>
+</rss>

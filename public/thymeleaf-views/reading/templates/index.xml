@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Templates :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/templates/index.html</link>
+    <description>Take a look at the homepage for WebElements . The content includes text, images, a navigation bar, a search box, linked menu options at the bottom of the page, and 118 carefully colored boxes with links—one for each element on the periodic table. All of this content is very deliberately arranged and styled.&#xA;Imagine your boss tasks you with creating this website. Setting up the HTML tags for the navigation bar would be straightforward, but what about the element boxes?</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/templates/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

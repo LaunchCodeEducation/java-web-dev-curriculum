@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Controllers with Forms :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html</link>
+    <description>Sending Form Data - Video Note The starter code for this video is found in the path-variables branch of the hello-spring repo. The final code presented in this video is found on the forms branch . As always, code along to the videos on your own hello-spring project.&#xA;Sending Form Data - Text What if we want to send over some form data? To send data via a simple form in Spring Boot, we’ll set things up like this:</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

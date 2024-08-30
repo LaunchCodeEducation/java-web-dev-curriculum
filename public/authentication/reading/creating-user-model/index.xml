@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creating a User Model :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/reading/creating-user-model/index.html</link>
+    <description>The next few sections walk through the steps necessary to enable simple authentication in the codingevents app. Along the way, we will use some advanced concepts that you haven’t fully learned. That’s okay. We don’t expect you to understand every detail the next few sections. However, you do need to understand the purpose of each step in enabling authentication.&#xA;Note While we’ll use codingevents, these steps would be the same for any other app.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/reading/creating-user-model/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

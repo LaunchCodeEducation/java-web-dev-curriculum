@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/models-and-model-binding/reading/index.html</link>
+    <description>Content Links Models in MVC Create a Model Models and Data Models Binding </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/models-and-model-binding/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Models in MVC</title>
+      <link>http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html</guid>
+      <description>In the previous chapters, you learned about thymeleaf, which displays data and an interface for a user, and controllers which determine what data to send to the views. This data needs to come from some source and take some shape. Cue the models.&#xA;What is a Model? A model represents the logic for accessing and storing the data used in an application. Properly constructed, they do not depend on any controllers or views, which makes models easy to reuse without modification.</description>
+    </item>
+    <item>
+      <title>Create a Model</title>
+      <link>http://localhost:1313/models-and-model-binding/reading/create-model/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/models-and-model-binding/reading/create-model/index.html</guid>
+      <description>In the next several pages, we will be making updates to codingevents to demonstrate model creation, how models relate to data, and the practice of model binding. The first of these steps is to move data handling out of our controller classes and into a model class. As we discussed on the previous page, the controller class is not responsible for holding data.&#xA;In codingevents, we’ll remove the ArrayList data from EventController and create a proper Java class to deal with event items.</description>
+    </item>
+    <item>
+      <title>Models and Data</title>
+      <link>http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html</guid>
+      <description>In order to work with data, we need to add another element to our MVC application. Say, for example, we want to do things like remove an event from our list. Well, if two events both have the same name, how might we identify which of those items to delete? We can’t yet. So we need to tweak how we store event data.&#xA;Add a Unique Id - Video Note The starter code for this video is found at the add-property branch of the CodingEventsJava repo.</description>
+    </item>
+    <item>
+      <title>Models Binding</title>
+      <link>http://localhost:1313/models-and-model-binding/reading/model-binding/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/models-and-model-binding/reading/model-binding/index.html</guid>
+      <description>We now introduce a useful technique to auto-create model instances, called model binding. Model binding takes place when a whole model object is created by the Spring framework on form submission. This saves us the effort, and the code, needed to pass in each form field to a controller.&#xA;Model binding reduces the amount of code we need to write to create an object and it helps with validation (which we’ll explore further in the next section).</description>
+    </item>
+  </channel>
+</rss>

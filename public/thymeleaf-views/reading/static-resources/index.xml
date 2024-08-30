@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Static Resources :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/static-resources/index.html</link>
+    <description>Up to now, we used templates to display controller data as text in the view. If we need to display an image or video, or if we want to create a link to a different file, then we need to move beyond a text output.&#xA;With Thymeleaf, we can set values for the HTML src and href attributes. Instead of hard-coding a file path or external URL inside a tag, th:src and th:href take advantage of a simpler syntax.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/static-resources/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

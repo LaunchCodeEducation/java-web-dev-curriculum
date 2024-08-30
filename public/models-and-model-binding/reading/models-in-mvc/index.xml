@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Models in MVC :: Java Web Development</title>
+    <link>http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html</link>
+    <description>In the previous chapters, you learned about thymeleaf, which displays data and an interface for a user, and controllers which determine what data to send to the views. This data needs to come from some source and take some shape. Cue the models.&#xA;What is a Model? A model represents the logic for accessing and storing the data used in an application. Properly constructed, they do not depend on any controllers or views, which makes models easy to reuse without modification.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

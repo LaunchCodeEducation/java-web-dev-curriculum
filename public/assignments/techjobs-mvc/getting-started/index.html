@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Relearn 6.1.1+tip">
+    <meta name="description" content="Getting Started Set up a local copy of the project:
+In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Task 1: Getting to Know the Starter Code :: Java Web Development">
+    <meta name="twitter:description" content="Getting Started Set up a local copy of the project:
+In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .">
+    <meta property="og:url" content="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">
+    <meta property="og:site_name" content="Java Web Development">
+    <meta property="og:title" content="Task 1: Getting to Know the Starter Code :: Java Web Development">
+    <meta property="og:description" content="Getting Started Set up a local copy of the project:
+In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Task 1: Getting to Know the Starter Code :: Java Web Development">
+    <meta itemprop="description" content="Getting Started Set up a local copy of the project:
+In Canvas, Graded Assignment #3: TechJobs (MVC Edition) contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from Assignment 0 for details. Launch the application (via the Gradle pane, Tasks &gt; Application &gt; bootRun) to make sure it starts up. Then shut it down. Run the autograding tests. The tests for this assignment are set up the same way as for Assignment 2 .">
+    <meta itemprop="datePublished" content="2023-05-22T10:20:54-05:00">
+    <meta itemprop="dateModified" content="2023-09-23T09:59:59-05:00">
+    <meta itemprop="wordCount" content="1568">
+    <title>Task 1: Getting to Know the Starter Code :: Java Web Development</title>
+    <link href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.xml" rel="alternate" type="application/rss+xml" title="Task 1: Getting to Know the Starter Code :: Java Web Development">
+    <link href="http://localhost:1313/images/favicon.png?1725032835" rel="icon" type="image/png">
+    <link href="http://localhost:1313/images/favicon.ico?1725032835" rel="icon" type="image/x-icon" sizes="any">
+    <link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/nucleus.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/perfect-scrollbar.min.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/theme.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/theme-lc-light.css?1725032835" rel="stylesheet" id="R-variant-style">
+    <link href="http://localhost:1313/css/chroma-relearn-light.css?1725032835" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="http://localhost:1313/css/variant.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/print.css?1725032835" rel="stylesheet" media="print">
+    <script src="http://localhost:1313/js/variant.js?1725032835"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="http://localhost:1313/index.search.js?1725032835";
+      // variant stuff
+      window.variants && variants.init( [ 'lc-light', 'lc-dark-blue', 'lc-dark-blue-two' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#review-the-code">Review the Code</a>
+      <ul>
+        <li><a href="#the-model">The Model</a></li>
+        <li><a href="#the-controllers">The Controllers</a></li>
+        <li><a href="#the-views">The Views</a></li>
+        <li><a href="#wrap-up-the-code-review">Wrap Up the Code Review</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/index.html"><span itemprop="name">Java Web Development</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/assignments/index.html"><span itemprop="name">Assignments</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/assignments/techjobs-mvc/index.html"><span itemprop="name">Assignment #3: Tech Jobs (MVC Edition)</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Task 1: Getting to Know the Starter Code</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/assignments/techjobs-mvc/index.html" title="Assignment #3: Tech Jobs (MVC Edition) (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.html" title="Task 2: Complete List Views (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="task-1-getting-to-know-the-starter-code">Task 1: Getting to Know the Starter Code</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>Set up a local copy of the project:</p>
+<ol>
+<li>In Canvas, <strong>Graded Assignment #3: TechJobs (MVC Edition)</strong> contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from <a href="http://localhost:1313/assignments/hello-world/index.html#getting-started">Assignment 0</a>
+ for details.</li>
+<li>Launch the application (via the Gradle pane, <em>Tasks &gt; Application &gt;
+bootRun</em>) to make sure it starts up. Then shut it down.</li>
+<li>Run the autograding tests. The tests for this assignment are set up the same way as for <a href="http://localhost:1313/assignments/techjobs-oo/task7/index.html#run-the-tests">Assignment 2</a>
+. There are four tasks for this assignment, but the first doesn&rsquo;t require any coding on your part. Therefore, there are 3 test files (for tasks 2-4). As with Assignment 2, we recommend that you only run the tests for the task you are currently working on.</li>
+</ol>
+<h2 id="review-the-code">Review the Code</h2>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>One essential programming skill that you will develop is the ability to read
+and understand someone else&rsquo;s code. This assignment begins with you
+practicing exactly that. Make sure you carefully examine the provided code
+BEFORE you start changing things.</p>
+<p>Trying to &ldquo;fix&rdquo; a code sample before understanding how it works leads to
+confusion, frustration, and a broken program. DO NOT SKIP the code review!</p>
+</div>
+</div>
+<p>Carly created a Spring Boot application and filled in some features. She
+refactored <code>JobData</code> to generate an ArrayList of <code>Job</code> objects based on
+your TechJobs-OO work, and she added controllers and views for a &ldquo;Home&rdquo;,
+&ldquo;List&rdquo;, and &ldquo;Search&rdquo; page. <code>JobData</code> now also builds ArrayLists for the
+<code>Employer</code>, <code>Location</code>, <code>PositionType</code>, and <code>CoreCompetency</code> objects.</p>
+<h3 id="the-model">The Model</h3>
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>When referring to Java class locations, we’ll usually omit the leading
+path: <code>src/main/java/org/launchcode/</code>.</p>
+</div>
+</div>
+<p>The &ldquo;model&rdquo; is contained in the <code>JobData</code> class, which is in the <code>models</code>
+package. We put &ldquo;model&rdquo; in quotes, since this class isn’t a model in the
+typical, MVC/object-oriented sense (maybe a better name for this assignment
+would be <em>TechJobs VC</em>).</p>
+<p>The <code>JobData</code> class serves the same purpose as before&mdash;it reads data from
+the <code>job_data.csv</code> file and stores it in a format we can use. In this case,
+that format is an ArrayList of <code>Job</code> objects. Note that Carly changed the
+path to the <code>job_data.csv</code> file to store it in the <code>src/main/resources</code>
+directory.</p>
+<p>You’ll use some of the static methods provided by <code>JobData</code> in your
+controller code. Since you’re already familiar with these, we’ll leave it to
+you to review their functionality as you go.</p>
+<h3 id="the-controllers">The Controllers</h3>
+<p>Expand the <code>controllers</code> package, and you’ll see that you have three
+controllers already in place. Let’s look at these one at a time.</p>
+<h4 id="the-homecontroller">The <code>HomeController</code></h4>
+<p>This class has only one handler method, <code>index</code>, which displays the home page
+for the app. The controller renders the <code>index.html</code> template (in
+<code>src/main/resources/templates</code>) and provides a fairly simple view.</p>
+<h4 id="the-listcontroller">The <code>ListController</code></h4>
+<p>This controller provides functionality for users to see either a table showing
+all the options for the different <code>Job</code> fields (<code>employer</code>, <code>location</code>,
+<code>coreCompetency</code>, and <code>positionType</code>) or a list of details for a selected
+set of jobs.</p>
+<p>If you look at the corresponding page at <code>/list</code>, you’ll see an &ldquo;All&rdquo; column
+in the table. However, this option doesn’t work yet, and you will fully
+implement that view as you work on the assignment.</p>
+<p>At the top of <code>ListController</code> is a constructor that populates
+<code>columnChoices</code> and <code>tableChoices</code> with values. These HashMaps play the
+same role as in the console app, which is to provide a centralized collection
+of the different <em>List</em> and <em>Search</em> options presented throughout the user
+interface.</p>
+<p><code>ListController</code> also has <code>list</code> and <code>listJobsByColumnAndValue</code> handler
+methods, with routes as annotated above their definitions. The first method
+renders a view that displays a table of clickable links for the different job
+categories. The second method renders a different view that displays
+information for the jobs that relate to a selected category. Both of the
+handlers obtain data by implementing the <code>JobData</code> class methods.</p>
+<p>In the <code>listJobsByColumnAndValue</code> method, the controller uses two query
+parameters passed in as <code>column</code> and <code>value</code> to determine what to fetch
+from <code>JobData</code>. In the case of <code>&quot;all&quot;</code> it will fetch all job data,
+otherwise, it will retrieve a smaller set of information. The controller then
+renders the <code>list-jobs.html</code> view. We’ll explore the <code>list.html</code> and
+<code>list-jobs.html</code> templates in a moment.</p>
+<p><code>listJobsByColumnAndValue</code> works similarly to the search functionality, in
+that we are &ldquo;searching&rdquo; for a particular value within a particular field and
+then displaying jobs that match. However, this is slightly different from the
+other way of searching in that the user will arrive at this handler method as a
+result of clicking on a link within the <code>list</code> view, rather than via
+submitting a form. We’ll see where these links originate when we look at the
+views. Also note that the <code>listJobsByColumnAndValue</code> method deals with an
+&ldquo;all&rdquo; scenario differently than if a user clicks one of the category links.</p>
+<h4 id="the-searchcontroller">The <code>SearchController</code></h4>
+<p>Currently, the search controller contains only a single method, <code>search</code>.
+It simply renders the form defined in the <code>search.html</code> template.</p>
+<p>Later in this assignment, you will receive instructions for adding a second
+handler to deal with user input and display the search results.</p>
+<h3 id="the-views">The Views</h3>
+<p>Let’s turn our attention to the views.</p>
+<h4 id="the-fragments-file">The <code>fragments</code> File</h4>
+<p>If the application is not running, launch it and navigate to the site’s home
+page in your browser. Also open up the
+<code>src/main/resources/templates/index.html</code> file in IntelliJ. You’ll notice
+that there is a fair amount of content visible on the page that isn’t contained
+in <code>index.html</code>. This is because we’re using two fragments from
+<code>fragments.html</code> (<code>head</code> and <code>page-header</code>). These allow for some basic
+page structure and navigation to be shared across all of our views.</p>
+<p>Have a look at the structure of <code>fragments.html</code>, but you will NOT need to do
+any work within this file for this assignment.</p>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>We use <a href="http://getbootstrap.com/" rel="external" target="_blank">Twitter’s Bootstrap</a>
+ CSS, HTML, and
+JS framework to provide some styling and functionality to our views. The
+appropriate files are included at the top of <code>fragments.html</code> and thus
+are included on every page of our app.</p>
+<p>You won’t have to explicitly use Bootstrap at all in this assignment,
+but it’s a great way to make your sites look good with minimal work.
+Consider using it in your own projects!</p>
+</div>
+</div>
+<h4 id="the-list-views">The List Views</h4>
+<p>Turn your attention to <code>list.html</code>. This page displays a table of links
+broken down into several categories. Data from <code>columnChoices</code> is used to
+fill in the header row, and information stored in <code>tableChoices</code> generates
+the link text.</p>
+<p>The most interesting part of this template is how we generate the links:</p>
+<div class="highlight wrap-code" linenos=%!q(bool=true)><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>   &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">th:each</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;category : ${tableChoices}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>         &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">th:each</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;item : ${category.value}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">th:href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@{/list/jobs(column=${category.key},value=${item})}&#34;</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${item}&#34;</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>         &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">td</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li><code>tableChoices</code> is a HashMap from <code>JobData</code>, and it contains the names of
+the <code>Job</code> fields as keys (<code>employer</code>, etc.). The value for each key is
+an ArrayList of <code>Employer</code>, <code>Location</code>, <code>CoreCompetency</code>, or
+<code>PositionType</code> objects.</li>
+<li>In line 1, <code>category</code> represents one key/value pair from
+<code>tableChoices</code>, and in line 3, <code>item</code> represents one entry from the
+stored ArrayList.</li>
+<li>We’ve seen the syntax <code>@{/list/jobs}</code> to generate a link within a Thymeleaf
+template, but we haven’t seen the other portion of the link:
+<code>(column=${category.key},value=${position})</code>. This syntax causes Thymeleaf
+to dynamically generate query parameters for our URL.</li>
+</ol>
+<p>In line 4, we set these parameters by using <code>column=</code> and <code>value=</code>. The
+values of these parameters are determined dynamically based on
+<code>${category.key}</code> and <code>${item}</code>. Since these values come from
+<code>tableChoices</code>, the <em>keys</em> will be <code>employer</code>, <code>location</code>, etc. The
+<em>values</em> will be the individual elements from the related ArrayList. When the
+user clicks on these links, they will be routed to the
+<code>listJobsByColumnAndValue</code> handler in <code>ListController</code>, which looks for
+these parameters.</p>
+<p>Clicking on one of the links will display a list of jobs that relate to the
+choice, via the <code>listJobsByColumnAndValue</code> handler method. However, that
+view, <code>list-jobs.html</code> isn’t working yet. While the handler method is fully
+implemented, the view template needs some work.</p>
+<p>For now, click one of the <em>Location</em> links. This sends a request as we
+outlined above, but doing so only displays a page with a title and no job list.</p>
+<p>The page you see at <code>/list/values?column=location&amp;value=...</code> is generated by
+the <code>list-jobs.html</code> template. It has a similar structure as <code>list.html</code>,
+but the table consists of only one column.</p>
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>Select &ldquo;Kansas City&rdquo; from the list of locations, and then check the address
+bar of your browser:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>   /list/jobs?column=location&amp;value=Kansas%20City
+</span></span></code></pre></div><p>Thymeleaf inserts <code>%20</code> for us, to represent a space, but this may
+actually be hidden in your browser’s address bar.</p>
+</div>
+</div>
+<h4 id="the-search-view">The Search View</h4>
+<p>Finally, click on <em>Search</em> from the home page, or the navigation bar, and open
+up <code>search.html</code> in IntelliJ. You’ll see a search form (in both the browser
+and template file) that gives the user the option of searching by a given
+<code>Job</code> field, or across all fields. This is an exact visual analog of our
+console application.</p>
+<p>This template will be used to display search results, in addition to rendering
+the form. This will give the nice user experience of easily searching multiple
+times in a row.</p>
+<h3 id="wrap-up-the-code-review">Wrap Up the Code Review</h3>
+<p>Once you understand the controllers and views that are already in place, you’re
+ready to begin your work.</p>
+<p>In IntelliJ, select <em>View &gt; Tool Windows &gt; TODO</em> to pop open a small pane at
+the bottom of the window. This list is populated by any code comments that
+start with <code>TODO</code>. You’ll see your tasks listed, and clicking on any one will
+open the relevant file.</p>
+<p><a href="#R-image-869a26631bee951da7961286c645fa92" class="lightbox-link"><img alt="TODO list in IntelliJ" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/assignments/techjobs-mvc/getting-started/figures/startcode-todolist.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-869a26631bee951da7961286c645fa92"><img alt="TODO list in IntelliJ" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/assignments/techjobs-mvc/getting-started/figures/startcode-todolist.png"></a></p>
+<p>As you work on your tasks, remember to refer to the
+<a href="https://java-techjobs-mvc.launchcodetechnicaltraining.org/" rel="external" target="_blank">demo app</a>
+.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a href="http://localhost:1313/"><img src="http://localhost:1313/images/LaunchCode_white.png" alt="LaunchCode" /></a>
+
+
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="http://localhost:1313/js/auto-complete.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.stemmer.support.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.multi.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.en.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/search.js?1725032835" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="http://localhost:1313/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/index.html">Chapter 1: Introduction and Setup</a><ul id="R-subsections-a304cdbbf4889d9e6404ee43fea352e5" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/setup/index.html">Setup for Java</a></li>
+          <li data-nav-id="/intro-and-setup/java-terminal/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-terminal/index.html">Java in the Terminal</a></li>
+          <li data-nav-id="/intro-and-setup/intellij/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/intellij/index.html">IntelliJ</a></li>
+          <li data-nav-id="/intro-and-setup/first-java-project/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/first-java-project/index.html">Your First Java Project</a></li>
+          <li data-nav-id="/intro-and-setup/java-web-dev-projects/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html">Java Web Dev Projects</a></li>
+          <li data-nav-id="/intro-and-setup/naming-conventions/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/naming-conventions/index.html">Java Naming Conventions</a></li></ul></li>
+          <li data-nav-id="/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/index.html">Chapter 2: Data Types</a><ul id="R-subsections-4f4c361a0f66d2fbe943223a1e09f1c1" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/data-types/reading/index.html">Reading</a><ul id="R-subsections-8ef317bbe9656932b70c7c394963e07f" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/data-types/index.html">Data Types</a></li>
+          <li data-nav-id="/data-types/reading/some-java-practice/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/some-java-practice/index.html">Some Java Practice</a></li>
+          <li data-nav-id="/data-types/reading/more-data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/more-data-types/index.html">More Data Types</a></li></ul></li>
+          <li data-nav-id="/data-types/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/exercises/index.html">Exercises: Data Types</a></li>
+          <li data-nav-id="/data-types/studio/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/studio/index.html">Studio: Area of a Circle</a></li>
+          <li data-nav-id="/data-types/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/index.html">Chapter 3: Control Flow and Collections</a><ul id="R-subsections-64fc82378c2226d602885aa9de5624e0" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/index.html">Reading</a><ul id="R-subsections-c0447d0341a626759ce5a4f57a79b446" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/conditionals/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html">Conditionals</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/loops/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/loops/index.html">Loops</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/collections/index.html">Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/arraylist/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html">ArrayList</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/array/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/array/index.html">Array</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/hashmap/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html">HashMap</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/exercises/index.html">Exercises: Control Flow and Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/studio/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/studio/index.html">Studio: Counting Characters</a></li>
+          <li data-nav-id="/control-flow-and-collections/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes/index.html" class=""><a class="padding" href="http://localhost:1313/classes/index.html">Chapter 4: Classes</a><ul id="R-subsections-0b0cacde8a4e9970b227851692cc4392" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes/reading/index.html">Reading</a><ul id="R-subsections-5351516f5c13b92664ea994855398098" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/background/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/background/index.html">Classes for Java</a></li>
+          <li data-nav-id="/classes/reading/modifiers/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/modifiers/index.html">Modifiers in Java</a></li>
+          <li data-nav-id="/classes/reading/encapsulation/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/encapsulation/index.html">Encapsulation</a></li>
+          <li data-nav-id="/classes/reading/constructors/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/constructors/index.html">Constructors</a></li>
+          <li data-nav-id="/classes/reading/methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/methods/index.html">Methods</a></li>
+          <li data-nav-id="/classes/reading/srp/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/srp/index.html">Single Responsibility Principle</a></li></ul></li>
+          <li data-nav-id="/classes/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/classes/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes/studio/index.html">Studio: Restaurant Menu</a></li>
+          <li data-nav-id="/classes/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/index.html">Chapter 5: Classes Part 2</a><ul id="R-subsections-eb794f8ad5cdaf028c38962b8ee979c2" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes-part-2/reading/index.html">Reading</a><ul id="R-subsections-98891f511818aeb4fbacfaaad9477fa3" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/custom-fields/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/custom-fields/index.html">Customizing Fields</a></li>
+          <li data-nav-id="/classes-part-2/reading/instance-and-static-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html">Instance and Static Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/special-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/special-methods/index.html">Special Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/intellij-shortcut/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html">IntelliJ Generator Shortcut</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/exercises/index.html">Exercises: Objects and Classes Part 2</a></li>
+          <li data-nav-id="/classes-part-2/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/studio/index.html">Studio: Restaurant Menu Continued</a></li>
+          <li data-nav-id="/classes-part-2/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/index.html">Chapter 6: Unit Testing</a><ul id="R-subsections-3bc848ae4ad1b63821b742e20049724d" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/unit-testing/reading/index.html">Reading</a><ul id="R-subsections-33c30be509a93475c0cfd6456fd11949" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/testing-in-java/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/testing-in-java/index.html">Testing in Java</a></li>
+          <li data-nav-id="/unit-testing/reading/junit/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/junit/index.html">JUnit</a></li></ul></li>
+          <li data-nav-id="/unit-testing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/exercises/index.html">Exercises: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/studio/index.html">Studio: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/index.html">Chapter 7: Inheritance</a><ul id="R-subsections-f76bb91cb47b43b6c8406073622c8626" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/inheritance/reading/index.html">Reading</a><ul id="R-subsections-b913ce714c3c990c6ebc66a363cc4cc5" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/inheritance-oop/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-oop/index.html">Inheritance in OOP</a></li>
+          <li data-nav-id="/inheritance/reading/inheritance-java/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-java/index.html">Inheritance in Java</a></li>
+          <li data-nav-id="/inheritance/reading/cat-classes/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/cat-classes/index.html">A Tale of Two Cats</a></li>
+          <li data-nav-id="/inheritance/reading/abstract-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/abstract-inheritance/index.html">Inheriting from Abstraction</a></li>
+          <li data-nav-id="/inheritance/reading/casting/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/casting/index.html">Casting</a></li>
+          <li data-nav-id="/inheritance/reading/testing-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/testing-inheritance/index.html">Testing Inheritance</a></li>
+          <li data-nav-id="/inheritance/reading/class-diagrams/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/class-diagrams/index.html">Class Diagrams</a></li></ul></li>
+          <li data-nav-id="/inheritance/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/exercises/index.html">Exercises: Inheritance</a></li>
+          <li data-nav-id="/inheritance/studio/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/studio/index.html">Studio: Fun with Quizzes</a></li></ul></li>
+          <li data-nav-id="/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/index.html">Chapter 8: Interfaces and Polymorphism</a><ul id="R-subsections-a7b42a11dccec46c63e8912e4782805a" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/interfaces/reading/index.html">Reading</a><ul id="R-subsections-6335a240ba32af119c1069bc3a85b053" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/intro/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/intro/index.html">Introduction</a></li>
+          <li data-nav-id="/interfaces/reading/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/interfaces/index.html">Interfaces</a></li>
+          <li data-nav-id="/interfaces/reading/abstract-classes/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/abstract-classes/index.html">Interfaces and Abstract Classes</a></li>
+          <li data-nav-id="/interfaces/reading/common-interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/common-interfaces/index.html">Interfaces in the Wild</a></li>
+          <li data-nav-id="/interfaces/reading/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/unit-testing/index.html">Unit Testing and Interfaces</a></li></ul></li>
+          <li data-nav-id="/interfaces/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/exercises/index.html">Exercises: Interfaces and Polymorphism</a></li>
+          <li data-nav-id="/interfaces/studio/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/studio/index.html">Studio: Spinning the Discs</a></li>
+          <li data-nav-id="/interfaces/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/spring-intro/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/index.html">Chapter 9: Spring Into MVC</a><ul id="R-subsections-cf0c46215a72d339f4e4dd17c0c70eaa" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-intro/reading/index.html">Reading</a><ul id="R-subsections-bc70f54fc117dd2904466afb66645ef7" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/mvc/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/mvc/index.html">Design Patterns, MVC, and Spring, Oh My!</a></li>
+          <li data-nav-id="/spring-intro/reading/initialize/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/initialize/index.html">Initialize Spring</a></li></ul></li>
+          <li data-nav-id="/spring-intro/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/index.html">Chapter 10: Controllers and Routing</a><ul id="R-subsections-272eff95a8b0668f5d74ec0db7181773" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/index.html">Reading</a><ul id="R-subsections-9f0e1c083512826b353326ebfd24f974" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/simple-controllers/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html">Simple Controllers</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-parameters/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html">Controllers with Parameters</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-forms/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html">Controllers with Forms</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-classes/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html">Class Level Controller Annotations</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/controllers-and-routing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/studio/index.html">Studio: Skills Tracker</a></li></ul></li>
+          <li data-nav-id="/exceptions/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/index.html">Chapter 11: Rules to the Exceptions</a><ul id="R-subsections-8eec131254d454a0b50c147e55396a4d" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/exceptions/reading/index.html">Reading</a><ul id="R-subsections-1e6043265d0493fde6c17672620c53fa" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/temperature-walkthrough/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html">Check the Temperature with Exceptions</a></li></ul></li>
+          <li data-nav-id="/exceptions/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/exercises/index.html">Exercises: Exceptions</a></li>
+          <li data-nav-id="/exceptions/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/index.html">Chapter 12: Tools in Intellij</a><ul id="R-subsections-fef402651fa1cd96d424f39aeb4a97df" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/index.html">Reading</a><ul id="R-subsections-177859a1837a86915100ccf90606be6b" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/gradle/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/gradle/index.html">Gradle</a></li>
+          <li data-nav-id="/tools-in-intellij/reading/debugging/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/debugging/index.html">Debugging in IntelliJ</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/studio/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/studio/index.html">Studio: If It Ain&#39;t Broke, Add a Breakpoint!</a></li>
+          <li data-nav-id="/tools-in-intellij/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/index.html">Chapter 13: Thymeleaf Views</a><ul id="R-subsections-69fb4d24a47b3b6e4498eb9e2a83c96a" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/index.html">Reading</a><ul id="R-subsections-29877ec5a052d2a10717217b6707da5e" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/templates/index.html">Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/creating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">Creating Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/using-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/using-templates/index.html">Using Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/iterating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html">Iterating in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/conditionals-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html">Conditionals in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/forms-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html">Thymeleaf Forms</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/fragments-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html">Template Fragments</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/static-resources/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/static-resources/index.html">Static Resources</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/bootstrap/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html">Bootstrap</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/exercises/index.html">Exercises: Thymeleaf Views</a></li>
+          <li data-nav-id="/thymeleaf-views/studios/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/studios/index.html">Studio: Spa Day!</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/index.html">Chapter 14: Models and Model Binding</a><ul id="R-subsections-b425ab8120c8045a29686974292fab81" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/index.html">Reading</a><ul id="R-subsections-245ddf76889aac7272030a839961234a" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/models-in-mvc/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html">Models in MVC</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/create-model/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/create-model/index.html">Create a Model</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/models-and-data/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html">Models and Data</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/model-binding/index.html">Models Binding</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/exercises/index.html">Exercises: Edit Model Classes</a></li>
+          <li data-nav-id="/models-and-model-binding/studio/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/studio/index.html">Studio: Spa User Signup</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/index.html">Chapter 15: Model Validation</a><ul id="R-subsections-cc64ee7cea4ab3dca78461823b1296c0" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-model-validation/reading/index.html">Reading</a><ul id="R-subsections-cc1bbcfae946480bfeb052e688ea8592" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/server-side-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html">Server-Side Validation</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-annotations/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html">Validation Annotations</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-controller/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-controller/index.html">Validating Models in a Controller</a></li>
+          <li data-nav-id="/spring-model-validation/reading/thymeleaf-form-tools/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html">Thymeleaf Form Tools</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/exercises/index.html">Exercises: Model Validation</a></li>
+          <li data-nav-id="/spring-model-validation/studio/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/studio/index.html">Studio: Spa User Validation</a></li>
+          <li data-nav-id="/spring-model-validation/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/index.html">Chapter 16: Enums</a><ul id="R-subsections-831b138d2e9a513438884233b2f221f2" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/enums/reading/index.html">Reading</a><ul id="R-subsections-904b86ebee00756ee4747a4acbd69524" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/intro-to-enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/intro-to-enums/index.html">Introduction to Enums</a></li>
+          <li data-nav-id="/enums/reading/enums-model-classes/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/enums-model-classes/index.html">Enums in Model Classes</a></li></ul></li>
+          <li data-nav-id="/enums/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/enums/exercises/index.html">Exercises: Enum Practice</a></li>
+          <li data-nav-id="/enums/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/enums/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/index.html">Chapter 17: Introduction to Object-Relational Mapping</a><ul id="R-subsections-aa4987828deb901fc4f8215487106198" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/index.html">Reading</a><ul id="R-subsections-2f85f252dde5e5dff037908f20779885" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/orm/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/orm/index.html">Object-Relational Mapping</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/accessing-data/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html">Accessing Data</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/repositories/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/repositories/index.html">Repositories</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/exercises/index.html">Exercises: OMG the ORM!</a></li>
+          <li data-nav-id="/intro-orm-mapping/studio/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/studio/index.html">Studio: Creating an AbstractEntity</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/index.html">Chapter 18: Relationships in Object-Relational Mapping</a><ul id="R-subsections-14a4ceddf2743bbc7cc53e73d28e238c" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/orm-relationships/reading/index.html">Reading</a><ul id="R-subsections-fbbffc798bf994fdf98727229ef8c7bd" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/types-of-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html">Types of Relationships</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">Creating a Many-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-many/index.html">Creating a One-to-Many Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-one/index.html">Creating a One-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-many/index.html">Creating a Many-to-Many Relationship</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/exercises/index.html">Exercises: The Early Bird Gets the ORM!</a></li>
+          <li data-nav-id="/orm-relationships/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/index.html">Chapter 19: Authentication</a><ul id="R-subsections-1345916ddf39bfe2b504bc524b69e938" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/authentication/reading/index.html">Reading</a><ul id="R-subsections-90b7ce6ead6e2e6c918d107a10c0c053" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/intro-to-authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/intro-to-authentication/index.html">Introduction to Authentication</a></li>
+          <li data-nav-id="/authentication/reading/hashing-passwords/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/hashing-passwords/index.html">Hashing Passwords</a></li>
+          <li data-nav-id="/authentication/reading/creating-user-model/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/creating-user-model/index.html">Creating a User Model</a></li>
+          <li data-nav-id="/authentication/reading/login-and-registration/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/login-and-registration/index.html">Login and Registration Forms</a></li>
+          <li data-nav-id="/authentication/reading/filtering-requests/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/filtering-requests/index.html">Filtering Requests</a></li></ul></li>
+          <li data-nav-id="/authentication/studio/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/studio/index.html">Studio: TechJobs Authentication</a></li>
+          <li data-nav-id="/authentication/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/index.html">Chapter 20: Introduction to Web APIs &amp; REST</a><ul id="R-subsections-42481ec37d6e5cf75cb79d369c79632a" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/web-api-rest/reading/index.html">Reading</a><ul id="R-subsections-c70e9a362888ae84c94682e8f5c6a772" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/web-api/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/web-api/index.html">Web APIs</a></li>
+          <li data-nav-id="/web-api-rest/reading/what-is-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/what-is-rest/index.html">What is REST</a></li>
+          <li data-nav-id="/web-api-rest/reading/rest-practical-fundamentals/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/rest-practical-fundamentals/index.html">REST: Practical Fundamentals</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/exercises/index.html">Exercises: Web APIs and REST</a></li>
+          <li data-nav-id="/web-api-rest/studio/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/studio/index.html">Studio: Consuming the Coding Events API With Postman</a></li>
+          <li data-nav-id="/web-api-rest/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/index.html" class="parent "><a class="padding" href="http://localhost:1313/assignments/index.html">Assignments</a><ul id="R-subsections-ac1a358b456bc5017269265633799872" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/hello-world/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/hello-world/index.html">Assignment #0: Hello, World!</a></li>
+          <li data-nav-id="/assignments/techjobs-console/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-console/index.html">Assignment #1: Tech Jobs Console</a><ul id="R-subsections-4b66cf2d2fe44b7bc1aa5c015f2d63d1" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-console/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-one/index.html">Task 1: Implement printJobs()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-two/index.html">Task 2: Create Method findByValue()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-three/index.html">Task 3: Make Search Methods Case-Insensitive</a></li>
+          <li data-nav-id="/assignments/techjobs-console/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-oo/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/index.html">Assignment #2: Tech Jobs OO</a><ul id="R-subsections-5c66abe3d5aa714badef7af5e2966996" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-oo/task1/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task1/index.html">Task 1: Explore the Employer Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task2/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task2/index.html">Task 2: Create the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task3/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task3/index.html">Task 3: Complete the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task4/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task4/index.html">Task 4: Use Unit Testing to Verify Parts of the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task5/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task5/index.html">Task 5: Use TDD to Build The toString Method</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task6/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task6/index.html">Task 6: Refactor to DRY the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task7/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task7/index.html">Task 7: Final Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-mvc/index.html" class="parent alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/index.html">Assignment #3: Tech Jobs (MVC Edition)</a><ul id="R-subsections-e5504cec6daa245b0ddb75d60003ef1b" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-mvc/getting-started/index.html" class="active"><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">Task 1: Getting to Know the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/list-views/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.html">Task 2: Complete List Views</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/search-controller/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html">Task 3: Complete SearchController</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/display-search-results/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html">Task 4: Display Search Results</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/submission/index.html">Submitting Your Work and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-persistent/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/index.html">Assignment #4: Tech Jobs Persistent</a><ul id="R-subsections-2de9dacd33f0514d2c2813740229e20c" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-persistent/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-one/index.html">Task 1: Connect a Database to a Spring App</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-two/index.html">Task 2: Persisting Employers and Skills</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-three/index.html">Task 3: Setting Up a One-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-four/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-four/index.html">Task 4: Setting Up a Many-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/appendices/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/index.html">Appendices</a><ul id="R-subsections-b483d80bdb9b2ad6e87ce036148cc8e4" class="morespace collapsible-menu">
+          <li data-nav-id="/appendices/install-postman/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/install-postman/index.html">Installing Postman</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-lc-light" value="lc-light" selected>Lc Light</option>
+                      <option id="R-select-variant-lc-dark-blue" value="lc-dark-blue">Lc Dark Blue</option>
+                      <option id="R-select-variant-lc-dark-blue-two" value="lc-dark-blue-two">Lc Dark Blue Two</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="http://localhost:1313/js/clipboard.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/perfect-scrollbar.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/theme.js?1725032835" defer></script>
+  </body>
+</html>

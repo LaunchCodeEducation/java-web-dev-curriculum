@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Objects and Classes Part 2 :: Java Web Development</title>
+    <link>http://localhost:1313/classes-part-2/exercises/index.html</link>
+    <description>Work on these exercises in the IntelliJ java-web-dev-projects/classes-part-two/exercises project. You will update your Student.java file by implementing the addGrade and getGradeLevel methods that were sketched out in the Instance Methods section.&#xA;1. The getGradeLevel Method This method returns the student’s level based on the number of credits they have earned: Freshman (0-29 credits), Sophomore (30-59 credits), Junior (60-89 credits), or Senior (90+ credits).&#xA;Check your solution public static String getGradeLevel(int credits) { if (credits &lt;= 29){ return &#34;freshman&#34;; } else if (credits &lt;= 59){ return &#34;sophomore&#34;; } else if (credits &lt;= 89) { return &#34;junior&#34;; } else { return &#34;senior&#34;; } } 2.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/classes-part-2/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

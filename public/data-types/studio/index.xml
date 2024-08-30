@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: Area of a Circle :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/studio/index.html</link>
+    <description>Get cozy with Java syntax by writing a console program that calculates the area of a circle based on input from the user.&#xA;Creating your class Since you’re still new to Java and IntelliJ, we’ll provide some extra direction for the first studio.&#xA;Within the datatypes-studio directory create the following directory structure: src/main/java. Create a new package named org.launchcode by right-clicking (or ctrl-clicking for some Mac users) on the java directory and selecting New &gt; Package.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

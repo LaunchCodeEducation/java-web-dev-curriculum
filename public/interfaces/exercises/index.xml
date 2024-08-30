@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercises: Interfaces and Polymorphism :: Java Web Development</title>
+    <link>http://localhost:1313/interfaces/exercises/index.html</link>
+    <description>Exercises As a new Java coder, it might take you some time to recognize the usefulness of interfaces. At first glance, these tools do not seem to provide much benefit over extending a base class, adding instance methods to a class, or overriding a method like toString.&#xA;To help overcome this, let’s consider a common occurrence—sorting an ArrayList of objects.&#xA;If the list contains String or numerical entries, then sorting the list is trivial :</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/interfaces/exercises/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

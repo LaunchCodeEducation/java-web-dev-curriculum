@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/reading/index.html</link>
+    <description> Simple Controllers Controllers with Parameters Controllers with Forms Class Level Controller Annotations </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Controllers</title>
+      <link>http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html</guid>
+      <description>The first of the MVC elements we’ll work on implementing are the controllers. Recall that controllers are like the traffic cops of our application. They handle the requests made from users interacting with the application’s view and update model data accordingly. Conversely, changes to model data are sent to the view via controller methods.&#xA;Controllers and Static Responses - Video Note: The starter code for this video is found in the starter branch of the hello-spring repo.</description>
+    </item>
+    <item>
+      <title>Controllers with Parameters</title>
+      <link>http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html</guid>
+      <description>Controllers with Parameters Now that you know the basics of a controller method, we can start to add some more variables into the mix. Some controller methods can take in parameters in the form of query strings or sections of the URL path. Passing this URL data to the controller is one step closer to more flexible web applications.&#xA;A route is the mechanism by which a request path gets assigned to a controller within our application.</description>
+    </item>
+    <item>
+      <title>Controllers with Forms</title>
+      <link>http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html</guid>
+      <description>Sending Form Data - Video Note The starter code for this video is found in the path-variables branch of the hello-spring repo. The final code presented in this video is found on the forms branch . As always, code along to the videos on your own hello-spring project.&#xA;Sending Form Data - Text What if we want to send over some form data? To send data via a simple form in Spring Boot, we’ll set things up like this:</description>
+    </item>
+    <item>
+      <title>Class Level Controller Annotations</title>
+      <link>http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html</guid>
+      <description>Controller Classes - Video Note The starter code for this video is found in the forms branch of the hello-spring repo. The final code presented in this video is found on the class-annotations branch . As always, code along to the videos on your own hello-spring project.&#xA;Have you been tracking your app progress in your own git branches ? Saving your progress in branches for each video tutorial means you can always go back to a certain spot in the app development.</description>
+    </item>
+  </channel>
+</rss>

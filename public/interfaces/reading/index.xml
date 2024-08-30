@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/interfaces/reading/index.html</link>
+    <description> Introduction Interfaces Interfaces and Abstract Classes Interfaces in the Wild Unit Testing and Interfaces </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2023 14:01:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/interfaces/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>http://localhost:1313/interfaces/reading/intro/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/intro/index.html</guid>
+      <description>The third pillar of Object-Oriented Programming that we’ll explore is polymorphism.&#xA;Polymorphism Polymorphism is an object-oriented mechanism that allows for objects of different types to be used in the same way.&#xA;We’ve already encountered polymorphism made possible by inheritance when talking about casting with our Cat and HouseCat classes. In that case, we stored an object of type HouseCat in its compatible type, Cat.&#xA;Let’s take a closer look at how polymorphism might work in our cat-centric application.</description>
+    </item>
+    <item>
+      <title>Interfaces</title>
+      <link>http://localhost:1313/interfaces/reading/interfaces/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/interfaces/index.html</guid>
+      <description>An interface is a formal construction within Java. Interfaces allow us to create a set of behaviors that a class must fulfill. A Java interface may contain:&#xA;Constants (that is, static final fields) Method signatures Static methods Default methods Creating an Interface Method Signatures One really useful aspect of using an interface is the ability to specify method signatures. A method signature includes the name, parameters, and return type of a method, but no body.</description>
+    </item>
+    <item>
+      <title>Interfaces and Abstract Classes</title>
+      <link>http://localhost:1313/interfaces/reading/abstract-classes/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/abstract-classes/index.html</guid>
+      <description>We mentioned previously that interfaces share some characteristics with abstract classes. Recall that an abstract class is one declared with the abstract keyword. You may not create an object from an abstract class, and like an interface, an abstract class is allowed to contain methods that only have signatures (that is, they don’t have implementation code).&#xA;The main differences between interfaces and abstract classes are:&#xA;You implement an interface, while you extend an abstract class.</description>
+    </item>
+    <item>
+      <title>Interfaces in the Wild</title>
+      <link>http://localhost:1313/interfaces/reading/common-interfaces/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/common-interfaces/index.html</guid>
+      <description>The first situations where you’ll want to use interfaces involve applying pre-defined interfaces and classes that are part of Java. Here are a few examples.&#xA;Comparable&lt;T&gt; Purpose: A class implements Comparable&lt;T&gt; in order to allow comparison—in a “greater than” and “less than” sense—to another instance of the class. This is a “parameterized” interface, which means that you need to specify the class that it will be comparing. For example, Comparable&lt;Job&gt; would compare Job objects.</description>
+    </item>
+    <item>
+      <title>Unit Testing and Interfaces</title>
+      <link>http://localhost:1313/interfaces/reading/unit-testing/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 14:01:05 -0500</pubDate>
+      <guid>http://localhost:1313/interfaces/reading/unit-testing/index.html</guid>
+      <description>After all that we have learned about interfaces, you are probably wondering, how do I write my unit tests with interfaces?&#xA;The best practices to testing interfaces are very similar to those of testing inheritance. You want to focus on testing the contract that the interface is supposed to be upholding as opposed to the interface itself.&#xA;Example We have a Temperature interface, a Celsius class, and a Fahrenheit class.</description>
+    </item>
+  </channel>
+</rss>

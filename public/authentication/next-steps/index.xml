@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Next Steps :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/next-steps/index.html</link>
+    <description>Additional Content Now that you have successfully added authentication to an existing project you can further explore the topics below:&#xA;For a deeper dive into spring security you can visit the official docs . View this guide that walks through the creation of a spring MVC web application using Spring Security. Baeldung Spring Security Basic Authentication walkthrough. This will will walk through the process of basic authentication with Spring with an MVC application.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/next-steps/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

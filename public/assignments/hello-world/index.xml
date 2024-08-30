@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignment #0: Hello, World! :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/hello-world/index.html</link>
+    <description>The purpose of this initial assignment is to familiarize yourself with the process of running the autograding tests with Github Actions and submitting your work. Even if you are familiar with GitHub Actions, this assignment will contain several new items that are specific to working with Java assignments.&#xA;Getting Started Let’s set up the assignment on our computer and learn about its basic structure.&#xA;First, find Assignment #0 in Canvas and click on the starter code repo link.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/hello-world/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

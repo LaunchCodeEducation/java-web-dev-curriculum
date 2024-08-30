@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enums in Model Classes :: Java Web Development</title>
+    <link>http://localhost:1313/enums/reading/enums-model-classes/index.html</link>
+    <description>One application of enum types is to represent categories of objects. We will take this approach in our coding-events application to categorize events based on their type, such as conference or meetup.&#xA;Enum Types in Models - Video Note The starter code for this video is found at the display-errors branch of the CodingEventsJava repo. The final code presented in this video is found on the enums branch . As always, code along to the videos on your own codingevents project.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/enums/reading/enums-model-classes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

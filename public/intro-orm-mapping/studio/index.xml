@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studio: Creating an AbstractEntity :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/studio/index.html</link>
+    <description>In Exercises: OMG the ORM! , you created a new persistent class, EventCategory. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. “DRY out your code”) using inheritance and abstract classes.&#xA;Getting Ready In your coding-events repository, create a new branch from your exercises work.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/studio/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Class Level Controller Annotations :: Java Web Development</title>
+    <link>http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html</link>
+    <description>Controller Classes - Video Note The starter code for this video is found in the forms branch of the hello-spring repo. The final code presented in this video is found on the class-annotations branch . As always, code along to the videos on your own hello-spring project.&#xA;Have you been tracking your app progress in your own git branches ? Saving your progress in branches for each video tutorial means you can always go back to a certain spot in the app development.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

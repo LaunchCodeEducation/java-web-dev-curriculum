@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 17: Introduction to Object-Relational Mapping :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/index.html</link>
+    <description>Learning Objectives Understand how object-relational mapping allows object-oriented web applications to store data in relational databases Implement ORM for individual, non-related entities in Spring Boot Explain what object-relational mapping means Describe what a data layer is, and how it is used in ORM Key Terminology Here is a list of key terms that you should make note of as you read through this chapter.&#xA;Object-Relational Mapping Object-Relation Mapping ORM Java Persistence API JPA Data Layer object-relational mapper Environment Variables Hibernate Accessing Data CrudRepository @Repository @Entity @Id @GeneratedValue persistent class entity class Repositories @Autowired Content Links Reading Exercises: OMG the ORM!</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/intro-orm-mapping/reading/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/reading/index.html</guid>
+      <description>Reading Content Links Object-Relational Mapping Accessing Data Repositories </description>
+    </item>
+    <item>
+      <title>Exercises: OMG the ORM!</title>
+      <link>http://localhost:1313/intro-orm-mapping/exercises/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/exercises/index.html</guid>
+      <description>For the exercises, we are going to continue building on our codingevents application. The exercise instructions assume that your code resembles the persistent-controller branch of CodingEventsJava. Create a new branch off of your own persistent-controller code to get started on the exercises.&#xA;Note You will be making one entity class, one repository, and one controller. If you are not sure what these classes and interface should look like, refer back to the sections on persistent models and controllers and repositories .</description>
+    </item>
+    <item>
+      <title>Studio: Creating an AbstractEntity</title>
+      <link>http://localhost:1313/intro-orm-mapping/studio/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/intro-orm-mapping/studio/index.html</guid>
+      <description>In Exercises: OMG the ORM! , you created a new persistent class, EventCategory. We will eventually use this class to categorize events in our application. However, your application now has a fair amount of duplication across the two model classes. In this studio, you will reduce repetition (i.e. “DRY out your code”) using inheritance and abstract classes.&#xA;Getting Ready In your coding-events repository, create a new branch from your exercises work.</description>
+    </item>
+  </channel>
+</rss>

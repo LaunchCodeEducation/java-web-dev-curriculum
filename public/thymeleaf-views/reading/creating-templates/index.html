@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Relearn 6.1.1+tip">
+    <meta name="description" content="Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.
+Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.
+More information can be found on the introduction page of the Thymeleaf website.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creating Templates :: Java Web Development">
+    <meta name="twitter:description" content="Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.
+Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.
+More information can be found on the introduction page of the Thymeleaf website.">
+    <meta property="og:url" content="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">
+    <meta property="og:site_name" content="Java Web Development">
+    <meta property="og:title" content="Creating Templates :: Java Web Development">
+    <meta property="og:description" content="Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.
+Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.
+More information can be found on the introduction page of the Thymeleaf website.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Creating Templates :: Java Web Development">
+    <meta itemprop="description" content="Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.
+Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.
+More information can be found on the introduction page of the Thymeleaf website.">
+    <meta itemprop="datePublished" content="2021-10-01T09:28:27-05:00">
+    <meta itemprop="dateModified" content="2021-10-01T09:28:27-05:00">
+    <meta itemprop="wordCount" content="1051">
+    <title>Creating Templates :: Java Web Development</title>
+    <link href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.xml" rel="alternate" type="application/rss+xml" title="Creating Templates :: Java Web Development">
+    <link href="http://localhost:1313/images/favicon.png?1725032835" rel="icon" type="image/png">
+    <link href="http://localhost:1313/images/favicon.ico?1725032835" rel="icon" type="image/x-icon" sizes="any">
+    <link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fontawesome-all.min.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/nucleus.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/auto-complete.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/perfect-scrollbar.min.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/css/fonts.css?1725032835" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/css/theme.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/theme-lc-light.css?1725032835" rel="stylesheet" id="R-variant-style">
+    <link href="http://localhost:1313/css/chroma-relearn-light.css?1725032835" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="http://localhost:1313/css/variant.css?1725032835" rel="stylesheet">
+    <link href="http://localhost:1313/css/print.css?1725032835" rel="stylesheet" media="print">
+    <script src="http://localhost:1313/js/variant.js?1725032835"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="http://localhost:1313/index.search.js?1725032835";
+      // variant stuff
+      window.variants && variants.init( [ 'lc-light', 'lc-dark-blue', 'lc-dark-blue-two' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#thymeleaf">Thymeleaf</a>
+      <ul>
+        <li><a href="#thymeleaf-naturally">Thymeleaf, Naturally</a></li>
+      </ul>
+    </li>
+    <li><a href="#thymeleaf-dependency">Thymeleaf Dependency</a>
+      <ul>
+        <li><a href="#during-setup-for-a-new-project">During Setup for a New Project</a></li>
+        <li><a href="#add-to-an-existing-project">Add to an Existing Project</a></li>
+      </ul>
+    </li>
+    <li><a href="#start-a-practice-project">Start a Practice Project</a>
+      <ul>
+        <li><a href="#template-location">Template Location</a></li>
+        <li><a href="#add-a-template">Add a Template</a></li>
+      </ul>
+    </li>
+    <li><a href="#thymeleaf-template">Thymeleaf Template</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/index.html"><span itemprop="name">Java Web Development</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/thymeleaf-views/index.html"><span itemprop="name">Chapter 13: Thymeleaf Views</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="http://localhost:1313/thymeleaf-views/reading/index.html"><span itemprop="name">Reading</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Creating Templates</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/thymeleaf-views/reading/templates/index.html" title="Templates (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="http://localhost:1313/thymeleaf-views/reading/using-templates/index.html" title="Using Templates (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="creating-templates">Creating Templates</h1>
+
+<p>Using templates is a useful way to reduce the effort required to create and
+maintain a web-based project. Before you can dive into using templates,
+however, you need to take care of a little groundwork first.</p>
+<h2 id="thymeleaf">Thymeleaf</h2>
+<p>In combination with Java and Spring Boot, we will use a library called
+<strong>Thymeleaf</strong>. This set of tools helps simplify the creation of flexible,
+reusable templates for standalone projects and web-based applications.</p>
+<p>More information can be found on the <a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thymeleaf" rel="external" target="_blank">introduction page</a>
+ of the Thymeleaf website.</p>
+<h3 id="thymeleaf-naturally">Thymeleaf, Naturally</h3>
+<p>The developers behind Thymeleaf emphasize the idea of <em>natural templates</em>. This
+means that templates constructed with Thymeleaf look and operate just like
+regular HTML code. You can open any template in a browser and view it just
+like a static HTML file.</p>
+<p>Any logic we add to a template occurs inside the tags, which preserves the
+ability to open the file and display it correctly. This helps us as we
+consider the best layout for presenting data on the screen.</p>
+<h2 id="thymeleaf-dependency">Thymeleaf Dependency</h2>
+<p>In this chapter, you will construct some small practice projects to help you
+learn how to implement Thymeleaf templates. To use the library, however, you
+need to provide IntelliJ with some information to make the IDE recognize
+Thymeleaf syntax and commands. You need to include in the proper
+<em>dependencies</em>, and there are two common ways to accomplish this.</p>
+<h3 id="during-setup-for-a-new-project">During Setup for a New Project</h3>
+<p>When you create a new Gradle project on the <a href="https://start.spring.io/" rel="external" target="_blank">start.spring.io</a>
+
+website, search for and select the <em>Thymeleaf</em> dependency. For the practice
+projects you build in this class, be sure to add the <em>Spring Web</em> and
+<em>Spring Boot DevTools</em> dependencies as well.</p>
+<p><a href="#R-image-fd820a262b29ed0d4c14075ce00bb64e" class="lightbox-link"><img alt="Select the Thymeleaf dependency" class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/selectTLdependency.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd820a262b29ed0d4c14075ce00bb64e"><img alt="Select the Thymeleaf dependency" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/selectTLdependency.png?classes=border"></a></p>
+<p>In IntelliJ, opening up the <code>build.gradle</code> file of the new project shows the dependencies you selected:</p>
+<div class="highlight wrap-code" linenos=%!q(bool=true)><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
+</span></span><span style="display:flex;"><span>    developmentOnly <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-devtools&#39;</span>
+</span></span><span style="display:flex;"><span>    testImplementation<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-test&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        exclude group: <span style="color:#e6db74">&#39;org.junit.vintage&#39;</span><span style="color:#f92672">,</span> module: <span style="color:#e6db74">&#39;junit-vintage-engine&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Lines 2 - 4 establish links to the <code>thymeleaf</code>, <code>spring-boot-starter-web</code>, and <code>spring-boot-devtools</code> libraries, respectively.</p>
+<h3 id="add-to-an-existing-project">Add to an Existing Project</h3>
+<p>If you have an existing project that does not currently use Thymeleaf, you can add the functionality by updating the <code>build.gradle</code> file.</p>
+<p><a href="#R-image-6f0d40978b0ce0961963e3f63060aba1" class="lightbox-link"><img alt="build.gradle file in the src directory" class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/buildGradleFileTree.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6f0d40978b0ce0961963e3f63060aba1"><img alt="build.gradle file in the src directory" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/buildGradleFileTree.png?classes=border"></a></p>
+<p>The <code>build.gradle</code> file in the src directory.</p>
+<p>In the <code>dependencies</code> block, just paste in the <code>implementation</code> statement seen in line 23 above. Also, be sure to include the Spring Boot libraries if the old project is missing those as well.</p>
+<h2 id="start-a-practice-project">Start a Practice Project</h2>
+<p>Open up your <code>hello-spring</code> project in IntelliJ and code along with the following video.</p>
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>We&rsquo;re assuming you&rsquo;ve completed these <a href="http://localhost:1313/controllers-and-routing/exercises/index.html">Controllers and Routing Exercises</a>
+ on your own <code>hello-spring</code> application and committed your changes to a branch reserved for the exercises. No matter where you are with those exercises, be sure that your own <code>hello-spring</code> application roughly matches the <a href="https://github.com/LaunchCodeEducation/hello-spring/tree/forms" rel="external" target="_blank">hello-spring forms branch</a>
+ so that you can follow along with the video lessons in this chapter. If you are using git branches to track your work, you can simply return to the branch you were on before starting the video walkthrough
+on <a href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html">this page</a>
+.</p>
+</div>
+</div>
+
+<div class="box notices cstyle orange">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Warning</div>
+  <div class="box-content">
+
+<p>The videos in this chapter walk you through building small web-based projects. Do NOT skip this practice, because the end of chapter exercises
+pick up where the tutorials end.</p>
+<p>In addition, the following video explores the use of <code>file templates</code>. Windows and Linux users may have a different experience than that shown in the video. For more information on locating / using <code>file templates</code> please visit the following link: <a href="https://www.jetbrains.com/help/idea/settings-file-and-code-templates.html" rel="external" target="_blank">JetBrains file and code templates</a>
+</p>
+</div>
+</div>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/UIetMLyDVjQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+
+<div class="box notices cstyle blue">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Note</div>
+  <div class="box-content">
+
+<p>The starter code for this video is found at the
+<a href="https://github.com/LaunchCodeEducation/hello-spring/tree/forms" rel="external" target="_blank">forms</a>
+ branch of <code>hello-spring-demo</code>.
+The final code presented in this video is found on the
+<a href="https://github.com/LaunchCodeEducation/hello-spring/tree/views-static" rel="external" target="_blank">views-static</a>
+
+branch.</p>
+</div>
+</div>
+<p>The sections below outline the main ideas presented in the video. However, the
+text is NOT a substitute for completing the work described in the clip.</p>
+<h3 id="template-location">Template Location</h3>
+<p>In IntelliJ, create a <code>templates</code> folder inside the <code>resources</code> directory. All of your templates should be put in the <code>templates</code> folder. As you saw in the video, Thymeleaf streamlines finding required files by using
+<code>resources/templates</code> as the default location.</p>
+<p><a href="#R-image-705bd8f932ed4448c56a4ed0d263881b" class="lightbox-link"><img alt="File tree location for the templates folder." class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/templatesFolder.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-705bd8f932ed4448c56a4ed0d263881b"><img alt="File tree location for the templates folder." class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/templatesFolder.png?classes=border"></a></p>
+<h3 id="add-a-template">Add a Template</h3>
+<p>To create a new template, right-click on the <code>templates</code> folder and select
+<em>New &ndash;&gt; HTML file</em>. Give your template a descriptive name, and note that
+IntelliJ provides some boilerplate code:</p>
+<div class="highlight wrap-code" linenos=%!q(bool=true)><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">title</span>&gt;Title&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>To tie in the Thymeleaf information, you need to add a URL inside the <code>html</code> tag on line 2:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#a6e22e">xmlns:th</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.thymeleaf.org/&#34;</span>&gt;</span></span></code></pre></div><p>The <code>xmlns:th</code> attribute pulls in information from <code>thymeleaf.org</code> about the keywords and methods that we will use with Thymeleaf. This allows IntelliJ to properly apply syntax highlighting and error reporting.</p>
+<p>A side effect of the <code>xmlns:th</code> attribute is that it implements stricter requirements for closing HTML tags. In HTML5, we can get away with leaving out the <code>/</code> character in standalone tags like <code>&lt;input&gt;</code>. However, with the xml format in Thymeleaf, we must include the character.</p>
+<p>For example, we need to update line 4 in the boilerplate HTML code to close the <code>meta</code> tag:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt; <span style="color:#75715e">&lt;!-- Note the closing &#39;/&#39; character --&gt;</span></span></span></code></pre></div><h2 id="thymeleaf-template">Thymeleaf Template</h2>
+<p>As described in the video, you can save yourself some time by creating your own boilerplate code for a Thymeleaf template. This will save you from having to make the edits described above every time you add a new base html file.</p>
+<ol>
+<li>Right-click on the <code>templates</code> folder (or any other directory), and select <em>New &ndash;&gt; Edit File Templates</em>.</li>
+</ol>
+
+<div class="box notices cstyle green">
+  <div class="box-label"><i class="fa-fw fas fa-rocket"></i> Tip</div>
+  <div class="box-content">
+
+<p>Alternatively, you can edit your <em>File Templates</em> by clicking <em>File &ndash;&gt; Settings &ndash;&gt; Editor &ndash;&gt; File and Code Templates</em> for <code>Windows</code> and <code>Linux</code> and <em>IntelliJ IDEA &ndash;&gt; Settings &ndash;&gt; Editor &ndash;&gt; File and Code Templates</em> for <code>macOS</code>.</p>
+</div>
+</div>
+<ol start="2">
+<li>In the window that pops up, click the &ldquo;+&rdquo; icon to add a new file.</li>
+</ol>
+<p><a href="#R-image-60bf91cca06b1f3bd47517fc5344bc65" class="lightbox-link"><img alt="Icon to click to create a new Thymeleaf template." class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/createNewTemplate.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-60bf91cca06b1f3bd47517fc5344bc65"><img alt="Icon to click to create a new Thymeleaf template." class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/createNewTemplate.png?classes=border"></a></p>
+<ol start="3">
+<li>Name your template, set the extension as <code>html</code>, then edit the starter code. This will be the boilerplate HTML that appears anytime you select your custom template. For Thymeleaf, the code should at least close the <code>meta</code>
+tag and include the <code>xmlns</code> attribute.</li>
+</ol>
+<p><a href="#R-image-af28f11d93f74e9d6d7e07779be3f7e4" class="lightbox-link"><img alt="Editor pane for setting Thymeleaf template code" class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/thymeleafTemplateCode.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-af28f11d93f74e9d6d7e07779be3f7e4"><img alt="Editor pane for setting Thymeleaf template code" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/thymeleafTemplateCode.png?classes=border"></a></p>
+<p>If you find yourself routinely using other code in your Thymeleaf files, you can return to this window and edit the HTML as needed. Don&rsquo;t forget to save your changes.</p>
+<ol start="4">
+<li>To use your custom Thymeleaf template, right-click on the <code>templates</code> folder and select <em>New &ndash;&gt; TemplateName</em>.</li>
+</ol>
+<p><a href="#R-image-01fb630898adac9d32f57a4f5937656a" class="lightbox-link"><img alt="Menu options for selecting a custom Thymeleaf template" class="border lazy lightbox noshadow figure-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/selectThymeleafTemplate.png?classes=border" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-01fb630898adac9d32f57a4f5937656a"><img alt="Menu options for selecting a custom Thymeleaf template" class="border lazy lightbox noshadow lightbox-image" loading="lazy" src="http://localhost:1313/thymeleaf-views/reading/creating-templates/pictures/selectThymeleafTemplate.png?classes=border"></a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a href="http://localhost:1313/"><img src="http://localhost:1313/images/LaunchCode_white.png" alt="LaunchCode" /></a>
+
+
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="http://localhost:1313/js/auto-complete.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.stemmer.support.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.multi.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/lunr/lunr.en.min.js?1725032835" defer></script>
+        <script src="http://localhost:1313/js/search.js?1725032835" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="http://localhost:1313/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/index.html">Chapter 1: Introduction and Setup</a><ul id="R-subsections-a304cdbbf4889d9e6404ee43fea352e5" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-and-setup/setup/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/setup/index.html">Setup for Java</a></li>
+          <li data-nav-id="/intro-and-setup/java-terminal/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-terminal/index.html">Java in the Terminal</a></li>
+          <li data-nav-id="/intro-and-setup/intellij/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/intellij/index.html">IntelliJ</a></li>
+          <li data-nav-id="/intro-and-setup/first-java-project/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/first-java-project/index.html">Your First Java Project</a></li>
+          <li data-nav-id="/intro-and-setup/java-web-dev-projects/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/java-web-dev-projects/index.html">Java Web Dev Projects</a></li>
+          <li data-nav-id="/intro-and-setup/naming-conventions/index.html" class=""><a class="padding" href="http://localhost:1313/intro-and-setup/naming-conventions/index.html">Java Naming Conventions</a></li></ul></li>
+          <li data-nav-id="/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/index.html">Chapter 2: Data Types</a><ul id="R-subsections-4f4c361a0f66d2fbe943223a1e09f1c1" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/data-types/reading/index.html">Reading</a><ul id="R-subsections-8ef317bbe9656932b70c7c394963e07f" class="morespace collapsible-menu">
+          <li data-nav-id="/data-types/reading/data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/data-types/index.html">Data Types</a></li>
+          <li data-nav-id="/data-types/reading/some-java-practice/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/some-java-practice/index.html">Some Java Practice</a></li>
+          <li data-nav-id="/data-types/reading/more-data-types/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/reading/more-data-types/index.html">More Data Types</a></li></ul></li>
+          <li data-nav-id="/data-types/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/exercises/index.html">Exercises: Data Types</a></li>
+          <li data-nav-id="/data-types/studio/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/studio/index.html">Studio: Area of a Circle</a></li>
+          <li data-nav-id="/data-types/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/data-types/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/index.html">Chapter 3: Control Flow and Collections</a><ul id="R-subsections-64fc82378c2226d602885aa9de5624e0" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/index.html">Reading</a><ul id="R-subsections-c0447d0341a626759ce5a4f57a79b446" class="morespace collapsible-menu">
+          <li data-nav-id="/control-flow-and-collections/reading/conditionals/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/conditionals/index.html">Conditionals</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/loops/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/loops/index.html">Loops</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/collections/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/collections/index.html">Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/arraylist/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/arraylist/index.html">ArrayList</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/array/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/array/index.html">Array</a></li>
+          <li data-nav-id="/control-flow-and-collections/reading/hashmap/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/reading/hashmap/index.html">HashMap</a></li></ul></li>
+          <li data-nav-id="/control-flow-and-collections/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/exercises/index.html">Exercises: Control Flow and Collections</a></li>
+          <li data-nav-id="/control-flow-and-collections/studio/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/studio/index.html">Studio: Counting Characters</a></li>
+          <li data-nav-id="/control-flow-and-collections/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/control-flow-and-collections/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes/index.html" class=""><a class="padding" href="http://localhost:1313/classes/index.html">Chapter 4: Classes</a><ul id="R-subsections-0b0cacde8a4e9970b227851692cc4392" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes/reading/index.html">Reading</a><ul id="R-subsections-5351516f5c13b92664ea994855398098" class="morespace collapsible-menu">
+          <li data-nav-id="/classes/reading/background/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/background/index.html">Classes for Java</a></li>
+          <li data-nav-id="/classes/reading/modifiers/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/modifiers/index.html">Modifiers in Java</a></li>
+          <li data-nav-id="/classes/reading/encapsulation/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/encapsulation/index.html">Encapsulation</a></li>
+          <li data-nav-id="/classes/reading/constructors/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/constructors/index.html">Constructors</a></li>
+          <li data-nav-id="/classes/reading/methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/methods/index.html">Methods</a></li>
+          <li data-nav-id="/classes/reading/srp/index.html" class=""><a class="padding" href="http://localhost:1313/classes/reading/srp/index.html">Single Responsibility Principle</a></li></ul></li>
+          <li data-nav-id="/classes/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/classes/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes/studio/index.html">Studio: Restaurant Menu</a></li>
+          <li data-nav-id="/classes/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/index.html">Chapter 5: Classes Part 2</a><ul id="R-subsections-eb794f8ad5cdaf028c38962b8ee979c2" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/classes-part-2/reading/index.html">Reading</a><ul id="R-subsections-98891f511818aeb4fbacfaaad9477fa3" class="morespace collapsible-menu">
+          <li data-nav-id="/classes-part-2/reading/custom-fields/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/custom-fields/index.html">Customizing Fields</a></li>
+          <li data-nav-id="/classes-part-2/reading/instance-and-static-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html">Instance and Static Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/special-methods/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/special-methods/index.html">Special Methods</a></li>
+          <li data-nav-id="/classes-part-2/reading/intellij-shortcut/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html">IntelliJ Generator Shortcut</a></li></ul></li>
+          <li data-nav-id="/classes-part-2/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/exercises/index.html">Exercises: Objects and Classes Part 2</a></li>
+          <li data-nav-id="/classes-part-2/studio/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/studio/index.html">Studio: Restaurant Menu Continued</a></li>
+          <li data-nav-id="/classes-part-2/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/classes-part-2/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/index.html">Chapter 6: Unit Testing</a><ul id="R-subsections-3bc848ae4ad1b63821b742e20049724d" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/unit-testing/reading/index.html">Reading</a><ul id="R-subsections-33c30be509a93475c0cfd6456fd11949" class="morespace collapsible-menu">
+          <li data-nav-id="/unit-testing/reading/testing-in-java/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/testing-in-java/index.html">Testing in Java</a></li>
+          <li data-nav-id="/unit-testing/reading/junit/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/reading/junit/index.html">JUnit</a></li></ul></li>
+          <li data-nav-id="/unit-testing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/exercises/index.html">Exercises: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/studio/index.html">Studio: Unit Testing</a></li>
+          <li data-nav-id="/unit-testing/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/unit-testing/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/index.html">Chapter 7: Inheritance</a><ul id="R-subsections-f76bb91cb47b43b6c8406073622c8626" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/inheritance/reading/index.html">Reading</a><ul id="R-subsections-b913ce714c3c990c6ebc66a363cc4cc5" class="morespace collapsible-menu">
+          <li data-nav-id="/inheritance/reading/inheritance-oop/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-oop/index.html">Inheritance in OOP</a></li>
+          <li data-nav-id="/inheritance/reading/inheritance-java/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/inheritance-java/index.html">Inheritance in Java</a></li>
+          <li data-nav-id="/inheritance/reading/cat-classes/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/cat-classes/index.html">A Tale of Two Cats</a></li>
+          <li data-nav-id="/inheritance/reading/abstract-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/abstract-inheritance/index.html">Inheriting from Abstraction</a></li>
+          <li data-nav-id="/inheritance/reading/casting/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/casting/index.html">Casting</a></li>
+          <li data-nav-id="/inheritance/reading/testing-inheritance/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/testing-inheritance/index.html">Testing Inheritance</a></li>
+          <li data-nav-id="/inheritance/reading/class-diagrams/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/reading/class-diagrams/index.html">Class Diagrams</a></li></ul></li>
+          <li data-nav-id="/inheritance/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/exercises/index.html">Exercises: Inheritance</a></li>
+          <li data-nav-id="/inheritance/studio/index.html" class=""><a class="padding" href="http://localhost:1313/inheritance/studio/index.html">Studio: Fun with Quizzes</a></li></ul></li>
+          <li data-nav-id="/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/index.html">Chapter 8: Interfaces and Polymorphism</a><ul id="R-subsections-a7b42a11dccec46c63e8912e4782805a" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/interfaces/reading/index.html">Reading</a><ul id="R-subsections-6335a240ba32af119c1069bc3a85b053" class="morespace collapsible-menu">
+          <li data-nav-id="/interfaces/reading/intro/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/intro/index.html">Introduction</a></li>
+          <li data-nav-id="/interfaces/reading/interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/interfaces/index.html">Interfaces</a></li>
+          <li data-nav-id="/interfaces/reading/abstract-classes/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/abstract-classes/index.html">Interfaces and Abstract Classes</a></li>
+          <li data-nav-id="/interfaces/reading/common-interfaces/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/common-interfaces/index.html">Interfaces in the Wild</a></li>
+          <li data-nav-id="/interfaces/reading/unit-testing/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/reading/unit-testing/index.html">Unit Testing and Interfaces</a></li></ul></li>
+          <li data-nav-id="/interfaces/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/exercises/index.html">Exercises: Interfaces and Polymorphism</a></li>
+          <li data-nav-id="/interfaces/studio/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/studio/index.html">Studio: Spinning the Discs</a></li>
+          <li data-nav-id="/interfaces/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/interfaces/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/spring-intro/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/index.html">Chapter 9: Spring Into MVC</a><ul id="R-subsections-cf0c46215a72d339f4e4dd17c0c70eaa" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-intro/reading/index.html">Reading</a><ul id="R-subsections-bc70f54fc117dd2904466afb66645ef7" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-intro/reading/mvc/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/mvc/index.html">Design Patterns, MVC, and Spring, Oh My!</a></li>
+          <li data-nav-id="/spring-intro/reading/initialize/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/reading/initialize/index.html">Initialize Spring</a></li></ul></li>
+          <li data-nav-id="/spring-intro/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-intro/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/index.html">Chapter 10: Controllers and Routing</a><ul id="R-subsections-272eff95a8b0668f5d74ec0db7181773" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/index.html">Reading</a><ul id="R-subsections-9f0e1c083512826b353326ebfd24f974" class="morespace collapsible-menu">
+          <li data-nav-id="/controllers-and-routing/reading/simple-controllers/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/simple-controllers/index.html">Simple Controllers</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-parameters/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-parameters/index.html">Controllers with Parameters</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-with-forms/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-with-forms/index.html">Controllers with Forms</a></li>
+          <li data-nav-id="/controllers-and-routing/reading/controllers-classes/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/reading/controllers-classes/index.html">Class Level Controller Annotations</a></li></ul></li>
+          <li data-nav-id="/controllers-and-routing/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/exercises/index.html">Exercises</a></li>
+          <li data-nav-id="/controllers-and-routing/studio/index.html" class=""><a class="padding" href="http://localhost:1313/controllers-and-routing/studio/index.html">Studio: Skills Tracker</a></li></ul></li>
+          <li data-nav-id="/exceptions/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/index.html">Chapter 11: Rules to the Exceptions</a><ul id="R-subsections-8eec131254d454a0b50c147e55396a4d" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/exceptions/reading/index.html">Reading</a><ul id="R-subsections-1e6043265d0493fde6c17672620c53fa" class="morespace collapsible-menu">
+          <li data-nav-id="/exceptions/reading/temperature-walkthrough/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/reading/temperature-walkthrough/index.html">Check the Temperature with Exceptions</a></li></ul></li>
+          <li data-nav-id="/exceptions/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/exercises/index.html">Exercises: Exceptions</a></li>
+          <li data-nav-id="/exceptions/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/exceptions/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/index.html">Chapter 12: Tools in Intellij</a><ul id="R-subsections-fef402651fa1cd96d424f39aeb4a97df" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/index.html">Reading</a><ul id="R-subsections-177859a1837a86915100ccf90606be6b" class="morespace collapsible-menu">
+          <li data-nav-id="/tools-in-intellij/reading/gradle/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/gradle/index.html">Gradle</a></li>
+          <li data-nav-id="/tools-in-intellij/reading/debugging/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/reading/debugging/index.html">Debugging in IntelliJ</a></li></ul></li>
+          <li data-nav-id="/tools-in-intellij/studio/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/studio/index.html">Studio: If It Ain&#39;t Broke, Add a Breakpoint!</a></li>
+          <li data-nav-id="/tools-in-intellij/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/tools-in-intellij/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/index.html" class="parent "><a class="padding" href="http://localhost:1313/thymeleaf-views/index.html">Chapter 13: Thymeleaf Views</a><ul id="R-subsections-69fb4d24a47b3b6e4498eb9e2a83c96a" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/index.html" class="parent alwaysopen"><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/index.html">Reading</a><ul id="R-subsections-29877ec5a052d2a10717217b6707da5e" class="morespace collapsible-menu">
+          <li data-nav-id="/thymeleaf-views/reading/templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/templates/index.html">Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/creating-templates/index.html" class="active"><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html">Creating Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/using-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/using-templates/index.html">Using Templates</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/iterating-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/iterating-templates/index.html">Iterating in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/conditionals-templates/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/conditionals-templates/index.html">Conditionals in a Template</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/forms-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/forms-thymeleaf/index.html">Thymeleaf Forms</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/fragments-thymeleaf/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/fragments-thymeleaf/index.html">Template Fragments</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/static-resources/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/static-resources/index.html">Static Resources</a></li>
+          <li data-nav-id="/thymeleaf-views/reading/bootstrap/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/reading/bootstrap/index.html">Bootstrap</a></li></ul></li>
+          <li data-nav-id="/thymeleaf-views/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/exercises/index.html">Exercises: Thymeleaf Views</a></li>
+          <li data-nav-id="/thymeleaf-views/studios/index.html" class=""><a class="padding" href="http://localhost:1313/thymeleaf-views/studios/index.html">Studio: Spa Day!</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/index.html">Chapter 14: Models and Model Binding</a><ul id="R-subsections-b425ab8120c8045a29686974292fab81" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/index.html">Reading</a><ul id="R-subsections-245ddf76889aac7272030a839961234a" class="morespace collapsible-menu">
+          <li data-nav-id="/models-and-model-binding/reading/models-in-mvc/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-in-mvc/index.html">Models in MVC</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/create-model/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/create-model/index.html">Create a Model</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/models-and-data/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/models-and-data/index.html">Models and Data</a></li>
+          <li data-nav-id="/models-and-model-binding/reading/model-binding/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/reading/model-binding/index.html">Models Binding</a></li></ul></li>
+          <li data-nav-id="/models-and-model-binding/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/exercises/index.html">Exercises: Edit Model Classes</a></li>
+          <li data-nav-id="/models-and-model-binding/studio/index.html" class=""><a class="padding" href="http://localhost:1313/models-and-model-binding/studio/index.html">Studio: Spa User Signup</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/index.html">Chapter 15: Model Validation</a><ul id="R-subsections-cc64ee7cea4ab3dca78461823b1296c0" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/spring-model-validation/reading/index.html">Reading</a><ul id="R-subsections-cc1bbcfae946480bfeb052e688ea8592" class="morespace collapsible-menu">
+          <li data-nav-id="/spring-model-validation/reading/server-side-validation/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/server-side-validation/index.html">Server-Side Validation</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-annotations/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-annotations/index.html">Validation Annotations</a></li>
+          <li data-nav-id="/spring-model-validation/reading/validation-controller/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/validation-controller/index.html">Validating Models in a Controller</a></li>
+          <li data-nav-id="/spring-model-validation/reading/thymeleaf-form-tools/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/reading/thymeleaf-form-tools/index.html">Thymeleaf Form Tools</a></li></ul></li>
+          <li data-nav-id="/spring-model-validation/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/exercises/index.html">Exercises: Model Validation</a></li>
+          <li data-nav-id="/spring-model-validation/studio/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/studio/index.html">Studio: Spa User Validation</a></li>
+          <li data-nav-id="/spring-model-validation/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/spring-model-validation/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/index.html">Chapter 16: Enums</a><ul id="R-subsections-831b138d2e9a513438884233b2f221f2" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/enums/reading/index.html">Reading</a><ul id="R-subsections-904b86ebee00756ee4747a4acbd69524" class="morespace collapsible-menu">
+          <li data-nav-id="/enums/reading/intro-to-enums/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/intro-to-enums/index.html">Introduction to Enums</a></li>
+          <li data-nav-id="/enums/reading/enums-model-classes/index.html" class=""><a class="padding" href="http://localhost:1313/enums/reading/enums-model-classes/index.html">Enums in Model Classes</a></li></ul></li>
+          <li data-nav-id="/enums/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/enums/exercises/index.html">Exercises: Enum Practice</a></li>
+          <li data-nav-id="/enums/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/enums/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/index.html">Chapter 17: Introduction to Object-Relational Mapping</a><ul id="R-subsections-aa4987828deb901fc4f8215487106198" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/index.html">Reading</a><ul id="R-subsections-2f85f252dde5e5dff037908f20779885" class="morespace collapsible-menu">
+          <li data-nav-id="/intro-orm-mapping/reading/orm/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/orm/index.html">Object-Relational Mapping</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/accessing-data/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html">Accessing Data</a></li>
+          <li data-nav-id="/intro-orm-mapping/reading/repositories/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/reading/repositories/index.html">Repositories</a></li></ul></li>
+          <li data-nav-id="/intro-orm-mapping/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/exercises/index.html">Exercises: OMG the ORM!</a></li>
+          <li data-nav-id="/intro-orm-mapping/studio/index.html" class=""><a class="padding" href="http://localhost:1313/intro-orm-mapping/studio/index.html">Studio: Creating an AbstractEntity</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/index.html">Chapter 18: Relationships in Object-Relational Mapping</a><ul id="R-subsections-14a4ceddf2743bbc7cc53e73d28e238c" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/orm-relationships/reading/index.html">Reading</a><ul id="R-subsections-fbbffc798bf994fdf98727229ef8c7bd" class="morespace collapsible-menu">
+          <li data-nav-id="/orm-relationships/reading/types-of-relationships/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/types-of-relationships/index.html">Types of Relationships</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-one/index.html">Creating a Many-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-many/index.html">Creating a One-to-Many Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/one-to-one/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/one-to-one/index.html">Creating a One-to-One Relationship</a></li>
+          <li data-nav-id="/orm-relationships/reading/many-to-many/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/reading/many-to-many/index.html">Creating a Many-to-Many Relationship</a></li></ul></li>
+          <li data-nav-id="/orm-relationships/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/exercises/index.html">Exercises: The Early Bird Gets the ORM!</a></li>
+          <li data-nav-id="/orm-relationships/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/orm-relationships/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/index.html">Chapter 19: Authentication</a><ul id="R-subsections-1345916ddf39bfe2b504bc524b69e938" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/authentication/reading/index.html">Reading</a><ul id="R-subsections-90b7ce6ead6e2e6c918d107a10c0c053" class="morespace collapsible-menu">
+          <li data-nav-id="/authentication/reading/intro-to-authentication/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/intro-to-authentication/index.html">Introduction to Authentication</a></li>
+          <li data-nav-id="/authentication/reading/hashing-passwords/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/hashing-passwords/index.html">Hashing Passwords</a></li>
+          <li data-nav-id="/authentication/reading/creating-user-model/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/creating-user-model/index.html">Creating a User Model</a></li>
+          <li data-nav-id="/authentication/reading/login-and-registration/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/login-and-registration/index.html">Login and Registration Forms</a></li>
+          <li data-nav-id="/authentication/reading/filtering-requests/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/reading/filtering-requests/index.html">Filtering Requests</a></li></ul></li>
+          <li data-nav-id="/authentication/studio/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/studio/index.html">Studio: TechJobs Authentication</a></li>
+          <li data-nav-id="/authentication/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/authentication/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/index.html">Chapter 20: Introduction to Web APIs &amp; REST</a><ul id="R-subsections-42481ec37d6e5cf75cb79d369c79632a" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/web-api-rest/reading/index.html">Reading</a><ul id="R-subsections-c70e9a362888ae84c94682e8f5c6a772" class="morespace collapsible-menu">
+          <li data-nav-id="/web-api-rest/reading/web-api/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/web-api/index.html">Web APIs</a></li>
+          <li data-nav-id="/web-api-rest/reading/what-is-rest/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/what-is-rest/index.html">What is REST</a></li>
+          <li data-nav-id="/web-api-rest/reading/rest-practical-fundamentals/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/reading/rest-practical-fundamentals/index.html">REST: Practical Fundamentals</a></li></ul></li>
+          <li data-nav-id="/web-api-rest/exercises/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/exercises/index.html">Exercises: Web APIs and REST</a></li>
+          <li data-nav-id="/web-api-rest/studio/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/studio/index.html">Studio: Consuming the Coding Events API With Postman</a></li>
+          <li data-nav-id="/web-api-rest/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/web-api-rest/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/index.html">Assignments</a><ul id="R-subsections-ac1a358b456bc5017269265633799872" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/hello-world/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/hello-world/index.html">Assignment #0: Hello, World!</a></li>
+          <li data-nav-id="/assignments/techjobs-console/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-console/index.html">Assignment #1: Tech Jobs Console</a><ul id="R-subsections-4b66cf2d2fe44b7bc1aa5c015f2d63d1" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-console/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-one/index.html">Task 1: Implement printJobs()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-two/index.html">Task 2: Create Method findByValue()</a></li>
+          <li data-nav-id="/assignments/techjobs-console/task-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/task-three/index.html">Task 3: Make Search Methods Case-Insensitive</a></li>
+          <li data-nav-id="/assignments/techjobs-console/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-console/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-oo/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/index.html">Assignment #2: Tech Jobs OO</a><ul id="R-subsections-5c66abe3d5aa714badef7af5e2966996" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-oo/task1/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task1/index.html">Task 1: Explore the Employer Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task2/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task2/index.html">Task 2: Create the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task3/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task3/index.html">Task 3: Complete the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task4/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task4/index.html">Task 4: Use Unit Testing to Verify Parts of the Job Class</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task5/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task5/index.html">Task 5: Use TDD to Build The toString Method</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task6/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task6/index.html">Task 6: Refactor to DRY the Support Classes</a></li>
+          <li data-nav-id="/assignments/techjobs-oo/task7/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-oo/task7/index.html">Task 7: Final Steps</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-mvc/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/index.html">Assignment #3: Tech Jobs (MVC Edition)</a><ul id="R-subsections-e5504cec6daa245b0ddb75d60003ef1b" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-mvc/getting-started/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/getting-started/index.html">Task 1: Getting to Know the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/list-views/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/list-views/index.html">Task 2: Complete List Views</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/search-controller/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/search-controller/index.html">Task 3: Complete SearchController</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/display-search-results/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/display-search-results/index.html">Task 4: Display Search Results</a></li>
+          <li data-nav-id="/assignments/techjobs-mvc/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-mvc/submission/index.html">Submitting Your Work and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/techjobs-persistent/index.html" class="alwaysopen"><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/index.html">Assignment #4: Tech Jobs Persistent</a><ul id="R-subsections-2de9dacd33f0514d2c2813740229e20c" class="morespace collapsible-menu">
+          <li data-nav-id="/assignments/techjobs-persistent/starter-code-review/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/starter-code-review/index.html">Review the Starter Code</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-one/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-one/index.html">Task 1: Connect a Database to a Spring App</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-two/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-two/index.html">Task 2: Persisting Employers and Skills</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-three/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-three/index.html">Task 3: Setting Up a One-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/part-four/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/part-four/index.html">Task 4: Setting Up a Many-to-Many Relationship</a></li>
+          <li data-nav-id="/assignments/techjobs-persistent/submission/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/techjobs-persistent/submission/index.html">Submission and Bonus Missions</a></li></ul></li>
+          <li data-nav-id="/assignments/next-steps/index.html" class=""><a class="padding" href="http://localhost:1313/assignments/next-steps/index.html">Next Steps</a></li></ul></li>
+          <li data-nav-id="/appendices/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/index.html">Appendices</a><ul id="R-subsections-b483d80bdb9b2ad6e87ce036148cc8e4" class="morespace collapsible-menu">
+          <li data-nav-id="/appendices/install-postman/index.html" class=""><a class="padding" href="http://localhost:1313/appendices/install-postman/index.html">Installing Postman</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-lc-light" value="lc-light" selected>Lc Light</option>
+                      <option id="R-select-variant-lc-dark-blue" value="lc-dark-blue">Lc Dark Blue</option>
+                      <option id="R-select-variant-lc-dark-blue-two" value="lc-dark-blue-two">Lc Dark Blue Two</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="http://localhost:1313/js/clipboard.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/perfect-scrollbar.min.js?1725032835" defer></script>
+    <script src="http://localhost:1313/js/theme.js?1725032835" defer></script>
+  </body>
+</html>

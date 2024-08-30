@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Object-Relational Mapping :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/reading/orm/index.html</link>
+    <description>With all that we have learned about MVC applications and relational databases, we are ready to connect the two and add persistent data storage to our apps! To do so, we need to use object-relational mapping.&#xA;Object-Relational Mapping or ORM is a technique for converting data between Java objects and relational databases. ORM converts data between two incompatible type systems (Java and MySQL), such that each model class becomes a table in our database and each instance a row of the table.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/reading/orm/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

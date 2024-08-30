@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Submitting Your Work and Bonus Missions :: Java Web Development</title>
+    <link>http://localhost:1313/assignments/techjobs-mvc/submission/index.html</link>
+    <description>Sanity Check At this point, all autograding tests should be passing. To be sure, right-click on the org.launchcode.techjobs.mvc package in src/test/java and select Run tests in… If any test fails, evaluate the failure/error message and go back to fix your code.&#xA;You might also want to check your app’s behavior against that of our demo app .&#xA;How to Submit To turn in your assignment and get credit, follow the submission instructions .</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/assignments/techjobs-mvc/submission/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

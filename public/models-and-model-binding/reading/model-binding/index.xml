@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Models Binding :: Java Web Development</title>
+    <link>http://localhost:1313/models-and-model-binding/reading/model-binding/index.html</link>
+    <description>We now introduce a useful technique to auto-create model instances, called model binding. Model binding takes place when a whole model object is created by the Spring framework on form submission. This saves us the effort, and the code, needed to pass in each form field to a controller.&#xA;Model binding reduces the amount of code we need to write to create an object and it helps with validation (which we’ll explore further in the next section).</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/models-and-model-binding/reading/model-binding/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/data-types/reading/index.html</link>
+    <description> Data Types Some Java Practice More Data Types </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/data-types/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Types</title>
+      <link>http://localhost:1313/data-types/reading/data-types/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 09:27:57 -0500</pubDate>
+      <guid>http://localhost:1313/data-types/reading/data-types/index.html</guid>
+      <description>Static vs. Dynamic Typing In a dynamically typed programming language (like JavaScript or Python), a variable or parameter can refer to a value of any data type (string, number, object, etc.) at any time. When the variable is used, the interpreter figures out what type it is and behaves accordingly.&#xA;Java is a statically typed language. When a variable or parameter is declared in a statically typed language, the data type for the value must be specified.</description>
+    </item>
+    <item>
+      <title>Some Java Practice</title>
+      <link>http://localhost:1313/data-types/reading/some-java-practice/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 09:27:57 -0500</pubDate>
+      <guid>http://localhost:1313/data-types/reading/some-java-practice/index.html</guid>
+      <description>Let’s move beyond our “Hello, World” example and explore a simple temperature conversion program. We want our function to convert a Fahrenheit temperature to Celsius.&#xA;Temperature Conversion Open the TempConverter file in the java-web-dev-projects/datatypes/datatypes-examples project in IntelliJ. Click through the folders until you find the TempConverter class.&#xA;Here’s what the file should look like. We will analyze the different statements in a moment.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import java.</description>
+    </item>
+    <item>
+      <title>More Data Types</title>
+      <link>http://localhost:1313/data-types/reading/more-data-types/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 09:27:57 -0500</pubDate>
+      <guid>http://localhost:1313/data-types/reading/more-data-types/index.html</guid>
+      <description>Arrays In Java, an array is an ordered, fixed-size collection of elements. To comply with static typing, the items stored in an array must all be the same data type. We can create an array of integers or an array of strings, but we may NOT create an array that holds both integers and strings.&#xA;The syntax for creating an array capable of holding 10 integers is:&#xA;int[] someInts = new int[10];Note the square brackets next to int.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 9: Spring Into MVC :: Java Web Development</title>
+    <link>http://localhost:1313/spring-intro/index.html</link>
+    <description>Learning Objectives After completing all the content in this chapter, you should be able to do the following:&#xA;Understand the basic architecture of an MVC web application Initialize a Spring Boot application Key Terminology Here is a list of key terms you should make note of based on the page on which they first appear.&#xA;Design Patterns, MVC, and Spring, Oh My! design patterns Model-View-Controller model view controller Spring Spring Boot Spring MVC Tomcat Initialize Spring Gradle Chapter Content Reading Next Steps </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jul 2023 16:28:46 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/spring-intro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/spring-intro/reading/index.html</link>
+      <pubDate>Mon, 03 Jul 2023 16:28:46 -0500</pubDate>
+      <guid>http://localhost:1313/spring-intro/reading/index.html</guid>
+      <description> Design Patterns, MVC, and Spring, Oh My! Initialize Spring </description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/spring-intro/next-steps/index.html</link>
+      <pubDate>Mon, 03 Jul 2023 16:28:46 -0500</pubDate>
+      <guid>http://localhost:1313/spring-intro/next-steps/index.html</guid>
+      <description>Now you are ready to learn more about controllers! If you want to learn more about MVC, here are some of our favorite resources.&#xA;Spring documentation </description>
+    </item>
+  </channel>
+</rss>

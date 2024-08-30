@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/authentication/reading/index.html</link>
+    <description> Introduction to Authentication Hashing Passwords Creating a User Model Login and Registration Forms Filtering Requests </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 09:28:27 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/authentication/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Authentication</title>
+      <link>http://localhost:1313/authentication/reading/intro-to-authentication/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/intro-to-authentication/index.html</guid>
+      <description>We log into many, many websites every day. The process has become so routine that we expect it to work flawlessly every time. How surprised would you be if you logged into a website and saw a different user’s account info? What if you entered the wrong password and were still let in? What we have come to expect as routine is anything but when we consider the code needed to make it happen.</description>
+    </item>
+    <item>
+      <title>Hashing Passwords</title>
+      <link>http://localhost:1313/authentication/reading/hashing-passwords/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/hashing-passwords/index.html</guid>
+      <description>Simple authentication allows users to log in to a site with a username and password. To implement authentication, we need to be able to verify that a user’s password is correct. However, you should NEVER store passwords in a database. Seriously. Don’t do it. Ever.&#xA;Storing passwords in a database is incredibly insecure. A hacker may break into the database, gaining access to every user account. Or a deviant employee with access to the database may do the same.</description>
+    </item>
+    <item>
+      <title>Creating a User Model</title>
+      <link>http://localhost:1313/authentication/reading/creating-user-model/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/creating-user-model/index.html</guid>
+      <description>The next few sections walk through the steps necessary to enable simple authentication in the codingevents app. Along the way, we will use some advanced concepts that you haven’t fully learned. That’s okay. We don’t expect you to understand every detail the next few sections. However, you do need to understand the purpose of each step in enabling authentication.&#xA;Note While we’ll use codingevents, these steps would be the same for any other app.</description>
+    </item>
+    <item>
+      <title>Login and Registration Forms</title>
+      <link>http://localhost:1313/authentication/reading/login-and-registration/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/login-and-registration/index.html</guid>
+      <description>With a User class in place, we can now create controllers and views for creating a user and verifying their credentials.&#xA;Note The code for this section begins with the user-model branch and ends with the login-reg-forms branch of the CodingEventsJava repository.&#xA;Creating AuthenticationController In the controllers package, create a new class named AuthenticationController. Since this controller will deal with User objects, it needs a UserRepository instance.&#xA;1 2 3 4 5 6 7 @Controller public class AuthenticationController { @Autowired UserRepository userRepository; } Session-Handling Utilities Before creating handler methods for rendering and processing our login and registration forms, we need some utility methods for working with sessions.</description>
+    </item>
+    <item>
+      <title>Filtering Requests</title>
+      <link>http://localhost:1313/authentication/reading/filtering-requests/index.html</link>
+      <pubDate>Fri, 01 Oct 2021 09:28:27 -0500</pubDate>
+      <guid>http://localhost:1313/authentication/reading/filtering-requests/index.html</guid>
+      <description>Our application now allows users to register and log in. However, access to pages on the site is NOT yet restricted in any way. Even if a user isn’t logged in, they may view any page on the site. To fully implement authentication, we need to be able to check a user’s login status on each request, before any controller methods are called.&#xA;We can do this by filtering requests. Request filtering is a mechanism available in many web frameworks.</description>
+    </item>
+  </channel>
+</rss>

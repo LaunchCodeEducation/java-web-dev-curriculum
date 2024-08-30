@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 5: Classes Part 2 :: Java Web Development</title>
+    <link>http://localhost:1313/classes-part-2/index.html</link>
+    <description>Major Concepts When you have completed this chapter, you should be familiar with the following:&#xA;How to customize fields with the keywords final and static. How to add methods to a class and call those methods. The difference between instance methods and static methods. How to override the default toString and equals methods for a class. How to auto-generate an equals method using the tools in IntelliJ. Key Terminology Final Field Final Primitive Field Final Object Field Static Methods Class Methods Overriding Cast Equality Identity Content Links Reading Exercises: Objects and Classes Part 2 Studio: Restaurant Menu Continued Next Steps </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 16:06:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/classes-part-2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/classes-part-2/reading/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/reading/index.html</guid>
+      <description> Customizing Fields Instance and Static Methods Special Methods IntelliJ Generator Shortcut </description>
+    </item>
+    <item>
+      <title>Exercises: Objects and Classes Part 2</title>
+      <link>http://localhost:1313/classes-part-2/exercises/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/exercises/index.html</guid>
+      <description>Work on these exercises in the IntelliJ java-web-dev-projects/classes-part-two/exercises project. You will update your Student.java file by implementing the addGrade and getGradeLevel methods that were sketched out in the Instance Methods section.&#xA;1. The getGradeLevel Method This method returns the student’s level based on the number of credits they have earned: Freshman (0-29 credits), Sophomore (30-59 credits), Junior (60-89 credits), or Senior (90+ credits).&#xA;Check your solution public static String getGradeLevel(int credits) { if (credits &lt;= 29){ return &#34;freshman&#34;; } else if (credits &lt;= 59){ return &#34;sophomore&#34;; } else if (credits &lt;= 89) { return &#34;junior&#34;; } else { return &#34;senior&#34;; } } 2.</description>
+    </item>
+    <item>
+      <title>Studio: Restaurant Menu Continued</title>
+      <link>http://localhost:1313/classes-part-2/studio/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/studio/index.html</guid>
+      <description>We began designing and implementing our Menu and MenuItem classes in the last studio . Let’s continue working on these classes by adding some methods.&#xA;1. Design To review, here are the details you have from the restaurant owner:&#xA;The menu consists of several menu items. Each menu item has a price, description, and category (appetizer, main course, or dessert). It should be possible to display whether or not a menu item is new.</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/classes-part-2/next-steps/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/next-steps/index.html</guid>
+      <description>Next Steps References for Customizing Fields Declaring Member Variables (docs.oracle.com) Initializing Fields (docs.oracle.com) Constructors (docs.oracle.com) References for Instance and Static Methods Encapsulation (wikipedia.org) Defining Methods (docs.oracle.com) Passing Data to a Method or Constructor (docs.oracle.com) References What is the equals() Method in Java Guide to hashCode() in Java </description>
+    </item>
+  </channel>
+</rss>

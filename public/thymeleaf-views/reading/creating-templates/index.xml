@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creating Templates :: Java Web Development</title>
+    <link>http://localhost:1313/thymeleaf-views/reading/creating-templates/index.html</link>
+    <description>Using templates is a useful way to reduce the effort required to create and maintain a web-based project. Before you can dive into using templates, however, you need to take care of a little groundwork first.&#xA;Thymeleaf In combination with Java and Spring Boot, we will use a library called Thymeleaf. This set of tools helps simplify the creation of flexible, reusable templates for standalone projects and web-based applications.&#xA;More information can be found on the introduction page of the Thymeleaf website.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/thymeleaf-views/reading/creating-templates/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

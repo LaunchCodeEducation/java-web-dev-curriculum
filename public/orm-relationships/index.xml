@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 18: Relationships in Object-Relational Mapping :: Java Web Development</title>
+    <link>http://localhost:1313/orm-relationships/index.html</link>
+    <description>Learning Objectives Upon completing the content in this chapter, you should be able to do the following:&#xA;Build persistent model classes that have one-to-many, many-to-one, one-to-one, and many-to-many relationships Understand how these relationships are represented in a relational database Key Terminology As you read though this chapter, make note of the following key terms and their definitions.&#xA;Types of Relationships one-to-one relationship one-to-many relationship many-to-one relationship many-to-many relationship Creating a Many-to-One Relationship truncate Creating a One-to-One Relationship transient cascades Creating a Many-to-Many Relationship data transfer object DTO join table Chapter Content Reading Exercises: The Early Bird Gets the ORM!</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Aug 2023 14:38:32 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/orm-relationships/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/orm-relationships/reading/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/reading/index.html</guid>
+      <description>Reading Content Links Types of Relationships Creating a Many-to-One Relationship Creating a One-to-Many Relationship Creating a One-to-One Relationship Creating a Many-to-Many Relationship </description>
+    </item>
+    <item>
+      <title>Exercises: The Early Bird Gets the ORM!</title>
+      <link>http://localhost:1313/orm-relationships/exercises/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/exercises/index.html</guid>
+      <description>Now that we have gotten very familiar with our coding-events application, let’s design some additional features. As you work on your coding-events application, you may have been inspired by Meetup ! One of the cool features that Meetup has is that people can sign up for accounts. They can use their Meetup accounts to follow the events they are most interested in and keep track of their calendar of events. To add similar features to coding-events, you need to add a Person class.</description>
+    </item>
+    <item>
+      <title>Next Steps</title>
+      <link>http://localhost:1313/orm-relationships/next-steps/index.html</link>
+      <pubDate>Mon, 21 Aug 2023 14:38:32 -0500</pubDate>
+      <guid>http://localhost:1313/orm-relationships/next-steps/index.html</guid>
+      <description>After completing this chapter, you are ready to tackle authentication. If you would like to learn more about Spring and ORM, here are a few resources.&#xA;Spring ORM Example Using Hibernate Spring Documentation </description>
+    </item>
+  </channel>
+</rss>

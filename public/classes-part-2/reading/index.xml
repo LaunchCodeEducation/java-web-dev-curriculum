@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading :: Java Web Development</title>
+    <link>http://localhost:1313/classes-part-2/reading/index.html</link>
+    <description> Customizing Fields Instance and Static Methods Special Methods IntelliJ Generator Shortcut </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jun 2023 10:06:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/classes-part-2/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customizing Fields</title>
+      <link>http://localhost:1313/classes-part-2/reading/custom-fields/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/reading/custom-fields/index.html</guid>
+      <description>Customizing Fields A final field is one that cannot be changed once it is initialized. This means slightly different things for primitive and class types. We create final fields by declaring them with the final keyword.&#xA;We cannot change the value of a final primitive field (final int, final double, etc.) after it is initialized.&#xA;Similarly, we cannot assign a new object to a final object field (final String, final Double, final ClassName, etc.</description>
+    </item>
+    <item>
+      <title>Instance and Static Methods</title>
+      <link>http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/reading/instance-and-static-methods/index.html</guid>
+      <description>We explored configuring data within classes with fields and properties. Now let’s turn our attention back to class behavior (methods).&#xA;Quick Method Review In the last chapter , we learned that:&#xA;A method belongs to a class and performs an action.&#xA;Methods cannot stand on their own—they must be part of a class.&#xA;To call a method on an object, use dot notation:&#xA;objectName.methodName(arguments); Access modifiers apply to methods:&#xA;private methods as those that are NOT useful outside of the class but contribute internally to helping the class behave as desired or expected.</description>
+    </item>
+    <item>
+      <title>Special Methods</title>
+      <link>http://localhost:1313/classes-part-2/reading/special-methods/index.html</link>
+      <pubDate>Wed, 14 Jun 2023 16:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/reading/special-methods/index.html</guid>
+      <description>Every class has a few special methods that belong to it, regardless of whether or not we define them. Exactly how every class obtains these methods will be explored in a future lesson. For now, let’s look at two important examples of these methods.&#xA;toString The toString method returns a string representation of a class. Calling toString on a class that you’ve written will result in something like this:&#xA;Example 1 2 Student person = new Student(&#34;Violet&#34;); System.</description>
+    </item>
+    <item>
+      <title>IntelliJ Generator Shortcut</title>
+      <link>http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html</link>
+      <pubDate>Thu, 15 Jun 2023 10:06:05 -0500</pubDate>
+      <guid>http://localhost:1313/classes-part-2/reading/intellij-shortcut/index.html</guid>
+      <description>Instead of cutting, pasting, and refactoring old code to ensure that you create a well-structured hashCode() method whenever you define your own equals() method, you can use IntelliJ’s code generation tool! Just right-click within your class file and select Generate &gt; equals and hashCode and follow the prompts.&#xA;Let’s use a Course class to demonstrate:&#xA;1 2 3 4 5 6 7 8 9 10 11 12 public class Course { private String title; private int credits; private String instructor; public Course (String title, int credits, String instructor) { this.</description>
+    </item>
+  </channel>
+</rss>

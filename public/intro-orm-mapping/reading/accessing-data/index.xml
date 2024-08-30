@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accessing Data :: Java Web Development</title>
+    <link>http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.html</link>
+    <description>Now that we have connected our Java application to a MySQL database, we need to set up our Java classes and interfaces.&#xA;In the previous lessons, we learned about performing CRUD operations on a database and its tables. One of the reasons we use ORM is so that now we can write Java code in our application to manage our relational database.&#xA;Persistent Classes Our JPA needs to know what Java class is going to be converted to a table in the MySQL database.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/intro-orm-mapping/reading/accessing-data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
