@@ -74,7 +74,7 @@ or more of the [bonus missions]({{% relref "./submission/#bonus-missions" %}}).
 You may need to enable actions within your github repository if you have not done so already. Please refer back to the instructions on how to do so in the [Running the Autograding Tests through Github Actions]({{% relref "../hello-world/#running-the-autograding-tests-through-github-actions" %}}) section of `Assignment 0` 
 {{% /notice %}}
 
-The starter code for this project is in [this github repository](https://github.com/LaunchCodeEducation/techjobs-console-java-graded). Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{% relref "../hello-world/#getting-started" %}}) for more details. 
+The starter code for this project is in [this github repository](https://github.com/LaunchCodeEducation/techjobs-console-java-graded-17). Fork the repository to your personal profile, copy the repo’s URL for cloning, and open up IntelliJ. and then set up the project in IntelliJ. Refer back to the setup instructions from [assignment 0]({{% relref "../hello-world/#getting-started" %}}) for more details. 
 
 Before diving in and starting to code, make sure you understand what the code
 you've been given does. Since you're starting with a functioning---albeit
