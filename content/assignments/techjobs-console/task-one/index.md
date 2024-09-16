@@ -42,6 +42,12 @@ For the autograding script to correctly grade your code, you'll need to match th
 If there are no results, it should print `No Results` in the following format:
 
 ```console
+No Results
+```
+
+Be sure to use the *exact* message `No Results` taking care to match casing.  In full context with prompting, the application will look like this when a user enters a term that would yield no results:
+
+```console
 Search term:
 Example Search Term with No Results
 No Results
@@ -49,8 +55,6 @@ View jobs by (type 'x' to quit):
 0 - Search
 1 - List
 ```
-
-Again, you should use this *exact* message.
 
 {{% notice green Tip "rocket" %}}
 To do this, you'll need to iterate over an `ArrayList` of jobs. Each job is itself a `HashMap`. While you can get each of the items out of
