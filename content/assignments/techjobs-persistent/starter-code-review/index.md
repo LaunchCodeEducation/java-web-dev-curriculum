@@ -17,7 +17,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 Set up a local copy of the project:
 
-1. In Canvas, find **Graded Assignment #4: TechJobs (Persistent Edition)** and click on the starter code repo link. Fork the repository to your personal profile, copy the repo's URL for cloning, and open up IntelliJ. Refer back to the instructions from [assignment0]({{% relref "../../hello-world/_index.md#getting-started" %}}) for more details.
+1. The starter code for this project is in [this github repository](https://github.com/LaunchCodeEducation/techjobs-persistent-java-graded-17.git). Fork the repository to your personal profile, copy the repo's URL for cloning, and open up IntelliJ. Refer back to the instructions from [assignment0]({{% relref "../../hello-world/_index.md#getting-started" %}}) for more details.
 1. Launch the application (via the Gradle pane, *Tasks > Application > bootRun*) to make sure it starts up properly. Then shut it down.
 <!-- TODO: Link below will need to be updated once assignment 2 is in the book -->
 1. The tests for this assignment are set up the same way as for [Tech Jobs OO]({{% relref "../../techjobs-oo/_index.md" %}}).
