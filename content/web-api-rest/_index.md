@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01T06:33:27-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 ## Learning Objectives
@@ -44,7 +44,7 @@ You should also have an understanding of the following:
 1. RESTful web services
 1. Representational state transfer
 1. JSON serialization
-1. JASON deserialization
+1. JSON deserialization
 1. resource
 1. resource entity
 1. resource collection
