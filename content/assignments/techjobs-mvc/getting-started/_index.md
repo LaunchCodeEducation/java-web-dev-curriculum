@@ -16,7 +16,7 @@ lastMod: 2023-09-23T09:59:59-05:00 # UPDATE ANY TIME CHANGES ARE MADE
 
 Set up a local copy of the project:
 
-1. In Canvas, **Graded Assignment #3: TechJobs (MVC Edition)** contains a GitHub repo link. Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from [Assignment 0]({{% relref "../../hello-world/#getting-started" %}}) for details. 
+1. The starter code for this project is in [this github repository](https://github.com/LaunchCodeEducation/techjobs-mvc-java-graded-17.git). Fork, clone, and then set up the project in IntelliJ. Refer back to the instructions from [Assignment 0]({{% relref "../../hello-world/#getting-started" %}}) for details. 
 1. Launch the application (via the Gradle pane, *Tasks > Application >
    bootRun*) to make sure it starts up. Then shut it down.
 1. Run the autograding tests. The tests for this assignment are set up the same way as for [Assignment 2]({{% relref "../../techjobs-oo/task7/#run-the-tests" %}}). There are four tasks for this assignment, but the first doesn't require any coding on your part. Therefore, there are 3 test files (for tasks 2-4). As with Assignment 2, we recommend that you only run the tests for the task you are currently working on.
