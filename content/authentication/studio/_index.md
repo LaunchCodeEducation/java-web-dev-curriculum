@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2023-12-08T15:36:01-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 For this studio, you'll be tasked with adding simple user authentication to your 
@@ -156,14 +156,14 @@ table.
       1. Query the the session data for a user.
       1. If a user exists, return true. Otherwise, redirect to the login page and return false.
 
-1. Create a whitelist.
+1. Create an allowlist.
 
-   1. In the top of `AuthenticationFilter`, add a whitelist variable containing the paths that can be 
+   1. In the top of `AuthenticationFilter`, add an allowlist variable containing the paths that can be 
       accessed without a user session.
-   1. Create a method next that checks a given path against the values in the whitelist. 
+   1. Create a method next that checks a given path against the values in the allowlist. 
    1. Update `preHandle` with a call to this method.
 
-      1. Before looking for session and user status, add a conditional that checks the whitelist status 
+      1. Before looking for session and user status, add a conditional that checks the allowlist status 
          of the current request object.
 
 1. Register the filter with Spring.
