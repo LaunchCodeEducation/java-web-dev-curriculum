@@ -46,7 +46,7 @@ errors in provided code.
 {{% /notice %}}
 
 {{% notice green "Tip" "rocket" %}}
-   Discuss with your fellow students and TA how the  
+   Discuss with your fellow students and IA how the  
    class should behave. What are some examples of input, and 
    what would the desired output be for each input?
 {{% /notice %}}
