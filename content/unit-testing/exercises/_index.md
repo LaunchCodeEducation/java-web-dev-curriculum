@@ -78,7 +78,7 @@ to our car that exceeds the gas tank size.
       //TODO: can't have more gas than tank size, expect an exception
       @Test()
       public void testGasOverfillException() {
-         assertthrows(IllegalArgumentException.class, () -> );
+         assertThrows(IllegalArgumentException.class, () -> );
       }
    ```
 
