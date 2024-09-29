@@ -78,7 +78,7 @@ Each `Job` object should have a unique ID that is an integer.
 
 
 ## Test the Full Constructor
-Each `Job` object should contain six fields—`id`, `name`, `employer`, `location`, `positionType`, and `coreCompetency`. The data types for these fields are `int`, `String`, `Employer`, `Location`, `PositionType`, and `CoreCompetency`, respectively.
+Each `Job` object should contain five fields (other than `id`) — `name`, `employer`, `location`, `positionType`, and `coreCompetency`. The data types for these five fields are `String`, `Employer`, `Location`, `PositionType`, and `CoreCompetency`, respectively.
 
 1. In `JobTest`, define a test called `testJobConstructorSetsAllFields`.
 
