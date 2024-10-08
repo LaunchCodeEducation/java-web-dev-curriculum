@@ -27,6 +27,6 @@ Here are some questions to ask yourself as you get started:
 4. How can you do this *without* altering the capitalization of the items in `allJobs` so that the data gets printed out the same way that it appears in `job_data.csv`?
 
 You might find it useful to review the String methods listed in the
-chapter on [Data Types](https://education.launchcode.org/java-web-development/chapters/data-types/index.html#data-types).
+chapter on [Data Types](https://education.launchcode.org/java-web-dev-curriculum/data-types/index.html#data-types).
 
 When this task is completed, you're ready to submit your assignment!
