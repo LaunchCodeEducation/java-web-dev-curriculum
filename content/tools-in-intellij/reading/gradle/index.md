@@ -26,7 +26,7 @@ So far we have included Gradle in our Spring Boot projects.
 
    You can also import Gradle using the terminal. 
    Instruction on that is beyond the scope of this class.
-   Here is [documentation](https://spring.io/guides/gs/gradle/) on this process if you are curious.
+   Here is [documentation](https://docs.gradle.org/current/userguide/part1_gradle_init.html) on this process if you are curious.
 
 {{% /notice %}}
 
