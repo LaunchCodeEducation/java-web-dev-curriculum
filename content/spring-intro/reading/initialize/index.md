@@ -148,9 +148,6 @@ is a decentralized place for developers to post their code for others to use.
 
 Before running your project, we need to check the configuration of a few items. 
 
-1. In `build.gradle`, locate an item called `sourceCompatibility`. If it's value is not equal to 
-   `17`, change it and save the file.
-
 1. In the `gradle` directory, open the subdirectory, `wrapper`, and then the file 
    `gradle-wrapper.properties` inside of it. Ensure that the `distributionUrl` includes a gradle 
    version of at least `7.0`. 
