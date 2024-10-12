@@ -245,4 +245,4 @@ open the relevant file.
 ![TODO list in IntelliJ](figures/startcode-todolist.png)
 
 As you work on your tasks, remember to refer to the
-[demo app](https://java-techjobs-mvc.launchcodetechnicaltraining.org/).
+[demo app](https://java-techjobs-mvc.launchcodelearning.org/).
