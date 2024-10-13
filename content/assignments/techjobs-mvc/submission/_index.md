@@ -16,7 +16,7 @@ lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 
 At this point, all autograding tests should be passing. To be sure, right-click on the `org.launchcode.techjobs.mvc` package in `src/test/java` and select *Run tests in...* If any test fails, evaluate the failure/error message and go back to fix your code.
 
-You might also want to check your app's behavior against that of [our demo app](https://java-techjobs-mvc.launchcodetechnicaltraining.org/).
+You might also want to check your app's behavior against that of [our demo app](https://java-techjobs-mvc.launchcodelearning.org/).
 
 ## How to Submit
 

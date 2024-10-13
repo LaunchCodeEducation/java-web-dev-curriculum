@@ -100,4 +100,4 @@ If everything seems to work – that is, you are able to submit the form without
 When everything works, move on to Part 3 below.
 {{% /notice %}}
 
-Throughout your work, refer to the [demo app](https://techjobs-persistent.launchcodetechnicaltraining.org/) as needed.
+Throughout your work, refer to the [demo app](https://techjobs-persistent.launchcodelearning.org/) as needed.
