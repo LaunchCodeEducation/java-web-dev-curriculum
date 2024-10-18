@@ -95,8 +95,8 @@ public class DayStatic {
 ```
 
 To refer to Thursday, you can use the value `DayStatic.THURSDAY`. Recall our
-`switch` [example from earlier](#switch-statements).
-
+`switch` [example from earlier]({{% ref "/control-flow-and-collections/reading/conditionals#switch-statements" %}}).
+ 
 ```java {linenos=true}
 import java.util.Scanner;
 
