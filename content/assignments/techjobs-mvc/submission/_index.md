@@ -33,10 +33,10 @@ Here are some additional challenges, for those willing to take them on:
    font, style, capitalization, etc. to further distinguish the labels from the
    data (e.g. **Employer:** *LaunchCode*). (*Hint:* We capitalize the title
    string in multiple templates, so have a look around).
-1. In the tables of the job results, make each value (except `name`)
-   hyperlinked to a new listing of all jobs with that same value. For example,
-   if we have a list of jobs with the `JavaScript` skill, clicking on a
-   location value like `Saint Louis` will generate a new list with all the
+1. In the tables of the job results, add an click handler to each table cell
+   (except `name`) to show a new listing of all jobs with that same value.
+   For example, if we have a list of jobs with the `JavaScript` skill, clicking on a
+   location cell with a value like `Saint Louis` will generate a new list with all the
    jobs available in that city.
 
 ### Super Bonus Mission
