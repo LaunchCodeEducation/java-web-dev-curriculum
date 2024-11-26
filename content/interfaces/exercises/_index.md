@@ -105,15 +105,49 @@ public static void main(String[] args){
    }
    ```
 
-1. Iterating through the `flavors` list before and after the sort shows the results. (The output below displays just the `name` fields).
-   ```bash
-   Before:                 After:
+1. Next, add some code to iterate over the flavors list and print out the flavors before and after sorting.
 
-   Vanilla                 Chocolate
-   Chocolate               Red Velvet
-   Red Velvet              Rocky Road
-   Rocky Road              Strawberry Sorbet
-   Strawberry Sorbet       Vanilla
+   ```java{linenos=table,hl_lines=[],linenostart=6}
+   public static void main(String[] args){
+      Case menu = new Case();
+      ArrayList<Flavor> flavors = menu.getFlavors();
+      ArrayList<Cone> cones = menu.getCones();
+      Comparator comparator = new FlavorComparator();
+
+      System.out.println("Before:");
+      System.out.println();
+      for (Flavor flavor : flavors) {
+         System.out.println(flavor.getName());
+      }
+
+      flavors.sort(comparator);
+
+      System.out.println();
+      System.out.println("After:");
+      System.out.println();
+      for (Flavor flavor : flavors) {
+         System.out.println(flavor.getName());
+      }
+   }
+   ```
+
+1. Running the application, shows the list before and after the sort.
+   ```bash
+   Before:
+
+   Vanilla
+   Chocolate
+   Red Velvet
+   Rocky Road
+   Strawberry Sorbet
+
+   After:
+
+   Chocolate
+   Red Velvet
+   Rocky Road
+   Strawberry Sorbet
+   Vanilla
    ```
 
 Note that `Main` does NOT have to implement the `Comparator` interface. This only needs to happen in the class that actually uses the `compare` method.
