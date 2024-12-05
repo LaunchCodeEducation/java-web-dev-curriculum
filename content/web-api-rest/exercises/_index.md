@@ -7,16 +7,16 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01T07:15:35-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 We've created a basic API application [here](https://github.com/LaunchCodeEducation/events-api). Before we ask you to fork and clone this, let's first think conceptually about the kinds of requests a client application could make to this API.
 
 ## The API
 
-The api starts by only exposing a single resource, `Event`, and four endpoints for interacting with it.
+The API starts by only exposing a single resource, `Event`, and four endpoints for interacting with it.
 
 ### The Resource
 
@@ -55,7 +55,7 @@ An example of a real `Event` JSON response to a `GET` request would look like th
 }
 ```
 
-Notice how this JSON is just a representation of an instance of the `Event` model class. The data shape has been converted from a Java object representation to a JSON string representation so it can be transported over HTTP. Recall that we perform this 
+Notice how this JSON is just a representation of an instance of the `Event` model class. The data shape has been converted from a Java object representation to a JSON string representation, so it can be transported over HTTP. Recall that we perform this 
 conversion, or serialization, so that our API can output data in a portable format that is language-agnostic.
 
 ### The Endpoints
@@ -179,7 +179,7 @@ Some items to consider:
 
 #### Delete a Coding Event
 
-Deleting a `Event` resource is an operation on a single entity. Just like the endpoint for getting a single entity, this endpoint requires a `id` path variable. When a resource is deleted, a RESTful API should respond with a `204` status code. Similar to the `201` status, this code indicates a success with no response body or special headers. 
+Deleting a `Event` resource is an operation on a single entity. Just like the endpoint for getting a single entity, this endpoint requires an `id` path variable. When a resource is deleted, a RESTful API should respond with a `204` status code. Similar to the `201` status, this code indicates a success with no response body or special headers. 
 
 If you attempt to delete a resource that doesn't exist (with an incorrect `id`), then the endpoint will respond with an expected `404` status and message.
 

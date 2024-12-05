@@ -7,9 +7,9 @@ originalAuthor: John Woolbright # to be set by page creator
 originalAuthorGitHub: jwoolbright23 # to be set by page creator
 reviewer: Sally Steuterman # to be set by the page reviewer
 reviewerGitHub: gildedgardenia # to be set by the page reviewer
-lastEditor: # update any time edits are made after review
-lastEditorGitHub: # update any time edits are made after review
-lastMod: # UPDATE ANY TIME CHANGES ARE MADE
+lastEditor: Terri Penn # update any time edits are made after review
+lastEditorGitHub: tpenn # update any time edits are made after review
+lastMod: 2024-01-01T06:59:25-06:00 # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 Here's a takeaway of the abstract ideas we covered on the last page:
@@ -99,7 +99,7 @@ Endpoints are what an API exposes to its consumers. Each endpoint is made up of 
 
 ### Identifying the Resource
 
-Paths are used to identify the resource being interacted with. Recall the hierarchal nature of resources where an entity only 
+Paths are used to identify the resource being interacted with. Recall the hierarchical nature of resources where an entity only 
 exists within a collection. RESTful APIs separate the resources they expose into one or more resource entry-points.
 
 Let's consider two resources exposed by a RESTful API:
@@ -211,7 +211,7 @@ Depending on the endpoint, the effect of a request can differ. In other words, t
 | `DELETE` | `remove all entities in the collection` |
 
 {{% notice blue "Note" "rocket" %}}
-Exposing the ability to modify or delete all of the entities in a collection at once can be risky. In many cases, the design of a RESTful API will only support `GET` and `POST` endpoints for collections. 
+Exposing the ability to modify or delete all the entities in a collection at once can be risky. In many cases, the design of a RESTful API will only support `GET` and `POST` endpoints for collections. 
 {{% /notice %}}
 
 Let's consider a request for creating a resource entity. Recall that this operation acts on the state of the collection by 
@@ -310,18 +310,18 @@ status codes and messages notify the consumer of the changes needed for a succes
 
 Let's look at some of the common client error status codes:
 
-| Status Code | Message | Correction |
-|-----|-----|-----|
-| `400` | `Bad Request` | Client must fix errors in their request body |
-| `401`| `Unauthorized` | Client must authenticate first |
-| `403` | `Forbidden` | An Authenticated client in not allowed to perform the requested action |
+| Status Code | Message | Correction                                                                    |
+|-----|-----|-------------------------------------------------------------------------------|
+| `400` | `Bad Request` | Client must fix errors in their request body                                  |
+| `401`| `Unauthorized` | Client must authenticate first                                                |
+| `403` | `Forbidden` | An Authenticated client is not allowed to perform the requested action        |
 | `404` | `Not Found` | The path to identify the resource is incorrect or the resource does not exist |
 
 
 A bad request will include an error message in its response. The message should indicate what the client must change in their request body to succeed. This failure is seen when creating or updating a resource entity:
 
 {{% notice blue "Example" "rocket" %}}
-In the upcoming SpringRestApiApplication, the state of a `Event` is validated using the following criteria:
+In the upcoming SpringRestApiApplication, the state of an `Event` is validated using the following criteria:
 
 - `name`: "string text"
 - `description`: "string text"
