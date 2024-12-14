@@ -25,7 +25,14 @@ As always, read through the whole page before starting to code.
 
 ## Setup
 
-Fork and clone the appropriate [repository](https://github.com/LaunchCodeEducation/Java17-SpaDay). Check out the project via Version Control in IntelliJ.
+Fork and clone the Spa Day [repository](https://github.com/LaunchCodeEducation/Java17-SpaDay).
+
+> ![warning] Uncheck "Copy the `starter` branch only"
+> When you fork this repository on github, be sure to **uncheck** the box that says
+> "Copy the `starter` branch only." This will ensure that you have access to all
+> the branches in the repository.
+
+Check out the project via Version Control in IntelliJ.
 
 When you open the project and run it using `bootRun`, go to `localhost:8080` and you should see a form!
 
